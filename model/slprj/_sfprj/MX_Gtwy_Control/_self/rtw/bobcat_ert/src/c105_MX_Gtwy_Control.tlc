@@ -1,0 +1,158 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   20 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c105_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c105_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OptionA"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionA"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Left_Control_or_Diverter_Fault"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionA.Left_Control_or_Diverter_Fault"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionA.Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionA.Enabled.Aux_Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OptionB"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionB"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionB.Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Offset_Left"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionB.Enabled.Offset_Left"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionB.Enabled.Offset_Left.Aux_Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Offset_Right"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionB.Enabled.Offset_Right"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionB.Enabled.Offset_Right.Aux_Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OptionC"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionC"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionC.Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Offset_Left"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionC.Enabled.Offset_Left"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionC.Enabled.Offset_Left.Aux_Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Offset_Right"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionC.Enabled.Offset_Right"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OptionC.Enabled.Offset_Right.Aux_Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "stored_ControlMode"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "stored_ControlMode"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -1,0 +1,60 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c18_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_GAIN"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "GAIN"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FILTER"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "GAIN.FAST_FILTER.FILTER"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FILTER"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FILTER"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "count_Factor"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "count_Factor"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "change_EngineSpeed"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "change_EngineSpeed"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

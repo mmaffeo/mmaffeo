@@ -1,0 +1,60 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  1 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_LOCK"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "LOCK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FAIL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "LOCK.FAIL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_UNLOCK"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "UNLOCK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FAIL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "UNLOCK.FAIL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

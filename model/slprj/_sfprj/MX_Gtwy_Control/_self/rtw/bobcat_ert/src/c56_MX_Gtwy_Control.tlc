@@ -1,0 +1,102 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c56_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c56_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SENSOR"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SENSOR"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SENSOR.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NO_SIGNAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SENSOR.NORMAL.NO_SIGNAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SENSOR.NORMAL.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HIGH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SENSOR.NORMAL.HIGH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_EXTREMELY_HIGH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SENSOR.NORMAL.EXTREMELY_HIGH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SHUTDOWN"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SENSOR.NORMAL.SHUTDOWN"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OUT_OF_RANGE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SENSOR.OUT_OF_RANGE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ECU"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ECU"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

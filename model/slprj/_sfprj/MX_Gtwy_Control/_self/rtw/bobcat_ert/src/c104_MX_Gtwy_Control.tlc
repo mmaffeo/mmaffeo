@@ -1,0 +1,109 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   13 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c104_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Pot_Calibration"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Pot_Calibration"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Pot_State"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Pot_State"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Supply_OK"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Pot_State.Supply_OK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Pot_State.Supply_OK.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ACTIVE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Pot_State.Supply_OK.NORMAL.ACTIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Normal"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Pot_State.Supply_OK.NORMAL.ACTIVE.Normal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "offset_LeftPotCal"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "offset_LeftPotCal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "state_LeftPotCal"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "state_LeftPotCal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "base_Threshold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "base_Threshold"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "rod_Threshold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "rod_Threshold"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

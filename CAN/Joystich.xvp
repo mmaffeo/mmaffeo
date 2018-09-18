@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Joystich">
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl24" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl24</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">39, 35</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;btn_LHJoystick_RH;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">26</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl23" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl23</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">67, 35</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;btn_LHJoystick_LH;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">25</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="ProgressBarControl1" Children="Controls" ControlName="Progress Bar">
+      <Property Name="Name">ProgressBarControl1</Property>
+      <Property Name="Size">74, 16</Property>
+      <Property Name="Location">249, 35</Property>
+      <Property Name="OriginValue">40</Property>
+      <Property Name="Alignment">RightBottom</Property>
+      <Property Name="Maximum">135</Property>
+      <Property Name="Minimum">40</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="ValueSize">28, 23</Property>
+      <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;sld01;0;CAN1;CAN1;-1</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl21" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl21</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">115, 35</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;btn_LHJoystick_Up;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">24</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl22" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl22</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">115, 70</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;btn_LHJoystick_Dw;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">23</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl7" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl7</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">328, 35</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;btn_RHJoystick_Speed;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">5</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl3" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl3</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">222, 35</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;btn_RHJoystick_Up;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">3</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl4" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl4</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">222, 70</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;btn_RHJoystick_Dw;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">2</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl1" ControlName="Left Joystick">
+      <Property Name="Name">GroupBoxControl1</Property>
+      <Property Name="Size">163, 137</Property>
+      <Property Name="Location">16, 13</Property>
+      <Property Name="Text">Left Joystick</Property>
+      <Property Name="TabIndex">28</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl2" Children="Controls" ControlName="Right Joystick">
+      <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl1" Children="Controls" ControlName="Input/Output Box">
+        <Property Name="Name">TextBoxControl1</Property>
+        <Property Name="Size">73, 22</Property>
+        <Property Name="Location">54, 43</Property>
+        <Property Name="AlarmUpperTextColor">WindowText</Property>
+        <Property Name="ValueDecimalPlaces">0</Property>
+        <Property Name="AlarmLowerBkgColor">Salmon</Property>
+        <Property Name="BoxTextAlign">Center</Property>
+        <Property Name="ValueDisplay">Decimal</Property>
+        <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+        <Property Name="AlarmLowerTextColor">WindowText</Property>
+        <Property Name="AlarmUpperFont">Microsoft Sans Serif, 7.8pt</Property>
+        <Property Name="AlarmGeneralSettings">1;3;0;255</Property>
+        <Property Name="DisplayLabel">Hide</Property>
+        <Property Name="DescriptionText">sld01:</Property>
+        <Property Name="AlarmLowerFont">Microsoft Sans Serif, 7.8pt</Property>
+        <Property Name="DescriptionSize">59, 18</Property>
+        <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;sld01;0;CAN1;CAN1;-1</Property>
+        <Property Name="TabIndex">22</Property>
+        <Property Name="ReadOnlyControl">True</Property>
+      </Object>
+      <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl19" ControlName="Switch/Indicator">
+        <Property Name="Name">SwitchControl19</Property>
+        <Property Name="Size">23, 30</Property>
+        <Property Name="Location">81, 78</Property>
+        <Property Name="StateCnt">2</Property>
+        <Property Name="SwitchValues">1;2;0;1</Property>
+        <Property Name="IsButton">True</Property>
+        <Property Name="SymbolConfiguration">4;2;CWL;Auxiliary;LegacyMessaggesPrior5;btn_RHJoystick_Trigger;0;CAN1;CAN1;-1</Property>
+        <Property Name="TabIndex">21</Property>
+        <Property Name="ReadOnlyControl">True</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl2</Property>
+      <Property Name="Size">182, 137</Property>
+      <Property Name="Location">196, 13</Property>
+      <Property Name="Text">Right Joystick</Property>
+      <Property Name="TabIndex">29</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">393, 162</Property>
+  </Object>
+</Panel>

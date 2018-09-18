@@ -1,0 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% bobcat_file_process.tlc
+%% $Id: bobcat_file_process.tlc 55 2008-04-25 14:18:25Z jgattu $
+%%
+%% Abstract:
+%%   This TLC function will generate a custom ERT_main for the bobcat bobcat target. 
+%%
+%%   Note: This file can contain any valid TLC code, which Real-Time Workshop
+%%   executes just prior to writing the generated source files to disk.
+%%   Using this template "hook" file, you are able to augment the generated
+%%   source code and create additional files.
+%%
+%% Author: Jagadish Gattu
+%%         The MathWorks Consulting Group
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%selectfile NULL_FILE
+
+%% The TLC true flag must be set for the file_process to work
+%assign ERTCustomFileTest = TLC_TRUE
+%if EXISTS("ERTCustomFileTest") && ERTCustomFileTest == TLC_TRUE
+  
+ %% Need to set the template compliance flag before you can use the API
+ %<LibSetCodeTemplateComplianceLevel(1)>
+
+ %% Customizing the code generation		
+ %%include "bobcat_create_main.tlc"
+ 
+%endif
+

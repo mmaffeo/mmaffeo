@@ -1,0 +1,67 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c51_MX_Library"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c51_MX_Library"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_STGOFF_DIAG_ACTIVE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FUNCTIONAL.STGOFF_DIAG_ACTIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_STGOFF_DIAG_INACTIVE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FUNCTIONAL.STGOFF_DIAG_INACTIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DIAG_CHECK"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "DIAG_CHECK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FUNCTIONAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FUNCTIONAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

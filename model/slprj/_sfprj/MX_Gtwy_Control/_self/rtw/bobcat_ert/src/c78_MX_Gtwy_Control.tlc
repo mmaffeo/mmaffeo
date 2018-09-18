@@ -1,0 +1,109 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   13 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c78_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Get_Cal_Values"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Get_Cal_Values"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Monitor"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Monitor"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Cal_Start"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Cal_Start"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Cal_Check"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Cal_Start.Cal_Check"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Cal_Mode"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.Cal_Mode"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "count"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "count"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previous_cal_state"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "previous_cal_state"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "range"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "range"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i3"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

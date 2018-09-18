@@ -1,0 +1,2967 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" type="text/css" href="rtwreport.css" /><script language="JavaScript" type="text/javascript">function rtwTableShrink(o) {var t = o.nextSibling;if (t.nodeType != 1) {t = t.nextSibling;}if (t.style.display == "none") {t.style.display = "";o.innerHTML = "[-]"} else {t.style.display = "none";o.innerHTML = "[+] ... "}}</script><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>
+Code Interface Report for ElectricAutomation
+</title>
+
+</head>
+<body ONLOAD="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdCodeInterface'); else local_onload();}} catch(err) {};">
+<h1>
+Code Interface Report for ElectricAutomation
+</h1>
+<h3>
+Table of Contents
+</h3>
+<ul>
+<li>
+<a href="#sec_Entry_Point_Functions">
+Entry Point Functions
+</a>
+
+</li>
+<li>
+<a href="#sec_Inports">
+Inports
+</a>
+
+</li>
+<li>
+<a href="#sec_Outports">
+Outports
+</a>
+
+</li>
+<li>
+<a href="#sec_Interface_Parameters">
+Interface Parameters
+</a>
+
+</li>
+<li>
+<a href="#sec_Data_Stores">
+Data Stores
+</a>
+
+</li>
+
+</ul>
+<h3>
+<a name="sec_Entry_Point_Functions">
+Entry Point Functions
+</a>
+
+</h3>
+<p>
+Function: <a href="ElectricAutomation_cpp.html#fcn_ElectricAutomation_initialize">ElectricAutomation_initialize</a>
+</p>
+<table width="100%" class="AltRow" cellspacing="0">
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Prototype
+</td>
+<td width="75%" align="left" valign="top">
+<b>
+void ElectricAutomation_initialize(void)
+</b>
+
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Description
+</td>
+<td width="75%" align="left" valign="top">
+Initialization entry point of generated code
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Timing
+</td>
+<td width="75%" align="left" valign="top">
+Must be called exactly once
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Arguments
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Return value
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Header file
+</td>
+<td width="75%" align="left" valign="top">
+<a href="ElectricAutomation_h.html">ElectricAutomation.h</a>
+</td>
+
+</tr>
+
+</table>
+<p>
+Function: <a href="ElectricAutomation_cpp.html#fcn_ElectricAutomation_step">ElectricAutomation_step</a>
+</p>
+<table width="100%" class="AltRow" cellspacing="0">
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Prototype
+</td>
+<td width="75%" align="left" valign="top">
+<b>
+void ElectricAutomation_step(void)
+</b>
+
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Description
+</td>
+<td width="75%" align="left" valign="top">
+Output entry point of generated code
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Timing
+</td>
+<td width="75%" align="left" valign="top">
+Must be called periodically, every 0.01 seconds
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Arguments
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Return value
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Header file
+</td>
+<td width="75%" align="left" valign="top">
+<a href="ElectricAutomation_h.html">ElectricAutomation.h</a>
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Inports">
+Inports
+</a>
+
+</h3>
+<span title="Click to shrink or expand table" onclick="rtwTableShrink(this)">[-]</span><table width="100%" class="AltRow FirstColumn" cellspacing="0">
+<tr class="heading">
+<th width="42%" align="left" valign="top">
+<b>
+Block Name
+</b>
+
+</th>
+<th width="26%" align="left" valign="top">
+<b>
+Code Identifier
+</b>
+
+</th>
+<th width="21%" align="left" valign="top">
+<b>
+Data Type
+</b>
+
+</th>
+<th width="10%" align="right" valign="top">
+<b>
+Dimension
+</b>
+
+</th>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_Console
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_SensorSupply1
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_SensorSupply2
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_OffsetPot
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_VBattery
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_SwitchedPower
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_ECT
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_FuelLevel
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_AuxPot
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_PrecisionReference
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_LoadMoment
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_ThrottlePrimary
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ain_Aux2FlowControl
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_AirFilter
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_HCFilter1
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_ACOn
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_TwoSpeedSwitch
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_StarterOutput
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_RunEnter
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_RemoteKey
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_EngineStart
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_SwPowerRelay
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_SwPowerOutput
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_GlowPlugRelay
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_GlowPlugOutput
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_FuelPriRelay
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_FuelPriOutput
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_StarterRelay
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_Buzzer
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_LightsOutput
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_HydExchange
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_HVACRelay
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_HVACOutput
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_Detent
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_LightsRelay
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_SecondAuxSw
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_PBValveRelay
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dfbk_PBValveOutput
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_OWDEnableSw
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+din_LeftHandleSelectSw
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+adin_HOT
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+adin_EOP
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+adin_LoadSense
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+adin_TravelPressureSwitch
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_HydEnable
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_OffsetRod
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_AuxRod
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_FuelSec
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_TwoSpeed
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_TwoSpeedSecondary
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_OffsetBase
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_AuxBase
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_DumpValve
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_HydBypass
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+afbk_Diverter
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ifbk_HydEnable
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ifbk_OffsetRod
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ifbk_AuxRod
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ifbk_OffsetBase
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ifbk_AuxBase
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ifbk_DumpValve
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ifbk_HydBypass
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ifbk_Diverter
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msg_PanelButtonState
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[8]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_StdDisplay
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_Secondary
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_sec_spare1
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_sec_spare2
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+btn_SnakeEyes
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+delay_DepthBeep
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_DepthBeep
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_OffsetSelectSw
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_RightHandleSelectSw
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_Throttle
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+fdbk_CANThrottle
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_ST_EngineStart
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_ST_CAN
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_ST_EStop
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+cmd_AuxEnable_ST
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_EOP
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_ECT
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_EngineSpeed
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_ecuECT
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_ecuEOP
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_GlowPlug
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_ECU
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_EngineStarterMode
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_isocMaxRPM
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_isocMinRPM
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_PercentTorque
+</td>
+<td width="21%" align="left" valign="top">
+int8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+lamp_Engine
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_HP
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_FuelTemp
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ecu_EOT
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_DeluxeG5
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+flow_Aux1Percent
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+flow_Aux2Percent
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+flow_Aux4Percent
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+flow_OffsetPercent
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msg_DeluxeButtons
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[5]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_Keypad
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[3]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_KeylessPanel
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msg_BJM2Left
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[8]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_BJM2Left
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msg_BJM2Right
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[8]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_BJM2Right
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_ACD_EngineStart
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_ACD_CAN
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_ACD_EStop
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_ACD_AuxCommand
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+cmd_AuxEnable_ACD
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_DeluxeG55
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dlx_G55_AutoIdle
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dlx_G55_EcoMode
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dlx_G55_AutoIdleTime
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+auth_DeluxeG55
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_DeluxeG55
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_JogShuttle
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+btn_JogShuttleAux
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+btn_JogShuttleLights
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+can_KeylessEntry
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[3]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+msgAge_KeylessEntry
+</td>
+<td width="21%" align="left" valign="top">
+uint16_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+freq_EngineSpeed
+</td>
+<td width="21%" align="left" valign="top">
+uint32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ee_OwnerPassword
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[5]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ee_MasterPassword
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[5]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_ConstantData
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_TwoSpeedLock
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ddp_MachineLock
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_ConsoleTest
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_ServiceClock
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_System
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+flag_InitEERead
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+scrn_DeluxePwdFail
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+actualHourMeter
+</td>
+<td width="21%" align="left" valign="top">
+uint32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+dv_TurboPrime
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_KeylessEntryPassword
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+state_KeylessEntryLock
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ee_User1Password
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[5]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+ee_User2Password
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+[5]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+ElectricAutomation_U.outNMCStatus
+</td>
+<td width="21%" align="left" valign="top">
+boolean_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+inverterStatus
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+ElectricAutomation_U.CANOpenMsgRPDO1_jpnx
+</td>
+<td width="21%" align="left" valign="top">
+CANOpenMsgRPDO1
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+synthesized block
+</td>
+<td width="26%" align="left" valign="top">
+ElectricAutomation_U.test_n13h
+</td>
+<td width="21%" align="left" valign="top">
+test
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Outports">
+Outports
+</a>
+
+</h3>
+<table width="100%" class="AltRow FirstColumn" cellspacing="0">
+<tr class="heading">
+<th width="42%" align="left" valign="top">
+<b>
+Block Name
+</b>
+
+</th>
+<th width="26%" align="left" valign="top">
+<b>
+Code Identifier
+</b>
+
+</th>
+<th width="21%" align="left" valign="top">
+<b>
+Data Type
+</b>
+
+</th>
+<th width="10%" align="right" valign="top">
+<b>
+Dimension
+</b>
+
+</th>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('MX_Gateway:31106')" name="code2model" class="code2model">&lt;S1&gt;/targetSpeed3</a>
+</td>
+<td width="26%" align="left" valign="top">
+cmdInverter
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('MX_Gateway:31159')" name="code2model" class="code2model">&lt;S1&gt;/Out1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ElectricAutomation_Y.Out1_jdzy
+</td>
+<td width="21%" align="left" valign="top">
+testOut
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Interface_Parameters">
+Interface Parameters
+</a>
+
+</h3>
+<span title="Click to shrink or expand table" onclick="rtwTableShrink(this)">[-]</span><table width="100%" class="AltRow FirstColumn" cellspacing="0">
+<tr class="heading">
+<th width="42%" align="left" valign="top">
+<b>
+Parameter Source
+</b>
+
+</th>
+<th width="26%" align="left" valign="top">
+<b>
+Code Identifier
+</b>
+
+</th>
+<th width="21%" align="left" valign="top">
+<b>
+Data Type
+</b>
+
+</th>
+<th width="10%" align="right" valign="top">
+<b>
+Dimension
+</b>
+
+</th>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+GO_OPERATIONAL
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+GO_OPERATIONAL
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+GO_PRE_OPERATIONAL
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+GO_PRE_OPERATIONAL
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+OPERATIONAL
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+OPERATIONAL
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+PRE_OPERATIONAL
+</td>
+<td width="26%" align="left" valign="top">
+<i>
+Imported data:
+</i>
+PRE_OPERATIONAL
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Data_Stores">
+Data Stores
+</a>
+
+</h3>
+<p>
+No data stores in the model; note that this report lists only data stores with non-auto storage class and global data stores
+</p>
+
+</body>
+
+</html>

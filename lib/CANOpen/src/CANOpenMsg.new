@@ -1,0 +1,487 @@
+/*******************************************************************************
+* Project Name: E10 Electric
+*
+* Copyright 2005 Bobcat Company as an unpublished work.
+* All Rights Reserved.
+*
+* The information contained herein is confidential
+* property of Bobcat Company. The use, copying, transfer or
+* disclosure of such information is prohibited except
+* by express written agreement with Bobcat Company.
+*
+* First written on 06 August, 2018 
+*
+* Module Description:
+* The module broadcasts messages on CANOpen Standard between the electric devices 
+* in a "CANOpen" message on the secondary CAN bus.
+*******************************************************************************/
+
+//******************************************************************************
+// INCLUDES
+//******************************************************************************
+
+//#include "hw_io.h"
+//#include "nvm_ecuid.h"
+#include "CANOpen.h"
+#include "CANOpenMsg.h"
+//#include "MX_Gtwy_Control_types.h"
+
+//#include "ap_eeprom.h"
+//#include "ap_subs.h"
+//#include "ap_can.h"
+//#include "MX_Gtwy_Control.h"
+//#include "MX_Gtwy_Control_private.h"
+//#include "global.h"
+//#include "ap_deluxeG5.h"
+//#include "defines.h"
+
+//******************************************************************************
+// DEFINES
+//******************************************************************************
+
+
+//#define STARTUP_TIME    10
+//******************************************************************************
+// STRUCTURES
+//******************************************************************************
+
+//******************************************************************************
+// GLOBAL VARIABLES
+//******************************************************************************
+uint8_t             InverterStatus;
+uint16_t            bus_RPDO1_ActualSpeed;                                      //Value received from Simulink
+
+CANOpenMsgRPDO1     RPDO1;
+CANOpenMsgRPDO2     RPDO2;
+CANOpenMsgTPDO1     TPDO1;
+CANOpenMsgTPDO2     TPDO2;
+            
+static uint8_t      steps = 0;
+static uint16_t     prevTime,
+                    prevTime1;
+extern CANOpenPDO   CANOpenPDOMsgNode8;
+//******************************************************************************
+//    returns     : NONE.
+//    Description : Receive info from CAN.
+//    Notes       :
+//******************************************************************************
+void CANOpenRPDO1_rx_callback(hw_can_msg_t *Msg)
+{
+  Msg2RPDO(Msg,&RPDO1);
+}
+void CANOpenRPDO2_rx_callback(hw_can_msg_t *Msg)
+{
+  Msg2RPDO(Msg,&RPDO2);
+}
+void CANOpenGuard_rx_callback(hw_can_msg_t *Msg)
+{
+
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Set all the std CAN identifier for all the RPDO
+//  messages used and add this in list of the message that must be 
+//  received
+//  Notes       :
+//******************************************************************************
+void CANOpen_initialize(void)
+{
+//Inizialitation of the RPOD1
+//  CANOpenRPDO1.initialize();
+//  CANOpenRPDO1.rx_id     .set_stdID( 0x0188);                                   //Set the CAN Identifier 0x200+0x100*(nPDO-1)+NodeID (0x180+0x0+0x8=188)                                    
+  //CANOpenRPDO1.D0_data = 0x00;                                                  //With this value there is no filter on the first data byte received 
+  //CANOpenRPDO1.rx_callback = CANOpenRPDO1_rx_callback;                          //Function overload
+//Inizialitation of the RPOD2
+//  CANOpenRPDO2.initialize();
+//  CANOpenRPDO2.rx_id     .set_stdID( 0x0288);                                   //Set the CAN Identifier 0x200+0x100*(nPDO-1)+NodeID (0x180+0x100+0x8=288)                                    
+//  //CANOpenRPDO2.D0_data = 0x00;                                                  //With this value there is no filter on the first data byte received 
+//  CANOpenRPDO2.rx_callback = CANOpenRPDO2_rx_callback;                          //Function overload
+//Inizialitation of the RPOD2
+//  CANOpenGuard.initialize();
+//  CANOpenGuard.rx_id     .set_stdID( 0x0708);                                   //Set the CAN Identifier 0x200+0x100*(nPDO-1)+NodeID (0x180+0x100+0x8=288)                                    
+  //CANOpenGuard.D0_data = 0x00;                                                  //With this value there is no filter on the first data byte received 
+//  CANOpenGuard.rx_callback = CANOpenGuard_rx_callback;                          //Function overload
+//Add message to the list of the readed messages  
+//  hw_can_rx_handler[HWC_CAN0].add_msg(&CANOpenRPDO1);
+//  hw_can_rx_handler[HWC_CAN0].add_msg(&CANOpenRPDO2);  
+//  hw_can_rx_handler[HWC_CAN0].add_msg(&CANOpenGuard);  
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Every 1000 ms send out the messages
+//  Notes       :
+//******************************************************************************
+void CANOpen_update(void)
+{  
+uint16_t currentTime = hw_clock_mS();
+  hw_can_msg_t msgData;
+ 
+// messages sent every 32 ms 
+  if (uint16_t(currentTime - prevTime) >= 32 )
+  {
+    prevTime += 32;
+    syncMsg( &msgData);
+  } 
+// message sent every 10 ms  
+  if (uint16_t(currentTime - prevTime1) >= 10)
+  {
+        prevTime1 += 10;
+        switch (steps)
+        {
+          case 0:
+            steps++;
+            break;
+          case 1:
+            TPDO1.enablePower = true;
+            steps++;
+            break;
+          case 2:
+            TPDO1.enablePower = true;
+            TPDO1.powerLineON = true;
+            steps++;           
+            break;
+          case 3:
+            TPDO1.enablePower = true;
+            TPDO1.powerLineON = true;
+            TPDO1.dirFWD = true;
+            steps++;           
+            break;
+          case 4:
+            TPDO1.enablePower = true;
+            TPDO1.powerLineON = true;
+            TPDO1.dirFWD = true;
+            TPDO1.targetSpeed = 80;
+            steps++;  
+          case 5:
+            TPDO1.enablePower = true;
+            TPDO1.powerLineON = true;
+            TPDO1.dirFWD = true;
+            TPDO1.targetSpeed = 80;
+            setNTMMsg( &msgData);         
+            steps++;  
+          case 6:
+            TPDO1.enablePower = true;
+            TPDO1.powerLineON = true;
+            TPDO1.dirFWD = true;
+            TPDO1.targetSpeed = 80;             
+          default:
+            break;
+        }  
+        CANOpenPDOMsgNode8.sendTPDO1Msg();
+  }
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : This function will convert the generic std CAN message in the 
+//  RPDO message
+//  Notes       : Two overloaded function for RPDO1 & RPDO2
+//******************************************************************************
+void Msg2RPDO(hw_can_msg_t *Msg, CANOpenMsgRPDO1* tmpRPDO1)
+{
+  uint16_t statusWord;
+  tmpRPDO1->actualSpeed = Msg->get_word(0);
+  statusWord = Msg->get_word(2);
+  tmpRPDO1->statusByte = Msg->get_byte(4);
+  tmpRPDO1->anin01 = Msg->get_byte(5);
+  tmpRPDO1->anin02 = Msg->get_byte(6);
+  tmpRPDO1->actualCurrent = Msg->get_byte(7);
+  tmpRPDO1->outA3 = statusWord & 0xFFFF;
+}
+//******************************************************************************
+void Msg2RPDO(hw_can_msg_t *Msg, CANOpenMsgRPDO2* tmpRPDO2)
+{
+  tmpRPDO2->warningsAlarms = Msg->get_word(0);
+  tmpRPDO2->motorTemp = Msg->get_byte(2);
+  tmpRPDO2->inverterTemp = Msg->get_byte(3);
+  tmpRPDO2->percentBDI = Msg->get_byte(4);
+  tmpRPDO2->batteryCurrent = Msg->get_byte(5);
+  tmpRPDO2->batteryVoltage = Msg->get_word(6);
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : 
+//  Notes       :
+//******************************************************************************
+uint8_t Msg2RPDO(hw_can_msg_t *Msg)
+{
+  return (Msg->get_byte(0));
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : this function will receive the TPDO data, transform it in the 
+//  std CAN message structure, and send it.
+//  Notes       : two overlaoad functions (TPDO1 & TPDO2)
+//******************************************************************************
+//void sendTPDO( CANOpenMsgTPDO1* tmpTPDO1, hw_can_msg_t* msgData)
+//{
+//uint16_t tmpWord = 0x0000;  
+//  msgData->DLR = 8;
+//  msgData->id.set_stdID(0x208);                                                 //0x180+0x100*(nPDO-1)+ (0x80*(0/TX or 1/RX)) + nodeID 0x8 
+//  msgData->set_word(0,tmpTPDO1->targetSpeed);                                   
+//  if(tmpTPDO1->enablePower)  tmpWord = tmpWord | 0x0001;                        // Set bit 0 byte 1
+//  if(tmpTPDO1->powerLineON)  tmpWord = tmpWord | 0x0002;                        // Set bit 1 byte 1
+//  if(tmpTPDO1->outNEB)       tmpWord = tmpWord | 0x0004;                        // Set bit 2 byte 1
+//  if(tmpTPDO1->dirFWD)       tmpWord = tmpWord | 0x0008;                        // Set bit 3 byte 1  
+//  if(tmpTPDO1->dirREV)       tmpWord = tmpWord | 0x0010;                        // Set bit 4 byte 1
+//  if(tmpTPDO1->watchdogBit && tmpTPDO1->enablePower && tmpTPDO1->powerLineON)  
+//    {
+//      tmpWord = tmpWord & 0x7FFF;                                               // Reset bit 7 byte 2
+//      tmpTPDO1->watchdogBit = false;
+//    }
+//  else
+//    {
+//      tmpWord = tmpWord | 0x8000;                                               // Set bit 7 byte 2
+//      tmpTPDO1->watchdogBit = true;
+//    }
+//  msgData->set_word(1,tmpWord); 
+//  msgData->set_byte(4,tmpTPDO1->brakeReq);
+//  msgData->set_byte(5,0x00);  
+//  msgData->set_word(3,0x0000);
+//  sendMsg(msgData);
+//}
+//******************************************************************************
+//void sendTPDO( CANOpenMsgTPDO2* tmpTPDO2, hw_can_msg_t* msgData)
+//{
+//uint16_t tmpWord = 0x0000;  
+//  msgData->DLR = 8;
+//  msgData->id.set_stdID(0x308);                                                 //0x180+0x100*(nPDO-1)+ (0x80*(0/TX or 1/RX)) + nodeID 0x8 
+//  msgData->set_byte(0,tmpTPDO2->motorMAXTorque);                                   
+//  msgData->set_byte(1,tmpTPDO2->brakeMAXTorque);                                   
+//  if(tmpTPDO2->watchdogBit)  
+//    {
+//      tmpWord = tmpWord & 0x7FFF;                                               // Reset bit 7 byte 2
+//      tmpTPDO2->watchdogBit = false;
+//    }
+//  else
+//    {
+//      tmpWord = tmpWord | 0x8000;                                               // Set bit 7 byte 2
+//      tmpTPDO2->watchdogBit = true;
+//    }
+//  msgData->set_word(1,tmpWord);
+//  msgData->set_word(2,0x0000);   
+//  msgData->set_word(3,0x0000);   
+//}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : send the CANOpen SYNC message for the nodes on the bus
+//  Notes       :
+//******************************************************************************
+void syncMsg( hw_can_msg_t* msgData)
+{
+  msgData->DLR = 0; //To be verified
+  msgData->id.set_stdID(0x080);                                                 //0x80=SYNC Message  
+//  msgData->set_word(0,0x0000);
+//  msgData->set_word(1,0x0000);
+//  msgData->set_word(2,0x0000);
+//  msgData->set_word(3,0x0000);  
+  sendMsg(msgData);
+}  
+//Set the status of the node(s)
+//******************************************************************************
+//  returns     : NONE.
+//  Description : 
+//  Notes       :
+//******************************************************************************
+void setNTMMsg( hw_can_msg_t* msgData)
+{
+  msgData->DLR = 8;
+  msgData->id.set_stdID(0x0);                                                   //ID always = 0 
+  msgData->set_byte(0,0x01);                                                    //Function =0x01->Go Operational , 0x02->Stop, 0x80->Go Pre-operational, 0x81->Reset node, 0x82->Reset communication
+  msgData->set_byte(1,0x00);                                                    //Target node =0->Every node, 1..127->Specific node  
+  msgData->set_word(1,0x0000);
+  msgData->set_word(2,0x0000);
+  msgData->set_word(3,0x0000);  
+  sendMsg(msgData);
+}  
+void sendMsg( hw_can_msg_t* msgData)
+{
+#ifdef HWC_CAN0
+    hw_can_txq[HWC_CAN0].send_msg(msgData);
+#endif
+#ifdef HWC_CAN4
+    //hw_can_txq[HWC_CAN4].send_msg(msgData);
+#endif    
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Standard constructor
+//  Notes       : 
+//******************************************************************************
+void CANOpenPDO::Initialize(int8_t node)
+{
+  //Set the address of the the node 
+  nodeID = node;
+  //Add the messages that must be received
+  addRPDO1Msg(node);
+  addRPDO2Msg(node); 
+}
+//******************************************************************************
+//  returns     : void
+//  Description : prepare the heading of the RPDO1 message 
+//  Notes       :
+//******************************************************************************
+void CANOpenPDO::addRPDO1Msg(uint8_t nodeID)
+{
+  CANOpenRPDO1.initialize();
+  CANOpenRPDO1.rx_id.set_stdID( getRPDO_ID(1,nodeID));
+  CANOpenRPDO1.rx_callback = CANOpenRPDO1_rx_callback;
+  addMsgHandler(&CANOpenRPDO1);
+}
+//******************************************************************************
+//  returns     : void
+//  Description : prepare the heading of the RPDO2 message
+//  Notes       :
+//******************************************************************************
+void CANOpenPDO::addRPDO2Msg(uint8_t nodeID)
+{
+  CANOpenRPDO2.initialize();
+  CANOpenRPDO2.rx_id.set_stdID( getRPDO_ID(1,nodeID));
+  CANOpenRPDO2.rx_callback = CANOpenRPDO2_rx_callback;
+  addMsgHandler(&CANOpenRPDO2);
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Get the value from the receiving message in the corresponding
+//              value in t0 member RPDO1 structure
+//  Notes       :
+//******************************************************************************
+void CANOpenPDO::Msg2RPDO1(  hw_can_msg_t *Msg)
+{
+  uint16_t statusWord;
+  RPDO1.actualSpeed = Msg->get_word(0);
+  statusWord = Msg->get_word(2);
+  RPDO1.statusByte = Msg->get_byte(4);
+  RPDO1.anin01 = Msg->get_byte(5);
+  RPDO1.anin02 = Msg->get_byte(6);
+  RPDO1.actualCurrent = Msg->get_byte(7);
+  RPDO1.outA3 = statusWord & 0xFFFF;
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Get the value from the receiving message in the corresponding
+//              value in t0 member RPDO2 structure
+//  Notes       :
+//******************************************************************************
+void CANOpenPDO::Msg2RPDO2(  hw_can_msg_t *Msg)
+{
+  RPDO2.warningsAlarms = Msg->get_word(0);
+  RPDO2.motorTemp = Msg->get_byte(2);
+  RPDO2.inverterTemp = Msg->get_byte(3);
+  RPDO2.percentBDI = Msg->get_byte(4);
+  RPDO2.batteryCurrent = Msg->get_byte(5);
+  RPDO2.batteryVoltage = Msg->get_word(6);
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : send the TPDO1 message on the bus
+//  Notes       :
+//******************************************************************************
+void CANOpenPDO::sendTPDO1Msg(void)
+{
+uint16_t tmpWord = 0x0000;
+hw_can_msg_t msgData; 
+  msgData.DLR = 8;
+  msgData.id.set_stdID(getTPDO_ID(1,nodeID));                                   
+  msgData.set_word(0,TPDO1.targetSpeed);                                   
+  if(TPDO1.enablePower)  tmpWord = tmpWord | 0x0001;                            // Set bit 0 byte 1
+  if(TPDO1.powerLineON)  tmpWord = tmpWord | 0x0002;                            // Set bit 1 byte 1
+  if(TPDO1.outNEB)       tmpWord = tmpWord | 0x0004;                            // Set bit 2 byte 1
+  if(TPDO1.dirFWD)       tmpWord = tmpWord | 0x0008;                            // Set bit 3 byte 1  
+  if(TPDO1.dirREV)       tmpWord = tmpWord | 0x0010;                            // Set bit 4 byte 1
+  if(TPDO1.watchdogBit && TPDO1.enablePower && TPDO1.powerLineON)  
+    {
+      tmpWord = tmpWord & 0x7FFF;                                               // Reset bit 7 byte 2
+      TPDO1.watchdogBit = false;
+    }
+  else
+    {
+      tmpWord = tmpWord | 0x8000;                                               // Set bit 7 byte 2
+      TPDO1.watchdogBit = true;
+    }
+  msgData.set_word(1,tmpWord); 
+  msgData.set_byte(4,TPDO1.brakeReq);
+  msgData.set_byte(5,0x00);  
+  msgData.set_word(3,0x0000);
+  sendMsg(&msgData);
+}  
+//******************************************************************************
+//  returns     : NONE.
+//  Description : send the TPDO2 message on the bus
+//  Notes       :
+//******************************************************************************
+void CANOpenPDO::sendTPDO2Msg(void)
+{
+uint16_t tmpWord = 0x0000;
+hw_can_msg_t msgData;
+  msgData.DLR = 8;
+  msgData.id.set_stdID(getTPDO_ID(1,nodeID));                                                   
+  msgData.set_byte(0,TPDO2.motorMAXTorque);                                   
+  msgData.set_byte(1,TPDO2.brakeMAXTorque);                                   
+  if(TPDO2.watchdogBit)  
+    {
+      tmpWord = tmpWord & 0x7FFF;                                               // Reset bit 7 byte 2
+      TPDO2.watchdogBit = false;
+    }
+  else
+    {
+      tmpWord = tmpWord | 0x8000;                                               // Set bit 7 byte 2
+      TPDO2.watchdogBit = true;
+    }
+  msgData.set_word(1,tmpWord);
+  msgData.set_word(2,0x0000);   
+  msgData.set_word(3,0x0000);
+  sendMsg(&msgData);
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Standard constructor
+//  Notes       : 
+//******************************************************************************
+CANOpenNTM::CANOpenNTM( uint8_t node)
+{
+  //Add the messages that must be received
+  addGUARDMsg(node);  
+}
+//******************************************************************************
+//  returns     : void
+//  Description : prepare the heading of the GUARD message
+//  Notes       :
+//******************************************************************************
+void CANOpenNTM::addGUARDMsg(uint8_t nodeID)
+{
+  CANOpenGuard.initialize();
+  CANOpenGuard.rx_id.set_stdID( getGUARD_ID(nodeID));
+  CANOpenGuard.rx_callback = CANOpenGuard_rx_callback;
+  addMsgHandler(&CANOpenGuard);
+}
+//******************************************************************************
+//  returns     : void
+//  Description : add the specific message in to list of the messages that the
+//                  bus must receive
+//  Notes       :
+//******************************************************************************
+void CANOpenNTM::sendNTMMsg(    uint8_t NTMFunction,
+                                uint8_t nodeID)
+{
+hw_can_msg_t msgData;
+  msgData.DLR = 8;
+  msgData.id.set_stdID(0x0);                                                   //ID always = 0 
+  msgData.set_byte(0,NTMFunction);                                             //Function =0x01.Go Operational , 0x02.Stop, 0x80.Go Pre-operational, 0x81.Reset node, 0x82.Reset communication
+  msgData.set_byte(1,nodeID);                                                  //Target node =0.Every node, 1..127.Specific node  
+  msgData.set_word(1,0x0000);
+  msgData.set_word(2,0x0000);
+  msgData.set_word(3,0x0000);  
+  sendMsg(&msgData);
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : send the sync message on the bus
+//  Notes       :
+//******************************************************************************
+void CANOpenNTM::sendSyncMsg( void)
+{
+hw_can_msg_t msgData;  
+  msgData.DLR = 0; 
+  msgData.id.set_stdID(0x080);                                                 //0x80=SYNC Message  
+  sendMsg(&msgData);
+}  

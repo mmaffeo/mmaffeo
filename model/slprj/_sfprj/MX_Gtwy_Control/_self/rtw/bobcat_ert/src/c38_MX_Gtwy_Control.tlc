@@ -1,0 +1,95 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   11 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c38_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c38_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ECU"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ECU"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_INACTIVE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.INACTIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PREHEAT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.PREHEAT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "cycleCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "cycleCount"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "glowPlugAfterGlowDone"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "glowPlugAfterGlowDone"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "state_CrankTimerExpired"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "state_CrankTimerExpired"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCrank"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCrank"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -1,0 +1,102 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c28_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_VALUE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "VALUE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ERROR_STATE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SHUTDOWN"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE.NORMAL.SHUTDOWN"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_EXTREMELY_HIGH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE.NORMAL.EXTREMELY_HIGH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HIGH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE.NORMAL.HIGH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE.NORMAL.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_COLD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE.NORMAL.COLD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OORH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE.OORH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OORL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ERROR_STATE.OORL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

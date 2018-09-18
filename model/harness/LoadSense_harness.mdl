@@ -1,0 +1,3387 @@
+Model {
+  Name			  "LoadSense_harness"
+  Version		  7.7
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.402"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PostLoadFcn		  "cd '..';\nPostLoadFcn;\ncd 'harness';"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  InitFcn		  "if signalbuilder('LoadSense_harness/Signal_Builder','activegroup') == 1\n  CD_LOADSENSE_FUNCTION.DataTyp"
+  "e = 'uint8';\n  CD_LOADSENSE_FUNCTION.Value = 0;\n  CD_LOADSENSE_REFERENCE.DataType = 'uint8';\n  CD_LOADSENSE_REFER"
+  "ENCE.Value = 1;\nelseif signalbuilder('LoadSense_harness/Signal_Builder','activegroup') == 2\n  CD_LOADSENSE_FUNCTIO"
+  "N.DataType = 'uint8';\n  CD_LOADSENSE_FUNCTION.Value = 255;\n  CD_LOADSENSE_REFERENCE.DataType = 'uint8';\n  CD_LOAD"
+  "SENSE_REFERENCE.Value = 1;\nelseif signalbuilder('LoadSense_harness/Signal_Builder','activegroup') == 3\n  CD_LOADSE"
+  "NSE_FUNCTION.DataType = 'uint8';\n  CD_LOADSENSE_FUNCTION.Value = 255;\n  CD_LOADSENSE_REFERENCE.DataType = 'uint8';"
+  "\n  CD_LOADSENSE_REFERENCE.Value = 2;\nelseif signalbuilder('LoadSense_harness/Signal_Builder','activegroup') == 4\n"
+  "  CD_LOADSENSE_FUNCTION.DataType = 'uint8';\n  CD_LOADSENSE_FUNCTION.Value = 0;\n  CD_LOADSENSE_REFERENCE.DataType ="
+  " 'uint8';\n  CD_LOADSENSE_REFERENCE.Value = 2;\nend"
+  Created		  "Wed Nov 09 14:07:37 2005"
+  Creator		  "smindema"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "zdoll"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Apr 18 11:57:47 2012"
+  RTWModifiedTimeStamp	  256490247
+  ModelVersionFormat	  "1.%<AutoIncrement:402>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  on
+  SampleTimeAnnotations	  on
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  off
+  ShowSignalResolutionIcons off
+  ShowViewerIcons	  off
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  on
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dcmw"
+  CovHTMLOptions	  " -aTS=1 -bRG=1 -bTC=1 -hTR=0 -nFC=0 -scm=1 -bcm=1 -xEv=0"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  on
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.0"
+	  StartTime		  "0.0"
+	  StopTime		  "200"
+	  AbsTol		  "auto"
+	  FixedStep		  ".01"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  Array {
+	    Type		    "Struct"
+	    Dimension		    1
+	    MATStruct {
+	      SampleTime	      "0.01"
+	      Offset		      "0"
+	      Priority		      [1.0]
+	    }
+	    PropName		    "SampleTimeProperty"
+	  }
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.0"
+	  BlockReduction	  off
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  off
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  on
+	  DataBitsets		  on
+	  UseTempVars		  on
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection on
+	  EfficientFloat2IntCast  on
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "none"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "warning"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  16
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  16
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Floor"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  16
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Motorola HC12"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Single"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.0"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  on
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Real-Time Workshop Embedded Coder (no auto configuration)"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  on
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomHeaderCode	  "#include \"cpp_req_defines.h\"\n#include \"hw_fin.h\"\n#include \"cdata.h\""
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  on
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "UpperCase"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  off
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     off
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      off
+	      SupportComplex	      off
+	      PurelyIntegerCode	      on
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"Hierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "gen_rtw_req_defines_h.tlc"
+	      CoverageDialogOpen      "off"
+	      ModuleNamingRule	      "Unspecified"
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "InSeparateSourceFile"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "InSeparateHeaderFile"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      GRTInterface	      off
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 280, 135, 1160, 765 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Assertion
+      StopWhenAssertionFail   on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      PropagateVarSize	      "Only when enabling"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      DataPortOrder	      "One-based contiguous"
+      Inputs		      "3"
+      DataPortIndices	      "{1,2,3}"
+      DataPortForDefault      "Last data port"
+      DiagnosticForDefault    "Error"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "LoadSense_harness"
+    Location		    [11, 83, 1909, 1033]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "191"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "89"
+    Block {
+      BlockType		      Assertion
+      Name		      "Assertion"
+      SID		      "1"
+      Position		      [930, 192, 990, 238]
+      Enabled		      on
+      StopWhenAssertionFail   off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion"
+      SID		      "2"
+      Position		      [215, 122, 285, 138]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      OutDataTypeStr	      "uint16"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      SampleTime	      "srate"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion1"
+      SID		      "29"
+      Position		      [215, 92, 285, 108]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      OutDataTypeStr	      "uint8"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      SampleTime	      "srate"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion2"
+      SID		      "86"
+      Position		      [215, 152, 285, 168]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      OutDataTypeStr	      "uint16"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      SampleTime	      "srate"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion3"
+      SID		      "87"
+      Position		      [215, 182, 285, 198]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      OutDataTypeStr	      "uint16"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      SampleTime	      "srate"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Load_Sense"
+      SID		      "31"
+      Ports		      [4, 4]
+      Position		      [450, 42, 660, 158]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      SystemSampleTime	      "srate"
+      RTWSystemCode	      "Function"
+      RTWFcnNameOpts	      "Use subsystem name"
+      RTWFileNameOpts	      "User specified"
+      RTWFileName	      "mod_Inputs"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Load_Sense"
+	Location		[77, 210, 1753, 1128]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "state_System"
+	  SID			  "32"
+	  Position		  [55, 73, 85, 87]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ain_SensorSupply2"
+	  SID			  "33"
+	  Position		  [55, 163, 85, 177]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ain_SensorSupply1"
+	  SID			  "34"
+	  Position		  [55, 333, 85, 347]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ain_LoadSense"
+	  SID			  "35"
+	  Position		  [55, 248, 85, 262]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Constant"
+	  SID			  "36"
+	  Ports			  [1, 1]
+	  Position		  [305, 71, 405, 89]
+	  ShowName		  off
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  "=="
+	  const			  "SYS_NORMAL"
+	  LogicOutDataTypeMode	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "CompareToConstant1"
+	  SID			  "37"
+	  Ports			  [1, 1]
+	  Position		  [305, 37, 405, 53]
+	  ShowName		  off
+	  LibraryVersion	  "1.236"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  "~="
+	  const			  "NON_FUNCTIONAL"
+	  LogicOutDataTypeMode	  "boolean"
+	  ZeroCross		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "38"
+	  Position		  [35, 37, 255, 53]
+	  ShowName		  off
+	  Value			  "CD_LOADSENSE_FUNCTION"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LP_Filter"
+	  SID			  "39"
+	  Ports			  [1, 1]
+	  Position		  [210, 237, 315, 273]
+	  LibraryVersion	  "1.110"
+	  SourceBlock		  "MX_Library/LP_Filter"
+	  SourceType		  ""
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  GAIN			  "CD_LOADSENSE_FILTER_GAIN"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Load_Sense"
+	  SID			  "40"
+	  Ports			  [3, 4, 1]
+	  Position		  [460, 126, 610, 379]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Load_Sense"
+	    Location		    [442, 298, 1947, 999]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ain_SensorSupply2"
+	      SID		      "41"
+	      Position		      [95, 138, 125, 152]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ain_LoadSense"
+	      SID		      "42"
+	      Position		      [95, 88, 125, 102]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ain_SensorSupply1"
+	      SID		      "43"
+	      Position		      [95, 188, 125, 202]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "44"
+	      Ports		      []
+	      Position		      [527, 25, 547, 45]
+	      StatesWhenEnabling      "reset"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Pressure_Monitor"
+	      SID		      "45"
+	      RequirementInfo	      "{} %GIDa_315e9fa6_e0dd_4ab8_9620_290a06eaf03d"
+	      Ports		      [1, 1]
+	      Position		      [600, 161, 790, 229]
+	      ErrorFcn		      "Stateflow.Translate.translate"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskSelfModifiable      on
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', '"
+	      "sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Pressure_Monitor"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"13"
+		Block {
+		  BlockType		  Inport
+		  Name			  "volts_LoadSense"
+		  SID			  "45::1"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  "45::11"
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  S-Function
+		  Name			  " SFunction "
+		  SID			  "45::10"
+		  Tag			  "Stateflow S-Function LoadSense_harness 4"
+		  Ports			  [1, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  Parameters		  "CD_LOADSENSE_DB,CD_LOADSENSE_OORH,CD_LOADSENSE_OORL,NORMAL,OORH,OORL"
+		  PortCounts		  "[1 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "state_LoadSense"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  "45::13"
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "state_LoadSense"
+		  SID			  "45::5"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "volts_LoadSense"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "state_LoadSense"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "state_LoadSense"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Pressure_Transform"
+	      SID		      "46"
+	      Ports		      [3, 3]
+	      Position		      [245, 67, 440, 223]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Pressure_Transform"
+		Location		[84, 556, 1696, 877]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "ain_LoadSense"
+		  SID			  "47"
+		  Position		  [55, 43, 85, 57]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "ain_SensorSupply2"
+		  SID			  "48"
+		  Position		  [55, 183, 85, 197]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "ain_SensorSupply1"
+		  SID			  "49"
+		  Position		  [55, 213, 85, 227]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Calculated_Pressure"
+		  SID			  "50"
+		  RequirementInfo	  "{} %GIDa_5f6cff1e_8808_4cda_8d6d_a04e247d5c20"
+		  Ports			  [2, 1]
+		  Position		  [645, 39, 740, 86]
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  System {
+		    Name		    "Calculated_Pressure"
+		    Location		    [680, 475, 1645, 863]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ain_LoadSense"
+		    SID			    "51"
+		    Position		    [35, 73, 65, 87]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ain_SensorSupply"
+		    SID			    "52"
+		    Position		    [35, 138, 65, 152]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "53"
+		    Position		    [245, 209, 410, 231]
+		    ShowName		    off
+		    Value		    "CD_LOADSENSE_OFFSET"
+		    OutDataTypeStr	    "uint16"
+		    }
+		    Block {
+		    BlockType		    DataTypeConversion
+		    Name		    "Data Type Conversion1"
+		    SID			    "54"
+		    Position		    [700, 104, 755, 126]
+		    ShowName		    off
+		    OutDataTypeStr	    "uint16"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    DataTypeConversion
+		    Name		    "Data Type Conversion2"
+		    SID			    "55"
+		    Position		    [450, 209, 505, 231]
+		    ShowName		    off
+		    OutDataTypeStr	    "int16"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    DataTypeConversion
+		    Name		    "Data Type Conversion3"
+		    SID			    "56"
+		    Position		    [450, 104, 505, 126]
+		    ShowName		    off
+		    OutDataTypeStr	    "int16"
+		    RndMeth		    "Floor"
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Gain"
+		    SID			    "57"
+		    Position		    [200, 60, 240, 100]
+		    ShowName		    off
+		    AttributesFormatString  "Gain = %<Gain>"
+		    Gain		    "CD_LOADSENSE_GAIN"
+		    ParamDataTypeStr	    "uint16"
+		    OutMin		    "0"
+		    OutMax		    "1024*8000"
+		    OutDataTypeStr	    "fixdt(0,32,9)"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    SID			    "58"
+		    Ports		    [2, 1]
+		    Position		    [345, 48, 390, 177]
+		    ShowName		    off
+		    Inputs		    "*/"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    LockScale		    on
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Saturate
+		    Name		    "Saturation"
+		    SID			    "59"
+		    Ports		    [1, 1]
+		    Position		    [625, 100, 655, 130]
+		    ShowName		    off
+		    AttributesFormatString  "Upper Limit = %<UpperLimit>\\nLower Limit = %<LowerLimit>"
+		    InputPortMap	    "u0"
+		    UpperLimit		    "8000"
+		    LowerLimit		    "0"
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum"
+		    SID			    "60"
+		    Ports		    [2, 1]
+		    Position		    [545, 105, 565, 125]
+		    ShowName		    off
+		    IconShape		    "round"
+		    Inputs		    "|+-"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "int16"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "psi_Loadsense"
+		    SID			    "61"
+		    Position		    [855, 108, 885, 122]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "Saturation"
+		    SrcPort		    1
+		    DstBlock		    "Data Type Conversion1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "ain_LoadSense"
+		    SrcPort		    1
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Gain"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "ain_SensorSupply"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    DstBlock		    "Data Type Conversion3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Data Type Conversion2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    DstBlock		    "Saturation"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Data Type Conversion1"
+		    SrcPort		    1
+		    DstBlock		    "psi_Loadsense"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Data Type Conversion2"
+		    SrcPort		    1
+		    Points		    [45, 0]
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Data Type Conversion3"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		    Annotation {
+		    Name		    "Pressure = Gain * Loadsense_A2D/VRef_A2D - Offset"
+		    Position		    [376, 25]
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  SID			  "62"
+		  RequirementInfo	  "{} %GIDa_1fbd377e_ee87_46ea_8419_8a173a96b5fc"
+		  Position		  [15, 152, 195, 168]
+		  ShowName		  off
+		  Value			  "CD_LOADSENSE_REFERENCE"
+		  OutDataTypeStr	  "uint8"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  SID			  "63"
+		  Position		  [800, 99, 860, 141]
+		  ShowName		  off
+		  AttributesFormatString  "Gain = %<Gain>"
+		  Gain			  "fi(1/14.5,0,16,18)"
+		  ParamDataTypeStr	  "fixdt(0,16,18)"
+		  OutDataTypeStr	  "fixdt(0,16,8)"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  MultiPortSwitch
+		  Name			  "Multiport\nSwitch"
+		  SID			  "64"
+		  Ports			  [3, 1]
+		  Position		  [245, 145, 280, 235]
+		  ShowName		  off
+		  Inputs		  "2"
+		  zeroidx		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Sensor_Corrected_Volts"
+		  SID			  "65"
+		  RequirementInfo	  "{} %GIDa_801eeb47_ed14_4091_9f9a_39536eca8a32"
+		  Ports			  [2, 1]
+		  Position		  [645, 154, 740, 201]
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  System {
+		    Name		    "Sensor_Corrected_Volts"
+		    Location		    [529, 612, 1494, 1000]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ain_LoadSense"
+		    SID			    "66"
+		    Position		    [30, 73, 60, 87]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ain_SensorSupply"
+		    SID			    "67"
+		    Position		    [30, 138, 60, 152]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    DataTypeConversion
+		    Name		    "Data Type Conversion2"
+		    SID			    "68"
+		    Position		    [465, 104, 520, 126]
+		    ShowName		    off
+		    OutDataTypeStr	    "uint8"
+		    RndMeth		    "Floor"
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Gain"
+		    SID			    "69"
+		    Position		    [190, 60, 255, 100]
+		    ShowName		    off
+		    AttributesFormatString  "Gain = %<Gain>"
+		    Gain		    "CD_LOADSENSE_VOLTS_GAIN"
+		    ParamDataTypeStr	    "fixdt(0,16,9)"
+		    OutMax		    "1024*100"
+		    OutDataTypeStr	    "fixdt(0,32,15)"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    SID			    "70"
+		    Ports		    [2, 1]
+		    Position		    [345, 48, 390, 177]
+		    ShowName		    off
+		    Inputs		    "*/"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    LockScale		    on
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Voltsx10"
+		    SID			    "71"
+		    Position		    [705, 108, 735, 122]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "ain_LoadSense"
+		    SrcPort		    1
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Gain"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "ain_SensorSupply"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    DstBlock		    "Data Type Conversion2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Data Type Conversion2"
+		    SrcPort		    1
+		    DstBlock		    "Voltsx10"
+		    DstPort		    1
+		    }
+		    Annotation {
+		    Name		    "Voltsx10 = Gain * LoadSense_A2D/VRef_A2D"
+		    Position		    [226, 35]
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "psi_LoadSense"
+		  SID			  "72"
+		  Position		  [960, 58, 990, 72]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bar_LoadSense"
+		  SID			  "73"
+		  Position		  [960, 113, 990, 127]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "volts_LoadSense"
+		  SID			  "74"
+		  Position		  [960, 173, 990, 187]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Calculated_Pressure"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    DstBlock		    "psi_LoadSense"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 55]
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "ain_LoadSense"
+		  SrcPort		  1
+		  Points		  [310, 0]
+		  Branch {
+		    Points		    [0, 115]
+		    DstBlock		    "Sensor_Corrected_Volts"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Calculated_Pressure"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sensor_Corrected_Volts"
+		  SrcPort		  1
+		  DstBlock		  "volts_LoadSense"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Multiport\nSwitch"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "ain_SensorSupply2"
+		  SrcPort		  1
+		  DstBlock		  "Multiport\nSwitch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "ain_SensorSupply1"
+		  SrcPort		  1
+		  DstBlock		  "Multiport\nSwitch"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Multiport\nSwitch"
+		  SrcPort		  1
+		  Points		  [270, 0]
+		  Branch {
+		    DstBlock		    "Sensor_Corrected_Volts"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, -115]
+		    DstBlock		    "Calculated_Pressure"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "bar_LoadSense"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "psi_LoadSense"
+	      SID		      "75"
+	      Position		      [955, 88, 985, 102]
+	      IconDisplay	      "Port number"
+	      OutputWhenDisabled      "reset"
+	      InitialOutput	      "[0]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "bar_LoadSense"
+	      SID		      "76"
+	      Position		      [955, 138, 985, 152]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutputWhenDisabled      "reset"
+	      InitialOutput	      "[0]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "state_LoadSense"
+	      SID		      "77"
+	      Position		      [955, 188, 985, 202]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutputWhenDisabled      "reset"
+	      InitialOutput	      "[8]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "volts_LoadSense"
+	      SID		      "78"
+	      Position		      [955, 253, 985, 267]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutputWhenDisabled      "reset"
+	      InitialOutput	      "[0]"
+	    }
+	    Line {
+	      SrcBlock		      "Pressure_Transform"
+	      SrcPort		      3
+	      Points		      [85, 0]
+	      Branch {
+		DstBlock		"Pressure_Monitor"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 65]
+		DstBlock		"volts_LoadSense"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Pressure_Transform"
+	      SrcPort		      1
+	      DstBlock		      "psi_LoadSense"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Pressure_Monitor"
+	      SrcPort		      1
+	      DstBlock		      "state_LoadSense"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ain_LoadSense"
+	      SrcPort		      1
+	      DstBlock		      "Pressure_Transform"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ain_SensorSupply2"
+	      SrcPort		      1
+	      DstBlock		      "Pressure_Transform"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "ain_SensorSupply1"
+	      SrcPort		      1
+	      DstBlock		      "Pressure_Transform"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Pressure_Transform"
+	      SrcPort		      2
+	      DstBlock		      "bar_LoadSense"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator1"
+	  SID			  "79"
+	  Ports			  [2, 1]
+	  Position		  [460, 29, 490, 96]
+	  ShowName		  off
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "psi_LoadSense"
+	  SID			  "80"
+	  Position		  [915, 148, 945, 162]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_LoadSense"
+	  SID			  "81"
+	  Position		  [915, 278, 945, 292]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "volts_LoadSense"
+	  SID			  "82"
+	  Position		  [915, 343, 945, 357]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "bar_LoadSense"
+	  SID			  "83"
+	  Position		  [915, 213, 945, 227]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "ain_SensorSupply2"
+	  SrcPort		  1
+	  DstBlock		  "Load_Sense"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ain_LoadSense"
+	  SrcPort		  1
+	  DstBlock		  "LP_Filter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Load_Sense"
+	  SrcPort		  1
+	  DstBlock		  "psi_LoadSense"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Load_Sense"
+	  SrcPort		  3
+	  DstBlock		  "state_LoadSense"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ain_SensorSupply1"
+	  SrcPort		  1
+	  DstBlock		  "Load_Sense"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Load_Sense"
+	  SrcPort		  4
+	  DstBlock		  "volts_LoadSense"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "state_System"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Constant"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CompareToConstant1"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "CompareToConstant1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Constant"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  DstBlock		  "Load_Sense"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "Load_Sense"
+	  SrcPort		  2
+	  DstBlock		  "bar_LoadSense"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LP_Filter"
+	  SrcPort		  1
+	  DstBlock		  "Load_Sense"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Name		      "Relational\nOperator"
+      SID		      "3"
+      Ports		      [2, 1]
+      Position		      [830, 197, 860, 228]
+      Operator		      "=="
+      InputSameDT	      off
+      OutDataTypeStr	      "boolean"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      SID		      "4"
+      Ports		      [4]
+      Position		      [790, 35, 900, 165]
+      Floating		      off
+      Location		      [505, 469, 1269, 991]
+      Open		      off
+      NumInputPorts	      "4"
+      List {
+	ListType		AxesTitles
+	axes1			"8 is normal, 4 is IN_ERROR"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+      }
+      YMin		      "7.6~-5~-5~-5"
+      YMax		      "8.4~5~5~5"
+      SaveToWorkspace	      on
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Signal_Builder"
+      SID		      "9"
+      Tag		      "STV Subsys"
+      Ports		      [0, 5]
+      Position		      [25, 86, 160, 234]
+      CopyFcn		      "sigbuilder_block('copy');"
+      DeleteFcn		      "sigbuilder_block('delete');"
+      LoadFcn		      "sigbuilder_block('load');"
+      ModelCloseFcn	      "sigbuilder_block('modelClose');"
+      PreSaveFcn	      "sigbuilder_block('preSave');"
+      StartFcn		      "sigbuilder_block('start');"
+      StopFcn		      "sigbuilder_block('stop');"
+      NameChangeFcn	      "sigbuilder_block('namechange');"
+      ClipboardFcn	      "sigbuilder_block('clipboard');"
+      OpenFcn		      "sigbuilder_block('open',[6 28.5 1428 808.5 ]);"
+      CloseFcn		      "sigbuilder_block('close');"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      on
+      MaskType		      "Sigbuilder block"
+      MaskDescription	      "Sigbuilder GUI"
+      MaskInitialization      "if ~strcmp(get_param(bdroot(gcbh),'SimulationStatus'),'stopped') tuvar = sigbuilder_blo"
+      "ck('maskInit'); end"
+      MaskDisplay	      "plot(0,0,100,100,[10,10,40,40,10],[80,20,20,80,80],[40,10],[50,50], [40,27,10],[65,72,56],[40"
+      ",25,25,10],[28,28,43,43]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "port"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Signal_Builder"
+	Location		[480, 85, 980, 386]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "10"
+	  Tag			  "STV Demux"
+	  Ports			  [1, 5]
+	  Position		  [150, 46, 160, 624]
+	  Outputs		  "5"
+	}
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "FromWs"
+	  SID			  "11"
+	  Tag			  "STV FromWs"
+	  Position		  [30, 300, 115, 350]
+	  VariableName		  "tuvar"
+	  SampleTime		  "0"
+	  ZeroCross		  on
+	  SigBuilderData	  "DataTag0"
+	  VnvData		  "DataTag1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "SystemState"
+	  SID			  "28"
+	  Tag			  "STV Outport"
+	  Position		  [280, 30, 300, 40]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "SensorSupply2"
+	  SID			  "88"
+	  Tag			  "STV Outport"
+	  Position		  [280, 60, 300, 70]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "SensorSupply1"
+	  SID			  "84"
+	  Tag			  "STV Outport"
+	  Position		  [280, 90, 300, 100]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "LoadSense"
+	  SID			  "89"
+	  Tag			  "STV Outport"
+	  Position		  [280, 120, 300, 130]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "LoadSenseState"
+	  SID			  "13"
+	  Tag			  "STV Outport"
+	  Position		  [280, 150, 300, 160]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "FromWs"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "SystemState"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "SensorSupply2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "SensorSupply1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  DstBlock		  "LoadSense"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  DstBlock		  "LoadSenseState"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      2
+      DstBlock		      "Data Type Conversion"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Relational\nOperator"
+      SrcPort		      1
+      DstBlock		      "Assertion"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      5
+      DstBlock		      "Relational\nOperator"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      1
+      DstBlock		      "Data Type Conversion1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Load_Sense"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Load_Sense"
+      SrcPort		      2
+      Points		      [65, 0]
+      Branch {
+	DstBlock		"Scope"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 120]
+	DstBlock		"Relational\nOperator"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Load_Sense"
+      SrcPort		      3
+      DstBlock		      "Scope"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Load_Sense"
+      SrcPort		      4
+      DstBlock		      "Scope"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      3
+      DstBlock		      "Data Type Conversion2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion1"
+      SrcPort		      1
+      Points		      [85, 0; 0, -45]
+      DstBlock		      "Load_Sense"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion"
+      SrcPort		      1
+      Points		      [105, 0; 0, -45]
+      DstBlock		      "Load_Sense"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion2"
+      SrcPort		      1
+      Points		      [125, 0; 0, -45]
+      DstBlock		      "Load_Sense"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion3"
+      SrcPort		      1
+      Points		      [145, 0]
+      DstBlock		      "Load_Sense"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      4
+      DstBlock		      "Data Type Conversion3"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    2 0   8    (     @         %    \"     $    !     0         %  0 $0    $   #,    =F5R:6"
+    "9Y0FQK4&%T:',   !V97)I9GE\";&M(86YD;&5S '9N=DUG<DED>           86-T:79E1W)O=7        !R97%$:7-P4')C;G0      &)L:T1"
+    "I<W!-;V1E        9W)O=7!#;G0           !G<F]U<%)E<4-N=        &=R;W5P1$]/4E-I9       ;6]D96Q(              !B;&]C:"
+    "T@              &]V97)I9&53971T:6YG<P        X   !P    !@    @    !          4    (     0    $    !          X   !"
+    "     !@    @    $          4    (     0    H    !         !     *    +T%S<V5R=&EO;@        X    X    !@    @    & "
+    "         4    (     0    $    !          D    (           ($$ .    .     8    (    !@         %    \"     $    !  "
+    "   0         )    \"            / _#@   #@    &    \"     8         !0    @    !     0    $         \"0    @      "
+    "      00 X    X    !@    @    &          4    (     0    $    !          D    (    _S\"-0\\W4UC\\.    .     8    ("
+    "    !@         %    \"     $    !     0         )    \"            /\"_#@   #@    &    \"     8         !0    @   "
+    " !     0    $         \"0    @            00 X    P    !@    @    &          4    (               !          D    "
+    "     #@   #     &    \"     8         !0    @               $         \"0         .    .     8    (    !@         "
+    "%    \"     $    !     0         )    \"            @A #@   #@    &    \"     8         !0    @    !     0    $   "
+    "      \"0    @         $(!?0 X   !0    !@    @    &          4    (     0    0    !          D    @               "
+    "                                "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    N!P   8    (     @         %    \"     $    !     0         %  0 %@    $   \"P    9W)I9"
+    "%-E='1I;F<              &-H86YN96QS                  !A>&5S                        8V]M;6]N                     &1"
+    "A=&%3970                   !D871A4V5T261X                :7-697)I9FEC871I;VY6:7-I8FQE '-B;V)J                     "
+    "  .    ,     8    (    !          %    \"     $    \"     0         0  ( ;VX   X    H#   !@    @    \"          4 "
+    "   (     0    4    !          4 !  *     0   %H   !S=&5P6       <W1E<%D      'E-:6X       !Y36%X        8V]L;W(   "
+    "   &QI;F53='EL90!L:6YE5VED=&@ ;&%B96P      &]U=$EN9&5X           .    .     8    (    !@         %    \"     $    "
+    "!     0         )    \"               #@   #@    &    \"     8         !0    @    !     0    $         \"0    @   "
+    "            X    X    !@    @    &          4    (     0    $    !          D    (            \\/\\.    .     8   "
+    " (    !@         %    \"     $    !     0         )    \"            /!_#@   $@    &    \"     8         !0    @  "
+    "  !     P    $         \"0   !@                                 \\#\\.    ,     8    (    !          %    \"     $"
+    "    !     0         0  $ +0    X    X    !@    @    &          4    (     0    $    !          D    (            ^"
+    "#\\.    0     8    (    !          %    \"     $    +     0         0    \"P   %-Y<W1E;5-T871E       .    .     8 "
+    "   (    !@         %    \"     $    !     0         )    \"            / _#@   #@    &    \"     8         !0    @"
+    "    !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $    !          D "
+    "   (    FIF9F9F9N3\\.    .     8    (    !@         %    \"     $    !     0         )    \"            /#_#@   #@"
+    "    &    \"     8         !0    @    !     0    $         \"0    @           #P?PX   !(    !@    @    &          4"
+    "    (     0    ,    !          D    8    0C[HV:SZZC\\                     #@   #     &    \"     0         !0    @"
+    "    !     0    $         $  ! \"T    .    .     8    (    !@         %    \"     $    !     0         )    \"     "
+    "       /@_#@   $     &    \"     0         !0    @    !    #0    $         $     T   !396YS;W)3=7!P;'DR    #@   #@"
+    "    &    \"     8         !0    @    !     0    $         \"0    @             0 X    X    !@    @    &          4"
+    "    (     0    $    !          D    (               .    .     8    (    !@         %    \"     $    !     0      "
+    "   )    \"               #@   #@    &    \"     8         !0    @    !     0    $         \"0    @           #P_PX"
+    "    X    !@    @    &          4    (     0    $    !          D    (            \\'\\.    2     8    (    !@     "
+    "    %    \"     $    #     0         )    &    *KQTDUB$- _          \"J\\=)-8A#0/PX    P    !@    @    $          "
+    "4    (     0    $    !         !   0 M    #@   #@    &    \"     8         !0    @    !     0    $         \"0    "
+    "@           #X/PX   !     !@    @    $          4    (     0    T    !         !     -    4V5N<V]R4W5P<&QY,0    X "
+    "   X    !@    @    &          4    (     0    $    !          D    (            \"$ .    .     8    (    !@       "
+    "  %    \"     $    !     0         )    \"               #@   #@    &    \"     8         !0    @    !     0    $ "
+    "        \"0    @               X    X    !@    @    &          4    (     0    $    !          D    (            \\"
+    "/\\.    .     8    (    !@         %    \"     $    !     0         )    \"            /!_#@   $@    &    \"     8"
+    "         !0    @    !     P    $         \"0   !@   !6?:ZV8G_O/UY+R <]F^L_,E4P*JD3D#\\.    ,     8    (    !      "
+    "    %    \"     $    !     0         0  $ +0    X    X    !@    @    &          4    (     0    $    !          D "
+    "   (            ^#\\.    0     8    (    !          %    \"     $    )     0         0    \"0   $QO861396YS90     "
+    "    .    .     8    (    !@         %    \"     $    !     0         )    \"            !! #@   #@    &    \"     "
+    "8         !0    @    !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $"
+    "    !          D    (               .    .     8    (    !@         %    \"     $    !     0         )    \"      "
+    "      /#_#@   #@    &    \"     8         !0    @    !     0    $         \"0    @           #P?PX   !(    !@    @"
+    "    &          4    (     0    ,    !          D    8    V(%S1I3VYC\\          -B!<T:4]N8_#@   #     &    \"     0"
+    "         !0    @    !     0    $         $  ! \"T    .    .     8    (    !@         %    \"     $    !     0     "
+    "    )    \"            /@_#@   $     &    \"     0         !0    @    !    #@    $         $     X   !,;V%D4V5N<V5"
+    "3=&%T90  #@   #@    &    \"     8         !0    @    !     0    $         \"0    @            40 X   \"P!@  !@    "
+    "@    \"          4    (     0    4    !          4 !  +     0   #<   !C:&%N;F5L<P   'E,:6T         ;&%B96Q0;W,   !"
+    "L86)E;$@      &QA8F5L4&%T8V@   X    X    !@    @    &          4    (     0    $    !          D    (            %"
+    "$ .    0     8    (    !@         %    \"     $    \"     0         )    $            !Q         .$ .    ,     8  "
+    "  (    !          %    \"     $    \"     0         0  ( 5$P   X    X    !@    @    &          4    (     0    $  "
+    "  !          D    (        @ 2P>$ .    .     8    (    !@         %    \"     $    !     0         )    \"        "
+    "( $H'A #@   #@    &    \"     8         !0    @    !     0    $         \"0    @            00 X   !     !@    @  "
+    "  &          4    (     0    (    !          D    0            \\+\\        J0 X    P    !@    @    $          4  "
+    "  (     0    (    !         !   @!43   #@   #@    &    \"     8         !0    @    !     0    $         \"0    @  "
+    "     \" !/!X0 X    X    !@    @    &          4    (     0    $    !          D    (        @ 3@>$ .    .     8   "
+    " (    !@         %    \"     $    !     0         )    \"             A #@   $     &    \"     8         !0    @  "
+    "  !     @    $         \"0   !            #POP       \"I #@   #     &    \"     0         !0    @    !     @    $ "
+    "        $  \" %1,   .    .     8    (    !@         %    \"     $    !     0         )    \"        ( $,'E #@   #@"
+    "    &    \"     8         !0    @    !     0    $         \"0    @       \" !\"!Y0 X    X    !@    @    &         "
+    " 4    (     0    $    !          D    (             $ .    0     8    (    !@         %    \"     $    \"     0   "
+    "      )    $            /\"_        *D .    ,     8    (    !          %    \"     $    \"     0         0  ( 5$P "
+    "  X    X    !@    @    &          4    (     0    $    !          D    (        @ 1P>4 .    .     8    (    !@    "
+    "     %    \"     $    !     0         )    \"        ( $8'E #@   #@    &    \"     8         !0    @    !     0   "
+    " $         \"0    @           #P/PX   !     !@    @    &          4    (     0    (    !          D    0    FIF9F9"
+    "F9N;^:F9F9F9GQ/PX    P    !@    @    $          4    (     0    (    !         !   @!43   #@   #@    &    \"     8"
+    "         !0    @    !     0    $         \"0    @       \" !+!Y0 X    X    !@    @    &          4    (     0    $"
+    "    !          D    (        @ 2@>4 .    : (   8    (     @         %    \"     $    !     0         %  0 #@    $ "
+    "  !B    9&ES<%1I;64       !D:7-P36]D90       &UI;E1I;64         ;6%X5&EM90        !A9G1E<D9I;F%L4W1R '-A;7!L951I;6"
+    "4     >F5R;T-R;W-S               .    0     8    (    !@         %    \"     $    \"     0         )    $         "
+    "              :4 .    .     8    (    !@         %    \"     $    !     0         )    \"            / _#@   #@   "
+    " &    \"     8         !0    @    !     0    $         \"0    @               X    X    !@    @    &          4   "
+    " (     0    $    !          D    (            :4 .    0     8    (    !          %    \"     $    +     0         "
+    "0    \"P   $5X=')A<&]L871E       .    .     8    (    !@         %    \"     $    !     0         )    \"         "
+    "      #@   #     &    \"     0         !0    @    !     @    $         $  \" &]N   .    , 4   8    (     @        "
+    " %    \"     $    $     0         %  0 #@    $    X    86-T:79E1&ES<$ED> !T:6UE4F%N9V4      &YA;64             9&E"
+    "S<&QA>5)A;F=E   .    6     8    (    !@         %    \"     $    %     0         )    *            !1         $$  "
+    "       (0         !         \\#\\.    0     8    (    !@         %    \"     $    \"     0         )    $         "
+    "              :4 .    .     8    (    !          %    \"     $    '     0         0    !P   $=R;W5P(#$ #@   $     "
+    "&    \"     8         !0    @    !     @    $         \"0   !                       &E #@   %@    &    \"     8   "
+    "      !0    @    !    !0    $         \"0   \"@            40        !!         \"$          0        / _#@   $   "
+    "  &    \"     8         !0    @    !     @    $         \"0   !                       &E #@   #@    &    \"     0 "
+    "        !0    @    !    !P    $         $     <   !'<F]U<\" R  X   !     !@    @    &          4    (     0    (  "
+    "  !          D    0                      !I0 X   !8    !@    @    &          4    (     0    4    !          D    "
+    "H            %$         00         A          $        #P/PX   !     !@    @    &          4    (     0    (    ! "
+    "         D    0                      !I0 X    X    !@    @    $          4    (     0    <    !         !     '   "
+    " 1W)O=7 @,P .    0     8    (    !@         %    \"     $    \"     0         )    $                       :4 .   "
+    " 6     8    (    !@         %    \"     $    %     0         )    *            !1         $$         (0         ! "
+    "        \\#\\.    0     8    (    !@         %    \"     $    \"     0         )    $                       :4 .  "
+    "  .     8    (    !          %    \"     $    '     0         0    !P   $=R;W5P(#0 #@   $     &    \"     8       "
+    "  !0    @    !     @    $         \"0   !                       &E #@   #@    &    \"     8         !0    @    !  "
+    "   0    $         \"0    @            00 X    X    !@    @    &          4    (     0    $    !          D    (   "
+    "         \\#\\.    @     8    (    $0         !          $ ! !-0T]3 0    @   !3:6=3=6ET90X   !(    !@    @    -   "
+    "       4    (    !@    $    !          8    8        W0(    !     0    $    #    #@   +B(   &    \"     D         "
+    "!0    @    !    B(@   $          @   (B(     4E-      X   #HAP  !@    @    \"          4    (     0    $    !     "
+    "     4 !  %     0    4   !-0T]3      X   \"@AP  !@    @    1          $          0 $ $U#3U,!    #0   $9I;&57<F%P<&"
+    "5R7U\\    .    8(<   8    (     0         %    \"    $T    !     0         .    2 @   8    (    \"0         %    \""
+    "    !@(   !     0         \"    & @   (    -    L    /    #P    8 ,  $@'   8\"             !'<F]U<', 3F%M90!3:6=N8"
+    "6QS %A$871A %E$871A %-I9U-U:71E4VEG;F%L %5S97)$871A %1I;65286YG90!3:6=3=6ET94=R;W5P $%C=&EV95-I9VYA; !297%U:7)E;65"
+    "N=$EN9F\\ 06-T:79E1W)O=7  4VEG4W5I=&4                                    &                    \"0                 "
+    "   T                                               ,                    !    &0    (                    \"    !@  "
+    "  $                    #     0    $                    $     @    $                    %     P    $               "
+    "     &    !     $                    '    !0    (                    (    #     $                    )    !P    $ "
+    "                   *    \"     $                    +    \"0    $                    ,    \"@    $                "
+    "    -    \"P    (                    .    $@    $                    /    #0    $                    0    #@    $ "
+    "                   1    #P    $                    2    $     $                    3    $0    (                   "
+    " 4    &     $                    5    $P    $                    6    %     $                    7    %0    $     "
+    "               8    %@    $                    9    %P               @    $    !    2     P    !    20         #  "
+    "   @    $          P    $    0    \"     $    1     P    (    !     0    0    !     @    4    !     P    ,    \"  "
+    "   0    0    $     0    4    %     0    8    #     @    $    '    !     $    (    !0    $    )     P    (    !    "
+    "\"@    0    !    \"P    4    !    #     ,    \"     0    T    $     0    X    %     0    \\    #     @    $    2  "
+    "   P    $    B    \"     $    C     P    (    !    $P    0    !    %     4    !    %0    ,    \"     0   !8    $  "
+    "   0   !<    %     0   !@    #     @    $    9    !     $    :    !0    $    ;     P    (    !    '     0    !    "
+    "'0    4    !    '@    ,    \"     0   !\\    $     0   \"     %     0   \"$    #     @    $    D     P    $    T  "
+    "  \"     $    U     P    (    !    )0    0    !    )@    4    !    )P    ,    \"     0   \"@    $     0   \"D    %"
+    "     0   \"H    #     @    $    K    !     $    L    !0    $    M     P    (    !    +@    0    !    +P    4    ! "
+    "   ,     ,    \"     0   #$    $     0   #(    %     0   #,    #     @    $    V     P    $   !&    \"     $   !' "
+    "    P    (    !    -P    0    !    .     4    !    .0    ,    \"     0   #H    $     0   #L    %     0   #P    #  "
+    "   @    $    ]    !     $    ^    !0    $    _     P    (    !    0     0    !    00    4    !    0@    ,    \"   "
+    "  0   $,    $     0   $0    %     0   $4                                                                          "
+    "                                                                                                                  "
+    "                                                                                             #@         .    .    "
+    " 8    (    !          %    \"     $    '     0         0    !P   $=R;W5P(#$ #@   $     &    \"     0         !0   "
+    " @    !    \"P    $         $     L   !3>7-T96U3=&%T90      #@   %     &    \"     8         !0    @    !    !    "
+    " $         \"0   \"                       %E         64        !I0 X   !0    !@    @    &          4    (     0   "
+    " 0    !          D    @            \\#\\       #P/P                     .    0     8    (    !          %    \"   "
+    "  $    -     0         0    #0   %-E;G-O<E-U<'!L>3(    .    H     8    (    !@         %    \"     $    .     0   "
+    "      )    <                       /D         ^0        $Y         3D       (!60       @%9       ! 8$       $!@0  "
+    "      &1         9$       ,!G0       P&=         :4 .    H     8    (    !@         %    \"     $    .     0      "
+    "   )    <            !1         %$                              *$         H0        !1         %$                "
+    "              *$         H0        !1         %$ .    0     8    (    !          %    \"     $    -     0         "
+    "0    #0   %-E;G-O<E-U<'!L>3$    .    8 $   8    (    !@         %    \"     $    F     0         )    , $         "
+    "            )$         D0        #1         -$         ^0        #Y         1$        !$0        $E         24    "
+    "    !.0        $Y       \" 44       (!10        %1         5$       (!60       @%9       \" 6T       (!;0        %"
+    "Y         7D       $!@0       0&!       \" 84       (!A0       P&)       # 8D        !D0        &1       ! 94     "
+    "  $!E0       @&9       \" 9D       ,!G0       P&=         :4 .    8 $   8    (    !@         %    \"     $    F   "
+    "  0         )    , $          \"!         ($                              *$         H0        \"!         ($     "
+    "                         *$         H0        \"!         ($                              *$         H0        \"!"
+    "         ($          @                   *$         H0        \"!         ($                              *$      "
+    "   H0        \"!         ($                              *$         H0        \"!         ($ .    0     8    (    "
+    "!          %    \"     $    )     0         0    \"0   $QO861396YS90         .    , H   8    (    !@         %    "
+    "\"     $   !  0   0         )      H                     X#\\       #@/P       / _        \\#\\        $0         "
+    "1         $$         00        !)         $D         40        !1         &D         :0        \"1         )$     "
+    "    E0        \"5         )D         F0        \"E         *4         L0        \"Q         +4         M0        \""
+    "Y         +D       ( P0       @#!         -$         T0       @#1       \" -$         U0        #5       \" -D    "
+    "   ( V0        #A         .$       ( X0       @#A         .4         Y0       @#I       \" .D         ^0        #Y"
+    "       \" /D       ( ^0        #]         /T       $! 0       0$!         04        !!0       0$%       ! 04      "
+    " (!!0       @$%       ! 0D       $!\"0        $1         1$       $!$0       0$1       \" 1$       (!$0       0$5 "
+    "      ! 14        !&0        $9       ! 1D       $!&0       @$9       \" 1D       $!'0       0$=         24       "
+    " !)0       0$E       ! 24       (!)0       @$E       ! 2D       $!*0        $M         2T       $!+0       0$M    "
+    "   \" 2T       (!+0       0$Q       ! 3$        !.0        $Y       ! 3D       $!.0       @$Y       \" 3D       $!"
+    "/0       0$]         4$        !00       (%!        @4$       $!00       0%!       \"@4$       *!00       @%%     "
+    "  \" 44       *!10       H%%       # 44       ,!10       (%)        @4D       (!20       @%)       \"@4D       *!2"
+    "0       P%)       # 4D       \"!30       (%-         5$        !40       (%1        @5$       $!40       0%1      "
+    " \"@5$       *!40        %5         54       \"!50       (%5       ! 54       $!50       H%5       \"@54       (!6"
+    "0       @%9       \"@5D       *!60       P%9       # 5D       \"!70       (%=       \" 5T       (!70       H%=    "
+    "   \"@5T       ,!70       P%=        @6$       \"!80        %E         64       \"!90       (%E       ! 64       $"
+    "!90       H%E       \"@64        !:0        %I        @6D       \"!:0       0%I       ! 6D       *!:0       H%I   "
+    "    \" 6T       (!;0       H%M       \"@6T       ,!;0       P%M        @7$       \"!<0       @%Q       \" 7$      "
+    " *!<0       H%Q       # 7$       ,!<0       (%U        @74        !>0        %Y        @7D       \"!>0       0%Y  "
+    "     ! 7D       *!>0       H%Y         7T        !?0       (%]        @7T       $!?0       0%]       \"@7T       *"
+    "!?0       0&!       ! 8$       %!@0       4&!       !@8$       &!@0       D&!       \"08$       ,!@0       P&!    "
+    "   #08$       -!@0       X&!       #@8$       !!A0       $&%       \" 84       (!A0       D&%       \"084       *!"
+    "A0       H&%       #084       -!A0        &)         8D       !!B0       $&)        @8D       \"!B0       4&)     "
+    "  !08D       ,!B0       P&)       #08D       -!B0       X&)       #@8D       !!C0       $&-       ! 8T       $!C0 "
+    "      4&-       !08T       &!C0       8&-       \"08T       )!C0        &1         9$       !!D0       $&1        "
+    "@9$       \"!D0       4&1       !09$       (!D0       @&1       \"09$       )!D0       H&1       \"@9$       -!D0 "
+    "      T&1       ! 94       $!E0       4&5       !094       &!E0       8&5       \"094       )!E0       P&5       #"
+    " 94       -!E0       T&5       #@94       .!E0       $&9        09D       (!F0       @&9       \"09D       )!F0   "
+    "    H&9       \"@9D       -!F0       T&9         9T        !G0       $&=        09T       \"!G0       (&=       !0"
+    "9T       %!G0       P&=       # 9T       -!G0       T&=       #@9T       .!G0       $&A        0:$       $!H0     "
+    "  0&A       !0:$       %!H0       8&A       !@:$       )!H0       D&A         :4 .    , H   8    (    !@         %"
+    "    \"     $   !  0   0         )      H                                00        !!                              "
+    "!!         $$         H0        \"A         %$         40        \"A         *$                   \"A             "
+    "                 !!         $$                              $$         00        \"A         *$         40        "
+    "!1         *$         H0                   *$                              $$         00                          "
+    "    00        !!         *$         H0        !1         %$         H0        \"A                    H0           "
+    "                   00        !!                              !!         $$         H0        \"A         %$       "
+    "  40        \"A         *$                   \"A                              !!         $$                       "
+    "       $$         00        \"A         *$         40        !1         *$         H0                   *$        "
+    "                      $$         00                              00        !!         *$         H0        !1     "
+    "    %$         H0        \"A                    H0                              00        !!                      "
+    "        !!         $$         H0        \"A         %$         40        \"A         *$                   \"A     "
+    "                         !!         $$                              $$         00        \"A         *$         40"
+    "        !1         *$         H0                   *$                              $$         00                  "
+    "            00        !!         *$         H0        !1         %$         H0        \"A                    H0   "
+    "                           00        !!                              !!         $$         H0        \"A         %"
+    "$         40        \"A         *$                   \"A                              !!         $$               "
+    "               $$         00        \"A         *$         40        !1         *$         H0                   *$"
+    "                              $$         00                              00        !!         *$         H0       "
+    " !1         %$         H0        \"A                    H0                              00        !!              "
+    "                !!         $$         H0        \"A         %$         40        \"A         *$                   "
+    "\"A                              !!         $$                              $$         00        \"A         *$   "
+    "      40        !1         *$         H0                   *$                              $$         00          "
+    "                    00        !!         *$         H0        !1         %$         H0        \"A                 "
+    "   H0                              00        !!                              !!         $$         H0        \"A  "
+    "       %$         40        \"A         *$                   \"A                              !!         $$       "
+    "                       $$         00        \"A         *$         40        !1         *$         H0             "
+    "      *$                              $$         00                              00        !!         *$         H"
+    "0        !1         %$         H0        \"A                    H0                              00        !!      "
+    "                        !!         $$         H0        \"A         %$         40        \"A         *$           "
+    "        \"A                              !!         $$                              $$         00        \"A      "
+    "   *$         40        !1         *$         H0                   *$ .    0     8    (    !          %    \"     "
+    "$    .     0         0    #@   $QO861396YS95-T871E   .    4 (   8    (    !@         %    \"     $   !$     0     "
+    "    )    ( (             2.%Z%*Y' 4!<C\\+U*%P!0.Q1N!Z%ZPM         #$#V*%R/PO430        !1 ,S,S,S,S'T ]\"M>C<#T?0(_"
+    "\"]2A<#R) %*Y'X7H4(D!2N!Z%ZU$H0->C<#T*5RA >Q2N1^'Z*D         K0'L4KD?A^BU         +D#-S,S,S,PQ0(_\"]2A<SS% 2.%Z%*X"
+    "',T *UZ-P/0HS0\"E<C\\+U*#9 [%&X'H4K-D       ( W0       @#=         .4         Y0,W,S,S,S#M C\\+U*%S/.T!(X7H4K@<]0 "
+    "K7HW ]\"CU KD?A>A0.3T\"/PO4H7 ]/0       P$] X7H4KD?!3T I7(_\"]8A00)J9F9F9B5! UZ-P/0KW4$!(X7H4KO=00->C<#T*!U) 2.%Z%"
+    "*X'4D       &!20'$]\"M>C8%) *5R/PO4(4T\":F9F9F0E30->C<#T*=U- 2.%Z%*YW4T#7HW ]\"H=40$CA>A2NAU1       #@5$!Q/0K7H^!4"
+    "0\"E<C\\+UB%5 FIF9F9F)54#7HW ]\"O=50$CA>A2N]U5 \"M>C<#T*5T![%*Y'X0I70(_\"]2A<7U=       !@5T\"/PO4H7+]70       P%= "
+    ",S,S,S-S6$\"D<#T*UW-80%*X'H7KP5A P_4H7(_\"6$        !90        %E         :4 .    4 (   8    (    !@         %    "
+    "\"     $   !$     0         )    ( (          \"!         ($         V0        #9         ($         @0        #5 "
+    "        -4         @0        \"!         -4         U0        #9         -D         @0        \"!         -4      "
+    "   U0        \"!         ($         U0        #5         -D         V0        \"!         ($         U0        #5 "
+    "        ($         @0        #5         -4         V0        #9         ($         @0        #5         -4        "
+    " @0        \"!         -D         V0        \"!         ($         U0        #5         ($         @0        #9   "
+    "      -D         @0        \"!         -4         U0        \"!         ($         V0        #9         ($        "
+    " @0        #5         -4         @0        \"!         -4         U0        \"!         ($ .    6     8    (    #0"
+    "         %    \"     H    !     0         &    *        -T\"     0    4    #    !     4    &    !P    $    .    0 "
+    "    8    (    !@         %    \"     $    \"     0         )    $                       :4 .    .     8    (    ! "
+    "         %    \"     $    '     0         0    !P   $=R;W5P(#( #@   $     &    \"     0         !0    @    !    \""
+    "P    $         $     L   !3>7-T96U3=&%T90      #@   %     &    \"     8         !0    @    !    !     $         \""
+    "0   \"                       %E         64        !I0 X   !0    !@    @    &          4    (     0    0    !      "
+    "    D    @            \\#\\       #P/P                     .    0     8    (    !          %    \"     $    -     "
+    "0         0    #0   %-E;G-O<E-U<'!L>3(    .    H     8    (    !@         %    \"     $    .     0         )    < "
+    "                      /D         ^0        $Y         3D       (!60       @%9       ! 8$       $!@0        &1     "
+    "    9$       ,!G0       P&=         :4 .    H     8    (    !@         %    \"     $    .     0         )    <    "
+    "        !1         %$                              *$         H0        !1         %$                             "
+    " *$         H0        !1         %$ .    0     8    (    !          %    \"     $    -     0         0    #0   %-E"
+    ";G-O<E-U<'!L>3$    .    8 $   8    (    !@         %    \"     $    F     0         )    , $                     )"
+    "$         D0        #1         -$         ^0        #Y         1$        !$0        $E         24        !.0      "
+    "  $Y       \" 44       (!10        %1         5$       (!60       @%9       \" 6T       (!;0        %Y         7D "
+    "      $!@0       0&!       \" 84       (!A0       P&)       # 8D        !D0        &1       ! 94       $!E0       "
+    "@&9       \" 9D       ,!G0       P&=         :4 .    8 $   8    (    !@         %    \"     $    F     0         )"
+    "    , $          \"!         ($                              *$         H0        \"!         ($                  "
+    "            *$         H0        \"!         ($                              *$         H0        \"!         ($  "
+    "        @                   *$         H0        \"!         ($                              *$         H0        "
+    "\"!         ($                              *$         H0        \"!         ($ .    0     8    (    !          % "
+    "   \"     $    )     0         0    \"0   $QO861396YS90         .    , H   8    (    !@         %    \"     $   ! "
+    " 0   0         )      H                     X#\\       #@/P       / _        \\#\\        $0         1         $$ "
+    "        00        !)         $D         40        !1         &D         :0        \"1         )$         E0       "
+    " \"5         )D         F0        \"E         *4         L0        \"Q         +4         M0        \"Y         +D"
+    "       ( P0       @#!         -$         T0       @#1       \" -$         U0        #5       \" -D       ( V0     "
+    "   #A         .$       ( X0       @#A         .4         Y0       @#I       \" .D         ^0        #Y       \" /D"
+    "       ( ^0        #]         /T       $! 0       0$!         04        !!0       0$%       ! 04       (!!0       "
+    "@$%       ! 0D       $!\"0        $1         1$       $!$0       0$1       \" 1$       (!$0       0$5       ! 14  "
+    "      !&0        $9       ! 1D       $!&0       @$9       \" 1D       $!'0       0$=         24        !)0       0"
+    "$E       ! 24       (!)0       @$E       ! 2D       $!*0        $M         2T       $!+0       0$M       \" 2T    "
+    "   (!+0       0$Q       ! 3$        !.0        $Y       ! 3D       $!.0       @$Y       \" 3D       $!/0       0$]"
+    "         4$        !00       (%!        @4$       $!00       0%!       \"@4$       *!00       @%%       \" 44     "
+    "  *!10       H%%       # 44       ,!10       (%)        @4D       (!20       @%)       \"@4D       *!20       P%) "
+    "      # 4D       \"!30       (%-         5$        !40       (%1        @5$       $!40       0%1       \"@5$      "
+    " *!40        %5         54       \"!50       (%5       ! 54       $!50       H%5       \"@54       (!60       @%9 "
+    "      \"@5D       *!60       P%9       # 5D       \"!70       (%=       \" 5T       (!70       H%=       \"@5T    "
+    "   ,!70       P%=        @6$       \"!80        %E         64       \"!90       (%E       ! 64       $!90       H%"
+    "E       \"@64        !:0        %I        @6D       \"!:0       0%I       ! 6D       *!:0       H%I       \" 6T   "
+    "    (!;0       H%M       \"@6T       ,!;0       P%M        @7$       \"!<0       @%Q       \" 7$       *!<0       "
+    "H%Q       # 7$       ,!<0       (%U        @74        !>0        %Y        @7D       \"!>0       0%Y       ! 7D   "
+    "    *!>0       H%Y         7T        !?0       (%]        @7T       $!?0       0%]       \"@7T       *!?0       0&"
+    "!       ! 8$       %!@0       4&!       !@8$       &!@0       D&!       \"08$       ,!@0       P&!       #08$     "
+    "  -!@0       X&!       #@8$       !!A0       $&%       \" 84       (!A0       D&%       \"084       *!A0       H&%"
+    "       #084       -!A0        &)         8D       !!B0       $&)        @8D       \"!B0       4&)       !08D      "
+    " ,!B0       P&)       #08D       -!B0       X&)       #@8D       !!C0       $&-       ! 8T       $!C0       4&-   "
+    "    !08T       &!C0       8&-       \"08T       )!C0        &1         9$       !!D0       $&1        @9$       \""
+    "!D0       4&1       !09$       (!D0       @&1       \"09$       )!D0       H&1       \"@9$       -!D0       T&1   "
+    "    ! 94       $!E0       4&5       !094       &!E0       8&5       \"094       )!E0       P&5       # 94       -!"
+    "E0       T&5       #@94       .!E0       $&9        09D       (!F0       @&9       \"09D       )!F0       H&9     "
+    "  \"@9D       -!F0       T&9         9T        !G0       $&=        09T       \"!G0       (&=       !09T       %!G"
+    "0       P&=       # 9T       -!G0       T&=       #@9T       .!G0       $&A        0:$       $!H0       0&A       "
+    "!0:$       %!H0       8&A       !@:$       )!H0       D&A         :4 .    , H   8    (    !@         %    \"     $"
+    "   !  0   0         )      H                                00        !!                              !!         $"
+    "$         H0        \"A         %$         40        \"A         *$                   \"A                         "
+    "     !!         $$                              $$         00        \"A         *$         40        !1         *"
+    "$         H0                   *$                              $$         00                              00      "
+    "  !!         *$         H0        !1         %$         H0        \"A                    H0                       "
+    "       00        !!                              !!         $$         H0        \"A         %$         40        "
+    "\"A         *$                   \"A                              !!         $$                              $$   "
+    "      00        \"A         *$         40        !1         *$         H0                   *$                    "
+    "          $$         00                              00        !!         *$         H0        !1         %$      "
+    "   H0        \"A                    H0                              00        !!                              !!  "
+    "       $$         H0        \"A         %$         40        \"A         *$                   \"A                 "
+    "             !!         $$                              $$         00        \"A         *$         40        !1  "
+    "       *$         H0                   *$                              $$         00                              "
+    "00        !!         *$         H0        !1         %$         H0        \"A                    H0               "
+    "               00        !!                              !!         $$         H0        \"A         %$         40"
+    "        \"A         *$                   \"A                              !!         $$                           "
+    "   $$         00        \"A         *$         40        !1         *$         H0                   *$            "
+    "                  $$         00                              00        !!         *$         H0        !1         "
+    "%$         H0        \"A                    H0                              00        !!                          "
+    "    !!         $$         H0        \"A         %$         40        \"A         *$                   \"A         "
+    "                     !!         $$                              $$         00        \"A         *$         40    "
+    "    !1         *$         H0                   *$                              $$         00                      "
+    "        00        !!         *$         H0        !1         %$         H0        \"A                    H0       "
+    "                       00        !!                              !!         $$         H0        \"A         %$   "
+    "      40        \"A         *$                   \"A                              !!         $$                   "
+    "           $$         00        \"A         *$         40        !1         *$         H0                   *$    "
+    "                          $$         00                              00        !!         *$         H0        !1 "
+    "        %$         H0        \"A                    H0                              00        !!                  "
+    "            !!         $$         H0        \"A         %$         40        \"A         *$                   \"A "
+    "                             !!         $$                              $$         00        \"A         *$       "
+    "  40        !1         *$         H0                   *$ .    0     8    (    !          %    \"     $    .     0"
+    "         0    #@   $QO861396YS95-T871E   .    4     8    (    !@         %    \"     $    $     0         )    (  "
+    "             ,S,S,S,S&T S,S,S,S,I0        &E #@   %     &    \"     8         !0    @    !    !     $         \"0 "
+    "  \"             @0        \"!         ($         @0 X   !8    !@    @    -          4    (    \"@    $    !      "
+    "    8    H        W0(    !    !0    D    *    \"P    P    -     0    X   !     !@    @    &          4    (     0 "
+    "   (    !          D    0                      !I0 X    X    !@    @    $          4    (     0    <    !         "
+    "!     '    1W)O=7 @,P .    0     8    (    !          %    \"     $    +     0         0    \"P   %-Y<W1E;5-T871E "
+    "      .    4     8    (    !@         %    \"     $    $     0         )    (                       64        !90 "
+    "       &E #@   %     &    \"     8         !0    @    !    !     $         \"0   \"            #P/P       / _     "
+    "                 X   !     !@    @    $          4    (     0    T    !         !     -    4V5N<V]R4W5P<&QY,@    X"
+    "   \"@    !@    @    &          4    (     0    X    !          D   !P                       ^0        #Y         "
+    "3D        !.0       @%9       \" 5D       $!@0       0&!         9$        !D0       P&=       # 9T        !I0 X  "
+    " \"@    !@    @    &          4    (     0    X    !          D   !P            %$         40                     "
+    "         H0        \"A         %$         40                              H0        \"A         %$         40 X   "
+    "!     !@    @    $          4    (     0    T    !         !     -    4V5N<V]R4W5P<&QY,0    X   !@ 0  !@    @    &"
+    "          4    (     0   \"8    !          D    P 0                     D0        \"1         -$         T0       "
+    " #Y         /D        !$0        $1         24        !)0        $Y         3D       (!10       @%%         5$    "
+    "    !40       @%9       \" 5D       (!;0       @%M         7D        !>0       0&!       ! 8$       (!A0       @&%"
+    "       # 8D       ,!B0        &1         9$       $!E0       0&5       \" 9D       (!F0       P&=       # 9T      "
+    "  !I0 X   !@ 0  !@    @    &          4    (     0   \"8    !          D    P 0          ($         @0            "
+    "                  H0        \"A         ($         @0                              H0        \"A         ($       "
+    "  @0                              H0        \"A         ($         @0         \"                    H0        \"A "
+    "        ($         @0                              H0        \"A         ($         @0                            "
+    "  H0        \"A         ($         @0 X   !     !@    @    $          4    (     0    D    !         !     )    3&"
+    "]A9%-E;G-E          X    P\"@  !@    @    &          4    (     0   $ !   !          D     \"@                    "
+    "#@/P       . _        \\#\\       #P/P        1         !$         00        !!         $D         20        !1   "
+    "      %$         :0        !I         )$         D0        \"5         )4         F0        \"9         *4        "
+    " I0        \"Q         +$         M0        \"U         +D         N0       @#!       \" ,$         T0        #1  "
+    "     \" -$       ( T0        #5         -4       ( V0       @#9         .$         X0       @#A       \" .$       "
+    "  Y0        #E       \" .D       ( Z0        #Y         /D       ( ^0       @#Y         /T         _0       0$!   "
+    "    ! 0$        !!0        $%       ! 04       $!!0       @$%       \" 04       $!\"0       0$)         1$        "
+    "!$0       0$1       ! 1$       (!$0       @$1       ! 14       $!%0        $9         1D       $!&0       0$9     "
+    "  \" 1D       (!&0       0$=       ! 1T        !)0        $E       ! 24       $!)0       @$E       \" 24       $!*"
+    "0       0$I         2T        !+0       0$M       ! 2T       (!+0       @$M       ! 3$       $!,0        $Y       "
+    "  3D       $!.0       0$Y       \" 3D       (!.0       0$]       ! 3T        !00        %!        @4$       \"!00 "
+    "      0%!       ! 4$       *!00       H%!       \" 44       (!10       H%%       \"@44       ,!10       P%%       "
+    " @4D       \"!20       @%)       \" 4D       *!20       H%)       # 4D       ,!20       (%-        @4T        !40 "
+    "       %1        @5$       \"!40       0%1       ! 5$       *!40       H%1         54        !50       (%5        "
+    "@54       $!50       0%5       \"@54       *!50       @%9       \" 5D       *!60       H%9       # 5D       ,!60  "
+    "     (%=        @5T       (!70       @%=       \"@5T       *!70       P%=       # 5T       \"!80       (%A        "
+    " 64        !90       (%E        @64       $!90       0%E       \"@64       *!90        %I         6D       \"!:0  "
+    "     (%I       ! 6D       $!:0       H%I       \"@6D       (!;0       @%M       \"@6T       *!;0       P%M       #"
+    " 6T       \"!<0       (%Q       \" 7$       (!<0       H%Q       \"@7$       ,!<0       P%Q        @74       \"!=0"
+    "        %Y         7D       \"!>0       (%Y       ! 7D       $!>0       H%Y       \"@7D        !?0        %]      "
+    "  @7T       \"!?0       0%]       ! 7T       *!?0       H%]       ! 8$       $!@0       4&!       !08$       &!@0 "
+    "      8&!       \"08$       )!@0       P&!       # 8$       -!@0       T&!       #@8$       .!@0       $&%        "
+    "084       (!A0       @&%       \"084       )!A0       H&%       \"@84       -!A0       T&%         8D        !B0  "
+    "     $&)        08D       \"!B0       (&)       !08D       %!B0       P&)       # 8D       -!B0       T&)       #@"
+    "8D       .!B0       $&-        08T       $!C0       0&-       !08T       %!C0       8&-       !@8T       )!C0     "
+    "  D&-         9$        !D0       $&1        09$       \"!D0       (&1       !09$       %!D0       @&1       \" 9$"
+    "       )!D0       D&1       \"@9$       *!D0       T&1       #09$       $!E0       0&5       !094       %!E0      "
+    " 8&5       !@94       )!E0       D&5       # 94       ,!E0       T&5       #094       .!E0       X&5        09D   "
+    "    !!F0       @&9       \" 9D       )!F0       D&9       \"@9D       *!F0       T&9       #09D        !G0        "
+    "&=        09T       !!G0       (&=        @9T       %!G0       4&=       # 9T       ,!G0       T&=       #09T     "
+    "  .!G0       X&=        0:$       !!H0       0&A       ! :$       %!H0       4&A       !@:$       &!H0       D&A  "
+    "     \"0:$        !I0 X    P\"@  !@    @    &          4    (     0   $ !   !          D     \"@                  "
+    "             !!         $$                              $$         00        \"A         *$         40        !1  "
+    "       *$         H0                   *$                              $$         00                              "
+    "00        !!         *$         H0        !1         %$         H0        \"A                    H0               "
+    "               00        !!                              !!         $$         H0        \"A         %$         40"
+    "        \"A         *$                   \"A                              !!         $$                           "
+    "   $$         00        \"A         *$         40        !1         *$         H0                   *$            "
+    "                  $$         00                              00        !!         *$         H0        !1         "
+    "%$         H0        \"A                    H0                              00        !!                          "
+    "    !!         $$         H0        \"A         %$         40        \"A         *$                   \"A         "
+    "                     !!         $$                              $$         00        \"A         *$         40    "
+    "    !1         *$         H0                   *$                              $$         00                      "
+    "        00        !!         *$         H0        !1         %$         H0        \"A                    H0       "
+    "                       00        !!                              !!         $$         H0        \"A         %$   "
+    "      40        \"A         *$                   \"A                              !!         $$                   "
+    "           $$         00        \"A         *$         40        !1         *$         H0                   *$    "
+    "                          $$         00                              00        !!         *$         H0        !1 "
+    "        %$         H0        \"A                    H0                              00        !!                  "
+    "            !!         $$         H0        \"A         %$         40        \"A         *$                   \"A "
+    "                             !!         $$                              $$         00        \"A         *$       "
+    "  40        !1         *$         H0                   *$                              $$         00              "
+    "                00        !!         *$         H0        !1         %$         H0        \"A                    H"
+    "0                              00        !!                              !!         $$         H0        \"A      "
+    "   %$         40        \"A         *$                   \"A                              !!         $$           "
+    "                   $$         00        \"A         *$         40        !1         *$         H0                 "
+    "  *$                              $$         00                              00        !!         *$         H0   "
+    "     !1         %$         H0        \"A                    H0                              00        !!          "
+    "                    !!         $$         H0        \"A         %$         40        \"A         *$               "
+    "    \"A                              !!         $$                              $$         00        \"A         *"
+    "$         40        !1         *$         H0                   *$                              $$         00      "
+    "                        00        !!         *$         H0        !1         %$         H0        \"A             "
+    "       H0 X   !     !@    @    $          4    (     0    X    !         !     .    3&]A9%-E;G-E4W1A=&4   X   !0  "
+    "  !@    @    &          4    (     0    0    !          D    @               S,S,S,S,;0#,S,S,S,RE         :4 .    "
+    "4     8    (    !@         %    \"     $    $     0         )    (            \"!         ($         @0        \"!"
+    " #@   %@    &    \"     T         !0    @    *     0    $         !@   \"@       #= @    $    %    #P   !     1   "
+    " $@   !,    !    #@   $     &    \"     8         !0    @    !     @    $         \"0   !                       &E"
+    " #@   #@    &    \"     0         !0    @    !    !P    $         $     <   !'<F]U<\" T  X   !     !@    @    $   "
+    "       4    (     0    L    !         !     +    4WES=&5M4W1A=&4       X   !0    !@    @    &          4    (     "
+    "0    0    !          D    @                      !90        %E         :4 .    4     8    (    !@         %    \" "
+    "    $    $     0         )    (            / _        \\#\\                     #@   $     &    \"     0         !"
+    "0    @    !    #0    $         $     T   !396YS;W)3=7!P;'DR    #@   *     &    \"     8         !0    @    !    #@"
+    "    $         \"0   '                       #Y         /D        !.0        $Y       \" 5D       (!60       0&!   "
+    "    ! 8$        !D0        &1       # 9T       ,!G0        &E #@   *     &    \"     8         !0    @    !    #@ "
+    "   $         \"0   '             40        !1                              \"A         *$         40        !1    "
+    "                          \"A         *$         40        !1 #@   $     &    \"     0         !0    @    !    #0 "
+    "   $         $     T   !396YS;W)3=7!P;'DQ    #@   & !   &    \"     8         !0    @    !    )@    $         \"0 "
+    "  # !                     \"1         )$         T0        #1         /D         ^0        $1         1$        !)"
+    "0        $E         3D        !.0       @%%       \" 44        !40        %1       \" 5D       (!60       @%M     "
+    "  \" 6T        !>0        %Y       ! 8$       $!@0       @&%       \" 84       ,!B0       P&)         9$        !D"
+    "0       0&5       ! 94       (!F0       @&9       # 9T       ,!G0        &E #@   & !   &    \"     8         !0   "
+    " @    !    )@    $         \"0   # !           @0        \"!                              \"A         *$         @"
+    "0        \"!                              \"A         *$         @0        \"!                              \"A   "
+    "      *$         @0        \"!          (                   \"A         *$         @0        \"!                  "
+    "            \"A         *$         @0        \"!                              \"A         *$         @0        \"!"
+    " #@   $     &    \"     0         !0    @    !    \"0    $         $     D   !,;V%D4V5N<V4         #@   # *   &   "
+    " \"     8         !0    @    !    0 $   $         \"0     *                     . _        X#\\       #P/P       /"
+    " _        !$         $0        !!         $$         20        !)         %$         40        !I         &D      "
+    "   D0        \"1         )4         E0        \"9         )D         I0        \"E         +$         L0        \""
+    "U         +4         N0        \"Y       \" ,$       ( P0        #1         -$       ( T0       @#1         -4    "
+    "     U0       @#9       \" -D         X0        #A       \" .$       ( X0        #E         .4       ( Z0       @#"
+    "I         /D         ^0       @#Y       \" /D         _0        #]       ! 0$       $! 0        $%         04     "
+    "  $!!0       0$%       \" 04       (!!0       0$)       ! 0D        !$0        $1       ! 1$       $!$0       @$1 "
+    "      \" 1$       $!%0       0$5         1D        !&0       0$9       ! 1D       (!&0       @$9       ! 1T       "
+    "$!'0        $E         24       $!)0       0$E       \" 24       (!)0       0$I       ! 2D        !+0        $M   "
+    "    ! 2T       $!+0       @$M       \" 2T       $!,0       0$Q         3D        !.0       0$Y       ! 3D       (!"
+    ".0       @$Y       ! 3T       $!/0        %!         4$       \"!00       (%!       ! 4$       $!00       H%!     "
+    "  \"@4$       (!10       @%%       \"@44       *!10       P%%       # 44       \"!20       (%)       \" 4D       ("
+    "!20       H%)       \"@4D       ,!20       P%)        @4T       \"!30        %1         5$       \"!40       (%1  "
+    "     ! 5$       $!40       H%1       \"@5$        !50        %5        @54       \"!50       0%5       ! 54       "
+    "*!50       H%5       \" 5D       (!60       H%9       \"@5D       ,!60       P%9        @5T       \"!70       @%= "
+    "      \" 5T       *!70       H%=       # 5T       ,!70       (%A        @6$        !90        %E        @64       "
+    "\"!90       0%E       ! 64       *!90       H%E         6D        !:0       (%I        @6D       $!:0       0%I   "
+    "    \"@6D       *!:0       @%M       \" 6T       *!;0       H%M       # 6T       ,!;0       (%Q        @7$       ("
+    "!<0       @%Q       \"@7$       *!<0       P%Q       # 7$       \"!=0       (%U         7D        !>0       (%Y   "
+    "     @7D       $!>0       0%Y       \"@7D       *!>0        %]         7T       \"!?0       (%]       ! 7T       $"
+    "!?0       H%]       \"@7T       $!@0       0&!       !08$       %!@0       8&!       !@8$       )!@0       D&!    "
+    "   # 8$       ,!@0       T&!       #08$       .!@0       X&!        084       !!A0       @&%       \" 84       )!A"
+    "0       D&%       \"@84       *!A0       T&%       #084        !B0        &)        08D       !!B0       (&)      "
+    "  @8D       %!B0       4&)       # 8D       ,!B0       T&)       #08D       .!B0       X&)        08T       !!C0  "
+    "     0&-       ! 8T       %!C0       4&-       !@8T       &!C0       D&-       \"08T        !D0        &1        0"
+    "9$       !!D0       (&1        @9$       %!D0       4&1       \" 9$       (!D0       D&1       \"09$       *!D0   "
+    "    H&1       #09$       -!D0       0&5       ! 94       %!E0       4&5       !@94       &!E0       D&5       \"09"
+    "4       ,!E0       P&5       #094       -!E0       X&5       #@94       !!F0       $&9       \" 9D       (!F0     "
+    "  D&9       \"09D       *!F0       H&9       #09D       -!F0        &=         9T       !!G0       $&=        @9T "
+    "      \"!G0       4&=       !09T       ,!G0       P&=       #09T       -!G0       X&=       #@9T       !!H0       "
+    "$&A       ! :$       $!H0       4&A       !0:$       &!H0       8&A       \"0:$       )!H0        &E #@   # *   & "
+    "   \"     8         !0    @    !    0 $   $         \"0     *                                $$         00        "
+    "                      00        !!         *$         H0        !1         %$         H0        \"A               "
+    "     H0                              00        !!                              !!         $$         H0        \"A"
+    "         %$         40        \"A         *$                   \"A                              !!         $$     "
+    "                         $$         00        \"A         *$         40        !1         *$         H0           "
+    "        *$                              $$         00                              00        !!         *$        "
+    " H0        !1         %$         H0        \"A                    H0                              00        !!    "
+    "                          !!         $$         H0        \"A         %$         40        \"A         *$         "
+    "          \"A                              !!         $$                              $$         00        \"A    "
+    "     *$         40        !1         *$         H0                   *$                              $$         00"
+    "                              00        !!         *$         H0        !1         %$         H0        \"A       "
+    "             H0                              00        !!                              !!         $$         H0   "
+    "     \"A         %$         40        \"A         *$                   \"A                              !!        "
+    " $$                              $$         00        \"A         *$         40        !1         *$         H0   "
+    "                *$                              $$         00                              00        !!         *$"
+    "         H0        !1         %$         H0        \"A                    H0                              00      "
+    "  !!                              !!         $$         H0        \"A         %$         40        \"A         *$ "
+    "                  \"A                              !!         $$                              $$         00       "
+    " \"A         *$         40        !1         *$         H0                   *$                              $$   "
+    "      00                              00        !!         *$         H0        !1         %$         H0        \""
+    "A                    H0                              00        !!                              !!         $$      "
+    "   H0        \"A         %$         40        \"A         *$                   \"A                              !!"
+    "         $$                              $$         00        \"A         *$         40        !1         *$      "
+    "   H0                   *$                              $$         00                              00        !!   "
+    "      *$         H0        !1         %$         H0        \"A                    H0                              "
+    "00        !!                              !!         $$         H0        \"A         %$         40        \"A    "
+    "     *$                   \"A                              !!         $$                              $$         0"
+    "0        \"A         *$         40        !1         *$         H0                   *$                           "
+    "   $$         00                              00        !!         *$         H0        !1         %$         H0  "
+    "      \"A                    H0                              00        !!                              !!         "
+    "$$         H0        \"A         %$         40        \"A         *$                   \"A #@   $     &    \"     "
+    "0         !0    @    !    #@    $         $     X   !,;V%D4V5N<V53=&%T90  #@   % \"   &    \"     8         !0    "
+    "@    !    1     $         \"0   \" \"             !^%ZU&X'@% ,S,S,S,S 4#L4;@>A>L+0         Q 'X7K4;@>&$ ?A>M1N!X80"
+    "$CA>A2N1Q] 4K@>A>M1'T##]2A<C\\(C0,/U*%R/PB- 7(_\"]2@<-D ?A>M1N!XV0       @#= P_4H7(^\"-T\"D<#T*UR,Z0&9F9F9F)CI 7(_"
+    "\"]2C<.T ?A>M1N-X[0%*X'H7K$4! ,S,S,S,30$ ?A>M1N+Y 0       P$! P_4H7(\\\"0D\"D<#T*UP-\"0\"E<C\\+UZ$) \"M>C<#WJ0D\"/"
+    "PO4H7.]#0'$]\"M>C\\$- KD?A>A0.2D\"/PO4H7 ]*0       P$I X7H4KD?!2D!2N!Z%ZQ%,0#,S,S,S$TQ KD?A>A3N3$\"/PO4H7.],0%*X'H"
+    "7K$4] ,S,S,S,33T ?A>M1N+Y/0       P$] X7H4KD>!4$!2N!Z%ZX%00(7K4;@>]5! A>M1N![U4$!(X7H4KG=10+@>A>M1>%% UZ-P/0J'5$!("
+    "X7H4KH=40       X%1 <3T*UZ/@5$ I7(_\"]8A50)J9F9F9B55 UZ-P/0KW54!(X7H4KO=50\"E<C\\+U\"%= FIF9F9D)5T\"/PO4H7%]70    "
+    "   8%= X7H4KD<!6$!2N!Z%ZP%80(7K4;@>=5A A>M1N!YU6$!(X7H4KO=80+@>A>M1^%A         64        !90        &E #@   % \"  "
+    " &    \"     8         !0    @    !    1     $         \"0   \" \"           @0        \"!         -D         V0  "
+    "      \"!         ($         U0        #5         ($         @0        #5         -4         V0        #9         "
+    "($         @0        #5         -4         @0        \"!         -D         V0        \"!         ($         U0   "
+    "     #5         ($         @0        #5         -4         V0        #9         ($         @0        #5         -4"
+    "         @0        \"!         -D         V0        \"!         ($         U0        #5         ($         @0     "
+    "   #5         -4         V0        #9         ($         @0        #5         -4         @0        \"!         -D "
+    "        V0        \"!         ($         U0        #5         ($         @0        #5         -4         @0       "
+    " \"! #@   %@    &    \"     T         !0    @    *     0    $         !@   \"@       #= @    $    %    %0   !8    "
+    "7    &    !D    !    #@   $     &    \"     8         !0    @    !     @    $         \"0   !                     "
+    "  &E #@   %@    &    \"     T         !0    @    )     0    $         !@   \"0       #= @    $    $     @    @    "
+    ".    %     (         #@   #@    &    \"     8         !0    @    !     0    $         \"0    @            00 X    "
+    "X!0  !@    @    !          4    (    !     $    !          X    X    !@    @    \"          4    (     0         !"
+    "          4 !  !     0         .    0 $   8    (     @         %    \"     $    !     0         %  0 \"0    $    D"
+    "    3F%M90      6$1A=&$     641A=&$     57-E<D1A=&$       X    P    !@    @    $          4    (               !  "
+    "       !          #@   #     &    \"     8         !0    @               $         \"0         .    ,     8    (  "
+    "  !@         %    \"                0         )          X    P    !@    @    &          4    (               !   "
+    "       D         #@   ! \"   &    \"     (         !0    @    !     0    $         !0 $ !     !    8    $YA;64    "
+    "           !3:6=N86QS            06-T:79E4VEG;F%L     %)E<75I<F5M96YT26YF;P!5<V5R1&%T80          5&EM95)A;F=E     "
+    "     X    P    !@    @    $          4    (               !         !          #@   $@    &    \"     T         !0"
+    "    @    %     0    $         !@   !0       #= @               0         .    ,     8    (    !@         %    \"  "
+    "              0         )          X    P    !@    @    $          4    (               !         !          #@   "
+    "#     &    \"     8         !0    @               $         \"0         .    0     8    (    !@         %    \"   "
+    "  $    \"     0         )    $                       )$ .    : $   8    (     @         %    \"     $    !     0  "
+    "       %  0 #     $    P    3F%M90          1W)O=7!S        06-T:79E1W)O=7  57-E<D1A=&$     #@   #     &    \"    "
+    " 0         !0    @               $         $          .    2     8    (    #0         %    \"     4    !     0    "
+    "     &    %        -T\"               \"          X    X    !@    @    &          4    (     0    $    !          "
+    "D    (            \\#\\.    ,     8    (    !@         %    \"                0         )          X   \"(    !@  "
+    "  @    )          4    (     0   %@    !          (   !8      %)30     .    2     8    (     @         %    \"    "
+    " $    !     0         %  0 !0    $    %    34-/4P     .          "
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Mar  5 2011, 00:01:50
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "LoadSense_harness"
+    created		    "09-Nov-2005 14:07:40"
+    isLibrary		    0
+    firstTarget		    32
+    debug {
+      runTimeCheck	      [1 0 1 1]
+    }
+    sfVersion		    75014001
+  }
+  chart {
+    id			    2
+    name		    "Load_Sense/Load_Sense/Pressure_Monitor"
+    windowPosition	    [-18 7.5 1440 753]
+    viewLimits		    [107.737 1265.319 0 594.333]
+    zoomFactor		    0.829
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 8 0 0]
+    firstTransition	    19
+    viewObj		    2
+    machine		    1
+    subviewS {
+      x1		      107.679
+      zoomFactor	      0.829
+    }
+    ssIdHighWaterMark	    77
+    decomposition	    CLUSTER_CHART
+    firstData		    23
+    chartFileNumber	    4
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  state {
+    id			    3
+    labelString		    "Normal"
+    position		    [136.6767 212.5997 297.3547 299.2693]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 9 8 4]
+    firstTransition	    22
+    subviewer		    2
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 303.156 419.438]
+    }
+    ssIdNumber		    1
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    4
+    labelString		    "OORL_DB"
+    position		    [735.4981 264.2347 83.0497 59.2741]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 3 5]
+    subviewer		    2
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    5
+    labelString		    "OORL\nstate_LoadSense = OORL;"
+    position		    [1072.5931 266.1319 160.716 95.9791]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 4 6]
+    subviewer		    2
+    ssIdNumber		    3
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    6
+    labelString		    "OORH_DB"
+    position		    [736.6566 388.2219 85.6741 58.031]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 5 7]
+    subviewer		    2
+    ssIdNumber		    4
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    7
+    labelString		    "OORH\nstate_LoadSense = OORH;"
+    position		    [1073.0522 391.8788 163.3273 103.9741]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 6 0]
+    subviewer		    2
+    ssIdNumber		    5
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    8
+    labelString		    "Init\nen:\nstate_LoadSense = NORMAL;"
+    position		    [138.52 89.5069 204.9681 60.7894]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 3]
+    subviewer		    2
+    ssIdNumber		    16
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    9
+    labelString		    "Normal_DB"
+    position		    [159.4376 268.7704 106.5853 33.9519]
+    fontSize		    12
+    chart		    2
+    treeNode		    [3 0 0 10]
+    subviewer		    2
+    ssIdNumber		    74
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    10
+    labelString		    "Normal\nen:\nstate_LoadSense = NORMAL;"
+    position		    [148.2885 384.7927 200.8792 49.4196]
+    fontSize		    12
+    chart		    2
+    treeNode		    [3 0 9 0]
+    subviewer		    2
+    ssIdNumber		    73
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    11
+    labelString		    "[volts_LoadSense <= CD_LOADSENSE_OORH]"
+    labelPosition	    [802.66 460.07 259.118 14.891]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [4 -1 -0 0.1699 1073.0522 478.1877 0 -34.3229]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 0 0.8875 434.0314 478.1877 0 34.3229]
+    }
+    midPoint		    [743.9107 478.1887]
+    chart		    2
+    linkNode		    [2 17 0]
+    dataLimits		    [434.031 1073.052 475.788 480.588]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    17
+  }
+  transition {
+    id			    12
+    labelString		    "[after(CD_LOADSENSE_DB ,tick)]"
+    labelPosition	    [839.536 272.893 183.309 14.891]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [2 1 -0 0.4921 818.5478 293.4035 0 1.7069]
+    }
+    dst {
+      id		      5
+      intersection	      [4 -1 0 0.7159 1072.5931 293.4035 0 -1.7069]
+    }
+    midPoint		    [946.8325 293.4039]
+    chart		    2
+    linkNode		    [2 13 14]
+    dataLimits		    [818.548 1072.593 291.004 295.803]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    18
+  }
+  transition {
+    id			    13
+    labelString		    "[volts_LoadSense < CD_LOADSENSE_OORL]"
+    labelPosition	    [463.811 256.622 251.04 14.891]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [2 1 0 0.2215 434.0314 278.8754 0 -14.9973]
+    }
+    dst {
+      id		      4
+      intersection	      [4 -1 -0 0.753 735.4981 278.8754 0 14.9973]
+    }
+    midPoint		    [587.0577 278.8744]
+    chart		    2
+    linkNode		    [2 20 12]
+    dataLimits		    [434.031 735.498 276.475 281.275]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    19
+  }
+  transition {
+    id			    14
+    labelString		    "[volts_LoadSense >= CD_LOADSENSE_OORL]"
+    labelPosition	    [448.11 281.65 257.875 14.891]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [4 -1 -0 0.3475 735.4981 302.9111 0 -9.0364]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 0 0.3018 434.0314 302.9111 0 9.0364]
+    }
+    midPoint		    [582.4719 302.9081]
+    chart		    2
+    linkNode		    [2 12 18]
+    dataLimits		    [434.031 735.498 300.511 305.311]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    20
+  }
+  transition {
+    id			    15
+    labelString		    "[after(CD_LOADSENSE_DB ,tick)]"
+    labelPosition	    [840.966 395.105 183.309 14.891]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [2 1 -0 0.4801 822.3307 416.0826 0 1.7069]
+    }
+    dst {
+      id		      7
+      intersection	      [4 -1 0 0.7672 1073.0522 416.0826 0 -1.7069]
+    }
+    midPoint		    [948.8812 416.0817]
+    chart		    2
+    linkNode		    [2 16 17]
+    dataLimits		    [822.331 1073.052 413.683 418.483]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    21
+  }
+  transition {
+    id			    16
+    labelString		    "[volts_LoadSense > CD_LOADSENSE_OORH]"
+    labelPosition	    [466.503 383.501 252.283 14.891]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [2 1 0 0.6313 434.0314 401.5284 0 -16.9512]
+    }
+    dst {
+      id		      6
+      intersection	      [4 -1 -0 0.7707 736.6566 401.5284 0 16.9512]
+    }
+    midPoint		    [587.6621 401.5294]
+    chart		    2
+    linkNode		    [2 18 15]
+    dataLimits		    [434.031 736.657 399.128 403.928]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    22
+  }
+  transition {
+    id			    17
+    labelString		    "[volts_LoadSense <= CD_LOADSENSE_OORH]"
+    labelPosition	    [447.405 411.305 259.118 14.891]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [4 -1 -0 0.2994 736.6566 428.8784 0 -10.3976]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 0 0.7227 434.0314 428.8784 0 10.3976]
+    }
+    midPoint		    [583.0259 428.8781]
+    chart		    2
+    linkNode		    [2 15 11]
+    dataLimits		    [434.031 736.657 426.478 431.278]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    23
+  }
+  transition {
+    id			    18
+    labelString		    "[volts_LoadSense >= CD_LOADSENSE_OORL]"
+    labelPosition	    [797.537 327.55 257.875 14.891]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [4 -1 -0 0.1549 1072.5931 347.2438 0 -33.1248]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 0 0.4499 434.0314 347.2438 0 33.1248]
+    }
+    midPoint		    [743.6912 347.2462]
+    chart		    2
+    linkNode		    [2 14 16]
+    dataLimits		    [434.031 1072.593 344.844 349.644]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    38
+  }
+  transition {
+    id			    19
+    labelPosition	    [228.679 67.898 8.078 14.891]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 224.2786 59.5069 0 0]
+    }
+    dst {
+      id		      8
+      intersection	      [1 0 -1 0.4184 224.2786 89.5069 0 0]
+    }
+    midPoint		    [224.2786 70.8983]
+    chart		    2
+    linkNode		    [2 0 20]
+    dataLimits		    [221.879 226.679 59.507 89.507]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    40
+  }
+  transition {
+    id			    20
+    labelPosition	    [259.005 164.569 8.078 14.891]
+    fontSize		    12
+    src {
+      id		      8
+      intersection	      [3 -0 1 0.4412 253.0562 150.2963 0 13.3125]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.3914 253.0562 212.5997 0 -13.3125]
+    }
+    midPoint		    [253.0583 178.5417]
+    chart		    2
+    linkNode		    [2 19 13]
+    dataLimits		    [250.656 255.456 150.296 212.6]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    39
+  }
+  transition {
+    id			    21
+    labelString		    "[after(CD_LOADSENSE_DB,tick) ||...\n state_LoadSense == NORMAL]"
+    labelPosition	    [221.943 313.312 196.98 28.542]
+    fontSize		    12
+    src {
+      id		      9
+      intersection	      [3 -0 1 0.5228 210.3001 302.7223 0 1.4483]
+    }
+    dst {
+      id		      10
+      intersection	      [1 0 -1 0.3087 210.3001 384.7927 0 -1.4483]
+    }
+    midPoint		    [210.2972 341.281]
+    chart		    2
+    linkNode		    [3 22 0]
+    dataLimits		    [207.9 212.7 302.722 384.793]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    75
+  }
+  transition {
+    id			    22
+    labelPosition	    [192.77 246.715 8.078 14.891]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 207.1704 238.7704 0 0]
+    }
+    dst {
+      id		      9
+      intersection	      [1 0 -1 0.4478 207.1704 268.7704 0 0]
+    }
+    midPoint		    [207.1704 250.1619]
+    chart		    2
+    linkNode		    [3 0 21]
+    dataLimits		    [204.77 209.57 238.77 268.77]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    77
+  }
+  data {
+    id			    23
+    ssIdNumber		    42
+    name		    "volts_LoadSense"
+    linkNode		    [2 0 24]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    24
+    ssIdNumber		    43
+    name		    "state_LoadSense"
+    linkNode		    [2 23 25]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    25
+    ssIdNumber		    49
+    name		    "CD_LOADSENSE_OORH"
+    linkNode		    [2 24 26]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    26
+    ssIdNumber		    50
+    name		    "CD_LOADSENSE_OORL"
+    linkNode		    [2 25 27]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    27
+    ssIdNumber		    51
+    name		    "CD_LOADSENSE_DB"
+    linkNode		    [2 26 28]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    28
+    ssIdNumber		    57
+    name		    "NORMAL"
+    linkNode		    [2 27 29]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    29
+    ssIdNumber		    58
+    name		    "OORH"
+    linkNode		    [2 28 30]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 4
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    30
+    ssIdNumber		    59
+    name		    "OORL"
+    linkNode		    [2 29 0]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 5
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    31
+    name		    "Load_Sense/Load_Sense/Pressure_Monitor"
+    machine		    1
+    chart		    2
+  }
+  target {
+    id			    32
+    name		    "sfun"
+    codeFlags		    ""
+    machine		    1
+    linkNode		    [1 0 33]
+  }
+  target {
+    id			    33
+    name		    "rtw"
+    codeFlags		    " comments=1 statebitsets=1 databitsets=1 emitlogicalops=1 elseifdetection=1 constantfolding=1 redu"
+    "ndantloadelimination=0 preservenames=0 preservenameswithparent=0 exportcharts=0"
+    machine		    1
+    linkNode		    [1 32 0]
+  }
+}

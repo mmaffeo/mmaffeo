@@ -1,0 +1,46 @@
+/***************************************************************
+* Project Name: E10 Electric
+*
+* Copyright 2005 Bobcat Company as an unpublished work.
+* All Rights Reserved.
+*
+* The information contained herein is confidential
+* property of Bobcat Company. The use, copying, transfer or
+* disclosure of such information is prohibited except
+* by express written agreement with Bobcat Company.
+*
+* First written on 6 August 2018
+*
+* Module Description:
+* The module broadcasts all the messages in a "CANOpen" message on the secondary
+* CAN bus.  It also handles all error code routines.
+***************************************************************/
+
+#ifndef _ap_bservice_CANOpenMsg_h
+#define _ap_bservice_CANOpenMsg_h
+
+// INCLUDES
+#include "hw_io.h"
+#include "CANOpen.h"
+
+// FUNCTION PROTOTYPE
+void CANOpen_initialize(void);
+void CANOpen_update(void);
+//Conversion function from CAN message to CANOpen 
+void Msg2RPDO(      hw_can_msg_t*,
+                    CANOpenMsgRPDO1*);
+void Msg2RPDO(      hw_can_msg_t*,
+                    CANOpenMsgRPDO2*);
+uint8_t getStatus(  hw_can_msg_t*);
+//Conversion function from CANOpen to CAN messages
+void initialize(    void);
+void sendTPDO(      CANOpenMsgTPDO1*,
+                    hw_can_msg_t*);
+void sendTPDO(      CANOpenMsgTPDO2*,
+                    hw_can_msg_t* );
+void syncMsg(       hw_can_msg_t* );
+void setNTMMsg(     hw_can_msg_t* );
+void sendMsg(       hw_can_msg_t* );
+
+#endif
+

@@ -1,0 +1,88 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   10 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c29_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SECONDARY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SECONDARY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_THROTTLE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "THROTTLE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ENGINE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ENGINE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_STD_PANEL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STD_PANEL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_JOG_SHUTTLE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "JOG_SHUTTLE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DELUXE_G55"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "DELUXE_G55"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FUNCTIONAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "DELUXE_G55.FUNCTIONAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_KEYLESS_ENTRY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEYLESS_ENTRY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

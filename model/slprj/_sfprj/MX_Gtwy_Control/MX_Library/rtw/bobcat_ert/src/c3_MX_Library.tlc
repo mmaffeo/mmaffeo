@@ -1,0 +1,123 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   15 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c3_MX_Library"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_RELAY.RELAY.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ERROR_OFF"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_RELAY.RELAY.ERROR_OFF"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ERROR_ON"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_RELAY.RELAY.ERROR_ON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_STATE_OUTPUT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_OUTPUT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_OUTPUT.OUTPUT.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ERROR_ON"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_OUTPUT.OUTPUT.ERROR_ON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ERROR_OFF"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_OUTPUT.OUTPUT.ERROR_OFF"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OPEN_CIRCUIT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_OUTPUT.OUTPUT.OPEN_CIRCUIT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FAILURE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_OUTPUT.OUTPUT.FAILURE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OUTPUT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_OUTPUT.OUTPUT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_STATE_RELAY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_RELAY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_RELAY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "STATE_RELAY.RELAY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceOutput"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceOutput"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceRelay"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceRelay"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

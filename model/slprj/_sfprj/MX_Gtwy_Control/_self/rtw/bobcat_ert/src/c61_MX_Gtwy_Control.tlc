@@ -1,0 +1,60 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c61_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c61_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_EMEA_CONTROLS"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "EMEA_CONTROLS"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SECOND_AUX_NA"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SECOND_AUX_NA"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "switch_hold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "switch_hold"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

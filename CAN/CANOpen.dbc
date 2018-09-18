@@ -1,0 +1,336 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: SmartDisplay InvenoxBMS CPU HydPump_Inverter
+VAL_TABLE_ ErrorDescription 65280 " Device specific " 61440 " Additional Functions " 36864 " External Error " 33360 " RPDO timeout " 33344 " Unexpected SYNC data length " 33328 " DAM MPDO not processed destination object not available " 33312 " PDO length exceeded " 33296 " PDO not processed due to length error " 33280 " Protocol Error " 33104 " CAN-ID collision " 33088 " recovered from bus off " 33072 " Life Guard Error or Heartbeat Error " 33056 " CAN in Error Passive Mode " 33040 " CAN Overrun (Objects lost) " 33024 " Communication " 32768 " Monitoring " 28672 " Additional Modules " 25344 " Data Set " 25088 " User Software " 24832 " Internal Software " 24576 " Device Software " 20480 " Device Hardware " 16896 " Device Temperature " 16640 " Ambient Temperature " 16384 " Temperature " 13056 " Output Voltage " 12800 " Voltage inside the device " 12544 " Mains Voltage " 12288 " Voltage " 8960 " Current device output side " 8704 " Current inside the device " 8448 " Current device input side " 8192 " Current " 4096 " Generic Error " 0 " error Reset or No Error " ;
+VAL_TABLE_ NTM_Functions 130 "Reset Communication" 129 "Reset Node" 128 "Go in Pre-Operational Status" 2 "Go in Operational Status" 1 "Go in Operational Status" ;
+VAL_TABLE_ NodeStatusTable 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Boot" ;
+
+
+BO_ 137 ErrorCodeNode09: 8 Vector__XXX
+ SG_ VoltageError : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TemperatureError : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ReservedError : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacterSpecificError : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GenericError : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DeviceProfileSpecificError : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CurrentError : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CommunicationError : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 136 ErrorCodeNode08: 8 Vector__XXX
+ SG_ VoltageError : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TemperatureError : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ReservedError : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacterSpecificError : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GenericError : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DeviceProfileSpecificError : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CurrentError : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CommunicationError : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 0 NTM: 8 Vector__XXX
+ SG_ NTM_Function : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NTM_AddressedNode : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1801 GUARDNode09: 1 Vector__XXX
+ SG_ StatusNode : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1800 GUARDNode08: 1 Vector__XXX
+ SG_ StatusNode : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 128 SYNC: 8 CPU
+
+BO_ 520 TPDO1: 8 CPU
+ SG_ ContrlWord_Stuffing : 31|1@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ ContrlWord_Reserved : 21|6@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ ContrlWord_REVRequest : 20|1@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ ContrlWord_OutNEB : 18|1@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ ContrlWord_FWDRequest : 19|1@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ ContrlWord_Free : 27|4@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ ContrlWord_PowerLineOn : 17|1@1+ (1,1) [0|0] ""  HydPump_Inverter
+ SG_ HydPumpInverterTargetSpeed : 0|16@1- (1,0) [0|0] ""  HydPump_Inverter
+ SG_ HydPumpInverterTargetEVP2 : 56|8@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ HydPumpInverterTargetEVP : 48|8@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ HydPumpInverterCurrentRequest : 40|8@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ ContrlWord_EnablePower : 16|1@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ HydPumpInverterBrakeRequest : 32|8@1+ (1,0) [0|0] ""  HydPump_Inverter
+
+BO_ 776 TPDO2: 4 CPU
+ SG_ ControlWord2_Stuffing : 31|1@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ HydPumpInverterMaxTorque : 0|8@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ HydPumpInverterMaxBrakingTorque : 8|8@1+ (1,0) [0|0] ""  HydPump_Inverter
+ SG_ ControlWord2_Free : 16|15@1+ (1,0) [0|0] ""  HydPump_Inverter
+
+BO_ 392 RPDO1: 8 HydPump_Inverter
+ SG_ StatusWord_Stuffing : 31|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_SensAcquiEndSuccess : 30|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_SensAcqInProgress : 29|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_Reserved : 18|4@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_OutNEBStatus : 17|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_A6 : 24|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_A5 : 23|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_A4 : 22|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_A3 : 28|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_A19 : 26|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_A13 : 25|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_A10 : 27|1@1- (1,0) [0|0] ""  CPU
+ SG_ StatusWord_OutNMCStatus : 16|1@1- (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterStatusByte : 32|8@1+ (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterAnalogInput2 : 48|8@1+ (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterAnalogInput1 : 40|8@1+ (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterActualCurrent : 56|8@1+ (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterActualSpeed : 0|16@1- (1,0) [0|0] ""  CPU
+
+BO_ 648 RPDO2: 7 HydPump_Inverter
+ SG_ HydPumpInverterWarningsAlarms : 0|16@1+ (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterTemperature : 24|8@1- (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterMotorTemperature : 16|8@1+ (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterBDI_Percentage : 32|8@1+ (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterBatteryVoltage : 48|8@1+ (1,0) [0|0] ""  CPU
+ SG_ HydPumpInverterBatteryCurrent : 40|8@1+ (1,0) [0|0] ""  CPU
+
+BO_ 768 FatalError: 8 InvenoxBMS
+ SG_ overU : 0|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ under_U : 1|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underSOC : 2|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overSOC : 3|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempInCharge : 4|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempInDrive : 5|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underTempInCharge : 6|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underTempInDrive : 7|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ openExternalWire : 8|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ balancingNotActive : 9|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ balancingLimited : 10|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTC_ADCRegister : 11|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCDiagnose : 12|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCBoardOverTemp : 13|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCComm : 14|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCTempSensor : 15|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryOverCurrentInDrive : 16|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryOverCurrentInCharge : 17|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANSync : 18|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANPrivateComm : 19|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANPublicComm : 20|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSDCard : 21|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUWatchdog : 22|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUExtOxill : 23|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUOverTemp : 24|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ disconnectedCurrentSensor : 25|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ openCircuitPilotLine : 26|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ emergencyStop : 27|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underVoltageSupplyVoltage : 28|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureBatteryHeater : 29|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureBatteryCharger : 30|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureMotorDriver : 31|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempPDU : 32|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimePrechargeRelay : 33|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeChargeRelay : 34|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeHVPosRelay : 35|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeHVNegRelay : 36|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureInsulation : 37|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ notsuccefullPrecharge : 38|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSlave : 39|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureMaster : 40|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ notAllowedRecharging : 41|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureDualCharger : 42|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSoftwareUnit : 43|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureParallelSystem : 44|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ permanentActiveSignalTX : 45|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ moduleNumber : 48|8@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 784 FailureError: 8 InvenoxBMS
+ SG_ overU : 0|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ under_U : 1|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underSOC : 2|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overSOC : 3|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempInCharge : 4|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempInDrive : 5|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underTempInCharge : 6|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underTempInDrive : 7|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ openExternalWire : 8|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ balancingNotActive : 9|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ balancingLimited : 10|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTC_ADCRegister : 11|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCDiagnose : 12|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCBoardOverTemp : 13|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCComm : 14|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCTempSensor : 15|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryOverCurrentInDrive : 16|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryOverCurrentInCharge : 17|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANSync : 18|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANPrivateComm : 19|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANPublicComm : 20|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSDCard : 21|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUWatchdog : 22|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUExtOxill : 23|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUOverTemp : 24|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ disconnectedCurrentSensor : 25|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ openCircuitPilotLine : 26|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ emergencyStop : 27|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underVoltageSupplyVoltage : 28|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureBatteryHeater : 29|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureBatteryCharger : 30|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureMotorDriver : 31|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempPDU : 32|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimePrechargeRelay : 33|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeChargeRelay : 34|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeHVPosRelay : 35|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeHVNegRelay : 36|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureInsulation : 37|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ notsuccefullPrecharge : 38|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSlave : 39|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureMaster : 40|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ notAllowedRecharging : 41|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureDualCharger : 42|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSoftwareUnit : 43|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureParallelSystem : 44|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ permanentActiveSignalTX : 45|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ moduleNumber : 48|8@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 800 WarningError: 8 InvenoxBMS
+ SG_ overU : 0|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ under_U : 1|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underSOC : 2|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overSOC : 3|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempInCharge : 4|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempInDrive : 5|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underTempInCharge : 6|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underTempInDrive : 7|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ openExternalWire : 8|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ balancingNotActive : 9|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ balancingLimited : 10|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTC_ADCRegister : 11|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCDiagnose : 12|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCBoardOverTemp : 13|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCComm : 14|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ faultLTCTempSensor : 15|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryOverCurrentInDrive : 16|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryOverCurrentInCharge : 17|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANSync : 18|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANPrivateComm : 19|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCANPublicComm : 20|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSDCard : 21|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUWatchdog : 22|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUExtOxill : 23|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureCPUOverTemp : 24|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ disconnectedCurrentSensor : 25|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ openCircuitPilotLine : 26|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ emergencyStop : 27|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ underVoltageSupplyVoltage : 28|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureBatteryHeater : 29|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureBatteryCharger : 30|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureMotorDriver : 31|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ overTempPDU : 32|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimePrechargeRelay : 33|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeChargeRelay : 34|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeHVPosRelay : 35|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxLifeTimeHVNegRelay : 36|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureInsulation : 37|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ notsuccefullPrecharge : 38|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSlave : 39|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureMaster : 40|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ notAllowedRecharging : 41|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureDualCharger : 42|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureSoftwareUnit : 43|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ failureParallelSystem : 44|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ permanentActiveSignalTX : 45|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ moduleNumber : 48|8@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 816 ActualData: 8 InvenoxBMS
+ SG_ batteryVoltage : 0|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryCharge : 16|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryTemperature : 32|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ batteryCurrent : 48|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 832 LimitData: 8 InvenoxBMS
+ SG_ maxDischargeCurrent : 0|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxRecuperationCurrent : 16|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ minDischargeVoltage : 32|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ maxChargeVoltage : 48|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 833 PowerData: 12 InvenoxBMS
+ SG_ totalEnergy : 0|32@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ remainingEnergy : 32|32@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ remainingUsableEnergy : 64|32@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 834 CapacityData: 8 InvenoxBMS
+ SG_ totalBatteryCapacity : 0|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ totalUsableBatteryCapacity : 16|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ remainingBatteryCapacity : 32|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ remainingUsableBatteryCapacity : 48|16@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 835 EnergyData: 8 InvenoxBMS
+ SG_ totalEnergy : 0|32@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ remainingEnergy : 32|32@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ remainingUsableEnergy : 64|32@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 848 ControlAnswer: 8 InvenoxBMS
+ SG_ stateBMS : 0|8@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ virtualPilotI208 : 8|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ heatherActive : 9|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ cellBalancingActive : 10|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ chargePermitted : 11|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ chargeFinished : 12|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+ SG_ chargeSwitchPermitted : 13|1@1- (1,0) [0|0] ""  HydPump_Inverter,CPU
+
+BO_ 1329 Control: 8 CPU
+ SG_ requestedStateBMS : 0|8@1- (1,0) [0|0] ""  InvenoxBMS
+ SG_ setDCBusVoltage : 8|16@1- (1,0) [0|0] ""  InvenoxBMS
+ SG_ setChargeCurrent : 24|16@1- (1,0) [0|0] ""  InvenoxBMS
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "BusType" "CAN";
+VAL_ 137 ErrorCode 65280 " Device specific " 61440 " Additional Functions " 36864 " External Error " 33360 " RPDO timeout " 33344 " Unexpected SYNC data length " 33328 " DAM MPDO not processed destination object not available " 33312 " PDO length exceeded " 33296 " PDO not processed due to length error " 33280 " Protocol Error " 33104 " CAN-ID collision " 33088 " recovered from bus off " 33072 " Life Guard Error or Heartbeat Error " 33056 " CAN in Error Passive Mode " 33040 " CAN Overrun (Objects lost) " 33024 " Communication " 32768 " Monitoring " 28672 " Additional Modules " 25344 " Data Set " 25088 " User Software " 24832 " Internal Software " 24576 " Device Software " 20480 " Device Hardware " 16896 " Device Temperature " 16640 " Ambient Temperature " 16384 " Temperature " 13056 " Output Voltage " 12800 " Voltage inside the device " 12544 " Mains Voltage " 12288 " Voltage " 8960 " Current device output side " 8704 " Current inside the device " 8448 " Current device input side " 8192 " Current " 4096 " Generic Error " 0 " error Reset or No Error " ;
+VAL_ 136 ErrorCode 65280 " Device specific " 61440 " Additional Functions " 36864 " External Error " 33360 " RPDO timeout " 33344 " Unexpected SYNC data length " 33328 " DAM MPDO not processed destination object not available " 33312 " PDO length exceeded " 33296 " PDO not processed due to length error " 33280 " Protocol Error " 33104 " CAN-ID collision " 33088 " recovered from bus off " 33072 " Life Guard Error or Heartbeat Error " 33056 " CAN in Error Passive Mode " 33040 " CAN Overrun (Objects lost) " 33024 " Communication " 32768 " Monitoring " 28672 " Additional Modules " 25344 " Data Set " 25088 " User Software " 24832 " Internal Software " 24576 " Device Software " 20480 " Device Hardware " 16896 " Device Temperature " 16640 " Ambient Temperature " 16384 " Temperature " 13056 " Output Voltage " 12800 " Voltage inside the device " 12544 " Mains Voltage " 12288 " Voltage " 8960 " Current device output side " 8704 " Current inside the device " 8448 " Current device input side " 8192 " Current " 4096 " Generic Error " 0 " error Reset or No Error " ;
+VAL_ 0 NTM_Function 130 "Reset Communication" 129 "Reset Node" 128 "Go in Pre-Operational Status" 2 "Go in Operational Status" 1 "Go in Operational Status" ;
+VAL_ 1801 StatusNode 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Boot" ;
+VAL_ 1800 StatusNode 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Boot" ;
+

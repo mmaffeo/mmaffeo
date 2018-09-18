@@ -1,0 +1,248 @@
+#ifndef __c81_MX_Gateway_h__
+#define __c81_MX_Gateway_h__
+
+/* Type Definitions */
+#ifndef typedef_SFc81_MX_GatewayInstanceStruct
+#define typedef_SFc81_MX_GatewayInstanceStruct
+
+typedef struct {
+  SimStruct *S;
+  ChartInfoStruct chartInfo;
+  uint32_T chartNumber;
+  uint32_T instanceNumber;
+  int32_T c81_sfEvent;
+  uint8_T c81_tp_BUTTON_STATE;
+  uint8_T c81_tp_INFO_BUTTON;
+  uint8_T c81_tp_INACTIVE;
+  uint8_T c81_tp_EDGE;
+  uint8_T c81_tp_INACTIVE_WAIT;
+  uint8_T c81_tp_ACTIVE;
+  uint8_T c81_tp_MOVE_RIGHT;
+  uint8_T c81_tp_PANEL_BUTTON;
+  uint8_T c81_b_tp_INACTIVE;
+  uint8_T c81_b_tp_EDGE;
+  uint8_T c81_b_tp_INACTIVE_WAIT;
+  uint8_T c81_b_tp_ACTIVE;
+  uint8_T c81_tp_MOVE_LEFT;
+  uint8_T c81_b_tp_PANEL_BUTTON;
+  uint8_T c81_c_tp_INACTIVE;
+  uint8_T c81_c_tp_EDGE;
+  uint8_T c81_c_tp_INACTIVE_WAIT;
+  uint8_T c81_c_tp_ACTIVE;
+  uint8_T c81_tp_PRIMARY_STATE;
+  uint8_T c81_d_tp_ACTIVE;
+  uint8_T c81_tp_ENGINE_HOURS;
+  uint8_T c81_tp_RESET_STATE;
+  uint8_T c81_d_tp_INACTIVE;
+  uint8_T c81_tp_DEBOUNCE;
+  uint8_T c81_tp_JOB_CLOCK_1;
+  uint8_T c81_b_tp_RESET_STATE;
+  uint8_T c81_e_tp_INACTIVE;
+  uint8_T c81_b_tp_DEBOUNCE;
+  uint8_T c81_tp_JOB_CLOCK_RESET1;
+  uint8_T c81_tp_JOB_CLOCK_2;
+  uint8_T c81_c_tp_RESET_STATE;
+  uint8_T c81_f_tp_INACTIVE;
+  uint8_T c81_c_tp_DEBOUNCE;
+  uint8_T c81_tp_JOB_CLOCK_RESET2;
+  uint8_T c81_tp_FACTORY;
+  uint8_T c81_tp_HOT;
+  uint8_T c81_tp_ECT;
+  uint8_T c81_tp_ENGINE_RPM;
+  uint8_T c81_tp_EMEA_CONTROLS1;
+  uint8_T c81_tp_BATTERY_VOLTAGE;
+  uint8_T c81_tp_SERVICE_CLOCK_RESET;
+  uint8_T c81_tp_SERVICE_CLOCK;
+  uint8_T c81_g_tp_INACTIVE;
+  uint8_T c81_tp_JUMP_STATE;
+  uint8_T c81_d_tp_DEBOUNCE;
+  uint8_T c81_tp_ERROR_CODES;
+  uint8_T c81_tp_EOP;
+  uint8_T c81_b_tp_ECT;
+  uint8_T c81_tp_HOT2;
+  uint8_T c81_tp_SECOND_AUX;
+  uint8_T c81_h_tp_INACTIVE;
+  uint8_T c81_b_tp_ERROR_CODES;
+  uint8_T c81_tp_EMEA_CONTROLS;
+  uint8_T c81_tp_SECONDARY_STATE;
+  uint8_T c81_tp_DELUXE_GOOD;
+  uint8_T c81_tp_VERSION;
+  uint8_T c81_tp_NON_SHUTDOWN;
+  uint8_T c81_tp_FLASH_COLD;
+  uint8_T c81_tp_COLD;
+  uint8_T c81_tp_SERVICE_CLOCK_ALARM;
+  uint8_T c81_tp_NO_STATE;
+  uint8_T c81_tp_GLOW_PLUGS;
+  uint8_T c81_tp_THROTTLE_CAL_DIAGNOSTICS;
+  uint8_T c81_tp_OFFSET;
+  uint8_T c81_tp_Aux_Detent_Error;
+  uint8_T c81_tp_HOLD;
+  uint8_T c81_tp_AUX;
+  uint8_T c81_tp_KSS;
+  uint8_T c81_tp_SHUTDOWN;
+  uint8_T c81_tp_DELUXE_ERROR;
+  uint8_T c81_tp_LIGHT_BUTTON_STATE;
+  uint8_T c81_i_tp_INACTIVE;
+  uint8_T c81_d_tp_EDGE;
+  uint8_T c81_e_tp_ACTIVE;
+  uint8_T c81_is_active_c81_MX_Gateway;
+  uint8_T c81_is_active_BUTTON_STATE;
+  uint8_T c81_is_INFO_BUTTON;
+  uint8_T c81_is_active_INFO_BUTTON;
+  uint8_T c81_is_active_MOVE_RIGHT;
+  uint8_T c81_is_PANEL_BUTTON;
+  uint8_T c81_is_active_PANEL_BUTTON;
+  uint8_T c81_is_active_MOVE_LEFT;
+  uint8_T c81_b_is_PANEL_BUTTON;
+  uint8_T c81_b_is_active_PANEL_BUTTON;
+  uint8_T c81_is_PRIMARY_STATE;
+  uint8_T c81_is_active_PRIMARY_STATE;
+  uint8_T c81_is_ACTIVE;
+  uint8_T c81_was_ACTIVE;
+  uint8_T c81_is_ENGINE_HOURS;
+  uint8_T c81_is_JOB_CLOCK_1;
+  uint8_T c81_is_JOB_CLOCK_2;
+  uint8_T c81_is_FACTORY;
+  uint8_T c81_is_SERVICE_CLOCK;
+  uint8_T c81_is_SECONDARY_STATE;
+  uint8_T c81_is_active_SECONDARY_STATE;
+  uint8_T c81_is_DELUXE_GOOD;
+  uint8_T c81_is_NON_SHUTDOWN;
+  uint8_T c81_is_Aux_Detent_Error;
+  uint8_T c81_is_LIGHT_BUTTON_STATE;
+  uint8_T c81_is_active_LIGHT_BUTTON_STATE;
+  uint16_T c81_debounceCount;
+  uint8_T c81_ACTIVE;
+  uint8_T c81_DISPLAY_BATTERY_VOLTAGE;
+  uint8_T c81_DISPLAY_ENGINE_HOURS;
+  uint8_T c81_DISPLAY_ENGINE_RPM;
+  uint8_T c81_DISPLAY_ERROR_CODES;
+  uint8_T c81_DISPLAY_GLOW_PLUGS;
+  uint8_T c81_DISPLAY_SECOND_AUX;
+  uint8_T c81_INACTIVE;
+  uint16_T c81_serviceClockAlarmTimer;
+  uint16_T c81_CD_DISPLAY_SERVICE_CLOCK_ALARM_TIME;
+  uint8_T c81_DISPLAY_SERVICE_CLOCK_ALARM;
+  uint16_T c81_shutdownTimer;
+  uint16_T c81_CD_DISPLAY_SHUTDOWN_TIME;
+  uint8_T c81_SHUTDOWN;
+  uint8_T c81_DISPLAY_SHUTDOWN;
+  uint8_T c81_DISPLAY_SERVICE_CLOCK_RESET;
+  uint8_T c81_MULTIPLE;
+  uint8_T c81_state_Jump;
+  uint8_T c81_state_LightButton;
+  uint8_T c81_DISPLAY_VERSION;
+  uint8_T c81_DISPLAY_DELUXE_ERROR;
+  uint8_T c81_NO_COMMUNICATION;
+  uint8_T c81_INFO_BUTTON_MASK;
+  uint8_T c81_INFO_BUTTON_PRESS;
+  uint8_T c81_LIGHT_BUTTON_MASK;
+  uint8_T c81_LIGHT_BUTTON_PRESS;
+  uint16_T c81_debounceButton;
+  uint8_T c81_DISPLAY_EOP;
+  uint8_T c81_DISPLAY_ECT;
+  uint8_T c81_DISPLAY_HOT;
+  uint16_T c81_debounceLeft;
+  uint8_T c81_LEFT_BUTTON_MASK;
+  uint8_T c81_RIGHT_BUTTON_PRESS;
+  uint16_T c81_debounceRight;
+  uint8_T c81_RIGHT_BUTTON_MASK;
+  uint8_T c81_LEFT_BUTTON_PRESS;
+  uint8_T c81_NON_FUNCTIONAL;
+  uint16_T c81_CD_AUX_DETENT_FLASH_TIME;
+  uint8_T c81_ERR_DETENT;
+  uint8_T c81_DISPLAY_HOLD;
+  uint8_T c81_DISPLAY_AUX;
+  uint16_T c81_CD_AUX_DETENT_CYCLE_TIME;
+  uint8_T c81_DISPLAY_JOB_CLOCK_1;
+  uint8_T c81_DISPLAY_JOB_CLOCK_2;
+  uint8_T c81_NORMAL;
+  uint8_T c81_DISPLAY_CAN_THROTTLE_DIAG;
+  uint16_T c81_CD_CAN_THROTTLE_CAL_DIAG_TIME;
+  uint8_T c81_prev_InfoSecondary;
+  uint8_T c81_DISPLAY_PRIMARY_INACTIVE;
+  uint8_T c81_ENGINE_CRANKING;
+  uint16_T c81_CD_HOT_FUNCTION;
+  uint8_T c81_LOW;
+  uint8_T c81_EXTREMELY_LOW;
+  uint8_T c81_EVENT;
+  uint8_T c81_DISPLAY_COLD;
+  uint8_T c81_DISPLAY_FLASH_COLD;
+  uint8_T c81_CD_AUTO_DISPLAY_FAULT_FUNCTION;
+  uint16_T c81_CD_AUTO_DISPLAY_FAULT_DEBOUNCE_ACTIVE;
+  uint16_T c81_debounceCode;
+  boolean_T c81_prev_SecondAux;
+  uint16_T c81_CD_SECOND_AUX_OFFSET_DISP_TIME;
+  uint8_T c81_DISPLAY_OFFSET;
+  uint8_T c81_DISPLAY_SERVICE_CLOCK;
+  uint8_T c81_CD_DELUXE_GEN5_5_FUNCTION;
+  uint8_T c81_CD_AUX_FUNCTION;
+  uint8_T c81_AUX_EMEA_CONTROLS;
+  uint16_T c81_CD_EMEA_CONTROLS_DISPLAY_TIME;
+  uint8_T c81_CD_SECOND_AUX_FUNCTION;
+  uint8_T c81_DISPLAY_EMEA_CONTROLS;
+  uint8_T c81_MODE_LEFT_NONE;
+  uint8_T c81_MODE_RIGHT_NONE;
+  uint8_T c81_CD_EMEA_CONTROLS_DISPLAY_MODE;
+  uint16_T c81_temporalCounter_i1;
+  uint8_T c81_temporalCounter_i2;
+  uint16_T c81_temporalCounter_i3;
+  uint16_T c81_temporalCounter_i4;
+  uint8_T c81_doSetSimStateSideEffects;
+  const mxArray *c81_setSimStateSideEffectsInfo;
+  uint8_T *c81_ee_DeluxeG5_address;
+  int32_T c81__indexuxeG5;
+  boolean_T c81_dsmdiag_ee_DeluxeG5;
+  uint8_T *c81__indexee_EngData_address;
+  int32_T c81__indexData;
+  boolean_T c81_dsmdiag_ee_EngData;
+  uint8_T (*c81__indexee_JobClockLHP_address)[2];
+  int32_T c81__indexClockLHP;
+  boolean_T c81_dsmdiag_ee_JobClockLHP;
+  uint8_T *c81__indexflag_StdActiveWarn_address;
+  int32_T c81__indextdActiveWarn;
+  boolean_T c81_dsmdiag_flag_StdActiveWarn;
+  void *c81_fEmlrtCtx;
+  uint8_T *c81_state_InfoPrimary;
+  uint16_T *c81_count_GlowPlug;
+  uint8_T (*c81_msg_PanelButtonState)[8];
+  uint8_T *c81_state_ServiceClock;
+  uint8_T *c81_state_Engine;
+  uint8_T *c81_state_Key;
+  uint8_T *c81_state_InfoButton;
+  uint8_T *c81_state_InfoSecondary;
+  uint8_T *c81_state_LeftButton;
+  uint8_T *c81_state_RightButton;
+  uint8_T *c81_enable_RightLeft;
+  uint8_T *c81_state_Detent;
+  uint8_T *c81_state_DetentEnable;
+  uint8_T *c81_state_CANThrottleCalDiag;
+  uint8_T *c81_state_TC;
+  uint8_T *c81_KSSDisplayState;
+  uint8_T *c81_state_KeylessPanel;
+  uint8_T *c81_state_MachineLock;
+  boolean_T *c81_cmd_SecondAux;
+  boolean_T *c81_fallingedge_SecondAux;
+  boolean_T *c81_mode_ControlChange;
+  uint8_T *c81_mode_LeftControl;
+  uint8_T *c81_mode_RightControl;
+} SFc81_MX_GatewayInstanceStruct;
+
+#endif                                 /*typedef_SFc81_MX_GatewayInstanceStruct*/
+
+/* Named Constants */
+
+/* Variable Declarations */
+extern struct SfDebugInstanceStruct *sfGlobalDebugInstanceStruct;
+
+/* Variable Definitions */
+
+/* Function Declarations */
+extern const mxArray *sf_c81_MX_Gateway_get_eml_resolved_functions_info(void);
+
+/* Function Definitions */
+extern void sf_c81_MX_Gateway_get_check_sum(mxArray *plhs[]);
+extern void c81_MX_Gateway_method_dispatcher(SimStruct *S, int_T method, void
+  *data);
+
+#endif

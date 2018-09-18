@@ -1,0 +1,74 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   8 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c39_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_THROTTLE_PRIMARY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "THROTTLE_PRIMARY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OORL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "THROTTLE_PRIMARY.OORL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OORH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "THROTTLE_PRIMARY.OORH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DEBOUNCE_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "THROTTLE_PRIMARY.DEBOUNCE_NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_THROTTLE_POSITION"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "THROTTLE_POSITION"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "THROTTLE_POSITION.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debouncePrimary"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debouncePrimary"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -1,0 +1,109 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   13 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c98_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c98_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Throttle_Actuator"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Throttle_Actuator"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_G2_Engine"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "G2_Engine"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_TC_PROTECTION"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "G2_Engine.TC_PROTECTION"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_COLD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "G2_Engine.TC_PROTECTION.COLD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_EXTREMELY_COLD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "G2_Engine.TC_PROTECTION.EXTREMELY_COLD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Normal"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "G2_Engine.Normal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_CAN_Throttle_Actuator"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "CAN_Throttle_Actuator"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Throttle_diff"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Throttle_diff"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Throttle_old"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Throttle_old"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceEvent"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceEvent"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceTC"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceTC"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

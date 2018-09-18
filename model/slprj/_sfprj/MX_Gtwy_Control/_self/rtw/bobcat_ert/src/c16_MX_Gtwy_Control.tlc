@@ -1,0 +1,67 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c16_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c16_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NOT_CONNECTED"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NOT_CONNECTED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL_NO_CRANK"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL_NO_CRANK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PLUGGED"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PLUGGED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "FilterDelay"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "FilterDelay"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

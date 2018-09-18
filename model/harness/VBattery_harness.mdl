@@ -1,0 +1,5176 @@
+Model {
+  Name			  "VBattery_harness"
+  Version		  7.7
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.30"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PostLoadFcn		  "load Vbattery.mat"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  InitFcn		  "if signalbuilder('VBattery_harness/Signal_Builder','activegroup') == 1\n  CD_VBATTERY_FUNCTION.DataType "
+  "= 'uint8';\n  CD_VBATTERY_FUNCTION.Value = 255;\n  CD_ALTERNATOR_FUNCTION.DataType = 'uint8';\n  CD_ALTERNATOR_FUNCT"
+  "ION.Value = 255;\nelseif signalbuilder('VBattery_harness/Signal_Builder','activegroup') == 2\n  CD_ALTERNATOR_FUNCTI"
+  "ON.DataType = 'uint8';\n  CD_ALTERNATOR_FUNCTION.Value = 255;\n  CD_VBATTERY_FUNCTION.DataType = 'uint8';\n  CD_VBAT"
+  "TERY_FUNCTION.Value = 0;\nelse\n  CD_VBATTERY_FUNCTION.DataType = 'uint8';\n  CD_VBATTERY_FUNCTION.Value = 0;\n  CD_"
+  "ALTERNATOR_FUNCTION.DataType = 'uint8';\n  CD_ALTERNATOR_FUNCTION.Value = 0;\nend"
+  Created		  "Fri Jan 06 08:41:25 2006"
+  Creator		  "smindema"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "aliebel"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Apr 02 09:26:51 2012"
+  RTWModifiedTimeStamp	  255259592
+  ModelVersionFormat	  "1.%<AutoIncrement:30>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  on
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  on
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dcw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  on
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.0"
+	  StartTime		  "0.0"
+	  StopTime		  "100.0"
+	  AbsTol		  "auto"
+	  FixedStep		  ".1"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Structure"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  on
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  16
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  16
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Floor"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  16
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Motorola HC12"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "32-bit Generic"
+	  TargetUnknown		  off
+	  ProdEqTarget		  off
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.0"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  on
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Real-Time Workshop Embedded Coder (no auto configuration)"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  off
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      off
+	      SupportComplex	      off
+	      PurelyIntegerCode	      on
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"NonHierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "example_file_process.tlc"
+	      CoverageDialogOpen      "off"
+	      ModuleNamingRule	      "Unspecified"
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "Auto"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "Auto"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      GRTInterface	      off
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 280, 135, 1160, 765 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Assertion
+      StopWhenAssertionFail   on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "VBattery_harness"
+    Location		    [2, 82, 1918, 1147]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "69"
+    Block {
+      BlockType		      Assertion
+      Name		      "AlternatorState"
+      SID		      "1"
+      Position		      [685, 257, 745, 303]
+      Enabled		      off
+    }
+    Block {
+      BlockType		      Assertion
+      Name		      "BatteryState"
+      SID		      "2"
+      Position		      [685, 192, 745, 238]
+      Enabled		      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion"
+      SID		      "3"
+      Position		      [180, 89, 245, 111]
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion1"
+      SID		      "4"
+      Position		      [180, 119, 245, 141]
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion2"
+      SID		      "5"
+      Position		      [180, 149, 245, 171]
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion3"
+      SID		      "6"
+      Position		      [180, 179, 245, 201]
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Name		      "Relational\nOperator"
+      SID		      "7"
+      Ports		      [2, 1]
+      Position		      [620, 197, 650, 228]
+      Operator		      "=="
+      InputSameDT	      off
+      OutDataTypeStr	      "boolean"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Name		      "Relational\nOperator1"
+      SID		      "8"
+      Ports		      [2, 1]
+      Position		      [620, 262, 650, 293]
+      Operator		      "=="
+      InputSameDT	      off
+      OutDataTypeStr	      "boolean"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      SID		      "9"
+      Ports		      [4]
+      Position		      [575, 128, 605, 162]
+      Floating		      off
+      Location		      [2058, 90, 3498, 916]
+      Open		      off
+      NumInputPorts	      "4"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+      }
+      TimeRange		      "100"
+      YMin		      "8~14.5~14.5~8"
+      YMax		      "11~21~21~10"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "100000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Signal_Builder"
+      SID		      "10"
+      Tag		      "STV Subsys"
+      Ports		      [0, 6]
+      Position		      [25, 88, 140, 262]
+      CopyFcn		      "sigbuilder_block('copy');"
+      DeleteFcn		      "sigbuilder_block('delete');"
+      LoadFcn		      "sigbuilder_block('load');"
+      ModelCloseFcn	      "sigbuilder_block('modelClose');"
+      PreSaveFcn	      "sigbuilder_block('preSave');"
+      StartFcn		      "sigbuilder_block('start');"
+      StopFcn		      "sigbuilder_block('stop');"
+      NameChangeFcn	      "sigbuilder_block('namechange');"
+      ClipboardFcn	      "sigbuilder_block('clipboard');"
+      OpenFcn		      "sigbuilder_block('open',[50.25 223.5 1137 507 ]);"
+      CloseFcn		      "sigbuilder_block('close');"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      on
+      MaskType		      "Sigbuilder block"
+      MaskDescription	      "Sigbuilder GUI"
+      MaskInitialization      "if ~strcmp(get_param(bdroot(gcbh),'SimulationStatus'),'stopped') tuvar = sigbuilder_blo"
+      "ck('maskInit'); end"
+      MaskDisplay	      "plot(0,0,100,100,[10,10,40,40,10],[80,20,20,80,80],[40,10],[50,50], [40,27,10],[65,72,56],[40"
+      ",25,25,10],[28,28,43,43]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "port"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Signal_Builder"
+	Location		[480, 85, 980, 386]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "11"
+	  Tag			  "STV Demux"
+	  Ports			  [1, 6]
+	  Position		  [150, 40, 160, 615]
+	  Outputs		  "6"
+	}
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "FromWs"
+	  SID			  "12"
+	  Tag			  "STV FromWs"
+	  Position		  [30, 300, 115, 350]
+	  VariableName		  "tuvar"
+	  SampleTime		  "0"
+	  ZeroCross		  on
+	  SigBuilderData	  "DataTag0"
+	  VnvData		  "DataTag1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ain_VBattery"
+	  SID			  "13"
+	  Tag			  "STV Outport"
+	  Position		  [280, 30, 300, 40]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ain_PrecisionReference"
+	  SID			  "14"
+	  Tag			  "STV Outport"
+	  Position		  [280, 60, 300, 70]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_Engine"
+	  SID			  "15"
+	  Tag			  "STV Outport"
+	  Position		  [280, 90, 300, 100]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "speed_Engine"
+	  SID			  "16"
+	  Tag			  "STV Outport"
+	  Position		  [280, 120, 300, 130]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_VBattery"
+	  SID			  "17"
+	  Tag			  "STV Outport"
+	  Position		  [280, 150, 300, 160]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_Alternator"
+	  SID			  "18"
+	  Tag			  "STV Outport"
+	  Position		  [280, 180, 300, 190]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "FromWs"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "ain_VBattery"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "ain_PrecisionReference"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "state_Engine"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  DstBlock		  "speed_Engine"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  DstBlock		  "state_VBattery"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  DstBlock		  "state_Alternator"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "VBattery"
+      SID		      "40"
+      Ports		      [4, 4]
+      Position		      [280, 84, 480, 206]
+      ForegroundColor	      "red"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      SystemSampleTime	      "srate100"
+      RTWSystemCode	      "Function"
+      RTWFcnNameOpts	      "Use subsystem name"
+      RTWFileNameOpts	      "User specified"
+      RTWFileName	      "mod_Inputs"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"state_VBattery"
+	PropagatedSignals	"state_VBattery"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"calc_VBattery"
+	PropagatedSignals	"calc_VBattery"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"calcFlt_VBattery"
+	PropagatedSignals	"calcFlt_VBattery"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"state_Alternator"
+	PropagatedSignals	"state_Alternator"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"VBattery"
+	Location		[579, 231, 1859, 1005]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "ain_VBattery"
+	  SID			  "41"
+	  Position		  [20, 123, 50, 137]
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint16"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ain_VBattery"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ain_PrecisionReference"
+	  SID			  "42"
+	  Position		  [115, 233, 145, 247]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint16"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ain_PrecisionReference"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "state_Engine"
+	  SID			  "43"
+	  Position		  [710, 163, 740, 177]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "state_Engine"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "flt_EngineSpeed"
+	  SID			  "44"
+	  Position		  [710, 203, 740, 217]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint16"
+	  Port {
+	    PortNumber		    1
+	    Name		    "flt_EngineSpeed"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "45"
+	  Position		  [15, 275, 245, 305]
+	  ShowName		  off
+	  Value			  "CD_PRECISION_REF_NOMINAL_VALUE"
+	  OutDataTypeStr	  "uint16"
+	  SampleTime		  "srate100"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  SID			  "46"
+	  Position		  [15, 40, 245, 70]
+	  ShowName		  off
+	  Value			  "CD_VBATTERY_FILTER_GAIN"
+	  OutDataTypeStr	  "uint8"
+	  SampleTime		  "srate100"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  SID			  "47"
+	  Position		  [510, 340, 740, 370]
+	  ShowName		  off
+	  Value			  "CD_VBATTERY_FILTER_DISPLAY_GAIN"
+	  OutDataTypeStr	  "uint8"
+	  SampleTime		  "srate100"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "48"
+	  Position		  [1005, 356, 1060, 374]
+	  ShowName		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "calcFlt_VBattery"
+	    RTWStorageClass	    "ExportedGlobal"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion2"
+	  SID			  "49"
+	  Position		  [816, 290, 834, 345]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  ShowName		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion3"
+	  SID			  "50"
+	  Position		  [400, 121, 455, 139]
+	  ShowName		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  SID			  "51"
+	  Ports			  [2, 1]
+	  Position		  [295, 232, 325, 263]
+	  Inputs		  "*/"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "fixdt(0,16,10)"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "adj_PrecisionReference"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide1"
+	  SID			  "52"
+	  Ports			  [2, 1]
+	  Position		  [660, 112, 690, 143]
+	  Inputs		  "*/"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "fixdt(0,16,8)"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "calc_VBattery"
+	    RTWStorageClass	    "ExportedGlobal"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "LP_Filter_Adj_Gain"
+	  SID			  "53"
+	  Ports			  [2, 1]
+	  Position		  [510, 99, 610, 141]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "LP_Filter_Adj_Gain"
+	    Location		    [433, 403, 1015, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Gain"
+	      SID		      "54"
+	      Position		      [105, 113, 135, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Input"
+	      SID		      "55"
+	      Position		      [110, 183, 140, 197]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LP_Fitler_Adj_Gain"
+	      SID		      "56"
+	      Ports		      [2, 1]
+	      Position		      [190, 84, 435, 226]
+	      ErrorFcn		      "Stateflow.Translate.translate"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskSelfModifiable      on
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', '"
+	      "sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"LP_Fitler_Adj_Gain"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"14"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Gain"
+		  SID			  "56::1"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Input"
+		  SID			  "56::2"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  "56::12"
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  S-Function
+		  Name			  " SFunction "
+		  SID			  "56::11"
+		  Tag			  "Stateflow S-Function VBattery_harness 12"
+		  Ports			  [2, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[2 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "Output"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  "56::14"
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Output"
+		  SID			  "56::6"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Input"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "Output"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "Output"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Output"
+	      SID		      "57"
+	      Position		      [460, 148, 490, 162]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "LP_Fitler_Adj_Gain"
+	      SrcPort		      1
+	      DstBlock		      "Output"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Input"
+	      SrcPort		      1
+	      DstBlock		      "LP_Fitler_Adj_Gain"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "LP_Fitler_Adj_Gain"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "LP_Filter_Adj_Gain1"
+	  SID			  "58"
+	  Ports			  [2, 1]
+	  Position		  [860, 344, 960, 386]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "LP_Filter_Adj_Gain1"
+	    Location		    [433, 403, 1015, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Gain"
+	      SID		      "59"
+	      Position		      [80, 113, 110, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Input"
+	      SID		      "60"
+	      Position		      [85, 183, 115, 197]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LP_Fitler_Adj_Gain"
+	      SID		      "61"
+	      Ports		      [2, 1]
+	      Position		      [190, 84, 435, 226]
+	      ErrorFcn		      "Stateflow.Translate.translate"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskSelfModifiable      on
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', '"
+	      "sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"LP_Fitler_Adj_Gain"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"14"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Gain"
+		  SID			  "61::1"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Input"
+		  SID			  "61::2"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  "61::12"
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  S-Function
+		  Name			  " SFunction "
+		  SID			  "61::11"
+		  Tag			  "Stateflow S-Function VBattery_harness 57"
+		  Ports			  [2, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[2 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "Output"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  "61::14"
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Output"
+		  SID			  "61::6"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Input"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "Output"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "Output"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Output"
+	      SID		      "62"
+	      Position		      [460, 148, 490, 162]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "LP_Fitler_Adj_Gain"
+	      SrcPort		      1
+	      DstBlock		      "Output"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Input"
+	      SrcPort		      1
+	      DstBlock		      "LP_Fitler_Adj_Gain"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "LP_Fitler_Adj_Gain"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "VBattery_State"
+	  SID			  "63"
+	  Ports			  [3, 2]
+	  Position		  [880, 112, 1065, 228]
+	  ForegroundColor	  "red"
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Stateflow diagram"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk',"
+	  " 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "state_VBattery"
+	    PropagatedSignals	    "state_VBattery"
+	    RTWStorageClass	    "ExportedGlobal"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "state_Alternator"
+	    PropagatedSignals	    "state_Alternator"
+	    RTWStorageClass	    "ExportedGlobal"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "VBattery_State"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "16"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "calc_VBattery"
+	      SID		      "63::1"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "state_Engine"
+	      SID		      "63::2"
+	      Position		      [20, 136, 40, 154]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "flt_EngineSpeed"
+	      SID		      "63::3"
+	      Position		      [20, 171, 40, 189]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "63::14"
+	      Ports		      [1, 1]
+	      Position		      [270, 180, 320, 220]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "63::13"
+	      Tag		      "Stateflow S-Function VBattery_harness 13"
+	      Ports		      [3, 3]
+	      Position		      [180, 100, 230, 180]
+	      FunctionName	      "sf_sfun"
+	      Parameters	      "CD_ALTERNATOR_ALARM_ENGINE_SPEED,CD_ALTERNATOR_DEBOUNCE_HIGH,CD_ALTERNATOR_DEBOUNCE_LOW,CD_AL"
+	      "TERNATOR_FUNCTION,CD_ALTERNATOR_HIGH,CD_ALTERNATOR_LOW,CD_VBATTERY_DEBOUNCE_EXTREMELY_HIGH,CD_VBATTERY_DEBOUNCE"
+	      "_EXTREMELY_LOW,CD_VBATTERY_DEBOUNCE_HIGH,CD_VBATTERY_DEBOUNCE_LOW,CD_VBATTERY_DEBOUNCE_NORMAL,CD_VBATTERY_DEBOU"
+	      "NCE_OORL,CD_VBATTERY_EXTREMELY_HIGH,CD_VBATTERY_EXTREMELY_LOW,CD_VBATTERY_FUNCTION,CD_VBATTERY_HIGH,CD_VBATTERY"
+	      "_LOW,CD_VBATTERY_OORL,CD_VOLTAGE_HYSTERESIS,ENGINE_CRANKING,EXTREMELY_HIGH,EXTREMELY_LOW,HIGH,LOW,NON_FUNCTIONA"
+	      "L,NORMAL,OORL"
+	      PortCounts	      "[3 3]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"state_VBattery"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"state_Alternator"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "63::16"
+	      Position		      [460, 191, 480, 209]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "state_VBattery"
+	      SID		      "63::7"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "state_Alternator"
+	      SID		      "63::8"
+	      Position		      [460, 136, 480, 154]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "calc_VBattery"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "state_Engine"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "flt_EngineSpeed"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "state_VBattery"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "state_VBattery"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "state_Alternator"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      3
+	      DstBlock		      "state_Alternator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Vbatt"
+	  SID			  "64"
+	  Position		  [115, 113, 340, 147]
+	  Gain			  "CD_VBATTERY_GAIN"
+	  ParamDataTypeStr	  "fixdt(0,16,12)"
+	  OutDataTypeStr	  "fixdt(0,16,8)"
+	  RndMeth		  "Nearest"
+	  SampleTime		  "srate100"
+	  Port {
+	    PortNumber		    1
+	    Name		    "calc_VBattery"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_VBattery"
+	  SID			  "65"
+	  Position		  [1165, 133, 1195, 147]
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "calc_VBattery"
+	  SID			  "66"
+	  Position		  [1165, 268, 1195, 282]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "calcFlt_VBattery"
+	  SID			  "67"
+	  Position		  [1165, 358, 1195, 372]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "fixdt(0,16,8)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_Alternator"
+	  SID			  "68"
+	  Position		  [1165, 193, 1195, 207]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Line {
+	  Name			  "ain_VBattery"
+	  Labels		  [0, 0]
+	  SrcBlock		  "ain_VBattery"
+	  SrcPort		  1
+	  DstBlock		  "Vbatt"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "state_Engine"
+	  Labels		  [0, 0]
+	  SrcBlock		  "state_Engine"
+	  SrcPort		  1
+	  DstBlock		  "VBattery_State"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "calcFlt_VBattery"
+	  Labels		  [1, 1]
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  DstBlock		  "calcFlt_VBattery"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LP_Filter_Adj_Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ain_PrecisionReference"
+	  Labels		  [0, 0]
+	  SrcBlock		  "ain_PrecisionReference"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -35]
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "adj_PrecisionReference"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  Points		  [285, 0; 0, -115]
+	  DstBlock		  "Divide1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "calc_VBattery"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Vbatt"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "calc_VBattery"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Divide1"
+	  SrcPort		  1
+	  Points		  [130, 0]
+	  Branch {
+	    Labels		    [-1, 0]
+	    DstBlock		    "VBattery_State"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 145]
+	    Branch {
+	      Labels		      [-1, 0]
+	      DstBlock		      "calc_VBattery"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [1, 1]
+	      DstBlock		      "Data Type Conversion2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "LP_Filter_Adj_Gain"
+	  SrcPort		  1
+	  DstBlock		  "Divide1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "flt_EngineSpeed"
+	  Labels		  [0, 0]
+	  SrcBlock		  "flt_EngineSpeed"
+	  SrcPort		  1
+	  DstBlock		  "VBattery_State"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "state_VBattery"
+	  Labels		  [0, 0]
+	  SrcBlock		  "VBattery_State"
+	  SrcPort		  1
+	  DstBlock		  "state_VBattery"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "state_Alternator"
+	  Labels		  [0, 0]
+	  SrcBlock		  "VBattery_State"
+	  SrcPort		  2
+	  DstBlock		  "state_Alternator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  Points		  [180, 0; 0, 55]
+	  DstBlock		  "LP_Filter_Adj_Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "LP_Filter_Adj_Gain1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion2"
+	  SrcPort		  1
+	  Points		  [0, 25]
+	  DstBlock		  "LP_Filter_Adj_Gain1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion3"
+	  SrcPort		  1
+	  DstBlock		  "LP_Filter_Adj_Gain"
+	  DstPort		  2
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      1
+      DstBlock		      "Data Type Conversion"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion"
+      SrcPort		      1
+      DstBlock		      "VBattery"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion1"
+      SrcPort		      1
+      DstBlock		      "VBattery"
+      DstPort		      2
+    }
+    Line {
+      Name		      "state_VBattery"
+      Labels		      [0, 0]
+      SrcBlock		      "VBattery"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	Points			[20, 0; 0, 30]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 105]
+	DstBlock		"Relational\nOperator"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "calc_VBattery"
+      Labels		      [0, 0]
+      SrcBlock		      "VBattery"
+      SrcPort		      2
+      Points		      [45, 0; 0, 10]
+      DstBlock		      "Scope"
+      DstPort		      2
+    }
+    Line {
+      Name		      "calcFlt_VBattery"
+      Labels		      [0, 0]
+      SrcBlock		      "VBattery"
+      SrcPort		      3
+      Points		      [45, 0; 0, -10]
+      DstBlock		      "Scope"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion2"
+      SrcPort		      1
+      DstBlock		      "VBattery"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      5
+      DstBlock		      "Relational\nOperator"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Relational\nOperator"
+      SrcPort		      1
+      DstBlock		      "BatteryState"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      4
+      DstBlock		      "Data Type Conversion3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion3"
+      SrcPort		      1
+      DstBlock		      "VBattery"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Relational\nOperator1"
+      SrcPort		      1
+      DstBlock		      "AlternatorState"
+      DstPort		      1
+    }
+    Line {
+      Name		      "state_Alternator"
+      Labels		      [1, 1]
+      SrcBlock		      "VBattery"
+      SrcPort		      4
+      Points		      [60, 0]
+      Branch {
+	Points			[0, 80]
+	DstBlock		"Relational\nOperator1"
+	DstPort			1
+      }
+      Branch {
+	Labels			[1, 0]
+	Points			[0, -30]
+	DstBlock		"Scope"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      6
+      Points		      [225, 0; 0, 35]
+      DstBlock		      "Relational\nOperator1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      2
+      DstBlock		      "Data Type Conversion1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      3
+      DstBlock		      "Data Type Conversion2"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    ( 4   8    (     @         %    \"     $    !     0         %  0 $0    $   #,    =F5R:6"
+    "9Y0FQK4&%T:',   !V97)I9GE\";&M(86YD;&5S '9N=DUG<DED>           86-T:79E1W)O=7        !R97%$:7-P4')C;G0      &)L:T1"
+    "I<W!-;V1E        9W)O=7!#;G0           !G<F]U<%)E<4-N=        &=R;W5P1$]/4E-I9       ;6]D96Q(              !B;&]C:"
+    "T@              &]V97)I9&53971T:6YG<P        X   \"X    !@    @    !          4    (     0    (    !          X   "
+    "!     !@    @    $          4    (     0   !     !         !     0    +T%L=&5R;F%T;W)3=&%T90X   !     !@    @    $"
+    "          4    (     0    T    !         !     -    +T)A='1E<GE3=&%T90    X   !     !@    @    &          4    (  "
+    "   0    (    !          D    0           ($$        $40 X   !     !@    @    &          4    (     0    (    !    "
+    "      D    0            \\#\\         0 X    X    !@    @    &          4    (     0    $    !          D    (    "
+    "         $ .    .     8    (    !@         %    \"     $    !     0         )    \"    %V2C;;))>D_#@   #@    &    "
+    "\"     8         !0    @    !     0    $         \"0    @           #POPX    X    !@    @    &          4    (    "
+    " 0    $    !          D    (            )$ .    ,     8    (    !@         %    \"                0         )     "
+    "     X    P    !@    @    &          4    (               !          D         #@   #@    &    \"     8         !0"
+    "    @    !     0    $         \"0    @           ((0 X    X    !@    @    &          4    (     0    $    !       "
+    "   D    (         (  *D .    T     8    (    !@         %    \"     (    *     0         )    H            / _    "
+    "    \\#\\       #P/P       / _        \\#\\       #P/P       / _        \\#\\       #P/P       / _        \\#\\   "
+    "    #P/P       / _        \\#\\       #P/P       / _        \\#\\       #P/P       / _        \\#\\"
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    L\"<   8    (     @         %    \"     $    !     0         %  0 %@    $   \"P    9W)I"
+    "9%-E='1I;F<              &-H86YN96QS                  !A>&5S                        8V]M;6]N                     &"
+    "1A=&%3970                   !D871A4V5T261X                :7-697)I9FEC871I;VY6:7-I8FQE '-B;V)J                    "
+    "   .    ,     8    (    !          %    \"     $    \"     0         0  ( ;VX   X   \" #@  !@    @    \"          "
+    "4    (     0    8    !          4 !  *     0   %H   !S=&5P6       <W1E<%D      'E-:6X       !Y36%X        8V]L;W( "
+    "     &QI;F53='EL90!L:6YE5VED=&@ ;&%B96P      &]U=$EN9&5X           .    .     8    (    !@         %    \"     $  "
+    "  !     0         )    \"               #@   #@    &    \"     8         !0    @    !     0    $         \"0    @ "
+    "              X    X    !@    @    &          4    (     0    $    !          D    (            \\/\\.    .     8 "
+    "   (    !@         %    \"     $    !     0         )    \"            /!_#@   $@    &    \"     8         !0    @"
+    "    !     P    $         \"0   !@   !\"/NC9K/KJ/P                     .    ,     8    (    !          %    \"     "
+    "$    !     0         0  $ +0    X    X    !@    @    &          4    (     0    $    !          D    (            "
+    "^#\\.    0     8    (    !          %    \"     $    ,     0         0    #    &%I;E]60F%T=&5R>0     .    .     8 "
+    "   (    !@         %    \"     $    !     0         )    \"            / _#@   #@    &    \"     8         !0    @"
+    "    !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $    !          D "
+    "   (               .    .     8    (    !@         %    \"     $    !     0         )    \"            /#_#@   #@ "
+    "   &    \"     8         !0    @    !     0    $         \"0    @           #P?PX   !(    !@    @    &          4 "
+    "   (     0    ,    !          D    8                                 / _#@   #     &    \"     0         !0    @  "
+    "  !     0    $         $  ! \"T    .    .     8    (    !@         %    \"     $    !     0         )    \"       "
+    "     /@_#@   $@    &    \"     0         !0    @    !    %@    $         $    !8   !A:6Y?4')E8VES:6]N4F5F97)E;F-E "
+    "  .    .     8    (    !@         %    \"     $    !     0         )    \"             ! #@   #@    &    \"     8 "
+    "        !0    @    !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $  "
+    "  !          D    (               .    .     8    (    !@         %    \"     $    !     0         )    \"        "
+    "    /#_#@   #@    &    \"     8         !0    @    !     0    $         \"0    @           #P?PX   !(    !@    @  "
+    "  &          4    (     0    ,    !          D    8    V(%S1I3VYC\\          -B!<T:4]N8_#@   #     &    \"     0  "
+    "       !0    @    !     0    $         $  ! \"T    .    .     8    (    !@         %    \"     $    !     0       "
+    "  )    \"            /@_#@   $     &    \"     0         !0    @    !    #     $         $     P   !S=&%T95]%;F=I;"
+    "F4     #@   #@    &    \"     8         !0    @    !     0    $         \"0    @            (0 X    X    !@    @  "
+    "  &          4    (     0    $    !          D    (               .    .     8    (    !@         %    \"     $   "
+    " !     0         )    \"               #@   #@    &    \"     8         !0    @    !     0    $         \"0    @  "
+    "         #P_PX    X    !@    @    &          4    (     0    $    !          D    (            \\'\\.    2     8  "
+    "  (    !@         %    \"     $    #     0         )    &    %9]KK9B?^\\_7DO(!SV;ZS\\R53 JJ1.0/PX    P    !@    @ "
+    "   $          4    (     0    $    !         !   0 M    #@   #@    &    \"     8         !0    @    !     0    $  "
+    "       \"0    @           #X/PX   !     !@    @    $          4    (     0    P    !         !     ,    <W!E961?16"
+    "YG:6YE      X    X    !@    @    &          4    (     0    $    !          D    (            $$ .    .     8    ("
+    "    !@         %    \"     $    !     0         )    \"               #@   #@    &    \"     8         !0    @    "
+    "!     0    $         \"0    @               X    X    !@    @    &          4    (     0    $    !          D    ("
+    "            \\/\\.    .     8    (    !@         %    \"     $    !     0         )    \"            /!_#@   $@   "
+    " &    \"     8         !0    @    !     P    $         \"0   !@   \"J\\=)-8A#0/P          JO'236(0T#\\.    ,     8"
+    "    (    !          %    \"     $    !     0         0  $ +0    X    X    !@    @    &          4    (     0    $ "
+    "   !          D    (            ^#\\.    0     8    (    !          %    \"     $    .     0         0    #@   '-T"
+    "871E7U9\"871T97)Y   .    .     8    (    !@         %    \"     $    !     0         )    \"            !1 #@   #@"
+    "    &    \"     8         !0    @    !     0    $         \"0    @               X    X    !@    @    &          4"
+    "    (     0    $    !          D    (               .    .     8    (    !@         %    \"     $    !     0      "
+    "   )    \"            /#_#@   #@    &    \"     8         !0    @    !     0    $         \"0    @           #P?PX"
+    "   !(    !@    @    &          4    (     0    ,    !          D    8    JO'236(0T#^J\\=)-8A#@/ZKQTDUB$. _#@   #  "
+    "   &    \"     0         !0    @    !     0    $         $  ! \"T    .    .     8    (    !@         %    \"     $"
+    "    !     0         )    \"            /@_#@   $     &    \"     0         !0    @    !    $     $         $    ! "
+    "   !S=&%T95]!;'1E<FYA=&]R#@   #@    &    \"     8         !0    @    !     0    $         \"0    @            80 X"
+    "   #P!P  !@    @    \"          4    (     0    8    !          4 !  +     0   #<   !C:&%N;F5L<P   'E,:6T         "
+    ";&%B96Q0;W,   !L86)E;$@      &QA8F5L4&%T8V@   X    X    !@    @    &          4    (     0    $    !          D   "
+    " (            &$ .    0     8    (    !@         %    \"     $    \"     0         )    $            !Q         (D"
+    " .    ,     8    (    !          %    \"     $    \"     0         0  ( 5$P   X    X    !@    @    &          4   "
+    " (     0    $    !          D    (        4 #HM4 .    .     8    (    !@         %    \"     $    !     0         "
+    ")    \"        %  Y[5 #@   #@    &    \"     8         !0    @    !     0    $         \"0    @            40 X   "
+    "!     !@    @    &          4    (     0    (    !          D    0            '$         N0 X    P    !@    @    $"
+    "          4    (     0    (    !         !   @!43   #@   #@    &    \"     8         !0    @    !     0    $      "
+    "   \"0    @       !0 .RU0 X    X    !@    @    &          4    (     0    $    !          D    (        4 #KM4 .  "
+    "  .     8    (    !@         %    \"     $    !     0         )    \"            !! #@   $     &    \"     8      "
+    "   !0    @    !     @    $         \"0   !           $!_P       0)] #@   #     &    \"     0         !0    @    ! "
+    "    @    $         $  \" %1,   .    .     8    (    !@         %    \"     $    !     0         )    \"        %  "
+    "\\+5 #@   #@    &    \"     8         !0    @    !     0    $         \"0    @       !0 .^U0 X    X    !@    @    "
+    "&          4    (     0    $    !          D    (            \"$ .    0     8    (    !@         %    \"     $    "
+    "\"     0         )    $    ,W,S,S,S.P_S<S,S,S, $ .    ,     8    (    !          %    \"     $    \"     0        "
+    " 0  ( 5$P   X    X    !@    @    &          4    (     0    $    !          D    (        4 #TM4 .    .     8    ("
+    "    !@         %    \"     $    !     0         )    \"        %  \\[5 #@   #@    &    \"     8         !0    @   "
+    " !     0    $         \"0    @             0 X   !     !@    @    &          4    (     0    (    !          D    "
+    "0          # ?T       .!_0 X    P    !@    @    $          4    (     0    (    !         !   @!43   #@   #@    & "
+    "   \"     8         !0    @    !     0    $         \"0    @       !0 /BU0 X    X    !@    @    &          4    ( "
+    "    0    $    !          D    (        4 #WM4 .    .     8    (    !@         %    \"     $    !     0         )  "
+    "  \"            / _#@   $     &    \"     8         !0    @    !     @    $         \"0   !            !I0       X"
+    "(5 #@   #     &    \"     0         !0    @    !     @    $         $  \" %1,   .    .     8    (    !@         % "
+    "   \"     $    !     0         )    \"        '  _;5 #@   #@    &    \"     8         !0    @    !     0    $     "
+    "    \"0    @       \"0 /RU0 X   !H @  !@    @    \"          4    (     0    $    !          4 !  .     0   &(   !"
+    "D:7-P5&EM90       &1I<W!-;V1E        ;6EN5&EM90        !M87A4:6UE         &%F=&5R1FEN86Q3='( <V%M<&QE5&EM90    !Z9"
+    "7)O0W)O<W,               X   !     !@    @    &          4    (     0    (    !          D    0                   "
+    "   !90 X    X    !@    @    &          4    (     0    $    !          D    (            \\#\\.    .     8    (   "
+    " !@         %    \"     $    !     0         )    \"               #@   #@    &    \"     8         !0    @    !  "
+    "   0    $         \"0    @           !90 X   !     !@    @    $          4    (     0    L    !         !     +   "
+    " 17AT<F%P;VQA=&4       X    X    !@    @    &          4    (     0    $    !          D    (               .    ,"
+    "     8    (    !          %    \"     $    \"     0         0  ( ;VX   X   \"0#   !@    @    \"          4    (   "
+    "  0    H    !          4 !  .     0   #@   !A8W1I=F5$:7-P261X '1I;65286YG90      ;F%M90            !D:7-P;&%Y4F%N9"
+    "V4   X   !@    !@    @    &          4    (     0    8    !          D    P            &$         40        !!    "
+    "     \"$          0        / _#@   $     &    \"     8         !0    @    !     @    $         \"0   !            "
+    "           %E #@   $     &    \"     0         !0    @    !    \"@    $         $     H   !4,2U.3TY&54Y#        #@"
+    "   $     &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   &     &    \""
+    "     8         !0    @    !    !@    $         \"0   #             80        !1         $$         (0         !   "
+    "      \\#\\.    0     8    (    !@         %    \"     $    \"     0         )    $                       64 .    "
+    "0     8    (    !          %    \"     $    .     0         0    #@   %0R+4%,5\"!.3TY&54Y#   .    0     8    (    "
+    "!@         %    \"     $    \"     0         )    $                       64 .    8     8    (    !@         %    "
+    "\"     $    &     0         )    ,            !A         %$         00         A          $        #P/PX   !     !"
+    "@    @    &          4    (     0    (    !          D    0                      !90 X    X    !@    @    $       "
+    "   4    (     0    <    !         !     '    04Q47TQ/5P .    0     8    (    !@         %    \"     $    \"     0 "
+    "        )    $                       64 .    8     8    (    !@         %    \"     $    &     0         )    ,   "
+    "         !A         %$         00         A          $        #P/PX   !     !@    @    &          4    (     0    "
+    "(    !          D    0                      !90 X    P    !@    @    $          4    (     0    0    !         !  "
+    "! !/3U),#@   $     &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   &  "
+    "   &    \"     8         !0    @    !    !@    $         \"0   #             80        !1         $$         (0   "
+    "      !         \\#\\.    0     8    (    !@         %    \"     $    \"     0         )    $                     "
+    "  64 .    ,     8    (    !          %    \"     $    #     0         0  , 3$]7  X   !     !@    @    &          4"
+    "    (     0    (    !          D    0                      !90 X   !8    !@    @    &          4    (     0    4  "
+    "  !          D    H            &$         40         A          $        #P/PX   !     !@    @    &          4    "
+    "(     0    (    !          D    0                      !90 X    P    !@    @    $          4    (     0    0    ! "
+    "        !  ! !(24=(#@   $     &    \"     8         !0    @    !     @    $         \"0   !                       "
+    "%E #@   &     &    \"     8         !0    @    !    !@    $         \"0   #             80        !1         $$   "
+    "      (0         !         \\#\\.    0     8    (    !@         %    \"     $    \"     0         )    $          "
+    "             64 .    .     8    (    !          %    \"     $    &     0         0    !@   $Y/4DU!3   #@   $     &"
+    "    \"     8         !0    @    !     @    $         \"0   !                       %E #@   &     &    \"     8    "
+    "     !0    @    !    !@    $         \"0   #             80        !1         $$         (0         !         \\#\\"
+    ".    0     8    (    !@         %    \"     $    \"     0         )    $                       64 .    .     8    "
+    "(    !          %    \"     $    %     0         0    !0   $A)1T@R    #@   $     &    \"     8         !0    @    "
+    "!     @    $         \"0   !                       %E #@   &     &    \"     8         !0    @    !    !@    $    "
+    "     \"0   #             80        !1         $$         (0         !         \\#\\.    0     8    (    !@        "
+    " %    \"     $    \"     0         )    $                       64 .    .     8    (    !          %    \"     $  "
+    "  %     0         0    !0   $A)1T@S    #@   $     &    \"     8         !0    @    !     @    $         \"0   !   "
+    "                    %E #@   &     &    \"     8         !0    @    !    !@    $         \"0   #             80    "
+    "    !1         $$         (0         !         \\#\\.    0     8    (    !@         %    \"     $    \"     0     "
+    "    )    $                       64 .    .     8    (    !          %    \"     $    (     0         0    \"    $%"
+    ",5%](24=(#@   $     &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   #@"
+    "    &    \"     8         !0    @    !     0    $         \"0    @             0 X    X    !@    @    &          4"
+    "    (     0    $    !          D    (            \\#\\.    @     8    (    $0         !          $ ! !-0T]3 0    @"
+    "   !3:6=3=6ET90X   !(    !@    @    -          4    (    !@    $    !          8    8        W0(    !     0    $  "
+    "  #    #@   $AX   &    \"     D         !0    @    !    &'@   $          @   !AX     4E-      X   !X=P  !@    @   "
+    " \"          4    (     0    $    !          4 !  %     0    4   !-0T]3      X    P=P  !@    @    1          $    "
+    "      0 $ $U#3U,!    #0   $9I;&57<F%P<&5R7U\\    .    \\'8   8    (     0         %    \"    ,T    !     0        "
+    " .    Z!0   8    (    \"0         %    \"    +@4   !     0         \"    N!0   (    -    L    /    #P    L <  '@2 "
+    " \"X%             !'<F]U<', 3F%M90!3:6=N86QS %A$871A %E$871A %-I9U-U:71E4VEG;F%L %5S97)$871A %-I9U-U:71E1W)O=7  06"
+    "-T:79E4VEG;F%L %)E<75I<F5M96YT26YF;P!4:6UE4F%N9V4 06-T:79E1W)O=7  4VEG4W5I=&4                                    &"
+    "                    \"                     T                                               ,                    ! "
+    "   1P    (                    \"    !P    $                    #     0    $                    $     @    $       "
+    "             %     P    $                    &    !     $                    '    !0    $                    (    "
+    "!@    (                    )    #@    $                    *    \"     $                    +    \"0    $         "
+    "           ,    \"@    $                    -    \"P    $                    .    #     $                    /    "
+    "#0    (                    0    %0    $                    1    #P    $                    2    $     $           "
+    "         3    $0    $                    4    $@    $                    5    $P    $                    6    %   "
+    "  (                    7    '     $                    8    %@    $                    9    %P    $               "
+    "     :    &     $                    ;    &0    $                    <    &@    $                    =    &P    ( "
+    "                   >    (P    $                    ?    '0    $                    @    '@    $                   "
+    " A    'P    $                    B    (     $                    C    (0    $                    D    (@    (     "
+    "               E    *@    $                    F    )     $                    G    )0    $                    H  "
+    "  )@    $                    I    )P    $                    J    *     $                    K    *0    (         "
+    "           L    ,0    $                    M    *P    $                    N    +     $                    O    +0"
+    "    $                    P    +@    $                    Q    +P    $                    R    ,     (             "
+    "       S    .     $                    T    ,@    $                    U    ,P    $                    V    -     "
+    "$                    W    -0    $                    X    -@    $                    Y    -P    (                 "
+    "   Z    /P    $                    [    .0    $                    \\    .@    $                    ]    .P    $  "
+    "                  ^    /     $                    _    /0    $                   !     /@    (                   !"
+    "!    1@    $                   !\"    0     $                   !#    00    $                   !$    0@    $     "
+    "              !%    0P    $                   !&    1     $                   !'    10               @    $    !  "
+    "  R     P    !    R0         \"     @    $          P    $    3          ,    \"     0    $    $     0    (    %  "
+    "   0    ,    #     @    $    $    !     $    %    !0    $    &     P    (    !    !P    0    !    \"     4    !   "
+    " \"0    ,    \"     0    H    $     0    L    %     0    P    #     @    $    -    !     $    .    !0    $    /   "
+    "  P    (    !    $     0    !    $0    4    !    $@    (    \"     0   !0    #     0   \"<          P    (    !   "
+    " %0    0    !    %@    4    !    %P    ,    \"     0   !@    $     0   !D    %     0   !H    #     @    $    ;    "
+    "!     $    <    !0    $    =     P    (    !    '@    0    !    'P    4    !    (     ,    \"     0   \"$    $    "
+    " 0   \"(    %     0   \",    #     @    $    D    !     $    E    !0    $    F     @    (    !    *     ,    !    "
+    ".P         #     @    $    I    !     $    J    !0    $    K     P    (    !    +     0    !    +0    4    !    +@"
+    "    ,    \"     0   \"\\    $     0   #     %     0   #$    #     @    $    R    !     $    S    !0    $    T     "
+    "P    (    !    -0    0    !    -@    4    !    -P    ,    \"     0   #@    $     0   #D    %     0   #H    \"     "
+    "@    $    \\     P    $   !/          ,    \"     0   #T    $     0   #X    %     0   #\\    #     @    $   !     "
+    "!     $   !!    !0    $   !\"     P    (    !    0P    0    !    1     4    !    10    ,    \"     0   $8    $    "
+    " 0   $<    %     0   $@    #     @    $   !)    !     $   !*    !0    $   !+     P    (    !    3     0    !    30"
+    "    4    !    3@    (    \"     0   %     #     0   &,          P    (    !    40    0    !    4@    4    !    4P "
+    "   ,    \"     0   %0    $     0   %4    %     0   %8    #     @    $   !7    !     $   !8    !0    $   !9     P  "
+    "  (    !    6@    0    !    6P    4    !    7     ,    \"     0   %T    $     0   %X    %     0   %\\    #     @  "
+    "  $   !@    !     $   !A    !0    $   !B     @    (    !    9     ,    !    =P         #     @    $   !E    !     "
+    "$   !F    !0    $   !G     P    (    !    :     0    !    :0    4    !    :@    ,    \"     0   &L    $     0   &P"
+    "    %     0   &T    #     @    $   !N    !     $   !O    !0    $   !P     P    (    !    <0    0    !    <@    4  "
+    "  !    <P    ,    \"     0   '0    $     0   '4    %     0   '8    \"     @    $   !X     P    $   \"+          , "
+    "   \"     0   'D    $     0   'H    %     0   'L    #     @    $   !\\    !     $   !]    !0    $   !^     P    ( "
+    "   !    ?P    0    !    @     4    !    @0    ,    \"     0   ((    $     0   (,    %     0   (0    #     @    $  "
+    " \"%    !     $   \"&    !0    $   \"'     P    (    !    B     0    !    B0    4    !    B@    (    \"     0   (P"
+    "    #     0   )\\          P    (    !    C0    0    !    C@    4    !    CP    ,    \"     0   )     $     0   )$"
+    "    %     0   )(    #     @    $   \"3    !     $   \"4    !0    $   \"5     P    (    !    E@    0    !    EP    "
+    "4    !    F     ,    \"     0   )D    $     0   )H    %     0   )L    #     @    $   \"<    !     $   \"=    !0   "
+    " $   \">     @    (    !    H     ,    !    LP         #     @    $   \"A    !     $   \"B    !0    $   \"C     P "
+    "   (    !    I     0    !    I0    4    !    I@    ,    \"     0   *<    $     0   *@    %     0   *D    #     @  "
+    "  $   \"J    !     $   \"K    !0    $   \"L     P    (    !    K0    0    !    K@    4    !    KP    ,    \"     0"
+    "   +     $     0   +$    %     0   +(    \"     @    $   \"T     P    $   #'          ,    \"     0   +4    $     "
+    "0   +8    %     0   +<    #     @    $   \"X    !     $   \"Y    !0    $   \"Z     P    (    !    NP    0    !    "
+    "O     4    !    O0    ,    \"     0   +X    $     0   +\\    %     0   ,     #     @    $   #!    !     $   #\"   "
+    " !0    $   ##     P    (    !    Q     0    !    Q0    4    !    Q@                                               "
+    "                                                                                                                  "
+    "                                                                                                                  "
+    "                                                                                                                  "
+    "                                                                                                                  "
+    "                                                                                                                  "
+    "                                                                                                                  "
+    "                                         X         #@   $     &    \"     0         !0    @    !    \"@    $      "
+    "   $     H   !4,2U.3TY&54Y#        #@   $     &    \"     0         !0    @    !    #     $         $     P   !A:6"
+    "Y?5D)A='1E<GD     #@   , !   &    \"     8         !0    @    !    ,@    $         \"0   ) !                     \""
+    "1         )$\":F9F9F9DD0)J9F9F9F21 S<S,S,S,)4#-S,S,S,PE0&=F9F9FYC5 9V9F9F;F-4 T,S,S,S,V0#0S,S,S,S9 9V9F9F;F/4!G9F9"
+    "F9N8]0#0S,S,S,SY -#,S,S,S/D       ( ^0       @#Y FIF9F9D9/T\":F9F9F1D_0       @#]       \" /T\":F9F9F1E#0)J9F9F9&4"
+    "-       ! 0T       $!#0        $9         1D#-S,S,S,Q&0,W,S,S,S$9 FIF9F9G91D\":F9F9F=E&0        $A         2$!G9F9"
+    "F9B9(0&=F9F9F)DA       # 2D       ,!*0)J9F9F9V4I FIF9F9G92D        !.0        $Y FIF9F9F94$\":F9F9F9E00)J9F9F9>5% "
+    "FIF9F9EY44 T,S,S,_-30#0S,S,S\\U- FIF9F9EY5D\":F9F9F7E60        %E #@   , !   &    \"     8         !0    @    !   "
+    " ,@    $         \"0   ) !         $!_0       0']       \"@<D       *!R0       0']       ! ?T       *!R0       H')"
+    "       ! ?T       $!_0       H')       \"@<D       $!L0       0&Q       ! ?T       $!_0       0&Q       ! ;$      "
+    " ,!R0       P')       ! ;$       $!L0       8'A       # =$       $!L0       0&Q       ! ?T       $!_0       0&Q   "
+    "    ! ;$       $!_0       0']       # <D       ,!R0       0']       ! ?T       ,!R0       P')       ! ?T       $!_"
+    "0       @')       \" <D       &!_0       8']         ;$        !L0       H')       \"@<D       $!_0       0'] #@  "
+    " $@    &    \"     0         !0    @    !    %@    $         $    !8   !A:6Y?4')E8VES:6]N4F5F97)E;F-E   .    0    "
+    " 8    (    !@         %    \"     $    \"     0         )    $                       64 .    0     8    (    !@   "
+    "      %    \"     $    \"     0         )    $           T']       #0?T .    0     8    (    !          %    \"   "
+    "  $    ,     0         0    #    '-T871E7T5N9VEN90     .    4     8    (    !@         %    \"     $    $     0   "
+    "      )    (                       24        !)0        %E #@   %     &    \"     8         !0    @    !    !     "
+    "$         \"0   \"            #P/P       / _         $          0 X   !     !@    @    $          4    (     0    "
+    "P    !         !     ,    <W!E961?16YG:6YE      X   !P    !@    @    &          4    (     0    @    !          D "
+    "  !                S,S,S,S,A0#,S,S,S,R% FIF9F9F92D\":F9F9F9E*0,W,S,S,3%! S<S,S,Q,4$        !90 X   !P    !@    @  "
+    "  &          4    (     0    @    !          D   !                                 <)=       !PET                 "
+    "           !PET       '\"70 X   !     !@    @    $          4    (     0    X    !         !     .    <W1A=&5?5D)A"
+    "='1E<GD   X   !     !@    @    &          4    (     0    (    !          D    0                      !90 X   !   "
+    "  !@    @    &          4    (     0    (    !          D    0            ($         @0 X   !     !@    @    $    "
+    "      4    (     0   !     !         !     0    <W1A=&5?06QT97)N871O<@X   !     !@    @    &          4    (     0"
+    "    (    !          D    0                      !90 X   !     !@    @    &          4    (     0    (    !        "
+    "  D    0            ($         @0 X   !@    !@    @    -          4    (    \"P    $    !          8    L        W"
+    "0(    !    !@    ,    $    !0    8    '    \"     $         #@   $     &    \"     0         !0    @    !    #@   "
+    " $         $     X   !4,BU!3%0@3D].1E5.0P  #@   $     &    \"     0         !0    @    !    #     $         $     "
+    "P   !A:6Y?5D)A='1E<GD     #@   (@!   &    \"     8         !0    @    !    *P    $         \"0   %@!              "
+    "       \"1         )$\":F9F9F9DD0)J9F9F9F21 S<S,S,S,)4#-S,S,S,PE0&=F9F9FYC5 9V9F9F;F-4 T,S,S,S,V0#0S,S,S,S9 9V9F9F"
+    ";F/4!G9F9F9N8]0#0S,S,S,SY -#,S,S,S/D       ( ^0       @#Y FIF9F9D9/T\":F9F9F1D_0       @#]       \" /T\":F9F9F1E#0"
+    ")J9F9F9&4-       ! 0T       $!#0#0S,S,S\\T9 -#,S,S.S1T T,S,S,[-'0       P$I       # 2D\":F9F9F=E*0)J9F9F9V4I      "
+    "   3D        !.0)J9F9F9F5! FIF9F9F94$\":F9F9F7E10)J9F9F9>5% -#,S,S/S4T T,S,S,_-30)J9F9F9>59 FIF9F9EY5D        !90 "
+    "X   \"( 0  !@    @    &          4    (     0   \"L    !          D   !8 0        ! ?T       $!_0       H')       "
+    "\"@<D       $!_0       0']       \"@<D       *!R0       0']       ! ?T       *!R0       H')       ! ;$       $!L0 "
+    "      0']       ! ?T       $!L0       0&Q       # <D       ,!R0       0&Q       ! ;$       &!X0       P'1       # "
+    "<D       ,!R0       P')       \"P@T       +\"#0       P')       # <D       )B\"0       F()       \" <D       (!R0 "
+    "      8']       !@?T        !L0        &Q       \"@<D       *!R0       0']       ! ?T .    2     8    (    !      "
+    "    %    \"     $    6     0         0    %@   &%I;E]0<F5C:7-I;VY2969E<F5N8V4   X   !     !@    @    &          4 "
+    "   (     0    (    !          D    0                      !90 X   !     !@    @    &          4    (     0    (   "
+    " !          D    0          #0?T       -!_0 X   !     !@    @    $          4    (     0    P    !         !     ,"
+    "    <W1A=&5?16YG:6YE      X   !0    !@    @    &          4    (     0    0    !          D    @                  "
+    "    !)0        $E         64 .    4     8    (    !@         %    \"     $    $     0         )    (            / "
+    "_        \\#\\         0         ! #@   $     &    \"     0         !0    @    !    #     $         $     P   !S<&"
+    "5E9%]%;F=I;F4     #@   (     &    \"     8         !0    @    !    \"@    $         \"0   %               #,S,S,S,"
+    "R% ,S,S,S,S(4!G9F9F9F9!0)J9F9F9F4% FIF9F9F92D\":F9F9F9E*0,W,S,S,3%! S<S,S,Q,4$        !90 X   \"     !@    @    & "
+    "         4    (     0    H    !          D   !0                                <)=       !PET       '\"70       <)"
+    "=                             <)=       !PET .    0     8    (    !          %    \"     $    .     0         0   "
+    " #@   '-T871E7U9\"871T97)Y   .    R     8    (    !@         %    \"     $    3     0         )    F              "
+    " S<S,S,S,*$#-S,S,S,PH0)J9F9F9&4! FIF9F9D90$ S,S,S,W-#0#,S,S,S<T-         2$        !(0#,S,S,S<TA ,S,S,S-S2$#-S,S,S"
+    ",Q+0,W,S,S,3$Y S<S,S,Q,3D S,S,S,_-.0#,S,S,S\\TY S<S,S,SL44#-S,S,S.Q10        %E #@   ,@    &    \"     8         !"
+    "0    @    !    $P    $         \"0   )@            @0        \"!         (D         B0        \"Q         +$      "
+    "   B0        \")         ($         @0        \"1         )$         D0        \"!         ($         B0        \""
+    ")         +$         L0 X   !     !@    @    $          4    (     0   !     !         !     0    <W1A=&5?06QT97)N"
+    "871O<@X   !     !@    @    &          4    (     0    (    !          D    0                      !90 X   !     !@"
+    "    @    &          4    (     0    (    !          D    0            ($         @0 X   !@    !@    @    -        "
+    "  4    (    \"P    $    !          8    L        W0(    !    !@    H    +    #     T    .    #P    $         #@   "
+    "#@    &    \"     0         !0    @    !    !P    $         $     <   !!3%1?3$]7  X   !     !@    @    $          "
+    "4    (     0    P    !         !     ,    86EN7U9\"871T97)Y      X   \"0 0  !@    @    &          4    (     0   \""
+    "P    !          D   !@ 0                     D0        \"1 FIF9F9F9)$\":F9F9F9DD0,W,S,S,S\"5 S<S,S,S,)4!G9F9F9N8U0"
+    "&=F9F9FYC5 -#,S,S,S-D T,S,S,S,V0&=F9F9FYCU 9V9F9F;F/4 T,S,S,S,^0#0S,S,S,SY       \" /D       ( ^0)J9F9F9&3] FIF9F9"
+    "D9/T       ( _0       @#] FIF9F9D90T\":F9F9F1E#0       0$-       ! 0T T,S,S,S-%0#0S,S,S,T5 S<S,S,R,2D#-S,S,S(Q*0  "
+    "     P$I       # 2D\":F9F9F=E*0)J9F9F9V4I         3D        !.0)J9F9F9F5! FIF9F9F94$\":F9F9F7E10)J9F9F9>5% -#,S,S/"
+    "S4T T,S,S,_-30)J9F9F9>59 FIF9F9EY5D        !90 X   \"0 0  !@    @    &          4    (     0   \"P    !          D"
+    "   !@ 0        ! ?T       $!_0       H')       \"@<D       $!_0       0']       \"@<D       *!R0       0']       !"
+    " ?T       *!R0       H')       ! ;$       $!L0       0']       ! ?T       $!L0       0&Q       # <D       ,!R0    "
+    "   0&Q       ! ;$       &!X0       P'1       ! ;$       $!L0       @'9       \" =D       $!_0       0']       # <D"
+    "       ,!R0       0']       ! ?T       (!R0       @')       !@?T       &!_0        &Q         ;$       *!R0       "
+    "H')       ! ?T       $!_0 X   !(    !@    @    $          4    (     0   !8    !         !     6    86EN7U!R96-I<V"
+    "EO;E)E9F5R96YC90  #@   $     &    \"     8         !0    @    !     @    $         \"0   !                       %"
+    "E #@   $     &    \"     8         !0    @    !     @    $         \"0   !           -!_0       T'] #@   $     &  "
+    "  \"     0         !0    @    !    #     $         $     P   !S=&%T95]%;F=I;F4     #@   &     &    \"     8       "
+    "  !0    @    !    !@    $         \"0   #                       $E         24       (!10       @%%         64 .   "
+    " 8     8    (    !@         %    \"     $    &     0         )    ,            / _        \\#\\         0         "
+    "!         \"$         (0 X   !     !@    @    $          4    (     0    P    !         !     ,    <W!E961?16YG:6Y"
+    "E      X   \"P    !@    @    &          4    (     0   !     !          D   \"                S,S,S,S,A0#,S,S,S,R%"
+    " -#,S,S.S-D T,S,S,[,V0)J9F9F9F3I FIF9F9F9.D        !%0        $5 9V9F9F:F1T!G9F9F9J9'0)J9F9F9F4I FIF9F9F92D       "
+    "$!10       0%%         64 .    L     8    (    !@         %    \"     $    0     0         )    @                 "
+    "               '\"70       <)=         -$         T0       <)=       !PET          @         \"       !PET       '"
+    "\"70                            '\"70       <)= #@   $     &    \"     0         !0    @    !    #@    $         $"
+    "     X   !S=&%T95]60F%T=&5R>0  #@   ,@    &    \"     8         !0    @    !    $P    $         \"0   )@          "
+    "    ,W,S,S,S\"A S<S,S,Q,-T#-S,S,S$PW0)J9F9F9&4! FIF9F9D90$\":F9F9F9E%0)J9F9F9F45 FIF9F9G91D\":F9F9F=E&0,W,S,S,S$Y "
+    "S<S,S,S,3D#-S,S,S*Q10,W,S,S,K%% S<S,S,SL44#-S,S,S.Q10       0%1       ! 5$        !90 X   #(    !@    @    &      "
+    "    4    (     0   !,    !          D   \"8            ($         @0        \"!         (D         B0        \"Q  "
+    "       +$         B0        \")         ($         @0        \")         (D         @0        \"!         +$      "
+    "   L0        \"!         ($ .    0     8    (    !          %    \"     $    0     0         0    $    '-T871E7T%L"
+    "=&5R;F%T;W(.    P     8    (    !@         %    \"     $    2     0         )    D               9F9F9F9F)T!F9F9F9"
+    "F8G0,W,S,S,3#= S<S,S,Q,-T!F9F9F9N9'0&9F9F9FYD= FIF9F9G92D\":F9F9F=E*0,W,S,S,K%% S<S,S,RL44#-S,S,S.Q10,W,S,S,[%%   "
+    "    ! 5$       $!40&9F9F9FQE9 9F9F9F;&5D        !90 X   #     !@    @    &          4    (     0   !(    !        "
+    "  D   \"0            ($         @0        \")         (D         @0        \"!         (D         B0        \"!   "
+    "      ($         B0        \")         ($         @0        \")         (D         @0        \"! #@   &     &    \""
+    "     T         !0    @    +     0    $         !@   \"P       #= @    $    &    $0   !(    3    %    !4    6     0"
+    "         .    ,     8    (    !          %    \"     $    $     0         0  0 3T]23 X   !     !@    @    $       "
+    "   4    (     0    P    !         !     ,    86EN7U9\"871T97)Y      X   #0    !@    @    &          4    (     0  "
+    " !0    !          D   \"@              !G9F9F9N8]0&=F9F9FYCU FIF9F9F9/D\":F9F9F9D^0        $1         1$!G9F9F9B9("
+    "0&=F9F9F)DA FIF9F9D92D\":F9F9F1E*0       @%-       \" 4T       ,!50       P%5       \" 5T       (!70,W,S,S,K%= S<S"
+    ",S,RL5T        !90 X   #0    !@    @    &          4    (     0   !0    !          D   \"@          ! ?T       $!_"
+    "0                            $!_0       0']         $$         00       \\'Y       #P?D        !!0        $%      "
+    " ! ?T       $!_0        $-         0T       $!_0       0']         0T        !#0 X   !(    !@    @    $          4"
+    "    (     0   !8    !         !     6    86EN7U!R96-I<VEO;E)E9F5R96YC90  #@   $     &    \"     8         !0    @ "
+    "   !     @    $         \"0   !                       %E #@   $     &    \"     8         !0    @    !     @    $ "
+    "        \"0   !           -!_0       T'] #@   $     &    \"     0         !0    @    !    #     $         $     P "
+    "  !S=&%T95]%;F=I;F4     #@   &     &    \"     8         !0    @    !    !@    $         \"0   #               ,W,"
+    "S,S,S$) S<S,S,S,0D!G9F9F9N900&=F9F9FYE!         64 .    8     8    (    !@         %    \"     $    &     0       "
+    "  )    ,            / _        \\#\\         0         !         \\#\\       #P/PX   !     !@    @    $          4"
+    "    (     0    P    !         !     ,    <W!E961?16YG:6YE      X   !     !@    @    &          4    (     0    (  "
+    "  !          D    0                      !90 X   !     !@    @    &          4    (     0    (    !          D    "
+    "0                          X   !     !@    @    $          4    (     0    X    !         !     .    <W1A=&5?5D)A="
+    "'1E<GD   X   !P    !@    @    &          4    (     0    @    !          D   !               #-S,S,S(Q$0,W,S,S,C$1"
+    " ,S,S,S/34T S,S,S,]-30,W,S,S,#%9 S<S,S,P,5D        !90 X   !P    !@    @    &          4    (     0    @    !     "
+    "     D   !             ($         @0        #9         -D         @0        \"!         -D         V0 X   !     !@"
+    "    @    $          4    (     0   !     !         !     0    <W1A=&5?06QT97)N871O<@X   !     !@    @    &        "
+    "  4    (     0    (    !          D    0                      !90 X   !     !@    @    &          4    (     0    "
+    "(    !          D    0            ($         @0 X   !@    !@    @    -          4    (    \"P    $    !          8"
+    "    L        W0(    !    !@   !@    9    &@   !L    <    '0    $         #@   #     &    \"     0         !0    @ "
+    "   !     P    $         $  # $Q/5P .    0     8    (    !          %    \"     $    ,     0         0    #    &%I;"
+    "E]60F%T=&5R>0     .    P $   8    (    !@         %    \"     $    R     0         )    D $                     )$"
+    "         D0)J9F9F9F21 FIF9F9F9)$#-S,S,S,PE0,W,S,S,S\"5 9V9F9F;F-4!G9F9F9N8U0#0S,S,S,S9 -#,S,S,S-D!G9F9F9N8]0&=F9F9"
+    "FYCU -#,S,S,S/D T,S,S,S,^0       @#Y       \" /D\":F9F9F1D_0)J9F9F9&3]       \" /T       ( _0)J9F9F9&4- FIF9F9D90T"
+    "       $!#0       0$-         1D        !&0,W,S,S,S$9 S<S,S,S,1D\":F9F9F=E&0)J9F9F9V49         2$        !(0&=F9F9"
+    "F)DA 9V9F9F8F2$       ,!*0       P$I FIF9F9G92D\":F9F9F=E*0        $Y         3D\":F9F9F9E00)J9F9F9F5! FIF9F9EY44\""
+    ":F9F9F7E10#0S,S,S\\U- -#,S,S/S4T\":F9F9F7E60)J9F9F9>59         64 .    P $   8    (    !@         %    \"     $   "
+    " R     0         )    D $         0']       ! ?T       *!R0       H')       ! ?T       $!_0       H')       \"@<D "
+    "      $!_0       0']       \"@<D       *!R0       0&Q       ! ;$       $!_0       0']       ! ;$       $!L0       "
+    "P')       # <D       $!L0       0&Q       !@>$       ,!T0       0&Q       ! ;$       $!_0       0']       ! ;$    "
+    "   $!L0       0']       ! ?T       ,!R0       P')       ! ?T       $!_0       P')       # <D       $!_0       0'] "
+    "      \" <D       (!R0       8']       !@?T        !L0        &Q       \"@<D       *!R0       0']       ! ?T .    "
+    "2     8    (    !          %    \"     $    6     0         0    %@   &%I;E]0<F5C:7-I;VY2969E<F5N8V4   X   !     !"
+    "@    @    &          4    (     0    (    !          D    0                      !90 X   !     !@    @    &       "
+    "   4    (     0    (    !          D    0          #0?T       -!_0 X   !     !@    @    $          4    (     0   "
+    " P    !         !     ,    <W1A=&5?16YG:6YE      X   !0    !@    @    &          4    (     0    0    !          D"
+    "    @                      !)0        $E         64 .    4     8    (    !@         %    \"     $    $     0      "
+    "   )    (            / _        \\#\\         0         ! #@   $     &    \"     0         !0    @    !    #     $"
+    "         $     P   !S<&5E9%]%;F=I;F4     #@   &     &    \"     8         !0    @    !    !@    $         \"0   # "
+    "              ,W,S,S,[%9 S<S,S,SL5D        !70        %=         64 .    8     8    (    !@         %    \"     $ "
+    "   &     0         )    ,                                 \"90        )E          (            X   !     !@    @  "
+    "  $          4    (     0    X    !         !     .    <W1A=&5?5D)A='1E<GD   X   \"P    !@    @    &          4   "
+    " (     0   !     !          D   \"               #-S,S,S,PH0,W,S,S,S\"A FIF9F9D90$\":F9F9F1E 0#,S,S,S<T9 ,S,S,S-S1"
+    "D#-S,S,S,Q.0,W,S,S,S$Y S<S,S,SL44#-S,S,S.Q10)J9F9F9V51 -#,S,S.354 S,S,S,Q-70#,S,S,S$U=         64 .    L     8    "
+    "(    !@         %    \"     $    0     0         )    @            \"!         ($         B0        \")         +$"
+    "         L0        \"!         ($         B0        \")         +$         L0        \"Q         +$         @0    "
+    "    \"! #@   $     &    \"     0         !0    @    !    $     $         $    !    !S=&%T95]!;'1E<FYA=&]R#@   $   "
+    "  &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   $     &    \"     8 "
+    "        !0    @    !     @    $         \"0   !             @0        \"! #@   &     &    \"     T         !0    @"
+    "    +     0    $         !@   \"P       #= @    $    &    'P   \"     A    (@   \",    D     0         .    ,     "
+    "8    (    !          %    \"     $    $     0         0  0 2$E'2 X   !     !@    @    $          4    (     0    P"
+    "    !         !     ,    86EN7U9\"871T97)Y      X   #0 0  !@    @    &          4    (     0   #0    !          D "
+    "  \"@ 0                     D0        \"1 FIF9F9F9)$\":F9F9F9DD0,W,S,S,S\"5 S<S,S,S,)4         P0        #!       "
+    "\" ,$       ( P0&=F9F9FYC5 9V9F9F;F-4 T,S,S,S,V0#0S,S,S,S9 9V9F9F;F/4!G9F9F9N8]0#0S,S,S,SY -#,S,S,S/D!G9F9F9F8^0&="
+    "F9F9F9CY -#,S,S.S/D T,S,S,[,^0&=F9F9FYCY 9V9F9F;F/D        !#0        $- S<S,S,P,0T#-S,S,S Q#0        $9         1"
+    "D#-S,S,S,Q&0,W,S,S,S$9 FIF9F9G91D\":F9F9F=E&0        $A         2$!G9F9F9B9(0&=F9F9F)DA       # 2D       ,!*0)J9F9"
+    "F9V4I FIF9F9G92D        !.0        $Y FIF9F9EY44\":F9F9F7E10#0S,S,S\\U- -#,S,S/S4T\":F9F9F7E60)J9F9F9>59         6"
+    "4 .    T $   8    (    !@         %    \"     $    T     0         )    H $         0']       ! ?T       +\"#0    "
+    "   L(-       ! ?T       $!_0       T(%       #0@4       !\"'0       $(=       #0@4       -\"!0       0']       ! ?"
+    "T       .\"!0       X(%       #@A4       .\"%0       0']       ! ?T       .\"%0       X(5       \"(@T       (B#0  "
+    "     X(5       #@A4       $!_0       0']       #@A4       .\"%0       0']       ! ?T       .\"%0       X(5       !"
+    " ?T       $!_0       8(-       \"(@T       $!_0       0']       \"P@T       +\"#0       0']       ! ?T       )\"!0"
+    "       D(%       #@A4       .\"%0       8(%       !@@4       $!_0       0'] #@   $@    &    \"     0         !0   "
+    " @    !    %@    $         $    !8   !A:6Y?4')E8VES:6]N4F5F97)E;F-E   .    0     8    (    !@         %    \"     "
+    "$    \"     0         )    $                       64 .    0     8    (    !@         %    \"     $    \"     0   "
+    "      )    $           T']       #0?T .    0     8    (    !          %    \"     $    ,     0         0    #    '"
+    "-T871E7T5N9VEN90     .    4     8    (    !@         %    \"     $    $     0         )    (                      "
+    " 24        !)0        %E #@   %     &    \"     8         !0    @    !    !     $         \"0   \"            #P/P"
+    "       / _         $          0 X   !     !@    @    $          4    (     0    P    !         !     ,    <W!E961?"
+    "16YG:6YE      X   !     !@    @    &          4    (     0    (    !          D    0                      !90 X   "
+    "!     !@    @    &          4    (     0    (    !          D    0                          X   !     !@    @    $"
+    "          4    (     0    X    !         !     .    <W1A=&5?5D)A='1E<GD   X   #     !@    @    &          4    (  "
+    "   0   !(    !          D   \"0              \":F9F9F9DG0)J9F9F9F2= 9F9F9F8F0$!F9F9F9B9 0,W,S,S,3$9 S<S,S,Q,1D    "
+    "   $!'0       0$= ,S,S,S.S3D S,S,S,[-.0#,S,S,S\\U% ,S,S,S/S44       \"!40       (%1 FIF9F9FY5D\":F9F9F;E60        "
+    "%E #@   ,     &    \"     8         !0    @    !    $@    $         \"0   )             @0        \"!         )$  "
+    "       D0        \"9         )D         D0        \"1         ($         @0        \"1         )$         F0      "
+    "  \"9         )$         D0        \"!         ($ .    0     8    (    !          %    \"     $    0     0        "
+    " 0    $    '-T871E7T%L=&5R;F%T;W(.    0     8    (    !@         %    \"     $    \"     0         )    $         "
+    "              64 .    0     8    (    !@         %    \"     $    \"     0         )    $            \"!         ("
+    "$ .    8     8    (    #0         %    \"     L    !     0         &    +        -T\"     0    8    F    )P   \"@ "
+    "   I    *@   \"L    !          X    X    !@    @    $          4    (     0    8    !         !     &    3D]234%, "
+    "  .    0     8    (    !          %    \"     $    ,     0         0    #    &%I;E]60F%T=&5R>0     .    0     8   "
+    " (    !@         %    \"     $    \"     0         )    $                       64 .    0     8    (    !@        "
+    " %    \"     $    \"     0         )    $           (']        @?T .    2     8    (    !          %    \"     $  "
+    "  6     0         0    %@   &%I;E]0<F5C:7-I;VY2969E<F5N8V4   X   !     !@    @    &          4    (     0    (    "
+    "!          D    0                      !90 X   !     !@    @    &          4    (     0    (    !          D    0 "
+    "         #0?T       -!_0 X   !     !@    @    $          4    (     0    P    !         !     ,    <W1A=&5?16YG:6Y"
+    "E      X   !0    !@    @    &          4    (     0    0    !          D    @                      !)0        $E  "
+    "       64 .    4     8    (    !@         %    \"     $    $     0         )    (            / _        \\#\\     "
+    "    0         ! #@   $     &    \"     0         !0    @    !    #     $         $     P   !S<&5E9%]%;F=I;F4     #"
+    "@   $     &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   $     &    \""
+    "     8         !0    @    !     @    $         \"0   !                          #@   $     &    \"     0         !"
+    "0    @    !    #@    $         $     X   !S=&%T95]60F%T=&5R>0  #@   $     &    \"     8         !0    @    !     @"
+    "    $         \"0   !                       %E #@   $     &    \"     8         !0    @    !     @    $         \""
+    "0   !             @0        \"! #@   $     &    \"     0         !0    @    !    $     $         $    !    !S=&%T9"
+    "5]!;'1E<FYA=&]R#@   $     &    \"     8         !0    @    !     @    $         \"0   !                       %E #"
+    "@   $     &    \"     8         !0    @    !     @    $         \"0   !             @0        \"! #@   &     &    "
+    "\"     T         !0    @    +     0    $         !@   \"P       #= @    $    &    +0   \"X    O    ,    #$    R   "
+    "  0         .    .     8    (    !          %    \"     $    %     0         0    !0   $A)1T@R    #@   $     &    "
+    "\"     0         !0    @    !    #     $         $     P   !A:6Y?5D)A='1E<GD     #@   &     &    \"     8         "
+    "!0    @    !    !@    $         \"0   #                       #1         -$        !.0        $Y         64 .    8"
+    "     8    (    !@         %    \"     $    &     0         )    ,           (']        @?T       !\"#0       $(-  "
+    "                     X   !(    !@    @    $          4    (     0   !8    !         !     6    86EN7U!R96-I<VEO;E)"
+    "E9F5R96YC90  #@   $     &    \"     8         !0    @    !     @    $         \"0   !                       %E #@ "
+    "  $     &    \"     8         !0    @    !     @    $         \"0   !           -!_0       T'] #@   $     &    \" "
+    "    0         !0    @    !    #     $         $     P   !S=&%T95]%;F=I;F4     #@   %     &    \"     8         !0 "
+    "   @    !    !     $         \"0   \"                       $E         24        !90 X   !0    !@    @    &       "
+    "   4    (     0    0    !          D    @            \\#\\       #P/P        !          $ .    0     8    (    !  "
+    "        %    \"     $    ,     0         0    #    '-P965D7T5N9VEN90     .    0     8    (    !@         %    \"  "
+    "   $    \"     0         )    $                       64 .    0     8    (    !@         %    \"     $    \"     0"
+    "         )    $                          .    0     8    (    !          %    \"     $    .     0         0    #@ "
+    "  '-T871E7U9\"871T97)Y   .    8     8    (    !@         %    \"     $    &     0         )    ,               S<S"
+    ",S,S,-$#-S,S,S,PT0&9F9F9FIDY 9F9F9F:F3D        !90 X   !@    !@    @    &          4    (     0    8    !         "
+    " D    P            ($         @0        \"1         )$         V0        #9 #@   $     &    \"     0         !0   "
+    " @    !    $     $         $    !    !S=&%T95]!;'1E<FYA=&]R#@   $     &    \"     8         !0    @    !     @    "
+    "$         \"0   !                       %E #@   $     &    \"     8         !0    @    !     @    $         \"0   "
+    "!             @0        \"! #@   &     &    \"     T         !0    @    +     0    $         !@   \"P       #= @  "
+    "  $    &    -    #4    V    -P   #@    Y     0         .    .     8    (    !          %    \"     $    %     0   "
+    "      0    !0   $A)1T@S    #@   $     &    \"     0         !0    @    !    #     $         $     P   !A:6Y?5D)A='"
+    "1E<GD     #@   - !   &    \"     8         !0    @    !    -     $         \"0   * !                     \"1      "
+    "   )$\":F9F9F9DD0)J9F9F9F21 S<S,S,S,)4#-S,S,S,PE0        #!         ,$       ( P0       @#! 9V9F9F;F-4!G9F9F9N8U0#"
+    "0S,S,S,S9 -#,S,S,S-D!G9F9F9N8]0&=F9F9FYCU -#,S,S,S/D T,S,S,S,^0&=F9F9F9CY 9V9F9F9F/D T,S,S,[,^0#0S,S,SLSY 9V9F9F;F"
+    "/D!G9F9F9N8^0        $-         0T!G9F9F9F9#0&=F9F9F9D-         1D        !&0,W,S,S,S$9 S<S,S,S,1D\":F9F9F=E&0)J9F"
+    "9F9V49         2$        !(0&=F9F9F)DA 9V9F9F8F2$       ,!*0       P$I FIF9F9G92D\":F9F9F=E*0        $Y         3D"
+    "\":F9F9F7E10)J9F9F9>5% -#,S,S/S4T T,S,S,_-30       P%1       # 5$        !90 X   #0 0  !@    @    &          4    "
+    "(     0   #0    !          D   \"@ 0        ! ?T       $!_0       L(-       \"P@T       $!_0       0']        @@D "
+    "      \"\"\"0       $(=        0AT       \"\"\"0       (()       ! ?T       $!_0       (()        @@D       .\"%0 "
+    "      X(5       ! ?T       $!_0       X(5       #@A4       (B#0       B(-       #@A4       .\"%0        (1        "
+    "HA$       .\"%0       X(5       ! ?T       $!_0       X(5       #@A4       $!_0       0']       !@@T       (B#0   "
+    "    0']       ! ?T       +\"#0       L(-       ! ?T       $!_0       ^(%       #X@4       .\"%0       X(5       #X"
+    "@4       /B!0       0']       ! ?T .    2     8    (    !          %    \"     $    6     0         0    %@   &%I;"
+    "E]0<F5C:7-I;VY2969E<F5N8V4   X   !     !@    @    &          4    (     0    (    !          D    0               "
+    "       !90 X   !     !@    @    &          4    (     0    (    !          D    0          #0?T       -!_0 X   !  "
+    "   !@    @    $          4    (     0    P    !         !     ,    <W1A=&5?16YG:6YE      X   !0    !@    @    &   "
+    "       4    (     0    0    !          D    @                      !)0        $E         64 .    4     8    (    !"
+    "@         %    \"     $    $     0         )    (            / _        \\#\\         0         ! #@   $     &    "
+    "\"     0         !0    @    !    #     $         $     P   !S<&5E9%]%;F=I;F4     #@   $     &    \"     8         "
+    "!0    @    !     @    $         \"0   !                       %E #@   $     &    \"     8         !0    @    !    "
+    " @    $         \"0   !                          #@   $     &    \"     0         !0    @    !    #@    $         "
+    "$     X   !S=&%T95]60F%T=&5R>0  #@   ,     &    \"     8         !0    @    !    $@    $         \"0   )          "
+    "     &9F9F9F9B= 9F9F9F9F)T!F9F9F9B9 0&9F9F9F)D! S<S,S,Q,1D#-S,S,S$Q&0       0$=       ! 1T#-S,S,S(Q.0,W,S,S,C$Y S<"
+    "S,S,SL44#-S,S,S.Q10       (%1        @5$#-S,S,S Q50,W,S,S,#%5         64 .    P     8    (    !@         %    \"  "
+    "   $    2     0         )    D            \"!         ($         D0        \"1         )D         F0        \"1   "
+    "      )$         @0        \"!         )$         D0        \"9         )D         D0        \"1         ($       "
+    "  @0 X   !     !@    @    $          4    (     0   !     !         !     0    <W1A=&5?06QT97)N871O<@X   !     !@ "
+    "   @    &          4    (     0    (    !          D    0                      !90 X   !     !@    @    &         "
+    " 4    (     0    (    !          D    0            ($         @0 X   !@    !@    @    -          4    (    \"P    "
+    "$    !          8    L        W0(    !    !@   #L    \\    /0   #X    _    0     $         #@   #@    &    \"     "
+    "0         !0    @    !    \"     $         $     @   !!3%1?2$E'2 X   !     !@    @    $          4    (     0    P"
+    "    !         !     ,    86EN7U9\"871T97)Y      X   #0 0  !@    @    &          4    (     0   #0    !          D "
+    "  \"@ 0                     D0        \"1 FIF9F9F9)$\":F9F9F9DD0,W,S,S,S\"5 S<S,S,S,)4         P0        #! S<S,S,"
+    "Q,,$#-S,S,S$PP0&=F9F9FYC5 9V9F9F;F-4 T,S,S,S,V0#0S,S,S,S9 9V9F9F;F/4!G9F9F9N8]0#0S,S,S,SY -#,S,S,S/D!G9F9F9F8^0&=F"
+    "9F9F9CY -#,S,S.S/D T,S,S,[,^0&=F9F9FYCY 9V9F9F;F/D        !#0        $-       \" 0T       (!#0        $9         1"
+    "D#-S,S,S,Q&0,W,S,S,S$9 FIF9F9G91D\":F9F9F=E&0        $A         2$!G9F9F9B9(0&=F9F9F)DA       # 2D       ,!*0)J9F9"
+    "F9V4I FIF9F9G92D        !.0        $Y FIF9F9EY44\":F9F9F7E10#0S,S,S\\U- -#,S,S/S4T\":F9F9F7E60)J9F9F9>59         6"
+    "4 .    T $   8    (    !@         %    \"     $    T     0         )    H $         0']       ! ?T       +\"#0    "
+    "   L(-       ! ?T       $!_0       2()       !(@D       !\"'0       $(=       !(@D       $B\"0       0']       ! ?"
+    "T       $B\"0       2()       #@A4       .\"%0       0']       ! ?T       .\"%0       X(5       \"(@T       (B#0  "
+    "     X(5       #@A4       $!_0       0']       #@A4       .\"%0       0']       ! ?T       .\"%0       X(5       !"
+    " ?T       $!_0       8(-       \"(@T       $!_0       0']       \"P@T       +\"#0       0']       ! ?T       \"\"\""
+    "0       (()       #@A4       .\"%0       (()        @@D       $!_0       0'] #@   $@    &    \"     0         !0  "
+    "  @    !    %@    $         $    !8   !A:6Y?4')E8VES:6]N4F5F97)E;F-E   .    0     8    (    !@         %    \"    "
+    " $    \"     0         )    $                       64 .    0     8    (    !@         %    \"     $    \"     0  "
+    "       )    $           T']       #0?T .    0     8    (    !          %    \"     $    ,     0         0    #    "
+    "'-T871E7T5N9VEN90     .    4     8    (    !@         %    \"     $    $     0         )    (                     "
+    "  24        !)0        %E #@   %     &    \"     8         !0    @    !    !     $         \"0   \"            #P/"
+    "P       / _         $          0 X   !     !@    @    $          4    (     0    P    !         !     ,    <W!E961"
+    "?16YG:6YE      X   !P    !@    @    &          4    (     0    @    !          D   !                        N0    "
+    "    \"Y         .4         Y0)J9F9F9F4! FIF9F9F90$        !90 X   !P    !@    @    &          4    (     0    @   "
+    " !          D   !                                 <)=       !PET       .\" 0       X(!       !PET       '\"70 X   "
+    "!     !@    @    $          4    (     0    X    !         !     .    <W1A=&5?5D)A='1E<GD   X   \"X    !@    @    "
+    "&          4    (     0   !$    !          D   \"(              !F9F9F9F8G0&9F9F9F9B= 9F9F9F8F0$!F9F9F9B9 0       "
+    "0$-       ! 0T S,S,S,W-$0#,S,S,S<T1       ! 1D       $!&0,W,S,S,[%% S<S,S,SL44\":F9F9F1E40)J9F9F9&51 S<S,S,S,5D   "
+    "     !90 X   \"X    !@    @    &          4    (     0   !$    !          D   \"(            ($         @0        "
+    "\"1         )$         F0        \"9         ($         @0        \"9         )D         @0        \"!         )D "
+    "        F0        \"!         ($         @0 X   !     !@    @    $          4    (     0   !     !         !     0"
+    "    <W1A=&5?06QT97)N871O<@X   #     !@    @    &          4    (     0   !(    !          D   \"0                 "
+    "    $!#0       0$- ,S,S,S-S1$ S,S,S,W-$0       0$9       ! 1D       $!'0       0$= ,S,S,S-S3D S,S,S,W-.0,W,S,S,[%%"
+    " S<S,S,SL44\":F9F9F1E40)J9F9F9&51 S<S,S,S,5D#-S,S,S,Q60        %E #@   ,     &    \"     8         !0    @    !   "
+    " $@    $         \"0   )             @0        \"!         )$         D0        \"!         ($         D0        \""
+    "1         ($         @0        \"1         )$         @0        \"!         )$         D0        \"!         ($ . "
+    "   8     8    (    #0         %    \"     L    !     0         &    +        -T\"     0    8   !\"    0P   $0   !%"
+    "    1@   $<    !          X   !P    !@    @    -          4    (    #P    $    !          8    \\        W0(    ! "
+    "   \"@    (    )    $    !<    >    )0   \"P    S    .@   $$    \"          X    X    !@    @    &          4    ("
+    "     0    $    !          D    (             $ .    . 4   8    (     0         %    \"     0    !     0         . "
+    "   .     8    (     @         %    \"     $          0         %  0  0    $         #@   $ !   &    \"     (      "
+    "   !0    @    !     0    $         !0 $  D    !    )    $YA;64      %A$871A     %E$871A     %5S97)$871A       .   "
+    " ,     8    (    !          %    \"                0         0          X    P    !@    @    &          4    (    "
+    "           !          D         #@   #     &    \"     8         !0    @               $         \"0         .    "
+    ",     8    (    !@         %    \"                0         )          X    0 @  !@    @    \"          4    (    "
+    " 0    $    !          4 !  0     0   &    !.86UE                4VEG;F%L<P           $%C=&EV95-I9VYA;     !297%U:7"
+    ")E;65N=$EN9F\\ 57-E<D1A=&$          %1I;65286YG90         .    ,     8    (    !          %    \"                0"
+    "         0          X   !(    !@    @    -          4    (    !0    $    !          8    4        W0(             "
+    "  $         #@   #     &    \"     8         !0    @               $         \"0         .    ,     8    (    !   "
+    "       %    \"                0         0          X    P    !@    @    &          4    (               !         "
+    " D         #@   $     &    \"     8         !0    @    !     @    $         \"0   !                       \"1 #@  "
+    " &@!   &    \"     (         !0    @    !     0    $         !0 $  P    !    ,    $YA;64          $=R;W5P<P       "
+    "$%C=&EV94=R;W5P %5S97)$871A      X    P    !@    @    $          4    (               !         !          #@   $@"
+    "    &    \"     T         !0    @    %     0    $         !@   !0       #= @               @         .    .     8 "
+    "   (    !@         %    \"     $    !     0         )    \"            / _#@   #     &    \"     8         !0    @"
+    "               $         \"0         .    B     8    (    \"0         %    \"     $   !8     0         \"    6    "
+    "  !24T     #@   $@    &    \"     (         !0    @    !     0    $         !0 $  4    !    !0   $U#3U,     #@    "
+    "     "
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Mar  5 2011, 00:01:50
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "VBattery_harness"
+    created		    "06-Jan-2006 08:41:40"
+    isLibrary		    0
+    firstData		    118
+    firstTarget		    119
+    debug {
+      runTimeCheck	      [1 0 1 1]
+    }
+    sfVersion		    75014001
+  }
+  chart {
+    id			    2
+    name		    "VBattery/LP_Filter_Adj_Gain/LP_Fitler_Adj_Gain"
+    windowPosition	    [84.75 -64.5 960 600]
+    viewLimits		    [128.994 859.445 77.36 526.868]
+    zoomFactor		    0.797
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    5
+    viewObj		    2
+    machine		    1
+    subviewS {
+      x1		      128.994
+      y1		      77.36
+      zoomFactor	      0.797
+    }
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    firstData		    7
+    chartFileNumber	    12
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  state {
+    id			    3
+    labelString		    "INITIAL\nen:Output = Input;"
+    position		    [212.7139 160.1628 214.625 74.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 4]
+    subviewer		    2
+    ssIdNumber		    1
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    4
+    labelString		    "LP_FILTER\ndu:Output = Output + ((Input - Output)/(1 << Gain));"
+    position		    [474.2513 322.146 301.4742 156.4611]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 3 0]
+    subviewer		    2
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  transition {
+    id			    5
+    labelPosition	    [400.544 150.413 7.767 14.915]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 396.1438 125.6216 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.8547 396.1438 160.1628 0 0]
+    }
+    midPoint		    [396.1438 139.3824]
+    chart		    2
+    linkNode		    [2 0 6]
+    dataLimits		    [396.144 396.144 125.622 152.163]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    3
+  }
+  transition {
+    id			    6
+    labelPosition	    [573.459 235.995 7.767 14.915]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [2 1 0 0.1913 427.3389 174.4354 0 -60.3524]
+    }
+    dst {
+      id		      4
+      intersection	      [1 0 -1 0.4511 610.2316 322.146 0 135.9803]
+    }
+    midPoint		    [552.8011 218.2374]
+    chart		    2
+    linkNode		    [2 5 0]
+    dataLimits		    [427.339 610.232 174.435 314.146]
+    stampAngle		    -1
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    4
+  }
+  data {
+    id			    7
+    ssIdNumber		    5
+    name		    "Gain"
+    linkNode		    [2 0 8]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    8
+    ssIdNumber		    6
+    name		    "Input"
+    linkNode		    [2 7 9]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_CUSTOM_INTEGER_TYPE
+	primitive		SF_INT16_TYPE
+	isSigned		1
+	wordLength		"16"
+	fixpt {
+	  scalingMode		  SF_FIXPT_BINARY_POINT
+	  fractionLength	  "8"
+	  slope			  "2^0"
+	  bias			  "0"
+	}
+      }
+    }
+    dataType		    "fixdt(1,16,8)"
+  }
+  data {
+    id			    9
+    ssIdNumber		    7
+    name		    "Output"
+    linkNode		    [2 8 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	method			SF_CUSTOM_INTEGER_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"32"
+	fixpt {
+	  scalingMode		  SF_FIXPT_BINARY_POINT
+	  fractionLength	  "16"
+	}
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "fixdt(1,32,16)"
+  }
+  instance {
+    id			    10
+    name		    "VBattery/LP_Filter_Adj_Gain/LP_Fitler_Adj_Gain"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    11
+    name		    "VBattery/VBattery_State"
+    windowPosition	    [0 30 1440 813]
+    viewLimits		    [1990.174 2000.174 496.013 506.013]
+    zoomFactor		    1.372
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 12 0 0]
+    firstTransition	    38
+    viewObj		    23
+    machine		    1
+    subviewS {
+      x1		      1990.174
+      y1		      496.013
+      zoomFactor	      1.372
+    }
+    ssIdHighWaterMark	    98
+    decomposition	    CLUSTER_CHART
+    firstData		    75
+    chartFileNumber	    13
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  state {
+    id			    12
+    labelString		    "NON_FUNCTIONAL\nen:state_VBattery = NORMAL;\nen:state_Alternator = NORMAL;"
+    position		    [2730.9267 688.9092 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [11 0 0 23]
+    visible		    0
+    subviewer		    11
+    ssIdNumber		    1
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    13
+    labelString		    "NORMAL\nen:state_VBattery = NORMAL;\nen:state_Alternator = NORMAL;"
+    position		    [667.1529 94.1419 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [16 0 22 0]
+    visible		    0
+    subviewer		    16
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    14
+    labelString		    "HIGH\nen:state_VBattery = HIGH;\nen:state_Alternator = NORMAL;"
+    position		    [678.6238 71.045 240.375 135.375]
+    fontSize		    12
+    chart		    11
+    treeNode		    [18 0 19 0]
+    visible		    0
+    subviewer		    18
+    ssIdNumber		    3
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    15
+    labelString		    "LOW\nen:state_VBattery = LOW;\nen:state_Alternator = NORMAL;"
+    position		    [678.6238 71.045 238.875 134.625]
+    fontSize		    12
+    chart		    11
+    treeNode		    [28 0 20 0]
+    visible		    0
+    subviewer		    28
+    ssIdNumber		    4
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    16
+    labelString		    "NORMAL"
+    position		    [396.5168 952.7529 272 174]
+    fontSize		    12
+    chart		    11
+    treeNode		    [23 22 35 28]
+    firstTransition	    47
+    superState		    SUBCHART
+    subviewer		    23
+    subviewS {
+      x1		      -16.74
+      y1		      -16.74
+      zoomFactor	      1.116
+      pos		      [0 0 926.173 343.461]
+    }
+    ssIdNumber		    5
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    17
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [33.3738 68.045 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [21 0 0 27]
+    visible		    0
+    subviewer		    21
+    ssIdNumber		    6
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    18
+    labelString		    "HIGH"
+    position		    [399.8055 517.2956 272 174]
+    fontSize		    12
+    chart		    11
+    treeNode		    [23 19 29 35]
+    firstTransition	    52
+    superState		    SUBCHART
+    subviewer		    23
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 928.999 292.25]
+    }
+    ssIdNumber		    7
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    19
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [33.3738 68.045 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [18 0 0 14]
+    visible		    0
+    subviewer		    18
+    ssIdNumber		    8
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    20
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [33.3738 68.045 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [28 0 0 15]
+    visible		    0
+    subviewer		    28
+    ssIdNumber		    9
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    21
+    labelString		    "EXTREMELY_LOW"
+    position		    [401.2475 1792.0528 272 174]
+    fontSize		    12
+    chart		    11
+    treeNode		    [23 17 32 0]
+    firstTransition	    62
+    superState		    SUBCHART
+    subviewer		    23
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 916.124 282.25]
+    }
+    ssIdNumber		    10
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    22
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [21.9029 91.1419 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [16 0 0 13]
+    visible		    0
+    subviewer		    16
+    ssIdNumber		    11
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    23
+    labelString		    "NORMAL"
+    position		    [2699.0515 974.6157 307.1922 154.9822]
+    fontSize		    12
+    chart		    11
+    treeNode		    [11 29 12 26]
+    firstTransition	    73
+    superState		    SUBCHART
+    subviewer		    11
+    subviewS {
+      x1		      -30
+      y1		      469.351
+      zoomFactor	      2
+      pos		      [0 0 1672.12 2023.351]
+    }
+    ssIdNumber		    12
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    24
+    labelString		    "DEBOUNCE_OORL\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [37.0764 72.5385 237.7771 158.5181]
+    fontSize		    12
+    chart		    11
+    treeNode		    [26 0 0 25]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    13
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    25
+    labelString		    "OORL\nen:state_VBattery = OORL;\nen:state_Alternator = NORMAL;"
+    position		    [696.8724 79.7652 258.9764 154.4245]
+    fontSize		    12
+    chart		    11
+    treeNode		    [26 0 24 0]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    14
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    26
+    labelString		    "OORL"
+    position		    [2701.6799 1233.5829 297.9449 165.5774]
+    fontSize		    12
+    chart		    11
+    treeNode		    [11 24 23 0]
+    firstTransition	    48
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    11
+    subviewS {
+      x1		      -16.815
+      y1		      -16.815
+      zoomFactor	      1.121
+      pos		      [0 0 971.267 311.326]
+    }
+    ssIdNumber		    15
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    27
+    labelString		    "EXTREMELY_LOW\nen:state_VBattery = EXTREMELY_LOW;\nen:state_Alternator = NORMAL;"
+    position		    [678.6238 71.045 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [21 0 17 0]
+    visible		    0
+    subviewer		    21
+    ssIdNumber		    16
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    28
+    labelString		    "LOW"
+    position		    [400.4109 1345.0292 272 174]
+    fontSize		    12
+    chart		    11
+    treeNode		    [23 20 16 32]
+    firstTransition	    59
+    superState		    SUBCHART
+    subviewer		    23
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 927.499 292.25]
+    }
+    ssIdNumber		    17
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    29
+    labelString		    "EXTREMELY_HIGH"
+    position		    [392.2862 127.6436 272 174]
+    fontSize		    12
+    chart		    11
+    treeNode		    [23 30 0 18]
+    firstTransition	    60
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    23
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 916.124 282.25]
+    }
+    ssIdNumber		    18
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    30
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [33.3738 68.045 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [29 0 0 31]
+    visible		    0
+    subviewer		    29
+    ssIdNumber		    19
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    31
+    labelString		    "EXTREMELY_HIGH\nen:state_VBattery = EXTREMELY_HIGH;\nen:state_Alternator = NORMAL;"
+    position		    [678.6238 71.045 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [29 0 30 0]
+    visible		    0
+    subviewer		    29
+    ssIdNumber		    20
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    32
+    labelString		    "ALTERNATOR_LOW"
+    position		    [1331.4293 1346.5236 272 174]
+    fontSize		    12
+    chart		    11
+    treeNode		    [23 33 28 21]
+    firstTransition	    63
+    superState		    SUBCHART
+    subviewer		    23
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 925.999 284.125]
+    }
+    ssIdNumber		    21
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    33
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [33.3738 68.045 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [32 0 0 34]
+    visible		    0
+    subviewer		    32
+    ssIdNumber		    22
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    34
+    labelString		    "LOW\nen:state_Alternator = LOW;\nen:state_VBattery = NORMAL;"
+    position		    [678.6238 71.045 236.625 134.625]
+    fontSize		    12
+    chart		    11
+    treeNode		    [32 0 33 0]
+    visible		    0
+    subviewer		    32
+    ssIdNumber		    23
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    35
+    labelString		    "ALTERNATOR_HIGH"
+    position		    [1322.1634 521.346 272 174]
+    fontSize		    12
+    chart		    11
+    treeNode		    [23 36 18 16]
+    firstTransition	    65
+    superState		    SUBCHART
+    subviewer		    23
+    subviewS {
+      x1		      2275.173
+      y1		      627.554
+      zoomFactor	      1.183
+      pos		      [0 0 926.749 292.25]
+    }
+    ssIdNumber		    24
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    36
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [33.3738 68.045 227.5 133.5]
+    fontSize		    12
+    chart		    11
+    treeNode		    [35 0 0 37]
+    visible		    0
+    subviewer		    35
+    ssIdNumber		    25
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    37
+    labelString		    "HIGH\nen:state_Alternator = HIGH;\nen:state_VBattery = NORMAL;"
+    position		    [678.6238 71.045 238.125 134.625]
+    fontSize		    12
+    chart		    11
+    treeNode		    [35 0 36 0]
+    visible		    0
+    subviewer		    35
+    ssIdNumber		    26
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  transition {
+    id			    38
+    labelPosition	    [2895.303 666.643 9.257 17.459]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 2890.9025 658.9092 0 0]
+    }
+    dst {
+      id		      12
+      intersection	      [1 0 -1 0.7032 2890.9025 688.9092 0 0]
+    }
+    midPoint		    [2890.9025 670.3007]
+    chart		    11
+    linkNode		    [11 0 44]
+    dataLimits		    [2888.503 2893.303 658.909 688.909]
+    subviewer		    11
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    27
+  }
+  transition {
+    id			    39
+    labelString		    "[(calc_VBattery <= CD_VBATTERY_OORL)]"
+    labelPosition	    [2550.472 1171.604 241.698 17.459]
+    fontSize		    12
+    src {
+      id		      23
+      intersection	      [3 -0 1 0.8555 2743.4408 1129.5979 0 114.1106]
+    }
+    dst {
+      id		      26
+      intersection	      [1 0 -1 0.1402 2743.4408 1233.5829 0 -114.1106]
+    }
+    midPoint		    [2743.4368 1179.5902]
+    chart		    11
+    linkNode		    [11 44 41]
+    dataLimits		    [2741.041 2745.841 1129.598 1233.583]
+    stampAngle		    -1
+    subviewer		    11
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    28
+  }
+  transition {
+    id			    40
+    labelString		    "[(debounceCount >= CD_VBATTERY_DEBOUNCE_HIGH)...\n|| (state_VBattery == HIGH)]"
+    labelPosition	    [283.684 66.375 337.349 32.864]
+    fontSize		    12
+    src {
+      id		      19
+      intersection	      [2 1 0 0.2149 260.8738 96.7392 0 -39.92]
+    }
+    dst {
+      id		      14
+      intersection	      [4 -1 -0 0.8102 678.6238 96.7392 0 39.92]
+    }
+    midPoint		    [474.5696 96.7438]
+    chart		    11
+    linkNode		    [18 52 0]
+    visible		    0
+    dataLimits		    [260.874 678.624 94.344 99.144]
+    stampAngle		    -1
+    subviewer		    18
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    29
+  }
+  transition {
+    id			    41
+    labelString		    "[(state_Engine != ENGINE_CRANKING)...\n&& (calc_VBattery > (CD_VBATTERY_OORL + CD_VOLTAGE_HYSTER"
+    "ESIS))]"
+    labelPosition	    [2957.678 1172.659 438.142 32.864]
+    fontSize		    12
+    src {
+      id		      26
+      intersection	      [1 0 -1 0.8248 2947.4164 1233.5829 0 102.6094]
+    }
+    dst {
+      id		      23
+      intersection	      [3 -0 1 0.1915 2947.4164 1129.5979 0 -102.6094]
+    }
+    midPoint		    [2947.4124 1183.5905]
+    chart		    11
+    linkNode		    [11 39 0]
+    dataLimits		    [2945.016 2949.816 1129.598 1233.583]
+    stampAngle		    -1
+    subviewer		    11
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    30
+  }
+  transition {
+    id			    42
+    labelString		    "[(debounceCount >= CD_VBATTERY_DEBOUNCE_EXTREMELY_HIGH)...\n|| (state_VBattery == EXTREMELY_HIGH"
+    ")]"
+    labelPosition	    [283.077 66.375 416.543 32.864]
+    fontSize		    12
+    src {
+      id		      30
+      intersection	      [2 1 0 0.215 260.8738 96.7438 0 -39.92]
+    }
+    dst {
+      id		      31
+      intersection	      [4 -1 -0 0.8075 678.6238 96.7438 0 39.92]
+    }
+    midPoint		    [474.5696 96.75]
+    chart		    11
+    linkNode		    [29 60 0]
+    visible		    0
+    dataLimits		    [260.874 678.624 94.344 99.144]
+    stampAngle		    -1
+    subviewer		    29
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    31
+  }
+  transition {
+    id			    43
+    labelString		    "[(debounceCount >= CD_VBATTERY_DEBOUNCE_EXTREMELY_LOW)...\n|| (state_VBattery == EXTREMELY_LOW)]"
+    labelPosition	    [283.38 66.375 413.458 32.864]
+    fontSize		    12
+    src {
+      id		      17
+      intersection	      [2 1 0 0.215 260.8738 96.7438 0 -39.92]
+    }
+    dst {
+      id		      27
+      intersection	      [4 -1 0 0.8075 678.6238 96.7438 0 39.92]
+    }
+    midPoint		    [474.5696 96.75]
+    chart		    11
+    linkNode		    [21 62 0]
+    visible		    0
+    dataLimits		    [260.874 678.624 94.35 99.15]
+    stampAngle		    -1
+    subviewer		    21
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    32
+  }
+  transition {
+    id			    44
+    labelString		    "[(CD_VBATTERY_FUNCTION != NON_FUNCTIONAL)]"
+    labelPosition	    [2500.527 844.744 304.437 17.459]
+    fontSize		    12
+    src {
+      id		      12
+      intersection	      [3 -0 1 0.8536 2764.2327 822.4092 0 80.4552]
+    }
+    dst {
+      id		      23
+      intersection	      [1 0 -1 0.2122 2764.2327 974.6157 0 -80.4552]
+    }
+    midPoint		    [2764.2327 897.5606]
+    chart		    11
+    linkNode		    [11 38 39]
+    dataLimits		    [2761.833 2766.633 822.409 974.616]
+    stampAngle		    -1
+    subviewer		    11
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    33
+  }
+  transition {
+    id			    45
+    labelString		    "[(debounceCount >= CD_VBATTERY_DEBOUNCE_LOW)...\n|| (state_VBattery == LOW)]"
+    labelPosition	    [283.684 66.375 334.263 32.864]
+    fontSize		    12
+    src {
+      id		      20
+      intersection	      [2 1 0 0.215 260.8738 96.7449 0 -39.92]
+    }
+    dst {
+      id		      15
+      intersection	      [4 -1 -0 0.8091 678.6238 96.7449 0 39.92]
+    }
+    midPoint		    [474.5696 96.7438]
+    chart		    11
+    linkNode		    [28 59 0]
+    visible		    0
+    dataLimits		    [260.874 678.624 94.344 99.144]
+    stampAngle		    -1
+    subviewer		    28
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    34
+  }
+  transition {
+    id			    46
+    labelString		    "[(debounceCount >= CD_VBATTERY_DEBOUNCE_OORL)...\n|| (state_VBattery == OORL)]"
+    labelPosition	    [328.209 65.023 341.179 30.208]
+    fontSize		    12
+    src {
+      id		      24
+      intersection	      [2 1 0 0.1669 274.8535 98.9911 0 -56.0857]
+    }
+    dst {
+      id		      25
+      intersection	      [4 -1 -0 0.8755 696.8724 98.9911 0 56.0857]
+    }
+    midPoint		    [490.7766 98.9952]
+    chart		    11
+    linkNode		    [26 48 0]
+    visible		    0
+    dataLimits		    [274.854 696.872 96.591 101.391]
+    stampAngle		    -1
+    subviewer		    26
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    35
+  }
+  transition {
+    id			    47
+    labelPosition	    [69.179 69.533 9.257 17.459]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 64.7791 61.1419 0 0]
+    }
+    dst {
+      id		      22
+      intersection	      [1 0 -1 0.1885 64.7791 91.1419 0 0]
+    }
+    midPoint		    [64.7791 72.5334]
+    chart		    11
+    linkNode		    [16 0 61]
+    visible		    0
+    dataLimits		    [62.379 67.179 61.142 91.142]
+    subviewer		    16
+    executionOrder	    1
+    ssIdNumber		    36
+  }
+  transition {
+    id			    48
+    labelPosition	    [73.071 50.414 8.403 15.943]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 68.6715 42.5385 0 0]
+    }
+    dst {
+      id		      24
+      intersection	      [1 0 -1 0.1329 68.6715 72.5385 0 0]
+    }
+    midPoint		    [68.6715 53.4137]
+    chart		    11
+    linkNode		    [26 0 46]
+    visible		    0
+    dataLimits		    [66.271 71.072 42.539 72.538]
+    subviewer		    26
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    37
+  }
+  transition {
+    id			    49
+    labelString		    "[(calc_VBattery < (CD_VBATTERY_EXTREMELY_HIGH - CD_VOLTAGE_HYSTERESIS))...\n&& ((CD_ALTERNATOR_F"
+    "UNCTION ==NON_FUNCTIONAL)...\n  || (flt_EngineSpeed < CD_ALTERNATOR_ALARM_ENGINE_SPEED))]"
+    labelPosition	    [35.004 336.531 481.267 47.906]
+    fontSize		    12
+    src {
+      id		      29
+      intersection	      [3 -0 1 0.8659 428.7735 301.6436 0 99.5362]
+    }
+    dst {
+      id		      18
+      intersection	      [1 0 -1 0.1065 428.7735 517.2956 0 -99.5362]
+    }
+    midPoint		    [428.7614 409.897]
+    chart		    11
+    linkNode		    [23 50 54]
+    dataLimits		    [426.374 431.173 301.644 517.296]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    38
+  }
+  transition {
+    id			    50
+    labelString		    "[(calc_VBattery >= CD_VBATTERY_EXTREMELY_HIGH)]"
+    labelPosition	    [526.768 460.458 305.852 17.965]
+    fontSize		    12
+    src {
+      id		      18
+      intersection	      [1 0 -1 0.8685 636.0375 517.2956 0 92.4445]
+    }
+    dst {
+      id		      29
+      intersection	      [3 -0 1 0.1039 636.0375 301.6436 0 -99.9445]
+    }
+    midPoint		    [636.0254 409.0422]
+    chart		    11
+    linkNode		    [23 74 49]
+    dataLimits		    [633.638 638.438 301.644 517.296]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    39
+  }
+  transition {
+    id			    51
+    labelPosition	    [498.9 926.884 8.996 17.965]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 494.5 922.7529 0 0]
+    }
+    dst {
+      id		      16
+      intersection	      [1 0 -1 0.3602 494.5 952.7529 0 0]
+    }
+    midPoint		    [494.5 929.8836]
+    chart		    11
+    linkNode		    [23 69 67]
+    dataLimits		    [492.1 496.9 922.753 952.753]
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    40
+  }
+  transition {
+    id			    52
+    labelPosition	    [70.9 46.436 9.257 17.459]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 66.5 38.045 0 0]
+    }
+    dst {
+      id		      19
+      intersection	      [1 0 -1 0.1456 66.5 68.045 0 0]
+    }
+    midPoint		    [66.5 49.4365]
+    chart		    11
+    linkNode		    [18 0 40]
+    visible		    0
+    dataLimits		    [64.1 68.9 38.045 68.045]
+    subviewer		    18
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    41
+  }
+  transition {
+    id			    53
+    labelString		    "[(calc_VBattery < (CD_VBATTERY_HIGH - CD_VOLTAGE_HYSTERESIS))]"
+    labelPosition	    [235.5 731.985 398.807 17.965]
+    fontSize		    12
+    src {
+      id		      18
+      intersection	      [3 -0 1 0.8835 431.4935 691.2956 0 104.3055]
+    }
+    dst {
+      id		      16
+      intersection	      [1 0 -1 0.1286 431.4935 952.7529 0 -104.3055]
+    }
+    midPoint		    [431.5 823.4474]
+    chart		    11
+    linkNode		    [23 54 70]
+    dataLimits		    [429.094 433.893 691.296 952.753]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    42
+  }
+  transition {
+    id			    54
+    labelString		    "[(calc_VBattery >= CD_VBATTERY_HIGH)...\n&& ((CD_ALTERNATOR_FUNCTION ==NON_FUNCTIONAL)...\n   ||"
+    "  (flt_EngineSpeed < CD_ALTERNATOR_ALARM_ENGINE_SPEED))]"
+    labelPosition	    [492.741 786.412 385.313 47.906]
+    fontSize		    12
+    src {
+      id		      16
+      intersection	      [1 0 -1 0.8941 639.7095 952.7529 0 101.4832]
+    }
+    dst {
+      id		      18
+      intersection	      [3 -0 1 0.118 639.7095 691.2956 0 -94.9507]
+    }
+    midPoint		    [639.7095 820.6011]
+    chart		    11
+    linkNode		    [23 49 53]
+    dataLimits		    [637.31 642.11 691.296 952.753]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    3
+    ssIdNumber		    43
+  }
+  transition {
+    id			    55
+    labelString		    "[(calc_VBattery <= CD_VBATTERY_LOW)...\n&& ((CD_ALTERNATOR_FUNCTION == NON_FUNCTIONAL)...\n  || "
+    " (flt_EngineSpeed < CD_ALTERNATOR_ALARM_ENGINE_SPEED))]"
+    labelPosition	    [8.254 1138.966 382.315 47.906]
+    fontSize		    12
+    src {
+      id		      16
+      intersection	      [3 0 1 0.8098 448.2557 1126.7529 0 98.0168]
+    }
+    dst {
+      id		      28
+      intersection	      [1 -0 -1 0.1759 448.2557 1345.0292 0 -99.5168]
+    }
+    midPoint		    [448.2557 1236.3755]
+    chart		    11
+    linkNode		    [23 68 56]
+    dataLimits		    [445.856 450.656 1126.753 1345.029]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    4
+    ssIdNumber		    44
+  }
+  transition {
+    id			    56
+    labelString		    "[(calc_VBattery > (CD_VBATTERY_LOW + CD_VOLTAGE_HYSTERESIS))...\n&& (state_Engine != ENGINE_CRAN"
+    "KING)]"
+    labelPosition	    [516.5 1266.553 403.305 32.936]
+    fontSize		    12
+    src {
+      id		      28
+      intersection	      [1 -0 -1 0.8643 635.5005 1345.0292 0 99.0891]
+    }
+    dst {
+      id		      16
+      intersection	      [3 0 1 0.1214 635.5005 1126.7529 0 -99.0891]
+    }
+    midPoint		    [635.5 1235.4066]
+    chart		    11
+    linkNode		    [23 55 57]
+    dataLimits		    [633.101 637.9 1126.753 1345.029]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    45
+  }
+  transition {
+    id			    57
+    labelString		    "[(calc_VBattery <= CD_VBATTERY_EXTREMELY_LOW)]"
+    labelPosition	    [243.001 1733.882 301.354 17.965]
+    fontSize		    12
+    src {
+      id		      28
+      intersection	      [3 -0 1 0.8195 449.5069 1519.0292 0 86.9109]
+    }
+    dst {
+      id		      21
+      intersection	      [1 0 -1 0.1774 449.5069 1792.0528 0 -86.9109]
+    }
+    midPoint		    [449.5069 1657.2156]
+    chart		    11
+    linkNode		    [23 56 58]
+    dataLimits		    [447.107 451.907 1519.029 1792.053]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    46
+  }
+  transition {
+    id			    58
+    labelString		    "[(calc_VBattery > (CD_VBATTERY_EXTREMELY_LOW + CD_VOLTAGE_HYSTERESIS))...\n&& (state_Engine != E"
+    "NGINE_CRANKING)...\n&& ((CD_ALTERNATOR_FUNCTION == NON_FUNCTIONAL)...\n  ||  (flt_EngineSpeed < CD_ALTERNATOR_ALAR"
+    "M_ENGINE_SPEED))]"
+    labelPosition	    [495.5 1551.553 479.768 62.877]
+    fontSize		    12
+    src {
+      id		      21
+      intersection	      [1 0 -1 0.8778 640.0157 1792.0528 0 102.7525]
+    }
+    dst {
+      id		      28
+      intersection	      [3 -0 1 0.1191 640.0157 1519.0292 0 -102.7525]
+    }
+    midPoint		    [640 1653.8664]
+    chart		    11
+    linkNode		    [23 57 71]
+    dataLimits		    [637.616 642.416 1519.029 1792.053]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    47
+  }
+  transition {
+    id			    59
+    labelPosition	    [58.9 46.436 9.257 17.459]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 54.5 38.045 0 0]
+    }
+    dst {
+      id		      20
+      intersection	      [1 0 -1 0.0929 54.5 68.045 0 0]
+    }
+    midPoint		    [54.5 49.4365]
+    chart		    11
+    linkNode		    [28 0 45]
+    visible		    0
+    dataLimits		    [52.1 56.9 38.045 68.045]
+    subviewer		    28
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    48
+  }
+  transition {
+    id			    60
+    labelPosition	    [67.15 46.436 9.257 17.459]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 62.75 38.045 0 0]
+    }
+    dst {
+      id		      30
+      intersection	      [1 0 -1 0.1291 62.75 68.045 0 0]
+    }
+    midPoint		    [62.75 49.4365]
+    chart		    11
+    linkNode		    [29 0 42]
+    visible		    0
+    dataLimits		    [60.35 65.15 38.045 68.045]
+    subviewer		    29
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    49
+  }
+  transition {
+    id			    61
+    labelString		    "[(debounceCount >= CD_VBATTERY_DEBOUNCE_NORMAL)...\n|| ((state_VBattery == NORMAL) && (state_Alt"
+    "ernator == NORMAL))]"
+    labelPosition	    [271.91 89.472 374.375 32.864]
+    fontSize		    12
+    src {
+      id		      22
+      intersection	      [2 1 0 0.215 249.4029 119.8407 0 -39.92]
+    }
+    dst {
+      id		      13
+      intersection	      [4 -1 0 0.8075 667.1529 119.8407 0 39.92]
+    }
+    midPoint		    [463.0987 119.8469]
+    chart		    11
+    linkNode		    [16 47 0]
+    visible		    0
+    dataLimits		    [249.403 667.153 117.441 122.241]
+    stampAngle		    -1
+    subviewer		    16
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    50
+  }
+  transition {
+    id			    62
+    labelPosition	    [70.9 46.436 9.257 17.459]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 66.5 38.045 0 0]
+    }
+    dst {
+      id		      17
+      intersection	      [1 0 -1 0.1456 66.5 68.045 0 0]
+    }
+    midPoint		    [66.5 49.4365]
+    chart		    11
+    linkNode		    [21 0 43]
+    visible		    0
+    dataLimits		    [64.1 68.9 38.045 68.045]
+    subviewer		    21
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    51
+  }
+  transition {
+    id			    63
+    labelPosition	    [58.9 46.436 9.257 17.459]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 54.5 38.045 0 0]
+    }
+    dst {
+      id		      33
+      intersection	      [1 0 -1 0.0929 54.5 68.045 0 0]
+    }
+    midPoint		    [54.5 49.4365]
+    chart		    11
+    linkNode		    [32 0 64]
+    visible		    0
+    dataLimits		    [52.1 56.9 38.045 68.045]
+    subviewer		    32
+    executionOrder	    1
+    ssIdNumber		    52
+  }
+  transition {
+    id			    64
+    labelString		    "[(debounceCount >= CD_ALTERNATOR_DEBOUNCE_LOW)]"
+    labelPosition	    [282.63 66.373 347.634 17.459]
+    fontSize		    12
+    src {
+      id		      33
+      intersection	      [2 1 0 0.215 260.8738 96.7449 0 -39.92]
+    }
+    dst {
+      id		      34
+      intersection	      [4 -1 -0 0.8091 678.6238 96.7449 0 39.92]
+    }
+    midPoint		    [474.5696 96.7438]
+    chart		    11
+    linkNode		    [32 63 0]
+    visible		    0
+    dataLimits		    [260.874 678.624 94.344 99.144]
+    stampAngle		    -1
+    subviewer		    32
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    53
+  }
+  transition {
+    id			    65
+    labelPosition	    [70.9 46.436 9.257 17.459]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 66.5 38.045 0 0]
+    }
+    dst {
+      id		      36
+      intersection	      [1 0 -1 0.1456 66.5 68.045 0 0]
+    }
+    midPoint		    [66.5 49.4365]
+    chart		    11
+    linkNode		    [35 0 66]
+    visible		    0
+    dataLimits		    [64.1 68.9 38.045 68.045]
+    subviewer		    35
+    executionOrder	    1
+    ssIdNumber		    54
+  }
+  transition {
+    id			    66
+    labelString		    "[(debounceCount >= CD_ALTERNATOR_DEBOUNCE_HIGH)]"
+    labelPosition	    [282.63 66.373 350.719 17.459]
+    fontSize		    12
+    src {
+      id		      36
+      intersection	      [2 1 0 0.215 260.8738 96.7449 0 -39.92]
+    }
+    dst {
+      id		      37
+      intersection	      [4 -1 -0 0.8091 678.6238 96.7449 0 39.92]
+    }
+    midPoint		    [474.5696 96.7438]
+    chart		    11
+    linkNode		    [35 65 0]
+    visible		    0
+    dataLimits		    [260.874 678.624 94.345 99.145]
+    stampAngle		    -1
+    subviewer		    35
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    55
+  }
+  transition {
+    id			    67
+    labelString		    "[(CD_ALTERNATOR_FUNCTION != NON_FUNCTIONAL)...\n&& (calc_VBattery <= CD_ALTERNATOR_LOW)...\n&& ("
+    "flt_EngineSpeed >= CD_ALTERNATOR_ALARM_ENGINE_SPEED)]"
+    labelPosition	    [1234.833 1039.628 382.315 47.906]
+    fontSize		    12
+    src {
+      id		      16
+      intersection	      [2 1 0 0.7316 668.5168 1080.0542 0 -46.6987]
+    }
+    dst {
+      id		      32
+      intersection	      [1 0 -1 0.8434 1560.8215 1346.5236 0 229.3922]
+    }
+    midPoint		    [1254.8815 1096.4751]
+    chart		    11
+    linkNode		    [23 51 68]
+    dataLimits		    [668.517 1563.222 1063.212 1346.524]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    56
+  }
+  transition {
+    id			    68
+    labelString		    "[(calc_VBattery > (CD_ALTERNATOR_LOW + CD_VOLTAGE_HYSTERESIS))...\n|| (flt_EngineSpeed < CD_ALTE"
+    "RNATOR_ALARM_ENGINE_SPEED)]"
+    labelPosition	    [1088.538 1284.397 421.296 32.936]
+    fontSize		    12
+    src {
+      id		      32
+      intersection	      [1 0 -1 0.1289 1366.4823 1346.5236 0 35.053]
+    }
+    dst {
+      id		      16
+      intersection	      [2 1 0 0.802 668.5168 1092.2952 0 -34.4577]
+    }
+    midPoint		    [1095.7218 1122.4765]
+    chart		    11
+    linkNode		    [23 67 55]
+    dataLimits		    [668.517 1366.482 1089.058 1346.524]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    57
+  }
+  transition {
+    id			    69
+    labelString		    "[(CD_ALTERNATOR_FUNCTION != NON_FUNCTIONAL)...\n&& (calc_VBattery >= CD_ALTERNATOR_HIGH)...\n&& "
+    "(flt_EngineSpeed >= CD_ALTERNATOR_ALARM_ENGINE_SPEED)]"
+    labelPosition	    [1236 965.061 382.315 47.906]
+    fontSize		    12
+    src {
+      id		      16
+      intersection	      [2 1 0 0.2352 668.5168 993.6812 0 40.9283]
+    }
+    dst {
+      id		      35
+      intersection	      [3 0 1 0.1488 1553.6824 695.346 0 -231.519]
+    }
+    midPoint		    [1251.4189 960.6595]
+    chart		    11
+    linkNode		    [23 70 51]
+    dataLimits		    [668.517 1556.082 695.346 1004.484]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    58
+  }
+  transition {
+    id			    70
+    labelString		    "[(calc_VBattery < (CD_ALTERNATOR_HIGH - CD_VOLTAGE_HYSTERESIS))...\n|| (flt_EngineSpeed < CD_ALT"
+    "ERNATOR_ALARM_ENGINE_SPEED)]"
+    labelPosition	    [817.5 893.061 422.795 32.936]
+    fontSize		    12
+    src {
+      id		      35
+      intersection	      [3 0 1 0.8689 1357.8218 695.346 0 -35.6584]
+    }
+    dst {
+      id		      16
+      intersection	      [2 1 0 0.1525 668.5168 979.2857 0 26.5328]
+    }
+    midPoint		    [1024 950.061]
+    chart		    11
+    linkNode		    [23 53 69]
+    dataLimits		    [668.517 1357.822 695.346 981.686]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    59
+  }
+  transition {
+    id			    71
+    labelString		    "[(calc_VBattery > (CD_VBATTERY_EXTREMELY_LOW + CD_VOLTAGE_HYSTERESIS))...\n&& ((CD_ALTERNATOR_FU"
+    "NCTION != NON_FUNCTIONAL) && (flt_EngineSpeed >= CD_ALTERNATOR_ALARM_ENGINE_SPEED))]"
+    labelPosition	    [886.628 1951.597 721.151 32.936]
+    fontSize		    12
+    src {
+      id		      21
+      intersection	      [2 1 0 0.8638 673.2475 1942.3511 0 150.2983]
+    }
+    dst {
+      id		      32
+      intersection	      [3 0 1 0.144 1564.25 1520.5236 0 -232.8207]
+    }
+    midPoint		    [1193.2726 1900.2516]
+    chart		    11
+    linkNode		    [23 58 72]
+    dataLimits		    [673.247 1566.65 1520.524 1947.69]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+      midPointSticky	      1
+    }
+    executionOrder	    1
+    ssIdNumber		    60
+  }
+  transition {
+    id			    72
+    labelString		    "[(calc_VBattery <= CD_VBATTERY_EXTREMELY_LOW)]"
+    labelPosition	    [876.708 1789.654 301.354 17.965]
+    fontSize		    12
+    src {
+      id		      32
+      intersection	      [3 0 1 0.8168 1381.25 1520.5236 0 -49.8207]
+    }
+    dst {
+      id		      21
+      intersection	      [2 1 0 0.269 673.2475 1838.8511 0 46.7983]
+    }
+    midPoint		    [1109.4986 1782.7009]
+    chart		    11
+    linkNode		    [23 71 0]
+    dataLimits		    [673.247 1381.25 1520.524 1841.251]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    61
+  }
+  transition {
+    id			    73
+    labelString		    "[(calc_VBattery >= CD_VBATTERY_EXTREMELY_HIGH)]"
+    labelPosition	    [1037.009 155.472 305.852 17.965]
+    fontSize		    12
+    src {
+      id		      35
+      intersection	      [1 0 -1 0.8726 1559.5 521.346 0 237.3366]
+    }
+    dst {
+      id		      29
+      intersection	      [2 1 0 0.1619 664.2862 155.8109 0 -145.8327]
+    }
+    midPoint		    [1212.868 211.2694]
+    chart		    11
+    linkNode		    [23 0 74]
+    dataLimits		    [664.286 1559.5 153.411 521.346]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    62
+  }
+  transition {
+    id			    74
+    labelString		    "[(calc_VBattery < (CD_VBATTERY_EXTREMELY_HIGH - CD_VOLTAGE_HYSTERESIS))...\n&& ((CD_ALTERNATOR_F"
+    "UNCTION != NON_FUNCTIONAL) && (flt_EngineSpeed >= CD_ALTERNATOR_ALARM_ENGINE_SPEED))]"
+    labelPosition	    [710.831 314.946 721.151 32.936]
+    fontSize		    12
+    src {
+      id		      29
+      intersection	      [2 1 0 0.7912 664.2862 265.3109 0 -36.3327]
+    }
+    dst {
+      id		      35
+      intersection	      [1 0 -1 0.117 1354 521.346 0 31.8366]
+    }
+    midPoint		    [1119.4178 301.6316]
+    chart		    11
+    linkNode		    [23 73 50]
+    dataLimits		    [664.286 1356.4 259.796 521.346]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    63
+  }
+  data {
+    id			    75
+    ssIdNumber		    64
+    name		    "state_VBattery"
+    linkNode		    [11 0 76]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	wordLength		"8"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    76
+    ssIdNumber		    65
+    name		    "calc_VBattery"
+    linkNode		    [11 75 77]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_CUSTOM_INTEGER_TYPE
+	primitive		SF_UINT16_TYPE
+	wordLength		"16"
+	fixpt {
+	  scalingMode		  SF_FIXPT_BINARY_POINT
+	  fractionLength	  "8"
+	}
+      }
+    }
+    dataType		    "fixdt(0,16,8)"
+  }
+  data {
+    id			    77
+    ssIdNumber		    66
+    name		    "debounceCount"
+    linkNode		    [11 76 78]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      initialValue	      "0"
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    78
+    ssIdNumber		    67
+    name		    "CD_VBATTERY_DEBOUNCE_EXTREMELY_LOW"
+    linkNode		    [11 77 79]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 7
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    79
+    ssIdNumber		    68
+    name		    "CD_VBATTERY_DEBOUNCE_HIGH"
+    linkNode		    [11 78 80]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 8
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    80
+    ssIdNumber		    69
+    name		    "CD_VBATTERY_DEBOUNCE_LOW"
+    linkNode		    [11 79 81]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 9
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    81
+    ssIdNumber		    70
+    name		    "CD_VBATTERY_DEBOUNCE_NORMAL"
+    linkNode		    [11 80 82]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 10
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    82
+    ssIdNumber		    71
+    name		    "CD_VBATTERY_DEBOUNCE_OORL"
+    linkNode		    [11 81 83]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 11
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    83
+    ssIdNumber		    72
+    name		    "CD_VBATTERY_EXTREMELY_LOW"
+    linkNode		    [11 82 84]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 13
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    84
+    ssIdNumber		    73
+    name		    "CD_VBATTERY_FUNCTION"
+    linkNode		    [11 83 85]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 14
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    85
+    ssIdNumber		    74
+    name		    "CD_VBATTERY_HIGH"
+    linkNode		    [11 84 86]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 15
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    86
+    ssIdNumber		    75
+    name		    "CD_VBATTERY_LOW"
+    linkNode		    [11 85 87]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 16
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    87
+    ssIdNumber		    76
+    name		    "CD_VBATTERY_OORL"
+    linkNode		    [11 86 88]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 17
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    88
+    ssIdNumber		    77
+    name		    "state_Engine"
+    linkNode		    [11 87 89]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    89
+    ssIdNumber		    78
+    name		    "CD_VBATTERY_EXTREMELY_HIGH"
+    linkNode		    [11 88 90]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 12
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    90
+    ssIdNumber		    79
+    name		    "CD_VBATTERY_DEBOUNCE_EXTREMELY_HIGH"
+    linkNode		    [11 89 91]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 6
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    91
+    ssIdNumber		    80
+    name		    "HIGH"
+    linkNode		    [11 90 92]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 22
+    machine		    1
+    props {
+      initialValue	      "10"
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    92
+    ssIdNumber		    81
+    name		    "OORL"
+    linkNode		    [11 91 93]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 26
+    machine		    1
+    props {
+      initialValue	      "22"
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    93
+    ssIdNumber		    82
+    name		    "LOW"
+    linkNode		    [11 92 94]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 23
+    machine		    1
+    props {
+      initialValue	      "9"
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    94
+    ssIdNumber		    83
+    name		    "NORMAL"
+    linkNode		    [11 93 95]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 25
+    machine		    1
+    props {
+      initialValue	      "8"
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    95
+    ssIdNumber		    84
+    name		    "EXTREMELY_LOW"
+    linkNode		    [11 94 96]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 21
+    machine		    1
+    props {
+      initialValue	      "14"
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    96
+    ssIdNumber		    85
+    name		    "EXTREMELY_HIGH"
+    linkNode		    [11 95 97]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 20
+    machine		    1
+    props {
+      initialValue	      "11"
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    97
+    ssIdNumber		    86
+    name		    "ENGINE_CRANKING"
+    linkNode		    [11 96 98]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 19
+    machine		    1
+    props {
+      initialValue	      "2"
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    98
+    ssIdNumber		    87
+    name		    "NON_FUNCTIONAL"
+    linkNode		    [11 97 99]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 24
+    machine		    1
+    props {
+      initialValue	      "255"
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    99
+    ssIdNumber		    88
+    name		    "CD_VOLTAGE_HYSTERESIS"
+    linkNode		    [11 98 100]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 18
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_CUSTOM_INTEGER_TYPE
+	primitive		SF_DOUBLE_TYPE
+	wordLength		"8"
+	fixpt {
+	  scalingMode		  SF_FIXPT_BINARY_POINT
+	  fractionLength	  "4"
+	}
+      }
+    }
+    dataType		    "fixdt(0,8,4)"
+  }
+  data {
+    id			    100
+    ssIdNumber		    89
+    name		    "CD_ALTERNATOR_FUNCTION"
+    linkNode		    [11 99 101]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    101
+    ssIdNumber		    90
+    name		    "CD_ALTERNATOR_HIGH"
+    linkNode		    [11 100 102]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 4
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    102
+    ssIdNumber		    91
+    name		    "CD_ALTERNATOR_LOW"
+    linkNode		    [11 101 103]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 5
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    103
+    ssIdNumber		    92
+    name		    "state_Alternator"
+    linkNode		    [11 102 104]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    104
+    ssIdNumber		    93
+    name		    "CD_ALTERNATOR_ALARM_ENGINE_SPEED"
+    linkNode		    [11 103 105]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    105
+    ssIdNumber		    94
+    name		    "flt_EngineSpeed"
+    linkNode		    [11 104 106]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    106
+    ssIdNumber		    95
+    name		    "CD_ALTERNATOR_DEBOUNCE_HIGH"
+    linkNode		    [11 105 107]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    107
+    ssIdNumber		    96
+    name		    "CD_ALTERNATOR_DEBOUNCE_LOW"
+    linkNode		    [11 106 0]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint16"
+  }
+  instance {
+    id			    108
+    name		    "VBattery/VBattery_State"
+    machine		    1
+    chart		    11
+  }
+  chart {
+    id			    109
+    name		    "VBattery/LP_Filter_Adj_Gain1/LP_Fitler_Adj_Gain"
+    windowPosition	    [84.75 -64.5 960 600]
+    viewLimits		    [128.994 859.445 77.36 526.868]
+    zoomFactor		    0.797
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 110 0 0]
+    firstTransition	    112
+    viewObj		    109
+    machine		    1
+    subviewS {
+      x1		      128.994
+      y1		      77.36
+      zoomFactor	      0.797
+    }
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    firstData		    114
+    chartFileNumber	    57
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  state {
+    id			    110
+    labelString		    "INITIAL\nen:Output = Input;"
+    position		    [212.7139 160.1628 214.625 74.625]
+    fontSize		    12
+    chart		    109
+    treeNode		    [109 0 0 111]
+    subviewer		    109
+    ssIdNumber		    1
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    111
+    labelString		    "LP_FILTER\ndu:Output = Output + ((Input - Output)/(1 << Gain));"
+    position		    [474.2513 322.146 301.4742 156.4611]
+    fontSize		    12
+    chart		    109
+    treeNode		    [109 0 110 0]
+    subviewer		    109
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  transition {
+    id			    112
+    labelPosition	    [400.544 150.413 7.767 14.915]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 396.1438 125.6216 0 0]
+    }
+    dst {
+      id		      110
+      intersection	      [1 0 -1 0.8547 396.1438 160.1628 0 0]
+    }
+    midPoint		    [396.1438 139.3824]
+    chart		    109
+    linkNode		    [109 0 113]
+    dataLimits		    [396.144 396.144 125.622 152.163]
+    subviewer		    109
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    3
+  }
+  transition {
+    id			    113
+    labelPosition	    [573.459 235.995 7.767 14.915]
+    fontSize		    12
+    src {
+      id		      110
+      intersection	      [2 1 0 0.1913 427.3389 174.4354 0 -60.3524]
+    }
+    dst {
+      id		      111
+      intersection	      [1 0 -1 0.4511 610.2316 322.146 0 135.9803]
+    }
+    midPoint		    [552.8011 218.2374]
+    chart		    109
+    linkNode		    [109 112 0]
+    dataLimits		    [427.339 610.232 174.435 314.146]
+    stampAngle		    -1
+    subviewer		    109
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    4
+  }
+  data {
+    id			    114
+    ssIdNumber		    5
+    name		    "Gain"
+    linkNode		    [109 0 115]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    115
+    ssIdNumber		    6
+    name		    "Input"
+    linkNode		    [109 114 116]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_CUSTOM_INTEGER_TYPE
+	primitive		SF_INT16_TYPE
+	isSigned		1
+	wordLength		"16"
+	fixpt {
+	  scalingMode		  SF_FIXPT_BINARY_POINT
+	  fractionLength	  "8"
+	  slope			  "2^0"
+	  bias			  "0"
+	}
+      }
+    }
+    dataType		    "fixdt(1,16,8)"
+  }
+  data {
+    id			    116
+    ssIdNumber		    7
+    name		    "Output"
+    linkNode		    [109 115 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	method			SF_CUSTOM_INTEGER_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"32"
+	fixpt {
+	  scalingMode		  SF_FIXPT_BINARY_POINT
+	  fractionLength	  "16"
+	}
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "fixdt(1,32,16)"
+  }
+  instance {
+    id			    117
+    name		    "VBattery/LP_Filter_Adj_Gain1/LP_Fitler_Adj_Gain"
+    machine		    1
+    chart		    109
+  }
+  data {
+    id			    118
+    name		    "ACTIVE"
+    linkNode		    [1 0 0]
+    scope		    CONSTANT_DATA
+    machine		    1
+    props {
+      initialValue	      "1"
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  target {
+    id			    119
+    name		    "sfun"
+    codeFlags		    ""
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

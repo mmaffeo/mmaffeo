@@ -1,0 +1,102 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c100_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c100_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Flasher"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ReminderOfLastState.Flasher"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OF_A1FLASH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ReminderOfLastState.Flasher.OF_A1FLASH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OF_A4FLASH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ReminderOfLastState.Flasher.OF_A4FLASH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_A2FLASH_A1FLASH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ReminderOfLastState.Flasher.A2FLASH_A1FLASH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_A2FLASH_A4FLASH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ReminderOfLastState.Flasher.A2FLASH_A4FLASH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_A4FLASH_OF"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ReminderOfLastState.Flasher.A4FLASH_OF"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_A4FLASH_A1FLASH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ReminderOfLastState.Flasher.A4FLASH_A1FLASH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FlashTimer"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ReminderOfLastState.FlashTimer"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "flash_timer"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "flash_timer"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

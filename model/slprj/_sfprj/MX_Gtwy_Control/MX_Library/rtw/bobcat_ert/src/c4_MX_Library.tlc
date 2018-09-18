@@ -1,0 +1,60 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c4_MX_Library"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c4_MX_Library"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OPEN_CIRCUIT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OPEN_CIRCUIT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SHORT_TO_GROUND"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SHORT_TO_GROUND"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SHORT_TO_BATTERY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SHORT_TO_BATTERY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "db_cnt"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "db_cnt"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

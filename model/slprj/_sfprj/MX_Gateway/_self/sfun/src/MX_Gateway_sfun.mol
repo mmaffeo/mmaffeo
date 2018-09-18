@@ -1,0 +1,32 @@
+MX_Gateway_sfun.obj
+c1_MX_Gateway.obj
+c2_MX_Gateway.obj
+c6_MX_Gateway.obj
+c42_MX_Gateway.obj
+c63_MX_Gateway.obj
+c78_MX_Gateway.obj
+c81_MX_Gateway.obj
+c83_MX_Gateway.obj
+c100_MX_Gateway.obj
+c105_MX_Gateway.obj
+MX_Gateway_sfun_registry.obj
+SendMsgNow_Blank.obj
+
+
+
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\sf_runtime.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmx.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmex.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmat.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libfixedpoint.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libut.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmwmathutil.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libemlrt.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmwsl_log_load_blocks.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmwsimulink.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmwsl_sfcn_cov_bridge.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libcovrt.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmwsl_simtarget_core.lib" 
+"C:\Program Files\MATLAB\R2017b\extern\lib\win64\mingw64\libmwsl_simtarget_instrumentation.lib" 
+"-LC:\Program Files\MATLAB\R2017b\bin\win64" "-llibmwipp"
+

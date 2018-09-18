@@ -1,0 +1,347 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   47 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c42_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Detent_State"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Detent_State"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_Detent_State"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Detent_State"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enable"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Detent_State.EMEA_CONTROLS.Enable"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_Enable"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Detent_State.EMEA_CONTROLS.Enable"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Detent"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Detent_State.EMEA_CONTROLS.Detent"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_Detent"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Detent_State.EMEA_CONTROLS.Detent"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active_Normal"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Detent_State.EMEA_CONTROLS.Detent.Active_Normal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enable"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Detent_State.NORMAL_CONTROLS.Enable"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_Enable"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Detent_State.NORMAL_CONTROLS.Enable"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Detent"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Detent_State.NORMAL_CONTROLS.Detent"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_Detent"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Detent_State.NORMAL_CONTROLS.Detent"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active_Normal"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Detent_State.NORMAL_CONTROLS.Detent.Active_Normal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_Aux_Enable_State"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Aux_Enable_State"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PHOENIX_K2"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.PHOENIX_K2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Functional"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.PHOENIX_K2.Functional"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.PHOENIX_K2.Functional.Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.PHOENIX_K2.Functional.Enabled.Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Relief_G5"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.PHOENIX_K2.Functional.Aux_Relief_G5"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State_ST"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.PHOENIX_K2.Aux_Enable_State_ST"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State_ACD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.PHOENIX_K2.Aux_Enable_State_ACD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SIRIUS2"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Functional"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2.Functional"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2.Functional.Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2.Functional.Enabled.Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State_ST"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2.Aux_Enable_State_ST"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State_ACD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2.Aux_Enable_State_ACD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SIRIUS2_HIFLOW"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2_HIFLOW"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Functional"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2_HIFLOW.Functional"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2_HIFLOW.Functional.Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2_HIFLOW.Functional.Enabled.Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State_ST"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2_HIFLOW.Aux_Enable_State_ST"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State_ACD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.SIRIUS2_HIFLOW.Aux_Enable_State_ACD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_EMEA_CONTROLS"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.EMEA_CONTROLS"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Functional"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.EMEA_CONTROLS.Functional"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Enabled"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.EMEA_CONTROLS.Functional.Enabled"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.EMEA_CONTROLS.Functional.Enabled.Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State_ST"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.EMEA_CONTROLS.Aux_Enable_State_ST"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Enable_State_ACD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Aux_Enable_State.EMEA_CONTROLS.Aux_Enable_State_ACD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_Aux_Reset"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Aux_Reset"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "state_ACD_old"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "state_ACD_old"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "state_ST_old"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "state_ST_old"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previouslyActive"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "previouslyActive"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

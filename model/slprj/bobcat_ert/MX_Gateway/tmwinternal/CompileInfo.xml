@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1">
+    <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="b9e91dd2-b9d1-4a1c-942f-579a8dbe9794">
+        <dataDictionary/>
+        <dataTransferInfos>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAAAAAABAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAA</dataTransferInfos>
+        <hasInlineVariantBlock>false</hasInlineVariantBlock>
+        <hasMachineDataAccess>false</hasMachineDataAccess>
+        <hasSigObjWithICDrivingRootOutport>false</hasSigObjWithICDrivingRootOutport>
+        <needElapsedTime>false</needElapsedTime>
+        <userSpecifiedFixedStepSize>0</userSpecifiedFixedStepSize>
+        <zeroInternalMemoryAtStartupUnchecked>false</zeroInternalMemoryAtStartupUnchecked>
+        <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="fc604690-173c-4288-a207-32d1681f67f4"/>
+        <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="4b585d79-8546-46ea-917c-3ec8b83a4aba">
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition1</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition10</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition11</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition12</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition13</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition14</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition15</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition16</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition17</deterministicRTBs>
+            <deterministicRTBs>MX_Gateway/Inputs/Rate Transition18</deterministicRTBs>
+            <hasHiddenDeterministicRTB>false</hasHiddenDeterministicRTB>
+        </periodicEventPortUnsupportedBlockInfo>
+        <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="17580769-a455-4978-9641-d93545293f10">
+            <compSimulinkFunctionCatalog>AAFJTQAAAAAOAAAAgAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAFAAQADgAAAAEAAAAOAAAAQ29tcEZ1bmN0aW9ucwAAAA4AAAAwAAAABgAAAAgAAAAGAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAAAkAAAAAAAAA</compSimulinkFunctionCatalog>
+            <postPropHasAnyExportedFunction>false</postPropHasAnyExportedFunction>
+            <postPropHasAnyVariantExportedFunction>false</postPropHasAnyVariantExportedFunction>
+        </simulinkFunctions>
+    </ModelRefInfoRepo.ModelRefInfoRoot>
+</MF0>

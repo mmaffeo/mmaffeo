@@ -1,0 +1,242 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   32 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c81_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_INFO_BUTTON"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "BUTTON_STATE.INFO_BUTTON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PANEL_BUTTON"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "BUTTON_STATE.MOVE_RIGHT.PANEL_BUTTON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PANEL_BUTTON"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "BUTTON_STATE.MOVE_LEFT.PANEL_BUTTON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PRIMARY_STATE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PRIMARY_STATE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ACTIVE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PRIMARY_STATE.ACTIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "was_ACTIVE"\
+      Description  "StatePrevActiveChild"\
+      SFName       ""\
+      Path         "PRIMARY_STATE.ACTIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ENGINE_HOURS"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PRIMARY_STATE.ACTIVE.ENGINE_HOURS"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_JOB_CLOCK_1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PRIMARY_STATE.ACTIVE.JOB_CLOCK_1"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_JOB_CLOCK_2"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PRIMARY_STATE.ACTIVE.JOB_CLOCK_2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FACTORY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PRIMARY_STATE.ACTIVE.FACTORY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SERVICE_CLOCK"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PRIMARY_STATE.ACTIVE.SERVICE_CLOCK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SECONDARY_STATE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SECONDARY_STATE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DELUXE_GOOD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SECONDARY_STATE.DELUXE_GOOD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NON_SHUTDOWN"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SECONDARY_STATE.DELUXE_GOOD.NON_SHUTDOWN"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Aux_Detent_Error"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SECONDARY_STATE.DELUXE_GOOD.NON_SHUTDOWN.Aux_Detent_Error"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_LIGHT_BUTTON_STATE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "LIGHT_BUTTON_STATE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "serviceClockAlarmTimer"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "serviceClockAlarmTimer"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "shutdownTimer"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "shutdownTimer"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "state_Jump"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "state_Jump"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "state_LightButton"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "state_LightButton"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceButton"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceButton"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceLeft"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceLeft"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceRight"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceRight"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "prev_InfoSecondary"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "prev_InfoSecondary"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCode"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCode"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "prev_SecondAux"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "prev_SecondAux"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i3"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i4"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -1,0 +1,2431 @@
+Model {
+  Name			  "Buzzer_harness"
+  Version		  7.7
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.391"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PostLoadFcn		  "cd '..';\nPostLoadFcn;\ncd 'harness';"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  InitFcn		  "\n"
+  Created		  "Wed Nov 09 14:07:37 2005"
+  Creator		  "smindema"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "aliebel"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue May 08 13:26:47 2012"
+  RTWModifiedTimeStamp	  258377597
+  ModelVersionFormat	  "1.%<AutoIncrement:391>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  on
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dcmw"
+  CovHTMLOptions	  " -aTS=1 -bRG=1 -bTC=1 -hTR=0 -nFC=0 -scm=1 -bcm=1 -xEv=0"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar off
+  CovSaveSingleToWorkspaceVar off
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.0"
+	  StartTime		  "0.0"
+	  StopTime		  "100"
+	  AbsTol		  "auto"
+	  FixedStep		  ".01"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  Array {
+	    Type		    "Struct"
+	    Dimension		    1
+	    MATStruct {
+	      SampleTime	      "0.01"
+	      Offset		      "0"
+	      Priority		      [1.0]
+	    }
+	    PropName		    "SampleTimeProperty"
+	  }
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.0"
+	  BlockReduction	  off
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  off
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  on
+	  DataBitsets		  on
+	  UseTempVars		  on
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection on
+	  EfficientFloat2IntCast  on
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "none"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "warning"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  16
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  16
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Floor"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  16
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Motorola HC12"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Single"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.0"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  on
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Real-Time Workshop Embedded Coder (no auto configuration)"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  on
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomHeaderCode	  "#include \"cpp_req_defines.h\"\n#include \"hw_fin.h\"\n#include \"cdata.h\""
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  on
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "UpperCase"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  off
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     off
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      off
+	      SupportComplex	      off
+	      PurelyIntegerCode	      on
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"Hierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "gen_rtw_req_defines_h.tlc"
+	      CoverageDialogOpen      "off"
+	      ModuleNamingRule	      "Unspecified"
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "InSeparateSourceFile"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "InSeparateHeaderFile"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      GRTInterface	      off
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 280, 135, 1160, 765 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Assertion
+      StopWhenAssertionFail   on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      DataStoreWrite
+      DataStoreName	      "A"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "Buzzer_harness"
+    Location		    [272, 138, 1847, 1031]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "294"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Buzzer"
+      SID		      "289"
+      Ports		      [1, 1]
+      Position		      [690, 93, 900, 177]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      SystemSampleTime	      "srate"
+      RTWSystemCode	      "Function"
+      RTWFileNameOpts	      "User specified"
+      RTWFileName	      "mod_Outputs"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Buzzer"
+	Location		[719, 165, 1563, 656]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "state_System"
+	  SID			  "290"
+	  Position		  [75, 153, 105, 167]
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Buzzer"
+	  SID			  "291"
+	  Ports			  [1, 1]
+	  Position		  [265, 112, 445, 208]
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Function"
+	  RTWFileNameOpts	  "User specified"
+	  RTWFileName		  "mod_Diagnostics"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Stateflow diagram"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk',"
+	  " 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Buzzer"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "16"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "state_System"
+	      SID		      "291::16"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "291::12"
+	      Ports		      [1, 1]
+	      Position		      [270, 180, 320, 220]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "291::11"
+	      Tag		      "Stateflow S-Function Buzzer_harness 65"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 180]
+	      FunctionName	      "sf_sfun"
+	      Parameters	      "ACTIVE,BEEP_NONE,CONTINUOUS_BEEP,DOUBLE_SHORT_BEEP,INACTIVE,NO_BEEP,SINGLE_LONG_BEEP,SINGLE_M"
+	      "EDIUM_BEEP,SINGLE_SHORT_BEEP,SYS_NORMAL,TRIPLE_SHORT_BEEP"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"dout_Buzzer"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "291::14"
+	      Position		      [460, 191, 480, 209]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "dout_Buzzer"
+	      SID		      "291::5"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "state_System"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "dout_Buzzer"
+	      Labels		      [0, 0; 0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "dout_Buzzer"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dout_Buzzer"
+	  SID			  "292"
+	  Position		  [535, 153, 565, 167]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Buzzer"
+	  SrcPort		  1
+	  DstBlock		  "dout_Buzzer"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "state_System"
+	  SrcPort		  1
+	  DstBlock		  "Buzzer"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      DataStoreWrite
+      Name		      "Data Store\nWrite"
+      SID		      "293"
+      Ports		      [1]
+      Position		      [490, 205, 570, 235]
+      DataStoreName	      "state_Buzzer"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion1"
+      SID		      "274"
+      Position		      [275, 127, 345, 143]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion2"
+      SID		      "275"
+      Position		      [275, 212, 345, 228]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion27"
+      SID		      "140"
+      Position		      [275, 297, 345, 313]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Name		      "Relational\nOperator"
+      SID		      "3"
+      Ports		      [2, 1]
+      Position		      [1095, 282, 1125, 313]
+      Operator		      "=="
+      InputSameDT	      off
+      OutDataTypeStr	      "boolean"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      SID		      "4"
+      Ports		      [1]
+      Position		      [1125, 49, 1215, 221]
+      Floating		      off
+      Location		      [5, 109, 1925, 1140]
+      Open		      on
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      TimeRange		      "100"
+      YMin		      "0"
+      YMax		      "6"
+      DataFormat	      "Array"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Signal Builder"
+      SID		      "276"
+      Tag		      "STV Subsys"
+      Ports		      [0, 3]
+      Position		      [80, 89, 210, 351]
+      CopyFcn		      "sigbuilder_block('copy');"
+      DeleteFcn		      "sigbuilder_block('delete');"
+      LoadFcn		      "sigbuilder_block('load',[381 256.5 911.25 362.25 ]);"
+      ModelCloseFcn	      "sigbuilder_block('modelClose');"
+      PreSaveFcn	      "sigbuilder_block('preSave');"
+      StartFcn		      "sigbuilder_block('start');"
+      StopFcn		      "sigbuilder_block('stop');"
+      NameChangeFcn	      "sigbuilder_block('namechange');"
+      ClipboardFcn	      "sigbuilder_block('clipboard');"
+      OpenFcn		      "sigbuilder_block('open',[118.5 149.25 911.25 362.25 ]);"
+      CloseFcn		      "sigbuilder_block('close');"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      on
+      MaskType		      "Sigbuilder block"
+      MaskDescription	      "Create and generate interchangeable groups of signals whose waveforms are piecewise linea"
+      "r."
+      MaskInitialization      "if ~strcmp(get_param(bdroot(gcbh),'SimulationStatus'),'stopped') tuvar = sigbuilder_blo"
+      "ck('maskInit'); end"
+      MaskSelfModifiable      on
+      MaskDisplay	      "plot(0, 0, 100, 100,[2, 2, 32, 32, 2], [68, 8, 8, 68, 68],[32, 2], [38, 38], [32, 19, 2],[53,"
+      " 60, 44], [32, 17, 17, 2],[16, 16, 31, 31]);txt = getActiveGroup(gcbh);text(2, 100, txt,'verticalAlignment', 'to"
+      "p');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "port"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskCapabilities	      "slmaskedcaps(gcbh)"
+      System {
+	Name			"Signal Builder"
+	Location		[480, 85, 980, 386]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"8"
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "276:1"
+	  Tag			  "STV Demux"
+	  Ports			  [1, 3]
+	  Position		  [150, 46, 160, 624]
+	  Outputs		  "3"
+	}
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "FromWs"
+	  SID			  "276:2"
+	  Tag			  "STV FromWs"
+	  Position		  [30, 300, 115, 350]
+	  VariableName		  "tuvar"
+	  SampleTime		  "0"
+	  ZeroCross		  on
+	  SigBuilderData	  "DataTag0"
+	  VnvData		  "DataTag1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_System"
+	  SID			  "276:3"
+	  Tag			  "STV Outport"
+	  Position		  [280, 30, 300, 40]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_Buzzer"
+	  SID			  "276:4"
+	  Tag			  "STV Outport"
+	  Position		  [280, 60, 300, 70]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dout_Buzzer"
+	  SID			  "276:8"
+	  Tag			  "STV Outport"
+	  Position		  [280, 90, 300, 100]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, -110]
+	  DstBlock		  "state_System"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FromWs"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "state_Buzzer"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "dout_Buzzer"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Assertion
+      Name		      "dout_Buzzer"
+      SID		      "294"
+      Position		      [1220, 277, 1280, 323]
+      Enabled		      off
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion27"
+      SrcPort		      1
+      DstBlock		      "Relational\nOperator"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion2"
+      SrcPort		      1
+      DstBlock		      "Data Store\nWrite"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal Builder"
+      SrcPort		      1
+      DstBlock		      "Data Type Conversion1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal Builder"
+      SrcPort		      2
+      DstBlock		      "Data Type Conversion2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal Builder"
+      SrcPort		      3
+      DstBlock		      "Data Type Conversion27"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Buzzer"
+      SrcPort		      1
+      Points		      [100, 0]
+      Branch {
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 155]
+	DstBlock		"Relational\nOperator"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion1"
+      SrcPort		      1
+      DstBlock		      "Buzzer"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Relational\nOperator"
+      SrcPort		      1
+      DstBlock		      "dout_Buzzer"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    0 0   8    (     @         %    \"     $    !     0         %  0 $0    $   #,    =F5R:6"
+    "9Y0FQK4&%T:',   !V97)I9GE\";&M(86YD;&5S '9N=DUG<DED>           86-T:79E1W)O=7        !R97%$:7-P4')C;G0      &)L:T1"
+    "I<W!-;V1E        9W)O=7!#;G0           !G<F]U<%)E<4-N=        &=R;W5P1$]/4E-I9       ;6]D96Q(              !B;&]C:"
+    "T@              &]V97)I9&53971T:6YG<P        X   !P    !@    @    !          4    (     0    $    !          X   !"
+    "     !@    @    $          4    (     0    P    !         !     ,    +V1O=71?0G5Z>F5R      X    X    !@    @    & "
+    "         4    (     0    $    !          D    (        5 ##QT .    .     8    (    !@         %    \"     $    !  "
+    "   0         )    \"            / _#@   #@    &    \"     8         !0    @    !     0    $         \"0    @      "
+    "      (0 X    X    !@    @    &          4    (     0    $    !          D    (    <AS'<1S'XC\\.    .     8    (  "
+    "  !@         %    \"     $    !     0         )    \"            /\"_#@   #@    &    \"     8         !0    @    !"
+    "     0    $         \"0    @            (0 X    P    !@    @    &          4    (               !          D      "
+    "   #@   #     &    \"     8         !0    @               $         \"0         .    .     8    (    !@         % "
+    "   \"     $    !     0         )    \"         @ LL) #@   #@    &    \"     8         !0    @    !     0    $     "
+    "    \"0    @        4 -#\"0 X   !(    !@    @    &          4    (     0    ,    !          D    8                "
+    "                    "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    4!0   8    (     @         %    \"     $    !     0         %  0 %@    $   \"P    9W)I9"
+    "%-E='1I;F<              &-H86YN96QS                  !A>&5S                        8V]M;6]N                     &1"
+    "A=&%3970                   !D871A4V5T261X                :7-697)I9FEC871I;VY6:7-I8FQE '-B;V)J                     "
+    "  .    ,     8    (    !          %    \"     $    \"     0         0  ( ;VX   X   \"(!P  !@    @    \"          4"
+    "    (     0    ,    !          4 !  *     0   %H   !S=&5P6       <W1E<%D      'E-:6X       !Y36%X        8V]L;W(  "
+    "    &QI;F53='EL90!L:6YE5VED=&@ ;&%B96P      &]U=$EN9&5X           .    .     8    (    !@         %    \"     $   "
+    " !     0         )    \"    'L4KD?A>H0_#@   #@    &    \"     8         !0    @    !     0    $         \"0    @  "
+    "         #P/PX    X    !@    @    &          4    (     0    $    !          D    (            \\/\\.    .     8  "
+    "  (    !@         %    \"     $    !     0         )    \"            /!_#@   $@    &    \"     8         !0    @ "
+    "   !     P    $         \"0   !@   !\"/NC9K/KJ/P                     .    ,     8    (    !          %    \"     $"
+    "    !     0         0  $ +0    X    X    !@    @    &          4    (     0    $    !          D    (            ^"
+    "#\\.    0     8    (    !          %    \"     $    ,     0         0    #    '-T871E7U-Y<W1E;0     .    .     8  "
+    "  (    !@         %    \"     $    !     0         )    \"            / _#@   #@    &    \"     8         !0    @ "
+    "   !     0    $         \"0    @   ![%*Y'X7J$/PX    X    !@    @    &          4    (     0    $    !          D  "
+    "  (            \\#\\.    .     8    (    !@         %    \"     $    !     0         )    \"            /#_#@   #@"
+    "    &    \"     8         !0    @    !     0    $         \"0    @           #P?PX   !(    !@    @    &          4"
+    "    (     0    ,    !          D    8    V(%S1I3VYC\\          -B!<T:4]N8_#@   #     &    \"     0         !0    @"
+    "    !     0    $         $  ! \"T    .    .     8    (    !@         %    \"     $    !     0         )    \"     "
+    "       /@_#@   $     &    \"     0         !0    @    !    #     $         $     P   !S=&%T95]\"=7IZ97(     #@   #"
+    "@    &    \"     8         !0    @    !     0    $         \"0    @             0 X    X    !@    @    &          "
+    "4    (     0    $    !          D    (               .    .     8    (    !@         %    \"     $    !     0     "
+    "    )    \"               #@   #@    &    \"     8         !0    @    !     0    $         \"0    @           #P_P"
+    "X    X    !@    @    &          4    (     0    $    !          D    (            \\'\\.    2     8    (    !@    "
+    "     %    \"     $    #     0         )    &    *KQTDUB$- _JO'236(0X#^J\\=)-8A#@/PX    P    !@    @    $          "
+    "4    (     0    $    !         !   0 M    #@   #@    &    \"     8         !0    @    !     0    $         \"0    "
+    "@           #X/PX   !     !@    @    $          4    (     0    L    !         !     +    9&]U=%]\"=7IZ97(       X"
+    "    X    !@    @    &          4    (     0    $    !          D    (            \"$ .    , 0   8    (     @      "
+    "   %    \"     $    #     0         %  0 \"P    $    W    8VAA;FYE;',   !Y3&EM         &QA8F5L4&]S    ;&%B96Q(    "
+    "  !L86)E;%!A=&-H   .    .     8    (    !@         %    \"     $    !     0         )    \"             A #@   $  "
+    "   &    \"     8         !0    @    !     @    $         \"0   !            #POP       / _#@   #     &    \"     0"
+    "         !0    @    !     @    $         $  \" %1,   .    .     8    (    !@         %    \"     $    !     0     "
+    "    )    \"        !2 @\\5 #@   #@    &    \"     8         !0    @    !     0    $         \"0    @        4 (/%0"
+    " X    X    !@    @    &          4    (     0    $    !          D    (             $ .    0     8    (    !@     "
+    "    %    \"     $    \"     0         )    $            !3       \" 2T .    ,     8    (    !          %    \"    "
+    " $    \"     0         0  ( 5$P   X    X    !@    @    &          4    (     0    $    !          D    (        $("
+    "\"%Q4 .    .     8    (    !@         %    \"     $    !     0         )    \"        !0 A<5 #@   #@    &    \"   "
+    "  8         !0    @    !     0    $         \"0    @           #P/PX   !     !@    @    &          4    (     0   "
+    " (    !          D    0    FIF9F9F9N;^:F9F9F9GQ/PX    P    !@    @    $          4    (     0    (    !         ! "
+    "  @!43   #@   #@    &    \"     8         !0    @    !     0    $         \"0    @        0@(?%0 X    X    !@    @"
+    "    &          4    (     0    $    !          D    (        $ \"'Q4 .    : (   8    (     @         %    \"     $"
+    "    !     0         %  0 #@    $   !B    9&ES<%1I;64       !D:7-P36]D90       &UI;E1I;64         ;6%X5&EM90       "
+    " !A9G1E<D9I;F%L4W1R '-A;7!L951I;64     >F5R;T-R;W-S               .    0     8    (    !@         %    \"     $   "
+    " \"     0         )    $                       64 .    .     8    (    !@         %    \"     $    !     0        "
+    " )    \"            / _#@   #@    &    \"     8         !0    @    !     0    $         \"0    @               X  "
+    "  X    !@    @    &          4    (     0    $    !          D    (            64 .    0     8    (    !          "
+    "%    \"     $    +     0         0    \"P   $5X=')A<&]L871E       .    .     8    (    !@         %    \"     $   "
+    " !     0         )    \"               #@   #     &    \"     0         !0    @    !     @    $         $  \" &]N "
+    "  .    Z ,   8    (     @         %    \"     $    #     0         %  0 #@    $    X    86-T:79E1&ES<$ED> !T:6UE4F"
+    "%N9V4      &YA;64             9&ES<&QA>5)A;F=E   .    2     8    (    !@         %    \"     $    #     0         "
+    ")    &             A          $        #P/PX   !     !@    @    &          4    (     0    (    !          D    0 "
+    "                     !90 X   !     !@    @    $          4    (     0    H    !         !     *    0V]N=&EN=6]U<P "
+    "       X   !     !@    @    &          4    (     0    (    !          D    0                      !90 X   !(    !"
+    "@    @    &          4    (     0    ,    !          D    8            \"$          0        / _#@   $     &    \""
+    "     8         !0    @    !     @    $         \"0   !                       %E #@   $     &    \"     0         !"
+    "0    @    !    #@    $         $     X   !-=6QT:7!L95]3:&]R=   #@   $     &    \"     8         !0    @    !     @"
+    "    $         \"0   !                       %E #@   $@    &    \"     8         !0    @    !     P    $         \""
+    "0   !@            (0         !         \\#\\.    0     8    (    !@         %    \"     $    \"     0         )   "
+    " $                       64 .    0     8    (    !          %    \"     $    +     0         0    \"P   $UE9&EU;5]"
+    ",;VYG       .    0     8    (    !@         %    \"     $    \"     0         )    $                       64 .   "
+    " .     8    (    !@         %    \"     $    !     0         )    \"             A #@   #@    &    \"     8       "
+    "  !0    @    !     0    $         \"0    @           #P/PX   \"     !@    @    1          $          0 $ $U#3U,!  "
+    "  \"    %-I9U-U:71E#@   $@    &    \"     T         !0    @    &     0    $         !@   !@       #= @    $    !  "
+    "   0    ,    .     !P   8    (    \"0         %    \"     $   #0&P   0         \"    T!L    !24T     #@   # ;   & "
+    "   \"     (         !0    @    !     0    $         !0 $  4    !    !0   $U#3U,     #@   .@:   &    \"    !$      "
+    "    0         !  0 34-/4P$    -    1FEL95=R87!P97)?7P    X   \"H&@  !@    @    !          4    (    *0    $    !  "
+    "        X   #H!   !@    @    )          4    (    N 0   $    !          (   \"X!    @    T   \"P    \\    /    !  "
+    "@  2 0  +@$             $=R;W5P<P!.86UE %-I9VYA;', 6$1A=&$ 641A=&$ 4VEG4W5I=&53:6=N86P 57-E<D1A=&$ 5&EM95)A;F=E %-"
+    "I9U-U:71E1W)O=7  06-T:79E4VEG;F%L %)E<75I<F5M96YT26YF;P!!8W1I=F5'<F]U< !3:6=3=6ET90                               "
+    "     8                    )                    #0                                               P                 "
+    "   $    -     @                    (    $     0                    ,    !     0                    0    \"     0  "
+    "                  4    #     @                    8    (     0                    <    %     0                    "
+    "@    &     0                    D    '     @                    H    ,     0                    L    )     0      "
+    "              P    *     0                    T    +               \"     0    $    D    #     $    E          ,  "
+    "  \"     0         #     0    H    (     0    L    #     @    $    !    !     $    \"    !0    $    #     P    (  "
+    "  !    !     0    !    !0    4    !    !@    ,    \"     0    <    $     0    @    %     0    D    #     @    $   "
+    " ,     P    $    6    \"     $    7     P    (    !    #0    0    !    #@    4    !    #P    ,    \"     0   !    "
+    " $     0   !$    %     0   !(    #     @    $    3    !     $    4    !0    $    5     P    (    !    &     ,    !"
+    "    (@    @    !    (P    ,    \"     0   !D    $     0   !H    %     0   !L    #     @    $    <    !     $    = "
+    "   !0    $    >     P    (    !    'P    0    !    (     4    !    (0                                             "
+    "                                                                                                            .     "
+    "     X   !     !@    @    $          4    (     0    H    !         !     *    0V]N=&EN=6]U<P        X   !     !@ "
+    "   @    $          4    (     0    P    !         !     ,    <W1A=&5?4WES=&5M      X   !0    !@    @    &         "
+    " 4    (     0    0    !          D    @                       B0        \")         64 .    4     8    (    !@    "
+    "     %    \"     $    $     0         )    (                                 #P/P       / _#@   $     &    \"     "
+    "0         !0    @    !    #     $         $     P   !S=&%T95]\"=7IZ97(     #@   )     &    \"     8         !0    "
+    "@    !    #     $         \"0   &               (7K4;@>A?,_A>M1N!Z%\\S\\I7(_\"]2@\"0\"E<C\\+U* ) D,+U*%R/\"D\"0PO4"
+    "H7(\\*0)J9F9F9&2E FIF9F9D9*4\"N1^%Z%&XP0*Y'X7H4;C!         64 .    D     8    (    !@         %    \"     $    ,  "
+    "   0         )    8           X&]       #@;T                              \\#\\       #P/P      X&]       #@;T    "
+    "    #P/P       / _      #@;T       .!O0 X   !     !@    @    $          4    (     0    L    !         !     +    "
+    "9&]U=%]\"=7IZ97(       X   !     !@    @    &          4    (     0    (    !          D    0                     "
+    " !90 X   !     !@    @    &          4    (     0    (    !          D    0                          X   !0    !@ "
+    "   @    -          4    (    \"     $    !          8    @        W0(    !     P    ,    $    !0    $    .    0   "
+    "  8    (    !@         %    \"     $    \"     0         )    $                       64 .    0     8    (    !   "
+    "       %    \"     $    .     0         0    #@   $UU;'1I<&QE7U-H;W)T   .    0     8    (    !          %    \"   "
+    "  $    ,     0         0    #    '-T871E7U-Y<W1E;0     .    0     8    (    !@         %    \"     $    \"     0  "
+    "       )    $                       64 .    0     8    (    !@         %    \"     $    \"     0         )    $   "
+    "         / _        \\#\\.    0     8    (    !          %    \"     $    ,     0         0    #    '-T871E7T)U>GI"
+    "E<@     .    H     8    (    !@         %    \"     $    .     0         )    <                       %$         4"
+    "0&=F9F9F9A1 9V9F9F9F%$         D0        \"1 S<S,S,S,)$#-S,S,S,PD0        \"Y         +D!G9F9F9F8O0&=F9F9F9B]     "
+    "    64 .    H     8    (    !@         %    \"     $    .     0         )    <                                  P0"
+    "        #!                              $!         0$                              2$        !(0                  "
+    "    .    0     8    (    !          %    \"     $    +     0         0    \"P   &1O=71?0G5Z>F5R       .    0     8"
+    "    (    !@         %    \"     $    \"     0         )    $                       64 .    0     8    (    !@     "
+    "    %    \"     $    \"     0         )    $                          .    4     8    (    #0         %    \"     "
+    "@    !     0         &    (        -T\"     0    ,    '    \"     D    !    #@   $     &    \"     8         !0   "
+    " @    !     @    $         \"0   !                       %E #@   $     &    \"     0         !0    @    !    \"P  "
+    "  $         $     L   !-961I=6U?3&]N9P      #@   $     &    \"     0         !0    @    !    #     $         $    "
+    " P   !S=&%T95]3>7-T96T     #@   ,     &    \"     8         !0    @    !    $@    $         \"0   )               "
+    "        $I         2D        !+0        $M FIF9F9F92T\":F9F9F9E+0        $Q         3$       (!.0       @$Y       "
+    "  3T        !/0       @%%       \" 44 ^\"M>C< U20#X*UZ-P#5)         64 .    P     8    (    !@         %    \"    "
+    " $    2     0         )    D            / _        \\#\\                             \\#\\       #P/P             "
+    "               #P/P       / _                             / _        \\#\\                             \\#\\      "
+    " #P/PX   !     !@    @    $          4    (     0    P    !         !     ,    <W1A=&5?0G5Z>F5R      X   \"P 0  !@"
+    "    @    &          4    (     0   #     !          D   \"  0                     40        !1 \"M>C<#T*&$ *UZ-P/0"
+    "H80        \"1         )$         E0        \"5 FIF9F9F9)D\":F9F9F9DF0        \"Y         +D#-S,S,S,PN0,W,S,S,S\"Y"
+    " S<S,S,Q,,$#-S,S,S$PP0        #1         -$       (!!0       @$%       \" 0D       (!\"0.%Z%*Y'@4) X7H4KD>!0D     "
+    "  (!&0       @$9 S<S,S,R,1D#-S,S,S(Q&0        $E         24#A>A2N1P%*0.%Z%*Y' 4I       \" 2T       (!+0'L4KD?AFDM "
+    ">Q2N1^&:2T        !.0        $Y S<S,S,Q,3D#-S,S,S$Q.0!6N1^%Z5$Y %:Y'X7I43D       $!00       0%! <3T*UZ. 44!Q/0K7HX"
+    "!10        %E #@   + !   &    \"     8         !0    @    !    ,     $         \"0   ( !                          "
+    "      ,T         S0                              S0        #-         2$        !(0                              S"
+    "0        #-         2$        !(0                              _0        #]                              \"Y      "
+    "   +D                              /T         _0                              _0        #]                        "
+    "      $A         2$                              ,T         S0        $A         2$                              \\"
+    "#\\       #P/P                     .    0     8    (    !          %    \"     $    +     0         0    \"P   &1O"
+    "=71?0G5Z>F5R       .    0     8    (    !@         %    \"     $    \"     0         )    $                       "
+    "64 .    0     8    (    !@         %    \"     $    \"     0         )    $                          .    4     8 "
+    "   (    #0         %    \"     @    !     0         &    (        -T\"     0    ,    +    #     T    !    #@   $  "
+    "   &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   %     &    \"     T"
+    "         !0    @    (     0    $         !@   \"        #= @    $    #     @    8    *     @    X    X    !@    @ "
+    "   &          4    (     0    $    !          D    (            \"$ .    . 4   8    (     0         %    \"     0 "
+    "   !     0         .    .     8    (     @         %    \"     $          0         %  0  0    $         #@   $ ! "
+    "  &    \"     (         !0    @    !     0    $         !0 $  D    !    )    $YA;64      %A$871A     %E$871A     %"
+    "5S97)$871A       .    ,     8    (    !          %    \"                0         0          X    P    !@    @    "
+    "&          4    (               !          D         #@   #     &    \"     8         !0    @               $     "
+    "    \"0         .    ,     8    (    !@         %    \"                0         )          X    0 @  !@    @    \""
+    "          4    (     0    $    !          4 !  0     0   &    !.86UE                4VEG;F%L<P           $%C=&EV95"
+    "-I9VYA;     !297%U:7)E;65N=$EN9F\\ 57-E<D1A=&$          %1I;65286YG90         .    ,     8    (    !          %   "
+    " \"                0         0          X   !(    !@    @    -          4    (    !0    $    !          8    4    "
+    "    W0(               $         #@   #     &    \"     8         !0    @               $         \"0         .    "
+    ",     8    (    !          %    \"                0         0          X    P    !@    @    &          4    (     "
+    "          !          D         #@   $     &    \"     8         !0    @    !     @    $         \"0   !           "
+    "            \"1 #@   &@!   &    \"     (         !0    @    !     0    $         !0 $  P    !    ,    $YA;64      "
+    "    $=R;W5P<P       $%C=&EV94=R;W5P %5S97)$871A      X    P    !@    @    $          4    (               !       "
+    "  !          #@   $@    &    \"     T         !0    @    %     0    $         !@   !0       #= @               @  "
+    "       .    .     8    (    !@         %    \"     $    !     0         )    \"            / _#@   #     &    \"  "
+    "   8         !0    @               $         \"0         .    B     8    (    \"0         %    \"     $   !8     0"
+    "         \"    6      !24T     #@   $@    &    \"     (         !0    @    !     0    $         !0 $  4    !    !0"
+    "   $U#3U,     #@         "
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Mar  5 2011, 00:01:50
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "Buzzer_harness"
+    created		    "09-Nov-2005 14:07:40"
+    isLibrary		    0
+    firstTarget		    54
+    defaultActionLanguage   CLASSIC_BITOPS
+    debug {
+      runTimeCheck	      [1 0 1 1]
+    }
+    sfVersion		    75014001
+  }
+  chart {
+    id			    2
+    name		    "Buzzer/Buzzer"
+    windowPosition	    [1440 133.5 1440 753]
+    viewLimits		    [0 1918.791 15.114 1000.272]
+    zoomFactor		    1.374
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 9 0 0]
+    firstTransition	    33
+    viewObj		    2
+    machine		    1
+    subviewS {
+      y1		      15.114
+      zoomFactor	      1.374
+    }
+    ssIdHighWaterMark	    93
+    decomposition	    CLUSTER_CHART
+    firstData		    36
+    updateMethod	    DISCRETE
+    sampleTime		    "srate"
+    chartFileNumber	    65
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  state {
+    id			    3
+    labelString		    "No_Beep\nen:\ndout_Buzzer = INACTIVE;\nstate_Buzzer = NO_BEEP;\nBeeps = 0;"
+    position		    [76.3812 71.3902 209.8984 965.2672]
+    fontSize		    12
+    arrowSize		    8.494
+    chart		    2
+    treeNode		    [2 0 9 0]
+    subviewer		    2
+    ssIdNumber		    1
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    4
+    labelString		    "Multiple_Off\nen:\ndout_Buzzer = INACTIVE;"
+    position		    [937.2162 602.6325 159.548 69.0606]
+    fontSize		    12
+    arrowSize		    8.861
+    chart		    2
+    treeNode		    [9 0 8 5]
+    subviewer		    2
+    ssIdNumber		    5
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    5
+    labelString		    "One_Beep_Medium\nen:\ndout_Buzzer = ACTIVE;\non after(ONE_SECOND, tick):\nBeeps = 0;"
+    position		    [935.6488 724.9733 182.6151 101.1979]
+    fontSize		    12
+    arrowSize		    9.408
+    chart		    2
+    treeNode		    [9 0 4 10]
+    subviewer		    2
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 468.483 169.448]
+    }
+    ssIdNumber		    3
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    6
+    labelString		    "Multiple_On\nen:\ndout_Buzzer = ACTIVE;"
+    position		    [938.3018 243.7547 147.9484 276.5103]
+    fontSize		    12
+    arrowSize		    8.861
+    chart		    2
+    treeNode		    [9 0 7 8]
+    subviewer		    2
+    ssIdNumber		    4
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    7
+    labelString		    "On\nen:\ndout_Buzzer = ACTIVE;"
+    position		    [933.8486 104.4352 177.8116 98.4267]
+    fontSize		    12
+    arrowSize		    9.408
+    chart		    2
+    treeNode		    [9 0 0 6]
+    subviewer		    2
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 468.483 169.448]
+    }
+    ssIdNumber		    55
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    8
+    labelString		    "Brief_Off\nen:\ndout_Buzzer = INACTIVE;"
+    position		    [1164.9109 452.4384 161.1176 69.0606]
+    fontSize		    12
+    arrowSize		    8.861
+    chart		    2
+    treeNode		    [9 0 6 4]
+    subviewer		    2
+    ssIdNumber		    58
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    9
+    labelString		    "Beep"
+    position		    [582.5721 44.5426 807.2486 995.3565]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 7 0 3]
+    firstTransition	    27
+    firstJunction	    12
+    subviewer		    2
+    ssIdNumber		    71
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    10
+    labelString		    "One_Beep_Long\nen:\ndout_Buzzer = ACTIVE;\non after(FIFTEEN_SECONDS, tick):\nBeeps = 0;"
+    position		    [930.7301 845.0368 216.7918 100.6826]
+    fontSize		    12
+    arrowSize		    9.408
+    chart		    2
+    treeNode		    [9 0 5 0]
+    subviewer		    2
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 468.483 169.448]
+    }
+    ssIdNumber		    88
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  junction {
+    id			    11
+    position		    [621.5174 339.8891 7.7536]
+    arrowSize		    8.861
+    chart		    2
+    linkNode		    [9 13 14]
+    subviewer		    2
+    quantum		    [0 24 0 0]
+    ssIdNumber		    68
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    12
+    position		    [621.5174 147.2799 7.7536]
+    arrowSize		    8.861
+    chart		    2
+    linkNode		    [9 0 13]
+    subviewer		    2
+    quantum		    [0 27 0 25]
+    ssIdNumber		    65
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    13
+    position		    [621.5174 277.7899 7.7536]
+    arrowSize		    8.861
+    chart		    2
+    linkNode		    [9 12 11]
+    subviewer		    2
+    quantum		    [0 23 0 0]
+    ssIdNumber		    67
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    14
+    position		    [621.5174 405.5269 7.7536]
+    arrowSize		    8.861
+    chart		    2
+    linkNode		    [9 11 15]
+    subviewer		    2
+    quantum		    [0 18 0 0]
+    ssIdNumber		    72
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    15
+    position		    [620.5877 782.694 7.7536]
+    arrowSize		    8.861
+    chart		    2
+    linkNode		    [9 14 16]
+    subviewer		    2
+    quantum		    [0 20 0 0]
+    ssIdNumber		    74
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    16
+    position		    [621.25 893.4375 7]
+    chart		    2
+    linkNode		    [9 15 0]
+    subviewer		    2
+    quantum		    [0 34 0 32]
+    ssIdNumber		    87
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    17
+    labelString		    "[after(20,tick)]"
+    labelPosition	    [1034.379 536.663 77.25 17.484]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      4
+      intersection	      [1 -0 -1 0.587 1030.8731 602.6325 0 22.6417]
+    }
+    dst {
+      id		      6
+      intersection	      [3 0 1 0.3743 1030.8731 520.265 0 -22.6417]
+    }
+    midPoint		    [1030.8731 564.3774]
+    chart		    2
+    linkNode		    [9 26 19]
+    dataLimits		    [1028.215 1033.531 520.265 602.633]
+    stampAngle		    -1
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    16
+  }
+  transition {
+    id			    18
+    labelString		    "[state_Buzzer == TRIPLE_SHORT_BEEP]\n{Beeps = 3;}"
+    labelPosition	    [655.323 368.093 234.84 32.912]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      14
+      intersection	      [0 1 0 -1 629.271 405.5269 0 7.4781]
+    }
+    dst {
+      id		      6
+      intersection	      [4 -1 0 0.415 938.3018 405.5133 0 -7.4781]
+    }
+    midPoint		    [785.8701 405.5269]
+    chart		    2
+    linkNode		    [9 31 21]
+    dataLimits		    [629.271 938.302 402.855 408.172]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    18
+  }
+  transition {
+    id			    19
+    labelString		    "[state_Buzzer == TRIPLE_SHORT_BEEP...\n&& after(50, tick)]\n{Beeps = 3;}"
+    labelPosition	    [1152.171 770.119 241.02 48.339]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      5
+      intersection	      [2 1 0 0.4645 1118.2639 771.9797 0 85.3905]
+    }
+    dst {
+      id		      8
+      intersection	      [3 0 1 0.5559 1236.4632 521.499 0 -111.9172]
+    }
+    midPoint		    [1209.9849 681.1472]
+    chart		    2
+    linkNode		    [9 17 20]
+    dataLimits		    [1118.264 1239.122 521.499 771.98]
+    stampAngle		    -1
+    subviewer		    2
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+      midPointSticky	      1
+    }
+    executionOrder	    1
+    ssIdNumber		    27
+  }
+  transition {
+    id			    20
+    labelString		    "[state_Buzzer == SINGLE_MEDIUM_BEEP]\n{Beeps = 1;}"
+    labelPosition	    [645.792 740.93 242.05 32.912]
+    fontSize		    12
+    arrowSize		    9.408
+    src {
+      id		      15
+      intersection	      [0 1 0 -1 628.3413 782.694 0 6.2979]
+    }
+    dst {
+      id		      5
+      intersection	      [4 -1 0 0.4296 935.6488 782.6965 0 -6.2979]
+    }
+    midPoint		    [783.7744 782.694]
+    chart		    2
+    linkNode		    [9 19 35]
+    dataLimits		    [628.341 935.649 779.874 785.519]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    9
+  }
+  transition {
+    id			    21
+    labelPosition	    [620.977 627.526 9.27 17.484]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      14
+      intersection	      [0 -0.0029 1 -1 621.4949 413.2804 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [0 0.0029 -1 -1 620.6102 774.9405 0 0]
+    }
+    midPoint		    [621.0459 596.7887]
+    chart		    2
+    linkNode		    [9 18 26]
+    dataLimits		    [617.978 623.294 413.28 774.941]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    75
+  }
+  transition {
+    id			    22
+    labelString		    "[after(10,tick)]"
+    labelPosition	    [1197.043 363.407 77.25 17.484]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      8
+      intersection	      [1 0 -1 0.449 1237.2527 452.4384 0 106.8721]
+    }
+    dst {
+      id		      6
+      intersection	      [2 1 0 0.3642 1086.2502 344.4598 0 -142.5089]
+    }
+    midPoint		    [1184.0756 369.8753]
+    chart		    2
+    linkNode		    [9 24 31]
+    dataLimits		    [1086.25 1237.253 341.801 452.438]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    59
+  }
+  transition {
+    id			    23
+    labelString		    "[state_Buzzer == SINGLE_SHORT_BEEP]\n{Beeps = 1;}"
+    labelPosition	    [654.312 235.798 236.9 32.912]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      13
+      intersection	      [0 1 0 -1 629.271 277.7899 0 -76.8399]
+    }
+    dst {
+      id		      6
+      intersection	      [4 -1 0 0.8769 938.3018 277.7932 0 76.8399]
+    }
+    midPoint		    [785.8701 277.7899]
+    chart		    2
+    linkNode		    [9 29 30]
+    dataLimits		    [629.271 938.302 275.135 280.452]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    1
+    ssIdNumber		    12
+  }
+  transition {
+    id			    24
+    labelString		    "[state_Buzzer == DOUBLE_SHORT_BEEP]\n{Beeps = 2;}"
+    labelPosition	    [655.625 299.13 243.08 32.912]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      11
+      intersection	      [0 1 0 -1 629.271 339.8891 0 -33.7644]
+    }
+    dst {
+      id		      6
+      intersection	      [4 -1 0 0.6523 938.3018 339.8974 0 33.7644]
+    }
+    midPoint		    [785.8701 339.8891]
+    chart		    2
+    linkNode		    [9 30 22]
+    dataLimits		    [629.271 938.302 337.239 342.556]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    13
+  }
+  transition {
+    id			    25
+    labelString		    "[state_Buzzer != BEEP_NONE...\n&& state_Buzzer != NO_BEEP...\n&& state_System == SYS_NORMAL]"
+    labelPosition	    [330.685 100.283 204.97 48.339]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      3
+      intersection	      [2 1 0 0.0786 286.2796 147.2799 0 0]
+    }
+    dst {
+      id		      12
+      intersection	      [0 -1 0 -1 613.7639 147.2799 0 0]
+    }
+    midPoint		    [452.4216 147.2799]
+    chart		    2
+    linkNode		    [2 33 28]
+    dataLimits		    [286.28 613.764 144.622 149.938]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    66
+  }
+  transition {
+    id			    26
+    labelString		    "[after(10,tick)]\n{Beeps--;}"
+    labelPosition	    [897.353 538.069 77.25 32.912]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      6
+      intersection	      [3 0 1 0.7137 980.6611 520.265 0 26.8493]
+    }
+    dst {
+      id		      4
+      intersection	      [1 -0 -1 0.2723 980.6611 602.6325 0 -26.8493]
+    }
+    midPoint		    [980.6611 558.5201]
+    chart		    2
+    linkNode		    [9 21 17]
+    dataLimits		    [978.003 983.319 520.265 602.633]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    15
+  }
+  transition {
+    id			    27
+    labelString		    "[state_Buzzer == CONTINUOUS_BEEP]\n{Beeps = 1;}"
+    labelPosition	    [651.661 101.278 224.54 32.912]
+    fontSize		    12
+    arrowSize		    9.408
+    src {
+      id		      12
+      intersection	      [0 1 0 -1 629.271 147.2799 0 9.3941]
+    }
+    dst {
+      id		      7
+      intersection	      [4 -1 0 0.5647 933.8486 147.2804 0 -9.3941]
+    }
+    midPoint		    [783.2798 147.2799]
+    chart		    2
+    linkNode		    [9 0 29]
+    dataLimits		    [629.271 933.849 144.458 150.103]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    56
+  }
+  transition {
+    id			    28
+    labelString		    "[state_Buzzer == NO_BEEP...\n|| !Beeps...\n|| state_System != SYS_NORMAL]"
+    labelPosition	    [373.139 269.779 190.55 48.339]
+    fontSize		    12
+    arrowSize		    8.494
+    src {
+      id		      9
+      intersection	      [4 -1 0 0.7234 582.5721 319.85 0 122.5694]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 -0 0.2574 286.2796 319.85 0 -122.5694]
+    }
+    midPoint		    [432.5085 319.887]
+    chart		    2
+    linkNode		    [2 25 32]
+    dataLimits		    [286.28 582.572 317.302 322.398]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    57
+  }
+  transition {
+    id			    29
+    labelPosition	    [621.518 219.642 9.27 17.484]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      12
+      intersection	      [0 0 1 -1 621.5174 155.0334 0 0]
+    }
+    dst {
+      id		      13
+      intersection	      [0 0 -1 -1 621.5174 270.0363 0 0]
+    }
+    midPoint		    [621.5174 209.8509]
+    chart		    2
+    linkNode		    [9 27 23]
+    dataLimits		    [618.859 624.176 155.033 270.036]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    69
+  }
+  transition {
+    id			    30
+    labelPosition	    [621.518 308.51 9.27 17.484]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      13
+      intersection	      [0 0 1 -1 621.5174 285.5434 0 0]
+    }
+    dst {
+      id		      11
+      intersection	      [0 0 -1 -1 621.5174 332.1356 0 0]
+    }
+    midPoint		    [621.5174 304.6684]
+    chart		    2
+    linkNode		    [9 23 24]
+    dataLimits		    [618.859 624.176 285.543 332.136]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    70
+  }
+  transition {
+    id			    31
+    labelPosition	    [621.517 372.263 9.27 17.484]
+    fontSize		    12
+    arrowSize		    8.861
+    src {
+      id		      11
+      intersection	      [0 0 1 -1 621.5174 347.6427 0 0]
+    }
+    dst {
+      id		      14
+      intersection	      [0 0 -1 -1 621.5174 397.7733 0 0]
+    }
+    midPoint		    [621.5174 368.6137]
+    chart		    2
+    linkNode		    [9 22 18]
+    dataLimits		    [618.859 624.176 347.643 397.773]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    73
+  }
+  transition {
+    id			    32
+    labelPosition	    [421.105 893.437 9.27 17.484]
+    fontSize		    12
+    arrowSize		    8.494
+    src {
+      id		      16
+      intersection	      [0 -1 0 -1 614.25 893.4375 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 0 0.8516 286.2796 893.4375 0 0]
+    }
+    midPoint		    [447.6588 893.4375]
+    chart		    2
+    linkNode		    [2 28 0]
+    dataLimits		    [286.28 614.25 890.889 895.986]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    2
+    ssIdNumber		    78
+  }
+  transition {
+    id			    33
+    labelPosition	    [162.878 49.324 9.27 17.484]
+    fontSize		    12
+    arrowSize		    8.494
+    src {
+      intersection	      [0 0 1 0 177.4263 41.3902 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.4814 177.4263 71.3902 0 0]
+    }
+    midPoint		    [177.4263 52.8182]
+    chart		    2
+    linkNode		    [2 0 25]
+    dataLimits		    [174.878 179.975 41.39 71.39]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    83
+  }
+  transition {
+    id			    34
+    labelString		    "[state_Buzzer == SINGLE_LONG_BEEP]\n{Beeps = 1;}"
+    labelPosition	    [644.892 855.448 228.66 32.912]
+    fontSize		    12
+    arrowSize		    9.408
+    src {
+      id		      16
+      intersection	      [0 1 0 -1 628.25 893.4375 0 0]
+    }
+    dst {
+      id		      10
+      intersection	      [4 -1 0 0.5193 930.7301 893.4375 0 0]
+    }
+    midPoint		    [781.0549 893.4375]
+    chart		    2
+    linkNode		    [9 35 0]
+    dataLimits		    [628.25 930.73 890.615 896.26]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    89
+  }
+  transition {
+    id			    35
+    labelPosition	    [620.952 843.593 9.27 17.484]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [0 0.006 1 -1 620.6341 790.4475 0 0]
+    }
+    dst {
+      id		      16
+      intersection	      [0 -0.006 -1 -1 621.2081 886.4376 0 0]
+    }
+    midPoint		    [620.9081 836.2687]
+    chart		    2
+    linkNode		    [9 20 34]
+    dataLimits		    [618.76 623.56 790.447 886.438]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    90
+  }
+  data {
+    id			    36
+    ssIdNumber		    36
+    name		    "dout_Buzzer"
+    linkNode		    [2 0 37]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    37
+    ssIdNumber		    37
+    name		    "Beeps"
+    linkNode		    [2 36 38]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    38
+    ssIdNumber		    39
+    name		    "NO_BEEP"
+    linkNode		    [2 37 39]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 5
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    39
+    ssIdNumber		    40
+    name		    "SINGLE_MEDIUM_BEEP"
+    linkNode		    [2 38 40]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 7
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    40
+    ssIdNumber		    41
+    name		    "TRIPLE_SHORT_BEEP"
+    linkNode		    [2 39 41]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 10
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    41
+    ssIdNumber		    42
+    name		    "DOUBLE_SHORT_BEEP"
+    linkNode		    [2 40 42]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    42
+    ssIdNumber		    76
+    name		    "SINGLE_SHORT_BEEP"
+    linkNode		    [2 41 43]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 8
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    43
+    ssIdNumber		    77
+    name		    "ONE_SECOND"
+    linkNode		    [2 42 44]
+    scope		    CONSTANT_DATA
+    machine		    1
+    props {
+      initialValue	      "99"
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    44
+    ssIdNumber		    79
+    name		    "CONTINUOUS_BEEP"
+    linkNode		    [2 43 45]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    45
+    ssIdNumber		    80
+    name		    "ACTIVE"
+    linkNode		    [2 44 46]
+    scope		    PARAMETER_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    46
+    ssIdNumber		    81
+    name		    "INACTIVE"
+    linkNode		    [2 45 47]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 4
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    47
+    ssIdNumber		    82
+    name		    "state_Buzzer"
+    linkNode		    [2 46 48]
+    scope		    DATA_STORE_MEMORY_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    48
+    ssIdNumber		    85
+    name		    "state_System"
+    linkNode		    [2 47 49]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    49
+    ssIdNumber		    86
+    name		    "SYS_NORMAL"
+    linkNode		    [2 48 50]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 9
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    50
+    ssIdNumber		    91
+    name		    "SINGLE_LONG_BEEP"
+    linkNode		    [2 49 51]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 6
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    51
+    ssIdNumber		    92
+    name		    "FIFTEEN_SECONDS"
+    linkNode		    [2 50 52]
+    scope		    CONSTANT_DATA
+    machine		    1
+    props {
+      initialValue	      "1499"
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    52
+    ssIdNumber		    93
+    name		    "BEEP_NONE"
+    linkNode		    [2 51 0]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    53
+    name		    "Buzzer/Buzzer"
+    machine		    1
+    chart		    2
+  }
+  target {
+    id			    54
+    name		    "sfun"
+    codeFlags		    ""
+    machine		    1
+    linkNode		    [1 0 55]
+  }
+  target {
+    id			    55
+    name		    "rtw"
+    codeFlags		    " comments=1 statebitsets=1 databitsets=1 emitlogicalops=1 elseifdetection=1 constantfolding=1 redu"
+    "ndantloadelimination=0 preservenames=0 preservenameswithparent=0 exportcharts=0"
+    machine		    1
+    linkNode		    [1 54 0]
+  }
+}

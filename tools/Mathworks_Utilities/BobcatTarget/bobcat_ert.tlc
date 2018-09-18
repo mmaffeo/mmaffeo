@@ -1,0 +1,41 @@
+%% SYSTLC: Bobcat Embedded Target derived from RTW-EC \
+%%    TMF: ert_default_tmf MAKE: make_rtw EXTMODE: ext_user
+%selectfile NULL_FILE
+
+%assign CodeFormat = "Embedded-C"
+
+%assign TargetType = "RT"
+%assign Language   = "C"
+%assign AutoBuildProcedure = !GenerateSampleERTMain
+
+%% Author: $Id: bobcat_ert.tlc 16 2007-11-13 16:02:07Z jgattu $
+
+%include "codegenentry.tlc"
+
+%% The contents between 'BEGIN_RTW_OPTIONS' and 'END_RTW_OPTIONS' are strictly
+%% written by the standard format. We need to use this structure in RTW
+%% options GUI function rtwoptionsdlg.m file.
+%%
+
+/%
+  BEGIN_RTW_OPTIONS
+
+  %----------------------------------------%
+  % Configure RTW code generation settings %
+  %----------------------------------------%
+
+  rtwgensettings.BuildDirSuffix = '_bobcat_ert_rtw';
+  rtwgensettings.Version        = '1';
+  rtwgensettings.SelectCallback = ...
+    'bobcat_ert_config(hDlg, hSrc)';
+
+  rtwgensettings.DerivedFrom = 'ert.tlc';
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % NOTE: DerivedFrom declares the base target of this target. All the UI     %
+  %       options and default settings are inherited.                         %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+  END_RTW_OPTIONS
+ %/
+

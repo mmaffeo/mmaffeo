@@ -1,0 +1,4684 @@
+Model {
+  Name			  "Fuel_level_harness"
+  Version		  7.7
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.346"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PostLoadFcn		  "\n\n"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  InitFcn		  "if signalbuilder('Fuel_level_harness/Signal_Builder','activegroup') == 1\n  CD_FUEL_LEVEL_FUNCTION.DataT"
+  "ype = 'uint8';\n  CD_FUEL_LEVEL_FUNCTION.Value = 255;\nelse\n  CD_FUEL_LEVEL_FUNCTION.DataType = 'uint8';\n  CD_FUEL"
+  "_LEVEL_FUNCTION.Value = 0;\nend\n\nif signalbuilder('Fuel_level_harness/Signal_Builder','activegroup') == 2\n  CD_FU"
+  "EL_WARN_FUNCTION.DataType = 'uint8';\n  CD_FUEL_WARN_FUNCTION.Value = 255;\nelse\n  CD_FUEL_WARN_FUNCTION.DataType ="
+  " 'uint8';\n  CD_FUEL_WARN_FUNCTION.Value = 0;\nend\n\nif signalbuilder('Fuel_level_harness/Signal_Builder','activegr"
+  "oup') == 6\n  CD_FUEL_WARN_TIMEOUT.DataType = 'uint16';\n  CD_FUEL_WARN_TIMEOUT.Value = 10;\n  CD_FUEL_LEVEL_DEBOUNC"
+  "E_OORL.DataType = 'uint16';\n  CD_FUEL_LEVEL_DEBOUNCE_OORL.Value = 10;\n  CD_FUEL_LEVEL_DEBOUNCE_OORH.DataType = 'ui"
+  "nt16';\n  CD_FUEL_LEVEL_DEBOUNCE_OORH.Value = 10;\n  CD_FUEL_LEVEL_DEBOUNCE_NORMAL.DataType = 'uint16';\n  CD_FUEL_L"
+  "EVEL_DEBOUNCE_NORMAL.Value = 10;\nelse\n  CD_FUEL_WARN_TIMEOUT.DataType = 'uint16';\n  CD_FUEL_WARN_TIMEOUT.Value = "
+  "600;\n  CD_FUEL_LEVEL_DEBOUNCE_OORL.DataType = 'uint16';\n  CD_FUEL_LEVEL_DEBOUNCE_OORL.Value = 300;\n  CD_FUEL_LEVE"
+  "L_DEBOUNCE_OORH.DataType = 'uint16';\n  CD_FUEL_LEVEL_DEBOUNCE_OORH.Value = 300;\n  CD_FUEL_LEVEL_DEBOUNCE_NORMAL.Da"
+  "taType = 'uint16';\n  CD_FUEL_LEVEL_DEBOUNCE_NORMAL.Value = 50;\nend\n\n\n"
+  Created		  "Wed Nov 09 14:07:37 2005"
+  Creator		  "spencermindeman"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "aliebel"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Apr 24 12:54:36 2012"
+  RTWModifiedTimeStamp	  257172873
+  ModelVersionFormat	  "1.%<AutoIncrement:346>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  on
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dctw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.0"
+	  StartTime		  "0.0"
+	  StopTime		  "100"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.1"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  Array {
+	    Type		    "Struct"
+	    Dimension		    1
+	    MATStruct {
+	      SampleTime	      "0.01"
+	      Offset		      "0"
+	      Priority		      [1.0]
+	    }
+	    PropName		    "SampleTimeProperty"
+	  }
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.0"
+	  BlockReduction	  off
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  off
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  on
+	  DataBitsets		  on
+	  UseTempVars		  on
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection on
+	  EfficientFloat2IntCast  on
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "none"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "warning"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  16
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  16
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Floor"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  16
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Motorola HC12"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Single"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.0"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  on
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Real-Time Workshop Embedded Coder (no auto configuration)"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  on
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomHeaderCode	  "#include \"cpp_req_defines.h\"\n#include \"hw_fin.h\"\n#include \"cdata.h\""
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  on
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "UpperCase"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  off
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     off
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      off
+	      SupportComplex	      off
+	      PurelyIntegerCode	      on
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"Hierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "gen_rtw_req_defines_h.tlc"
+	      CoverageDialogOpen      "off"
+	      ModuleNamingRule	      "Unspecified"
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "InSeparateSourceFile"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "InSeparateHeaderFile"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      GRTInterface	      off
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 360, 285, 1240, 915 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Assertion
+      StopWhenAssertionFail   on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataStoreRead
+      DataStoreName	      "A"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Lookup
+      InputValues	      "[-4:5]"
+      Table		      " rand(1,10)-0.5"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      DataPortOrder	      "One-based contiguous"
+      Inputs		      "3"
+      DataPortIndices	      "{1,2,3}"
+      DataPortForDefault      "Last data port"
+      DiagnosticForDefault    "Error"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "Fuel_level_harness"
+    Location		    [439, 226, 1649, 699]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "94"
+    Block {
+      BlockType		      DataStoreRead
+      Name		      "Data Store\nRead"
+      SID		      "94"
+      Ports		      [0, 1]
+      Position		      [735, 255, 765, 285]
+      DataStoreName	      "state_Buzzer"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion"
+      SID		      "1"
+      Position		      [215, 109, 290, 121]
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion1"
+      SID		      "2"
+      Position		      [215, 144, 290, 156]
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion2"
+      SID		      "66"
+      Position		      [215, 214, 290, 226]
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion6"
+      SID		      "3"
+      Position		      [215, 179, 290, 191]
+      ShowName		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FuelLevel"
+      SID		      "67"
+      Ports		      [4, 3]
+      Position		      [335, 100, 540, 235]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      SystemSampleTime	      "srate100"
+      RTWSystemCode	      "Function"
+      RTWFileNameOpts	      "User specified"
+      RTWFileName	      "mod_Inputs"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"FuelLevel"
+	Location		[2, 82, 1918, 1147]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "ain_FuelLevel"
+	  SID			  "68"
+	  Position		  [55, 688, 85, 702]
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint16"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ain_FuelLevel"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ain_SwitchedPower"
+	  SID			  "69"
+	  Position		  [55, 718, 85, 732]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "uint16"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ain_SwitchedPower"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "state_Console"
+	  SID			  "70"
+	  Position		  [65, 408, 95, 422]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "state_Engine"
+	  SID			  "71"
+	  Position		  [65, 338, 95, 352]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "72"
+	  Position		  [995, 476, 1050, 494]
+	  ShowName		  off
+	  OutDataTypeStr	  "uint16"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion2"
+	  SID			  "73"
+	  Position		  [710, 488, 755, 522]
+	  ShowName		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "ratiometric"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion4"
+	  SID			  "74"
+	  Position		  [945, 673, 1005, 707]
+	  ShowName		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion5"
+	  SID			  "75"
+	  Position		  [550, 693, 595, 727]
+	  ShowName		  off
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From17"
+	  SID			  "76"
+	  Position		  [1535, 256, 1620, 274]
+	  ShowName		  off
+	  GotoTag		  "fltValue"
+	}
+	Block {
+	  BlockType		  Lookup
+	  Name			  "Fuel Gauge Table1"
+	  SID			  "77"
+	  Position		  [620, 480, 670, 530]
+	  AttributesFormatString  "input = %<InputValues>\\noutput = %<OutputValues>\\nlookup = %<LookUpMeth>\\nrounding = %<"
+	  "RndMeth>"
+	  InputValues		  "MXGTW_FUELSND"
+	  Table			  "MXGTW_FUELGAUGE"
+	  LookUpMeth		  "Use Input Nearest"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "fltValue"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Fuel_Level"
+	  SID			  "78"
+	  Ports			  [4, 1]
+	  Position		  [1230, 310, 1425, 590]
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Stateflow diagram"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk',"
+	  " 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "state_FuelLevel"
+	    PropagatedSignals	    "state_FuelLevel"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Fuel_Level"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "17"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "state_Engine"
+	      SID		      "78::17"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "state_Console"
+	      SID		      "78::16"
+	      Position		      [20, 136, 40, 154]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "fltValue"
+	      SID		      "78::1"
+	      Position		      [20, 171, 40, 189]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "rawValue"
+	      SID		      "78::2"
+	      Position		      [20, 206, 40, 224]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "78::12"
+	      Ports		      [1, 1]
+	      Position		      [270, 205, 320, 245]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "78::11"
+	      Tag		      "Stateflow S-Function Fuel_level_harness 22"
+	      Ports		      [4, 2]
+	      Position		      [180, 102, 230, 203]
+	      FunctionName	      "sf_sfun"
+	      Parameters	      "CD_FUEL_LEVEL_DEBOUNCE_LOW,CD_FUEL_LEVEL_DEBOUNCE_NORMAL,CD_FUEL_LEVEL_DEBOUNCE_OORH,CD_FUEL_"
+	      "LEVEL_DEBOUNCE_OORL,CD_FUEL_LEVEL_FUNCTION,CD_FUEL_LEVEL_LOW,CD_FUEL_LEVEL_OORH,CD_FUEL_LEVEL_OORL,CD_FUEL_RESE"
+	      "T_VALUE,CD_FUEL_WARN_DELTA,CD_FUEL_WARN_FUNCTION,CD_FUEL_WARN_TIMEOUT,CONTINUOUS_BEEP,ENGINE_NOT_RUNNING,INACTI"
+	      "VE,LOW,NON_FUNCTIONAL,NORMAL,NO_BEEP,OORH,OORL,SINGLE_SHORT_BEEP"
+	      PortCounts	      "[4 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"state_FuelLevel"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "78::14"
+	      Position		      [460, 216, 480, 234]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "state_FuelLevel"
+	      SID		      "78::6"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "state_Engine"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "state_Console"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "fltValue"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "rawValue"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "state_FuelLevel"
+	      Labels		      [0, 0; 0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "state_FuelLevel"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Gain"
+	  SID			  "79"
+	  Ports			  [1, 1]
+	  Position		  [220, 436, 360, 494]
+	  ForegroundColor	  "red"
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Stateflow diagram"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk',"
+	  " 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Gain"
+	    PropagatedSignals	    "Gain"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Gain"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "13"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "state_Console"
+	      SID		      "79::1"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "79::11"
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "79::10"
+	      Tag		      "Stateflow S-Function Fuel_level_harness 23"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      Parameters	      "CD_FUEL_LEVEL_FILTER_FAST_VALUE,CD_FUEL_LEVEL_FILTER_SLOW_VALUE,INACTIVE"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"Gain"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "79::13"
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Gain"
+	      SID		      "79::5"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "state_Console"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Gain"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto25"
+	  SID			  "80"
+	  Position		  [1120, 451, 1195, 469]
+	  ShowName		  off
+	  GotoTag		  "fltValue"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LP_Filter_Adj_Gain"
+	  SID			  "81"
+	  Ports			  [2, 1]
+	  Position		  [825, 446, 930, 524]
+	  ForegroundColor	  "red"
+	  LibraryVersion	  "1.112"
+	  SourceBlock		  "MX_Library/LP_Filter_Adj_Gain"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LP_Filter_Adj_Gain1"
+	  SID			  "82"
+	  Ports			  [2, 1]
+	  Position		  [730, 649, 830, 731]
+	  ForegroundColor	  "red"
+	  LibraryVersion	  "1.112"
+	  SourceBlock		  "MX_Library/LP_Filter_Adj_Gain"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "Multiport\nSwitch"
+	  SID			  "83"
+	  Ports			  [4, 1]
+	  Position		  [1705, 151, 1750, 334]
+	  ShowName		  off
+	  zeroidx		  off
+	  InputSameDT		  off
+	  OutDataTypeStr	  "uint16"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Ratiometric_Converter"
+	  SID			  "84"
+	  Ports			  [2, 1]
+	  Position		  [185, 680, 315, 740]
+	  ForegroundColor	  "red"
+	  LibraryVersion	  "1.112"
+	  SourceBlock		  "MX_Library/Ratiometric_Converter"
+	  SourceType		  ""
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  multiplier		  "1000"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ratiometric"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Remove_OOR_Levels"
+	  SID			  "85"
+	  Ports			  [1, 1]
+	  Position		  [425, 478, 555, 532]
+	  ForegroundColor	  "red"
+	  LibraryVersion	  "1.112"
+	  SourceBlock		  "MX_Library/Remove_OOR_Levels"
+	  SourceType		  ""
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  OORL_LEVEL		  "CD_FUEL_LEVEL_OORL"
+	  OORH_LEVEL		  "CD_FUEL_LEVEL_OORH"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Truth_Table"
+	  SID			  "86"
+	  Ports			  [1, 1]
+	  Position		  [1510, 133, 1610, 187]
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Truth Table Block"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "plot([0 0 1 1 0 NaN 0.36 0.64 0.64 0.36 0.36 NaN 0.5 0.5 NaN 0.36 0.64 NaN 0.406667 0.453333 NaN 0."
+	  "43 0.43 NaN 0.546667 0.593333 NaN 0.546667 0.546667 NaN 0.546667 0.57 ], [0 1 1 0 0 NaN 0.36 0.36 0.64 0.64 0.36 Na"
+	  "N 0.36 0.64 NaN 0.546667 0.546667 NaN 0.5 0.5 NaN 0.406667 0.5 NaN 0.5 0.5 NaN 0.406667 0.5 NaN 0.453333 0.453333 ]"
+	  ");"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Truth_Table"
+	    Location		    [50, 413, 605, 673]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "13"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "state"
+	      SID		      "86::1"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "86::11"
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "86::10"
+	      Tag		      "Stateflow S-Function Fuel_level_harness 25"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"gauge"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "86::13"
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "gauge"
+	      SID		      "86::5"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "state"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "gauge"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "gauge"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "filter_level"
+	  SID			  "87"
+	  Position		  [620, 655, 650, 685]
+	  Value			  "3"
+	  OutDataTypeStr	  "uint8"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "max"
+	  SID			  "88"
+	  Position		  [1520, 302, 1550, 318]
+	  Value			  "255"
+	  OutDataTypeStr	  "uint16"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "min"
+	  SID			  "89"
+	  Position		  [1520, 211, 1550, 229]
+	  Value			  "0"
+	  OutDataTypeStr	  "uint16"
+	  SampleTime		  "srate100"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_FuelLevel"
+	  SID			  "90"
+	  Position		  [1785, 443, 1815, 457]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "gau_FuelLevel"
+	  SID			  "91"
+	  Position		  [1785, 238, 1815, 252]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rm_FuelLevel"
+	  SID			  "92"
+	  Position		  [1785, 683, 1815, 697]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "state_FuelLevel"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Fuel_Level"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "state_FuelLevel"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -290]
+	    DstBlock		    "Truth_Table"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "ain_SwitchedPower"
+	  Labels		  [0, 0]
+	  SrcBlock		  "ain_SwitchedPower"
+	  SrcPort		  1
+	  DstBlock		  "Ratiometric_Converter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "LP_Filter_Adj_Gain"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Gain"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "LP_Filter_Adj_Gain"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ain_FuelLevel"
+	  Labels		  [0, 0]
+	  SrcBlock		  "ain_FuelLevel"
+	  SrcPort		  1
+	  DstBlock		  "Ratiometric_Converter"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ratiometric"
+	  SrcBlock		  "Ratiometric_Converter"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Labels		    [1, 1]
+	    Points		    [0, -205]
+	    DstBlock		    "Remove_OOR_Levels"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [1, 1]
+	    DstBlock		    "Data Type Conversion5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "ratiometric"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Data Type Conversion2"
+	  SrcPort		  1
+	  DstBlock		  "LP_Filter_Adj_Gain"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Multiport\nSwitch"
+	  SrcPort		  1
+	  DstBlock		  "gau_FuelLevel"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "min"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "max"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "LP_Filter_Adj_Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "filter_level"
+	  SrcPort		  1
+	  DstBlock		  "LP_Filter_Adj_Gain1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion5"
+	  SrcPort		  1
+	  DstBlock		  "LP_Filter_Adj_Gain1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "state_Console"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Fuel_Level"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "state_Engine"
+	  SrcPort		  1
+	  DstBlock		  "Fuel_Level"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Truth_Table"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 15]
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From17"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion4"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    DstBlock		    "rm_FuelLevel"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -135]
+	    DstBlock		    "Fuel_Level"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  Name			  "fltValue"
+	  Labels		  [0, 0; 0, 0]
+	  SrcBlock		  "Fuel Gauge Table1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "Fuel_Level"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "Goto25"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Remove_OOR_Levels"
+	  SrcPort		  1
+	  DstBlock		  "Fuel Gauge Table1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Name		      "Relational\nOperator"
+      SID		      "29"
+      Ports		      [2, 1]
+      Position		      [735, 342, 765, 373]
+      ShowName		      off
+      Operator		      "=="
+      InputSameDT	      off
+      OutDataTypeStr	      "boolean"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      SID		      "30"
+      Ports		      [4]
+      Position		      [815, 102, 860, 243]
+      Floating		      off
+      Location		      [2024, 122, 3464, 948]
+      Open		      on
+      NumInputPorts	      "4"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+      }
+      TimeRange		      "100"
+      YMin		      "8~0~0~0"
+      YMax		      "22~275~2000~17.5"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "50000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Signal_Builder"
+      SID		      "31"
+      Tag		      "STV Subsys"
+      Ports		      [0, 5]
+      Position		      [15, 97, 170, 273]
+      CopyFcn		      "sigbuilder_block('copy');"
+      DeleteFcn		      "sigbuilder_block('delete');"
+      LoadFcn		      "sigbuilder_block('load',[861 126 863.25 411 ]);"
+      ModelCloseFcn	      "sigbuilder_block('modelClose');"
+      PreSaveFcn	      "sigbuilder_block('preSave');"
+      StartFcn		      "sigbuilder_block('start');"
+      StopFcn		      "sigbuilder_block('stop');"
+      NameChangeFcn	      "sigbuilder_block('namechange');"
+      ClipboardFcn	      "sigbuilder_block('clipboard');"
+      OpenFcn		      "sigbuilder_block('open',[-1200 -225 1200 849.75 ]);"
+      CloseFcn		      "sigbuilder_block('close');"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      on
+      MaskType		      "Sigbuilder block"
+      MaskDescription	      "Sigbuilder GUI"
+      MaskInitialization      "if ~strcmp(get_param(bdroot(gcbh),'SimulationStatus'),'stopped') tuvar = sigbuilder_blo"
+      "ck('maskInit'); end"
+      MaskDisplay	      "plot(0,0,100,100,[10,10,40,40,10],[80,20,20,80,80],[40,10],[50,50], [40,27,10],[65,72,56],[40"
+      ",25,25,10],[28,28,43,43]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "port"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Signal_Builder"
+	Location		[480, 85, 980, 386]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "32"
+	  Tag			  "STV Demux"
+	  Ports			  [1, 5]
+	  Position		  [150, 62, 160, 648]
+	  Outputs		  "5"
+	}
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "FromWs"
+	  SID			  "33"
+	  Tag			  "STV FromWs"
+	  Position		  [30, 300, 115, 350]
+	  VariableName		  "tuvar"
+	  SampleTime		  "0"
+	  ZeroCross		  on
+	  SigBuilderData	  "DataTag0"
+	  VnvData		  "DataTag1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ain_FuelLevel"
+	  SID			  "34"
+	  Tag			  "STV Outport"
+	  Position		  [280, 30, 300, 40]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ain_SwitchedPower"
+	  SID			  "35"
+	  Tag			  "STV Outport"
+	  Position		  [280, 60, 300, 70]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_Console"
+	  SID			  "36"
+	  Tag			  "STV Outport"
+	  Position		  [280, 90, 300, 100]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_Engine"
+	  SID			  "65"
+	  Tag			  "STV Outport"
+	  Position		  [280, 120, 300, 130]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state_FuelLevel"
+	  SID			  "37"
+	  Tag			  "STV Outport"
+	  Position		  [280, 150, 300, 160]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "FromWs"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "ain_FuelLevel"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "ain_SwitchedPower"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "state_Console"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  DstBlock		  "state_Engine"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  DstBlock		  "state_FuelLevel"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Assertion
+      Name		      "assert_State"
+      SID		      "38"
+      Position		      [815, 340, 880, 380]
+      Enabled		      off
+    }
+    Line {
+      SrcBlock		      "Relational\nOperator"
+      SrcPort		      1
+      DstBlock		      "assert_State"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion"
+      SrcPort		      1
+      DstBlock		      "FuelLevel"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion1"
+      SrcPort		      1
+      DstBlock		      "FuelLevel"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion6"
+      SrcPort		      1
+      DstBlock		      "FuelLevel"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      1
+      DstBlock		      "Data Type Conversion"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      2
+      DstBlock		      "Data Type Conversion1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      3
+      DstBlock		      "Data Type Conversion6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "FuelLevel"
+      SrcPort		      1
+      Points		      [130, 0]
+      Branch {
+	Labels			[1, 0]
+	Points			[125, 0]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 225]
+	DstBlock		"Relational\nOperator"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "FuelLevel"
+      SrcPort		      2
+      Points		      [255, 0]
+      DstBlock		      "Scope"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "FuelLevel"
+      SrcPort		      3
+      Points		      [255, 0]
+      DstBlock		      "Scope"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      5
+      Points		      [460, 0; 0, 110]
+      DstBlock		      "Relational\nOperator"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Signal_Builder"
+      SrcPort		      4
+      DstBlock		      "Data Type Conversion2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion2"
+      SrcPort		      1
+      DstBlock		      "FuelLevel"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Data Store\nRead"
+      SrcPort		      1
+      Points		      [15, 0; 0, -45]
+      DstBlock		      "Scope"
+      DstPort		      4
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    8 0   8    (     @         %    \"     $    !     0         %  0 $0    $   #,    =F5R:6"
+    "9Y0FQK4&%T:',   !V97)I9GE\";&M(86YD;&5S '9N=DUG<DED>           86-T:79E1W)O=7        !R97%$:7-P4')C;G0      &)L:T1"
+    "I<W!-;V1E        9W)O=7!#;G0           !G<F]U<%)E<4-N=        &=R;W5P1$]/4E-I9       ;6]D96Q(              !B;&]C:"
+    "T@              &]V97)I9&53971T:6YG<P        X   !P    !@    @    !          4    (     0    $    !          X   !"
+    "     !@    @    $          4    (     0    T    !         !     -    +V%S<V5R=%]3=&%T90    X    X    !@    @    & "
+    "         4    (     0    $    !          D    (          (PA$ .    .     8    (    !@         %    \"     $    !  "
+    "   0         )    \"            / _#@   #@    &    \"     8         !0    @    !     0    $         \"0    @      "
+    "      <0 X    X    !@    @    &          4    (     0    $    !          D    (    _Z!B>)H+X#\\.    .     8    (  "
+    "  !@         %    \"     $    !     0         )    \"            /\"_#@   #@    &    \"     8         !0    @    !"
+    "     0    $         \"0    @            <0 X    P    !@    @    &          4    (               !          D      "
+    "   #@   #     &    \"     8         !0    @               $         \"0         .    .     8    (    !@         % "
+    "   \"     $    !     0         )    \"        ( !N(! #@   #@    &    \"     8         !0    @    !     0    $     "
+    "    \"0    @       \"  <\"#0 X   !H    !@    @    &          4    (     0    <    !          D    X            \\#"
+    "\\       #P/P                  \\#\\       #P/P                     "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    2\"    8    (     @         %    \"     $    !     0         %  0 %@    $   \"P    9W)I"
+    "9%-E='1I;F<              &-H86YN96QS                  !A>&5S                        8V]M;6]N                     &"
+    "1A=&%3970                   !D871A4V5T261X                :7-697)I9FEC871I;VY6:7-I8FQE '-B;V)J                    "
+    "   .    ,     8    (    !          %    \"     $    \"     0         0  ( ;VX   X    P#   !@    @    \"          4"
+    "    (     0    4    !          4 !  *     0   %H   !S=&5P6       <W1E<%D      'E-:6X       !Y36%X        8V]L;W(  "
+    "    &QI;F53='EL90!L:6YE5VED=&@ ;&%B96P      &]U=$EN9&5X           .    .     8    (    !@         %    \"     $   "
+    " !     0         )    \"               #@   #@    &    \"     8         !0    @    !     0    $         \"0    @  "
+    "             X    X    !@    @    &          4    (     0    $    !          D    (            \\/\\.    .     8  "
+    "  (    !@         %    \"     $    !     0         )    \"            /!_#@   $@    &    \"     8         !0    @ "
+    "   !     P    $         \"0   !@   \"J\\=)-8A#0/ZKQTDUB$. _JO'236(0X#\\.    ,     8    (    !          %    \"    "
+    " $    !     0         0  $ +0    X    X    !@    @    &          4    (     0    $    !          D    (           "
+    " ^#\\.    0     8    (    !          %    \"     $    -     0         0    #0   &%I;E]&=65L3&5V96P    .    .     8"
+    "    (    !@         %    \"     $    !     0         )    \"            / _#@   #@    &    \"     8         !0    "
+    "@    !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $    !          D"
+    "    (               .    .     8    (    !@         %    \"     $    !     0         )    \"            /#_#@   #@"
+    "    &    \"     8         !0    @    !     0    $         \"0    @           #P?PX   !(    !@    @    &          4"
+    "    (     0    ,    !          D    8    JO'236(0T#\\          *KQTDUB$- _#@   #     &    \"     0         !0    @"
+    "    !     0    $         $  ! \"T    .    .     8    (    !@         %    \"     $    !     0         )    \"     "
+    "       /@_#@   $@    &    \"     0         !0    @    !    $0    $         $    !$   !A:6Y?4W=I=&-H9610;W=E<@     "
+    "    .    .     8    (    !@         %    \"     $    !     0         )    \"             ! #@   #@    &    \"     "
+    "8         !0    @    !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $"
+    "    !          D    (               .    .     8    (    !@         %    \"     $    !     0         )    \"      "
+    "      /#_#@   #@    &    \"     8         !0    @    !     0    $         \"0    @           #P?PX   !(    !@    @"
+    "    &          4    (     0    ,    !          D    8    5GVNMF)_[S]>2\\@'/9OK/S)5,\"JI$Y _#@   #     &    \"     "
+    "0         !0    @    !     0    $         $  ! \"T    .    .     8    (    !@         %    \"     $    !     0    "
+    "     )    \"            /@_#@   $     &    \"     0         !0    @    !    #0    $         $     T   !S=&%T95]#;V"
+    "YS;VQE    #@   #@    &    \"     8         !0    @    !     0    $         \"0    @            (0 X    X    !@    "
+    "@    &          4    (     0    $    !          D    (               .    .     8    (    !@         %    \"     $"
+    "    !     0         )    \"               #@   #@    &    \"     8         !0    @    !     0    $         \"0    "
+    "@           #P_PX    X    !@    @    &          4    (     0    $    !          D    (            \\'\\.    2     "
+    "8    (    !@         %    \"     $    #     0         )    &    %9]KK9B?^\\_7DO(!SV;ZS\\R53 JJ1.0/PX    P    !@   "
+    " @    $          4    (     0    $    !         !   0 M    #@   #@    &    \"     8         !0    @    !     0    "
+    "$         \"0    @           #X/PX   !     !@    @    $          4    (     0    P    !         !     ,    <W1A=&5"
+    "?16YG:6YE      X    X    !@    @    &          4    (     0    $    !          D    (            $$ .    .     8  "
+    "  (    !@         %    \"     $    !     0         )    \"               #@   #@    &    \"     8         !0    @ "
+    "   !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $    !          D  "
+    "  (            \\/\\.    .     8    (    !@         %    \"     $    !     0         )    \"            /!_#@   $@"
+    "    &    \"     8         !0    @    !     P    $         \"0   !@    4KD?A>A3D/])O7P?.&=D_>'JE+$,<RS\\.    ,     "
+    "8    (    !          %    \"     $    !     0         0  $ +0    X    X    !@    @    &          4    (     0    $"
+    "    !          D    (            ^#\\.    0     8    (    !          %    \"     $    /     0         0    #P   '-"
+    "T871E7T9U96Q,979E;  .    .     8    (    !@         %    \"     $    !     0         )    \"            !1 #@   + "
+    "&   &    \"     (         !0    @    !    !0    $         !0 $  L    !    -P   &-H86YN96QS    >4QI;0        !L86)E"
+    ";%!O<P   &QA8F5L2       ;&%B96Q0871C:   #@   #@    &    \"     8         !0    @    !     0    $         \"0    @ "
+    "           40 X   !     !@    @    &          4    (     0    (    !          D    0            '$         B0 X   "
+    " P    !@    @    $          4    (     0    (    !         !   @!43   #@   #@    &    \"     8         !0    @    "
+    "!     0    $         \"0    @       \"  4B,0 X    X    !@    @    &          4    (     0    $    !          D    "
+    "(        @ % C$ .    .     8    (    !@         %    \"     $    !     0         )    \"            !! #@   $     "
+    "&    \"     8         !0    @    !     @    $         \"0   !    #-S,S,S,SL/\\W,S,S,S ! #@   #     &    \"     0  "
+    "       !0    @    !     @    $         $  \" %1,   .    .     8    (    !@         %    \"     $    !     0       "
+    "  )    \"        ( !:(Q #@   #@    &    \"     8         !0    @    !     0    $         \"0    @       \"  6\",0 "
+    "X    X    !@    @    &          4    (     0    $    !          D    (            \"$ .    0     8    (    !@     "
+    "    %    \"     $    \"     0         )    $    )J9F9F9F;F_FIF9F9F9\\3\\.    ,     8    (    !          %    \"   "
+    "  $    \"     0         0  ( 5$P   X    X    !@    @    &          4    (     0    $    !          D    (        @"
+    " &(C$ .    .     8    (    !@         %    \"     $    !     0         )    \"        ( !@(Q #@   #@    &    \"   "
+    "  8         !0    @    !     0    $         \"0    @             0 X   !     !@    @    &          4    (     0   "
+    " (    !          D    0           P?T       %!_0 X    P    !@    @    $          4    (     0    (    !         ! "
+    "  @!43   #@   #@    &    \"     8         !0    @    !     0    $         \"0    @       \"  :B,0 X    X    !@    "
+    "@    &          4    (     0    $    !          D    (        @ &@C$ .    .     8    (    !@         %    \"     $"
+    "    !     0         )    \"            / _#@   $     &    \"     8         !0    @    !     @    $         \"0   !"
+    "                      ,(% #@   #     &    \"     0         !0    @    !     @    $         $  \" %1,   .    .     "
+    "8    (    !@         %    \"     $    !     0         )    \"        ( % () #@   #@    &    \"     8         !0   "
+    " @    !     0    $         \"0    @       \" !_B!0 X   !H @  !@    @    \"          4    (     0    $    !        "
+    "  4 !  .     0   &(   !D:7-P5&EM90       &1I<W!-;V1E        ;6EN5&EM90        !M87A4:6UE         &%F=&5R1FEN86Q3='"
+    "( <V%M<&QE5&EM90    !Z97)O0W)O<W,               X   !     !@    @    &          4    (     0    (    !          D "
+    "   0                      !90 X    X    !@    @    &          4    (     0    $    !          D    (            \\"
+    "#\\.    .     8    (    !@         %    \"     $    !     0         )    \"               #@   #@    &    \"     8"
+    "         !0    @    !     0    $         \"0    @           !90 X   !     !@    @    $          4    (     0    L "
+    "   !         !     +    17AT<F%P;VQA=&4       X    X    !@    @    &          4    (     0    $    !          D   "
+    " (               .    ,     8    (    !          %    \"     $    \"     0         0  ( ;VX   X   \"X\"   !@    @ "
+    "   \"          4    (     0    <    !          4 !  .     0   #@   !A8W1I=F5$:7-P261X '1I;65286YG90      ;F%M90   "
+    "         !D:7-P;&%Y4F%N9V4   X   !0    !@    @    &          4    (     0    0    !          D    @            %$ "
+    "        (0         !         \\#\\.    0     8    (    !@         %    \"     $    \"     0         )    $        "
+    "               64 .    0     8    (    !          %    \"     $    +     0         0    \"P   %0Q+4Y/3E]&54Y#     "
+    "  .    0     8    (    !@         %    \"     $    \"     0         )    $                       64 .    4     8  "
+    "  (    !@         %    \"     $    $     0         )    (            !1         \"$          0        / _#@   $   "
+    "  &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   #@    &    \"     0 "
+    "        !0    @    !    !@    $         $     8   !4,BU/3U(   X   !     !@    @    &          4    (     0    (   "
+    " !          D    0                      !90 X   !0    !@    @    &          4    (     0    0    !          D    @"
+    "            %$         (0         !         \\#\\.    0     8    (    !@         %    \"     $    \"     0        "
+    " )    $                       64 .    .     8    (    !          %    \"     $    &     0         0    !@   %0S+4Q"
+    "/5P  #@   $     &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   %     "
+    "&    \"     8         !0    @    !    !     $         \"0   \"             40         A          $        #P/PX   "
+    "!     !@    @    &          4    (     0    (    !          D    0                      !90 X    X    !@    @    $"
+    "          4    (     0    <    !         !     '    5#0M1T%)3@ .    0     8    (    !@         %    \"     $    \""
+    "     0         )    $                       64 .    6     8    (    !@         %    \"     $    %     0         ) "
+    "   *            !1         $$         (0         !         \\#\\.    0     8    (    !@         %    \"     $    \""
+    "     0         )    $                       64 .    .     8    (    !          %    \"     $    (     0         0 "
+    "   \"    %0U+4=!24XR#@   $     &    \"     8         !0    @    !     @    $         \"0   !                      "
+    " %E #@   %@    &    \"     8         !0    @    !    !0    $         \"0   \"@            40        !!         \"$"
+    "          0        / _#@   $     &    \"     8         !0    @    !     @    $         \"0   !                    "
+    "   %E #@   $     &    \"     0         !0    @    !    #P    $         $     \\   !4-BU&:6QL7U=A<FYI;F< #@   $    "
+    " &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   %@    &    \"     8  "
+    "       !0    @    !    !0    $         \"0   \"@            40        !!         \"$          0        / _#@   $  "
+    "   &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   $     &    \"     0"
+    "         !0    @    !    $     $         $    !    !4-RU&:6QL7U=A<FYI;F<Q#@   $     &    \"     8         !0    @ "
+    "   !     @    $         \"0   !                       %E #@   #@    &    \"     8         !0    @    !     0    $ "
+    "        \"0    @            <0 X    X    !@    @    &          4    (     0    $    !          D    (            \\"
+    "#\\.    @     8    (    $0         !          $ ! !-0T]3 0    @   !3:6=3=6ET90X   !(    !@    @    -          4   "
+    " (    !@    $    !          8    8        W0(    !     0    $    #    #@   + \\   &    \"     D         !0    @   "
+    " !    @#P   $          @   ( \\     4E-      X   #@.P  !@    @    \"          4    (     0    $    !          4 ! "
+    " %     0    4   !-0T]3      X   \"8.P  !@    @    1          $          0 $ $U#3U,!    #0   $9I;&57<F%P<&5R7U\\   "
+    " .    6#L   8    (     0         %    \"    'P    !     0         .    ( T   8    (    \"0         %    \"    / , "
+    "  !     0         \"    \\ P   (    -    L    /    #P    $ 4  ) +  #P#             !'<F]U<', 3F%M90!3:6=N86QS %A$8"
+    "71A %E$871A %-I9U-U:71E4VEG;F%L %5S97)$871A %-I9U-U:71E1W)O=7  06-T:79E4VEG;F%L %)E<75I<F5M96YT26YF;P!4:6UE4F%N9V4"
+    " 06-T:79E1W)O=7  4VEG4W5I=&4                                    &                    \"                     T     "
+    "                                          ,                    !    *P    (                    \"    !@    $      "
+    "              #     0    $                    $     @    $                    %     P    $                    &   "
+    " !     $                    '    !0    (                    (    #     $                    )    !P    $          "
+    "          *    \"     $                    +    \"0    $                    ,    \"@    $                    -    "
+    "\"P    (                    .    $@    $                    /    #0    $                    0    #@    $          "
+    "          1    #P    $                    2    $     $                    3    $0    (                    4    &  "
+    "   $                    5    $P    $                    6    %     $                    7    %0    $              "
+    "      8    %@    $                    9    %P    (                    :    '@    $                    ;    &0    $"
+    "                    <    &@    $                    =    &P    $                    >    '     $                  "
+    "  ?    '0    (                    @    )     $                    A    'P    $                    B    (     $    "
+    "                C    (0    $                    D    (@    $                    E    (P    (                    F "
+    "   *@    $                    G    )0    $                    H    )@    $                    I    )P    $        "
+    "            J    *     $                    K    *0               @    $    !    =P    P    !    >          \"    "
+    " @    $          P    $    0          ,    \"     0    $    $     0    (    %     0    ,    #     @    $    $    !"
+    "     $    %    !0    $    &     P    (    !    !P    0    !    \"     4    !    \"0    ,    \"     0    H    $    "
+    " 0    L    %     0    P    #     @    $    -    !     $    .    !0    $    /     @    (    !    $0    ,    !    (0"
+    "         #     @    $    2    !     $    3    !0    $    4     P    (    !    %0    0    !    %@    4    !    %P  "
+    "  ,    \"     0   !@    $     0   !D    %     0   !H    #     @    $    ;    !     $    <    !0    $    =     P   "
+    " (    !    '@    0    !    'P    4    !    (     (    \"     0   \"(    #     0   #(          P    (    !    (P   "
+    " 0    !    )     4    !    )0    ,    \"     0   \"8    $     0   \"<    %     0   \"@    #     @    $    I    !  "
+    "   $    J    !0    $    K     P    (    !    +     0    !    +0    4    !    +@    ,    \"     0   \"\\    $     0"
+    "   #     %     0   #$    \"     @    $    S     P    $   !#          ,    \"     0   #0    $     0   #4    %     0"
+    "   #8    #     @    $    W    !     $    X    !0    $    Y     P    (    !    .@    0    !    .P    4    !    /   "
+    "  ,    \"     0   #T    $     0   #X    %     0   #\\    #     @    $   !     !     $   !!    !0    $   !\"     @ "
+    "   (    !    1     ,    !    5          #     @    $   !%    !     $   !&    !0    $   !'     P    (    !    2    "
+    " 0    !    20    4    !    2@    ,    \"     0   $L    $     0   $P    %     0   $T    #     @    $   !.    !     "
+    "$   !/    !0    $   !0     P    (    !    40    0    !    4@    4    !    4P    (    \"     0   %4    #     0   &4"
+    "          P    (    !    5@    0    !    5P    4    !    6     ,    \"     0   %D    $     0   %H    %     0   %L "
+    "   #     @    $   !<    !     $   !=    !0    $   !>     P    (    !    7P    0    !    8     4    !    80    ,   "
+    " \"     0   &(    $     0   &,    %     0   &0    \"     @    $   !F     P    $   !V          ,    \"     0   &<  "
+    "  $     0   &@    %     0   &D    #     @    $   !J    !     $   !K    !0    $   !L     P    (    !    ;0    0    "
+    "!    ;@    4    !    ;P    ,    \"     0   '     $     0   '$    %     0   '(    #     @    $   !S    !     $   !T"
+    "    !0    $   !U                                                                                                  "
+    "                                                                                                                  "
+    "                                                                                                                  "
+    "                                                                                                                  "
+    "                                  X         #@   $     &    \"     0         !0    @    !    \"P    $         $   "
+    "  L   !4,2U.3TY?1E5.0P      #@   $     &    \"     0         !0    @    !    #0    $         $     T   !A:6Y?1G5E;"
+    "$QE=F5L    #@   $     &    \"     8         !0    @    !     @    $         \"0   !                       %E #@   "
+    "$     &    \"     8         !0    @    !     @    $         \"0   !                          #@   $@    &    \"   "
+    "  0         !0    @    !    $0    $         $    !$   !A:6Y?4W=I=&-H9610;W=E<@         .    0     8    (    !@    "
+    "     %    \"     $    \"     0         )    $                       64 .    0     8    (    !@         %    \"    "
+    " $    \"     0         )    $             \"          ( .    0     8    (    !          %    \"     $    -     0  "
+    "       0    #0   '-T871E7T-O;G-O;&4    .    0     8    (    !@         %    \"     $    \"     0         )    $   "
+    "                    64 .    0     8    (    !@         %    \"     $    \"     0         )    $                   "
+    "       .    0     8    (    !          %    \"     $    ,     0         0    #    '-T871E7T5N9VEN90     .    0    "
+    " 8    (    !@         %    \"     $    \"     0         )    $                       64 .    0     8    (    !@   "
+    "      %    \"     $    \"     0         )    $                          .    0     8    (    !          %    \"   "
+    "  $    /     0         0    #P   '-T871E7T9U96Q,979E;  .    0     8    (    !@         %    \"     $    \"     0  "
+    "       )    $                       64 .    0     8    (    !@         %    \"     $    \"     0         )    $   "
+    "         \"!         ($ .    6     8    (    #0         %    \"     H    !     0         &    *        -T\"     0 "
+    "   4    #    !     4    &    !P    $    .    .     8    (    !          %    \"     $    &     0         0    !@  "
+    " %0R+4]/4@  #@   $     &    \"     0         !0    @    !    #0    $         $     T   !A:6Y?1G5E;$QE=F5L    #@   "
+    "  !   &    \"     8         !0    @    !    &@    $         \"0   -               #0S,S,S,_,_-#,S,S,S\\S\\        "
+    "80        !A S<S,S,S,($#-S,S,S,P@0#0S,S,S\\T5 -#,S,S/S14#-S,S,S$Q&0,W,S,S,3$9 9V9F9F:F1T!G9F9F9J9'0)J9F9F9F4I FIF9"
+    "F9F92D!G9F9F9N9+0&=F9F9FYDM FIF9F9F93$\":F9F9F9E,0)J9F9F9659 FIF9F9E95D#-S,S,S(Q60,W,S,S,C%9 FIF9F9G95D\":F9F9F=E6"
+    "0        %E #@     !   &    \"     8         !0    @    !    &@    $         \"0   -            !90        %E     "
+    "                         %E         64          @                   64        !90                    (        !90 "
+    "       %E       ! CT       $\"/0        %E         64       $\"/0       0(]         )$         D0       0(]       "
+    "! CT        !90        %E #@   $@    &    \"     0         !0    @    !    $0    $         $    !$   !A:6Y?4W=I=&-"
+    "H9610;W=E<@         .    0     8    (    !@         %    \"     $    \"     0         )    $                      "
+    " 64 .    0     8    (    !@         %    \"     $    \"     0         )    $           0']       ! ?T .    0     8"
+    "    (    !          %    \"     $    -     0         0    #0   '-T871E7T-O;G-O;&4    .    0     8    (    !@      "
+    "   %    \"     $    \"     0         )    $                       64 .    0     8    (    !@         %    \"     $"
+    "    \"     0         )    $                          .    0     8    (    !          %    \"     $    ,     0     "
+    "    0    #    '-T871E7T5N9VEN90     .    0     8    (    !@         %    \"     $    \"     0         )    $      "
+    "                 64 .    0     8    (    !@         %    \"     $    \"     0         )    $                      "
+    "    .    0     8    (    !          %    \"     $    /     0         0    #P   '-T871E7T9U96Q,979E;  .    @     8 "
+    "   (    !@         %    \"     $    *     0         )    4               S<S,S,P,1$#-S,S,S Q$0#,S,S,S,TI ,S,S,S,S2"
+    "D!F9F9F9@960&9F9F9F!E9 9F9F9F8F6$!F9F9F9B980        %E #@   (     &    \"     8         !0    @    !    \"@    $  "
+    "       \"0   %             @0        \"!         -D         V0        \"!         ($         U0        #5         "
+    "($         @0 X   !8    !@    @    -          4    (    \"@    $    !          8    H        W0(    !    !0    D  "
+    "  *    \"P    P    -     0    X    X    !@    @    $          4    (     0    8    !         !     &    5#,M3$]7  "
+    " .    0     8    (    !          %    \"     $    -     0         0    #0   &%I;E]&=65L3&5V96P    .    N     8    "
+    "(    !@         %    \"     $    1     0         )    B               S<S,S,S,[#_-S,S,S,SL/\\W,S,S,S!! S<S,S,S,$$ "
+    "      ,!&0       P$9 9V9F9F:F1T!G9F9F9J9'0        $E         24 T,S,S,_--0#0S,S,S<TY -#,S,S-S3D!G9F9F9B980&=F9F9F)"
+    "EA         64 .    N     8    (    !@         %    \"     $    1     0         )    B           0']       ! ?T    "
+    "   ,!R0       P')       ! ?T       $!_0       8&A       !@:$       $!_0       0']       ! =4!'X7H4KD=R0+L.IR)[FG) "
+    "      ! ?T       $!_0       0(]       ! CT .    2     8    (    !          %    \"     $    1     0         0    $"
+    "0   &%I;E]3=VET8VAE9%!O=V5R          X   !     !@    @    &          4    (     0    (    !          D    0       "
+    "               !90 X   !     !@    @    &          4    (     0    (    !          D    0          ! ?T       $!_0"
+    " X   !     !@    @    $          4    (     0    T    !         !     -    <W1A=&5?0V]N<V]L90    X   !     !@    @"
+    "    &          4    (     0    (    !          D    0                      !90 X   !     !@    @    &          4  "
+    "  (     0    (    !          D    0                          X   !     !@    @    $          4    (     0    P    "
+    "!         !     ,    <W1A=&5?16YG:6YE      X   !     !@    @    &          4    (     0    (    !          D    0 "
+    "                     !90 X   !     !@    @    &          4    (     0    (    !          D    0                   "
+    "       X   !     !@    @    $          4    (     0    \\    !         !     /    <W1A=&5?1G5E;$QE=F5L  X   !P    "
+    "!@    @    &          4    (     0    @    !          D   !               #-S,S,S$P^0,W,S,S,3#Y ,S,S,S/S34 S,S,S,_"
+    "--0#,S,S,S$U= ,S,S,S,35T        !90 X   !P    !@    @    &          4    (     0    @    !          D   !         "
+    "    ($         @0        \")         (D         @0        \"!         (D         B0 X   !8    !@    @    -        "
+    "  4    (    \"@    $    !          8    H        W0(    !    !0    \\    0    $0   !(    3     0    X    X    !@  "
+    "  @    $          4    (     0    <    !         !     '    5#0M1T%)3@ .    0     8    (    !          %    \"    "
+    " $    -     0         0    #0   &%I;E]&=65L3&5V96P    .    0     8    (    !@         %    \"     $    \"     0   "
+    "      )    $                       64 .    0     8    (    !@         %    \"     $    \"     0         )    $    "
+    "                 ! CT .    2     8    (    !          %    \"     $    1     0         0    $0   &%I;E]3=VET8VAE9%"
+    "!O=V5R          X   !     !@    @    &          4    (     0    (    !          D    0                      !90 X "
+    "  !     !@    @    &          4    (     0    (    !          D    0          ! ?T       $!_0 X   !     !@    @   "
+    " $          4    (     0    T    !         !     -    <W1A=&5?0V]N<V]L90    X   !     !@    @    &          4    ("
+    "     0    (    !          D    0                      !90 X   !     !@    @    &          4    (     0    (    !  "
+    "        D    0                          X   !     !@    @    $          4    (     0    P    !         !     ,    "
+    "<W1A=&5?16YG:6YE      X   !     !@    @    &          4    (     0    (    !          D    0                      "
+    "!90 X   !     !@    @    &          4    (     0    (    !          D    0                          X   !     !@  "
+    "  @    $          4    (     0    \\    !         !     /    <W1A=&5?1G5E;$QE=F5L  X   !0    !@    @    &         "
+    " 4    (     0    0    !          D    @              #-S,S,S\"Q10,W,S,S,+%%         64 .    4     8    (    !@    "
+    "     %    \"     $    $     0         )    (            \"!         ($         B0        \") #@   %@    &    \"   "
+    "  T         !0    @    *     0    $         !@   \"@       #= @    $    %    %0   !8    7    &    !D    !    #@   "
+    "#@    &    \"     0         !0    @    !    \"     $         $     @   !4-2U'04E.,@X   !     !@    @    $         "
+    " 4    (     0    T    !         !     -    86EN7T9U96Q,979E;     X   !     !@    @    &          4    (     0    ("
+    "    !          D    0                      !90 X   !     !@    @    &          4    (     0    (    !          D  "
+    "  0                     $\"/0 X   !(    !@    @    $          4    (     0   !$    !         !     1    86EN7U-W:7"
+    "1C:&5D4&]W97(         #@   $     &    \"     8         !0    @    !     @    $         \"0   !                    "
+    "   %E #@   $     &    \"     8         !0    @    !     @    $         \"0   !           $!_0       0'] #@   $    "
+    " &    \"     0         !0    @    !    #0    $         $     T   !S=&%T95]#;VYS;VQE    #@   $     &    \"     8   "
+    "      !0    @    !     @    $         \"0   !                       %E #@   $     &    \"     8         !0    @   "
+    " !     @    $         \"0   !            #P/P       / _#@   $     &    \"     0         !0    @    !    #     $   "
+    "      $     P   !S=&%T95]%;F=I;F4     #@   $     &    \"     8         !0    @    !     @    $         \"0   !    "
+    "                   %E #@   $     &    \"     8         !0    @    !     @    $         \"0   !                    "
+    "      #@   $     &    \"     0         !0    @    !    #P    $         $     \\   !S=&%T95]&=65L3&5V96P #@   $@   "
+    " &    \"     8         !0    @    !     P    $         \"0   !@              ,W,S,S,[%9         64 .    2     8   "
+    " (    !@         %    \"     $    #     0         )    &            \"!         ($         @0 X   !8    !@    @   "
+    " -          4    (    \"@    $    !          8    H        W0(    !    !0   !L    <    '0   !X    ?     0    X   !"
+    "     !@    @    $          4    (     0    \\    !         !     /    5#8M1FEL;%]787)N:6YG  X   !     !@    @    $"
+    "          4    (     0    T    !         !     -    86EN7T9U96Q,979E;     X   \"H    !@    @    &          4    ( "
+    "    0    \\    !          D   !X                        0         ! FIF9F9F9%4\":F9F9F9D50#0S,S,S,QM -#,S,S,S'T   "
+    "      D0        \"1 9V9F9F9F,D T,S,S,S,\\0        $1         1$       (!60        %E #@   *@    &    \"     8     "
+    "    !0    @    !    #P    $         \"0   '@           !)0        $E                             X(!       ! @$   "
+    "    $\"/0       0(]       ! ?T       $!_0        &E       \" 9D       $!_0        $E         24 .    2     8    ( "
+    "   !          %    \"     $    1     0         0    $0   &%I;E]3=VET8VAE9%!O=V5R          X   !     !@    @    &  "
+    "        4    (     0    (    !          D    0                      !90 X   !     !@    @    &          4    (    "
+    " 0    (    !          D    0          ! ?T       $!_0 X   !     !@    @    $          4    (     0    T    !      "
+    "   !     -    <W1A=&5?0V]N<V]L90    X   !@    !@    @    &          4    (     0    8    !          D    P        "
+    "      #-S,S,S,PJ0,W,S,S,S\"I 9V9F9F9F+$!G9F9F9F8L0        %E #@   &     &    \"     8         !0    @    !    !@  "
+    "  $         \"0   #                                  \\#\\       #P/P                     .    0     8    (    !  "
+    "        %    \"     $    ,     0         0    #    '-T871E7T5N9VEN90     .    8     8    (    !@         %    \"  "
+    "   $    &     0         )    ,               -#,S,S,S+T T,S,S,S,O0&=F9F9F9C! 9V9F9F9F,$        !90 X   !@    !@   "
+    " @    &          4    (     0    8    !          D    P            \\#\\       #P/P        !          $        #P/"
+    "P       / _#@   $     &    \"     0         !0    @    !    #P    $         $     \\   !S=&%T95]&=65L3&5V96P #@   "
+    "$@    &    \"     8         !0    @    !     P    $         \"0   !@              ,W,S,S,[%9         64 .    2    "
+    " 8    (    !@         %    \"     $    #     0         )    &            \"!         ($         @0 X   !8    !@   "
+    " @    -          4    (    \"@    $    !          8    H        W0(    !    !0   \"$    B    (P   \"0    E     0  "
+    "  X   !     !@    @    $          4    (     0   !     !         !     0    5#<M1FEL;%]787)N:6YG,0X   !     !@    "
+    "@    $          4    (     0    T    !         !     -    86EN7T9U96Q,979E;     X   !X    !@    @    &          4 "
+    "   (     0    D    !          D   !(                       D0        \"1 9V9F9F9F,D T,S,S,S,\\0        $1         "
+    "1$       (!60        %E #@   '@    &    \"     8         !0    @    !    \"0    $         \"0   $@           !N0  "
+    "      &Y       ! ?T       $!_0       0&5       \" 9D       $!_0        $E         24 .    2     8    (    !       "
+    "   %    \"     $    1     0         0    $0   &%I;E]3=VET8VAE9%!O=V5R          X   !     !@    @    &          4  "
+    "  (     0    (    !          D    0                      !90 X   !     !@    @    &          4    (     0    (    "
+    "!          D    0          ! ?T       $!_0 X   !     !@    @    $          4    (     0    T    !         !     - "
+    "   <W1A=&5?0V]N<V]L90    X   !@    !@    @    &          4    (     0    8    !          D    P               S,S,"
+    "S,S- 0#,S,S,S,T!       \" 0$       (! 0        %E #@   &     &    \"     8         !0    @    !    !@    $        "
+    " \"0   #                                  \\#\\       #P/P                     .    0     8    (    !          %  "
+    "  \"     $    ,     0         0    #    '-T871E7T5N9VEN90     .    8     8    (    !@         %    \"     $    &  "
+    "   0         )    ,               -#,S,S,S6$ T,S,S,S-80&=F9F9F9EA 9V9F9F9F6$        !90 X   !@    !@    @    &    "
+    "      4    (     0    8    !          D    P            \\#\\       #P/P        !          $        #P/P       / _"
+    "#@   $     &    \"     0         !0    @    !    #P    $         $     \\   !S=&%T95]&=65L3&5V96P #@   $@    &    "
+    "\"     8         !0    @    !     P    $         \"0   !@              ,W,S,S,[%9         64 .    2     8    (    "
+    "!@         %    \"     $    #     0         )    &            \"!         ($         @0 X   !8    !@    @    -    "
+    "      4    (    \"@    $    !          8    H        W0(    !    !0   \"<    H    *0   \"H    K     0    X   !@   "
+    " !@    @    -          4    (    #     $    !          8    P        W0(    !    !P    (    (    #@   !0    :    ("
+    "    \"8    \"    #@   #@    &    \"     8         !0    @    !     0    $         \"0    @            <0 X    X!0 "
+    " !@    @    !          4    (    !     $    !          X    X    !@    @    \"          4    (     0         !    "
+    "      4 !  !     0         .    0 $   8    (     @         %    \"     $    !     0         %  0 \"0    $    D    "
+    "3F%M90      6$1A=&$     641A=&$     57-E<D1A=&$       X    P    !@    @    $          4    (               !      "
+    "   !          #@   #     &    \"     8         !0    @               $         \"0         .    ,     8    (    !@"
+    "         %    \"                0         )          X    P    !@    @    &          4    (               !       "
+    "   D         #@   ! \"   &    \"     (         !0    @    !     0    $         !0 $ !     !    8    $YA;64        "
+    "       !3:6=N86QS            06-T:79E4VEG;F%L     %)E<75I<F5M96YT26YF;P!5<V5R1&%T80          5&EM95)A;F=E         "
+    " X    P    !@    @    $          4    (               !         !          #@   $@    &    \"     T         !0    "
+    "@    %     0    $         !@   !0       #= @               0         .    ,     8    (    !@         %    \"      "
+    "          0         )          X    P    !@    @    $          4    (               !         !          #@   #   "
+    "  &    \"     8         !0    @               $         \"0         .    0     8    (    !@         %    \"     $ "
+    "   \"     0         )    $                       )$ .    : $   8    (     @         %    \"     $    !     0      "
+    "   %  0 #     $    P    3F%M90          1W)O=7!S        06-T:79E1W)O=7  57-E<D1A=&$     #@   #     &    \"     0  "
+    "       !0    @               $         $          .    2     8    (    #0         %    \"     4    !     0        "
+    " &    %        -T\"               \"          X    X    !@    @    &          4    (     0    $    !          D   "
+    " (            \\#\\.    ,     8    (    !@         %    \"                0         )          X   \"(    !@    @ "
+    "   )          4    (     0   %@    !          (   !8      %)30     .    2     8    (     @         %    \"     $  "
+    "  !     0         %  0 !0    $    %    34-/4P     .          "
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Mar  5 2011, 00:01:50
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "Fuel_level_harness"
+    created		    "09-Nov-2005 14:07:40"
+    isLibrary		    0
+    firstTarget		    118
+    debug {
+      runTimeCheck	      [1 0 1 1]
+    }
+    sfVersion		    75014001
+  }
+  chart {
+    id			    2
+    name		    "FuelLevel/Fuel_Level"
+    windowPosition	    [15 51 1437 750]
+    viewLimits		    [0 1670.807 0 856.086]
+    zoomFactor		    1.199
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 23 0 0]
+    viewObj		    2
+    machine		    1
+    subviewS {
+      zoomFactor	      1.199
+    }
+    ssIdHighWaterMark	    96
+    decomposition	    SET_CHART
+    firstData		    61
+    chartFileNumber	    22
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  state {
+    id			    3
+    labelString		    "NON_FUNCTIONAL\nen:state_FuelLevel = NORMAL;"
+    position		    [446.5125 44.8545 148.625 86.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [23 0 0 14]
+    visible		    0
+    subviewer		    23
+    ssIdNumber		    1
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    4
+    labelString		    "NORMAL"
+    position		    [449.0125 242.8545 148.625 86.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [23 10 7 0]
+    firstTransition	    38
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    23
+    subviewS {
+      x1		      -17.985
+      y1		      -17.985
+      zoomFactor	      1.199
+      pos		      [0 0 748.75 540.75]
+    }
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    5
+    labelString		    "NORMAL\nen:state_FuelLevel = OORL;"
+    position		    [613.965 88.215 253.75 113.25]
+    fontSize		    12
+    chart		    2
+    treeNode		    [7 0 8 0]
+    visible		    0
+    subviewer		    7
+    ssIdNumber		    3
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    6
+    labelString		    "LOW\nen:state_FuelLevel = LOW;"
+    position		    [609.25 112.59 247.125 112.125]
+    fontSize		    12
+    chart		    2
+    treeNode		    [11 0 9 0]
+    visible		    0
+    subviewer		    11
+    ssIdNumber		    4
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    7
+    labelString		    "OORL"
+    position		    [29.544 223.077 188.375 128.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [23 8 14 4]
+    firstTransition	    34
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    23
+    subviewS {
+      x1		      20.728
+      zoomFactor	      1.199
+      pos		      [0 0 877.715 332.5]
+    }
+    ssIdNumber		    5
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    8
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [56.59 85.59 170.375 107.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [7 0 0 5]
+    visible		    0
+    subviewer		    7
+    ssIdNumber		    6
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    9
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [51.875 109.965 170.375 107.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [11 0 0 6]
+    visible		    0
+    subviewer		    11
+    ssIdNumber		    7
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    10
+    labelString		    "NORMAL"
+    position		    [260.375 46.125 188.375 128.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [4 12 0 11]
+    firstTransition	    37
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    4
+    subviewS {
+      x1		      -13.035
+      y1		      -13.035
+      pos		      [0 0 841 322.5]
+    }
+    ssIdNumber		    8
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    11
+    labelString		    "LOW"
+    position		    [263.5 333.75 188.375 128.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [4 9 10 0]
+    firstTransition	    36
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    4
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 866.375 333.59]
+    }
+    ssIdNumber		    9
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    12
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [56.59 85.59 170.375 107.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [10 0 0 13]
+    visible		    0
+    subviewer		    10
+    ssIdNumber		    10
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    13
+    labelString		    "NORMAL\nen:state_FuelLevel = NORMAL;"
+    position		    [613.965 88.215 170.375 107.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [10 0 12 0]
+    visible		    0
+    subviewer		    10
+    ssIdNumber		    11
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    14
+    labelString		    "OORH"
+    position		    [885.251 221.736 188.375 128.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [23 15 3 7]
+    firstTransition	    44
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    23
+    subviewS {
+      x1		      20.728
+      zoomFactor	      1.199
+      pos		      [0 0 859.715 332.5]
+    }
+    ssIdNumber		    12
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    15
+    labelString		    "DEBOUNCE\nen:debounceCount = 0;\ndu:debounceCount++;"
+    position		    [56.59 85.59 170.375 107.625]
+    fontSize		    12
+    chart		    2
+    treeNode		    [14 0 0 16]
+    visible		    0
+    subviewer		    14
+    ssIdNumber		    13
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    16
+    labelString		    "NORMAL\nen:state_FuelLevel = OORH;"
+    position		    [613.965 88.215 235.75 111]
+    fontSize		    12
+    chart		    2
+    treeNode		    [14 0 15 0]
+    visible		    0
+    subviewer		    14
+    ssIdNumber		    14
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    17
+    labelString		    "FuelFillWarning"
+    position		    [202.2088 17.0715 159.712 154.6995]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 18 23 0]
+    firstTransition	    46
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -17.985
+      y1		      -17.985
+      zoomFactor	      1.199
+      pos		      [0 0 1412.583 675.806]
+    }
+    ssIdNumber		    53
+    type		    AND_STATE
+    decomposition	    CLUSTER_STATE
+    executionOrder	    2
+  }
+  state {
+    id			    18
+    labelString		    "Inactive"
+    position		    [32.375 46.875 503.6704 52.6388]
+    fontSize		    12
+    chart		    2
+    treeNode		    [17 0 0 19]
+    visible		    0
+    subviewer		    17
+    ssIdNumber		    57
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    19
+    labelString		    "Active"
+    position		    [14.3926 195.8599 1382.3143 451.5807]
+    fontSize		    12
+    chart		    2
+    treeNode		    [17 20 18 0]
+    firstTransition	    49
+    firstJunction	    24
+    visible		    0
+    subviewer		    17
+    ssIdNumber		    58
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    20
+    labelString		    "Intermittant_Beep\nen:\nbeep_Delay = (255c - fltValue)/8c;"
+    position		    [510.671 239.0195 282.3624 213.6859]
+    fontSize		    12
+    chart		    2
+    treeNode		    [19 0 0 21]
+    visible		    0
+    subviewer		    17
+    ssIdNumber		    76
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    21
+    labelString		    "Armed\nen:\nstart_FuelLevel = fltValue;\nprevious_Delay = 31;\ndelay_Limit = 0;"
+    position		    [46.125 239.625 210.5575 352.7572]
+    fontSize		    12
+    chart		    2
+    treeNode		    [19 0 20 22]
+    visible		    0
+    subviewer		    17
+    ssIdNumber		    77
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    22
+    labelString		    "Continuous\nen:\nstate_Buzzer = CONTINUOUS_BEEP;\nex:\nstate_Buzzer = NO_BEEP;"
+    position		    [632.5249 516.3986 248.2818 81.8375]
+    fontSize		    12
+    chart		    2
+    treeNode		    [19 0 21 0]
+    visible		    0
+    subviewer		    17
+    ssIdNumber		    78
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    23
+    labelString		    "Monitor"
+    position		    [14.9875 5.3955 162.1648 154.671]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 3 0 17]
+    firstTransition	    29
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 1210.54 457.269]
+    }
+    ssIdNumber		    79
+    type		    AND_STATE
+    decomposition	    CLUSTER_STATE
+    executionOrder	    1
+  }
+  junction {
+    id			    24
+    position		    [973.8381 270.5557 7]
+    chart		    2
+    linkNode		    [19 0 25]
+    visible		    0
+    subviewer		    17
+    quantum		    [0 0 0 50]
+    ssIdNumber		    59
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    25
+    position		    [973.8381 336.8437 7]
+    chart		    2
+    linkNode		    [19 24 26]
+    visible		    0
+    subviewer		    17
+    ssIdNumber		    60
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    26
+    position		    [1199.8932 336.8437 7]
+    chart		    2
+    linkNode		    [19 25 27]
+    visible		    0
+    subviewer		    17
+    ssIdNumber		    61
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    27
+    position		    [973.8381 409.2188 7]
+    chart		    2
+    linkNode		    [19 26 28]
+    visible		    0
+    subviewer		    17
+    quantum		    [0 0 0 57]
+    ssIdNumber		    62
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    28
+    position		    [1199.8932 409.2188 7]
+    chart		    2
+    linkNode		    [19 27 0]
+    visible		    0
+    subviewer		    17
+    ssIdNumber		    63
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    29
+    labelPosition	    [572.288 23.245 8.246 14.971]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 567.8875 14.8545 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.8167 567.8875 44.8545 0 0]
+    }
+    midPoint		    [567.8875 26.246]
+    chart		    2
+    linkNode		    [23 0 30]
+    visible		    0
+    dataLimits		    [565.488 570.288 14.855 44.855]
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    15
+  }
+  transition {
+    id			    30
+    labelString		    "[(CD_FUEL_LEVEL_FUNCTION != NON_FUNCTIONAL)]"
+    labelPosition	    [166.307 143.224 304.353 14.971]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [3 0 1 0.8845 463.6818 131.4795 0 57.15]
+    }
+    dst {
+      id		      4
+      intersection	      [1 -0 -1 0.0987 463.6818 242.8545 0 -57.15]
+    }
+    midPoint		    [463.675 185.3275]
+    chart		    2
+    linkNode		    [23 29 31]
+    visible		    0
+    dataLimits		    [461.282 466.082 131.48 242.855]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    16
+  }
+  transition {
+    id			    31
+    labelString		    "[(rawValue <= CD_FUEL_LEVEL_OORL)]"
+    labelPosition	    [230.809 235.259 223.392 14.971]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [4 -1 -0 0.8626 449.0125 254.7568 0 31.4085]
+    }
+    dst {
+      id		      7
+      intersection	      [2 1 0 0.2463 217.919 254.7568 0 -31.4085]
+    }
+    midPoint		    [332.7027 254.7585]
+    chart		    2
+    linkNode		    [23 30 39]
+    visible		    0
+    dataLimits		    [217.919 449.012 252.357 257.157]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    2
+    ssIdNumber		    17
+  }
+  transition {
+    id			    32
+    labelString		    "[(rawValue > CD_FUEL_LEVEL_OORL)]"
+    labelPosition	    [221.504 297.762 216.645 14.971]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [2 1 0 0.6981 217.919 312.8648 0 26.7015]
+    }
+    dst {
+      id		      4
+      intersection	      [4 -1 -0 0.1918 449.0125 312.8648 0 -26.7015]
+    }
+    midPoint		    [334.2288 312.8685]
+    chart		    2
+    linkNode		    [23 39 40]
+    visible		    0
+    dataLimits		    [217.919 449.012 310.465 315.265]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    18
+  }
+  transition {
+    id			    33
+    labelString		    "[(debounceCount >= CD_FUEL_LEVEL_DEBOUNCE_OORL)...\n|| (state_FuelLevel == OORL)]"
+    labelPosition	    [255.786 74.345 331.663 30.515]
+    fontSize		    12
+    src {
+      id		      8
+      intersection	      [2 1 -0 0.2126 226.965 108.4711 0 -30.9375]
+    }
+    dst {
+      id		      5
+      intersection	      [4 -1 0 0.8211 613.965 108.4711 0 30.9375]
+    }
+    midPoint		    [424.6173 108.47]
+    chart		    2
+    linkNode		    [7 34 0]
+    visible		    0
+    dataLimits		    [226.965 613.965 106.071 110.871]
+    stampAngle		    -1
+    subviewer		    7
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    19
+  }
+  transition {
+    id			    34
+    labelPosition	    [85.615 63.981 8.089 16.155]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 81.215 55.59 0 0]
+    }
+    dst {
+      id		      8
+      intersection	      [1 0 -1 0.1445 81.215 85.59 0 0]
+    }
+    midPoint		    [81.215 66.9815]
+    chart		    2
+    linkNode		    [7 0 33]
+    visible		    0
+    dataLimits		    [78.815 83.615 55.59 85.59]
+    subviewer		    7
+    executionOrder	    1
+    ssIdNumber		    20
+  }
+  transition {
+    id			    35
+    labelString		    "[(debounceCount >= CD_FUEL_LEVEL_DEBOUNCE_LOW)...\n|| (state_FuelLevel == LOW)]"
+    labelPosition	    [243.6 98.72 332.089 28.444]
+    fontSize		    12
+    src {
+      id		      9
+      intersection	      [2 1 -0 0.2126 222.25 132.8461 0 -30.9375]
+    }
+    dst {
+      id		      6
+      intersection	      [4 -1 0 0.8193 609.25 132.8461 0 30.9375]
+    }
+    midPoint		    [419.9023 132.845]
+    chart		    2
+    linkNode		    [11 36 0]
+    visible		    0
+    dataLimits		    [222.25 609.25 130.446 135.246]
+    stampAngle		    -1
+    subviewer		    11
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    21
+  }
+  transition {
+    id			    36
+    labelPosition	    [80.9 88.356 8.246 14.971]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 76.5 79.965 0 0]
+    }
+    dst {
+      id		      9
+      intersection	      [1 0 -1 0.1445 76.5 109.965 0 0]
+    }
+    midPoint		    [76.5 91.3565]
+    chart		    2
+    linkNode		    [11 0 35]
+    visible		    0
+    dataLimits		    [74.1 78.9 79.965 109.965]
+    subviewer		    11
+    executionOrder	    1
+    ssIdNumber		    22
+  }
+  transition {
+    id			    37
+    labelPosition	    [85.615 63.981 8.246 14.971]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 81.215 55.59 0 0]
+    }
+    dst {
+      id		      12
+      intersection	      [1 0 -1 0.1445 81.215 85.59 0 0]
+    }
+    midPoint		    [81.215 66.9815]
+    chart		    2
+    linkNode		    [10 0 41]
+    visible		    0
+    dataLimits		    [78.815 83.615 55.59 85.59]
+    subviewer		    10
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    23
+  }
+  transition {
+    id			    38
+    labelPosition	    [423.429 25.073 8.089 16.155]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 419.0294 16.125 0 0]
+    }
+    dst {
+      id		      10
+      intersection	      [1 0 -1 0.8422 419.0294 46.125 0 0]
+    }
+    midPoint		    [419.0294 28.0731]
+    chart		    2
+    linkNode		    [4 0 42]
+    visible		    0
+    dataLimits		    [416.629 421.429 16.125 46.125]
+    subviewer		    4
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    24
+  }
+  transition {
+    id			    39
+    labelString		    "[(rawValue >= CD_FUEL_LEVEL_OORH)]"
+    labelPosition	    [655.351 246.488 224.891 14.971]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [2 1 -0 0.2406 597.6375 263.6965 0 -22.4685]
+    }
+    dst {
+      id		      14
+      intersection	      [4 -1 0 0.6738 885.251 263.6965 0 22.4685]
+    }
+    midPoint		    [743.436 263.6985]
+    chart		    2
+    linkNode		    [23 31 32]
+    visible		    0
+    dataLimits		    [597.638 885.251 261.297 266.096]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    25
+  }
+  transition {
+    id			    40
+    labelString		    "[(rawValue < CD_FUEL_LEVEL_OORH)]"
+    labelPosition	    [657.562 297.156 218.144 14.971]
+    fontSize		    12
+    src {
+      id		      14
+      intersection	      [4 -1 0 0.2845 885.251 313.7657 0 -27.5955]
+    }
+    dst {
+      id		      4
+      intersection	      [2 1 -0 0.8186 597.6375 313.7657 0 27.5955]
+    }
+    midPoint		    [739.4525 313.7625]
+    chart		    2
+    linkNode		    [23 32 0]
+    visible		    0
+    dataLimits		    [597.638 885.251 311.366 316.166]
+    stampAngle		    -1
+    subviewer		    23
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    26
+  }
+  transition {
+    id			    41
+    labelString		    "[(debounceCount >= CD_FUEL_LEVEL_DEBOUNCE_NORMAL)...\n|| (state_FuelLevel == NORMAL)]"
+    labelPosition	    [256.09 74.34 355.328 28.444]
+    fontSize		    12
+    src {
+      id		      12
+      intersection	      [2 1 0 0.2125 226.965 108.465 0 -30.9375]
+    }
+    dst {
+      id		      13
+      intersection	      [4 -1 0 0.8118 613.965 108.465 0 30.9375]
+    }
+    midPoint		    [424.6173 108.465]
+    chart		    2
+    linkNode		    [10 37 0]
+    visible		    0
+    dataLimits		    [226.965 613.965 106.065 110.865]
+    stampAngle		    -1
+    subviewer		    10
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    27
+  }
+  transition {
+    id			    42
+    labelString		    "[(fltValue > CD_FUEL_RESET_VALUE)]"
+    labelPosition	    [439.856 200.54 211.222 16.155]
+    fontSize		    12
+    src {
+      id		      11
+      intersection	      [1 0 -1 0.8801 429.2888 333.75 0 71.5985]
+    }
+    dst {
+      id		      10
+      intersection	      [3 -0 1 0.1033 429.2888 174.75 0 -72.4526]
+    }
+    midPoint		    [429.286 255.0542]
+    chart		    2
+    linkNode		    [4 38 43]
+    visible		    0
+    dataLimits		    [426.891 431.691 174.75 333.75]
+    stampAngle		    -1
+    subviewer		    4
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    28
+  }
+  transition {
+    id			    43
+    labelString		    "[(fltValue <= CD_FUEL_LEVEL_LOW)]"
+    labelPosition	    [86.754 253.071 204.93 16.155]
+    fontSize		    12
+    src {
+      id		      10
+      intersection	      [3 -0 1 0.8299 292.4156 174.75 0 58.2335]
+    }
+    dst {
+      id		      11
+      intersection	      [1 0 -1 0.1535 292.4156 333.75 0 -62.144]
+    }
+    midPoint		    [292.4185 253.4458]
+    chart		    2
+    linkNode		    [4 42 0]
+    visible		    0
+    dataLimits		    [290.018 294.818 174.75 333.75]
+    stampAngle		    -1
+    subviewer		    4
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    29
+  }
+  transition {
+    id			    44
+    labelPosition	    [85.615 63.981 8.089 16.155]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 81.215 55.59 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [1 0 -1 0.1445 81.215 85.59 0 0]
+    }
+    midPoint		    [81.215 66.9815]
+    chart		    2
+    linkNode		    [14 0 45]
+    visible		    0
+    dataLimits		    [78.815 83.615 55.59 85.59]
+    subviewer		    14
+    executionOrder	    1
+    ssIdNumber		    30
+  }
+  transition {
+    id			    45
+    labelString		    "[(debounceCount >= CD_FUEL_LEVEL_DEBOUNCE_OORH)...\n|| (state_FuelLevel == OORH)]"
+    labelPosition	    [255.786 74.345 333.46 30.515]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [2 1 0 0.2126 226.965 108.4725 0 -30.9375]
+    }
+    dst {
+      id		      16
+      intersection	      [4 -1 -0 0.8175 613.965 108.4725 0 30.9375]
+    }
+    midPoint		    [424.6173 108.47]
+    chart		    2
+    linkNode		    [14 44 0]
+    visible		    0
+    dataLimits		    [226.965 613.965 106.072 110.873]
+    stampAngle		    -1
+    subviewer		    14
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    31
+  }
+  transition {
+    id			    46
+    labelPosition	    [246.654 25.266 8.089 16.155]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 242.2545 16.875 0 0]
+    }
+    dst {
+      id		      18
+      intersection	      [1 0 -1 0.4167 242.2545 46.875 0 0]
+    }
+    midPoint		    [242.2545 28.2665]
+    chart		    2
+    linkNode		    [17 0 48]
+    visible		    0
+    dataLimits		    [239.855 244.655 16.875 46.875]
+    subviewer		    17
+    executionOrder	    1
+    ssIdNumber		    54
+  }
+  transition {
+    id			    47
+    labelString		    "[state_Console != INACTIVE...\n|| state_Engine != ENGINE_NOT_RUNNING...\n|| state_FuelLevel == O"
+    "ORL...\n|| state_FuelLevel == OORH]"
+    labelPosition	    [471.509 108.931 239.085 59.235]
+    fontSize		    12
+    src {
+      id		      19
+      intersection	      [1 0 -1 0.3277 467.3951 195.8599 0 154.3125]
+    }
+    dst {
+      id		      18
+      intersection	      [3 -0 1 0.1363 467.3951 99.5138 0 -154.3125]
+    }
+    midPoint		    [467.3843 149.8531]
+    chart		    2
+    linkNode		    [17 48 0]
+    visible		    0
+    dataLimits		    [464.995 469.795 99.514 195.86]
+    stampAngle		    -1
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    55
+  }
+  transition {
+    id			    48
+    labelString		    "[CD_FUEL_WARN_FUNCTION != NON_FUNCTIONAL...\n&& state_Console == INACTIVE...\n&& state_Engine =="
+    " ENGINE_NOT_RUNNING...\n&& state_FuelLevel != OORL...\n&& state_FuelLevel != OORH]"
+    labelPosition	    [120.569 115.477 294.811 73.595]
+    fontSize		    12
+    src {
+      id		      18
+      intersection	      [3 -0 1 0.8405 112.7104 99.5138 0 17.375]
+    }
+    dst {
+      id		      19
+      intersection	      [1 0 -1 0.0711 112.7104 195.8599 0 -17.375]
+    }
+    midPoint		    [112.7104 145.5206]
+    chart		    2
+    linkNode		    [17 46 47]
+    visible		    0
+    dataLimits		    [110.31 115.11 99.514 195.86]
+    stampAngle		    -1
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+    }
+    executionOrder	    1
+    ssIdNumber		    56
+  }
+  transition {
+    id			    49
+    labelPosition	    [141.759 218.016 8.089 16.155]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 137.3596 209.625 0 0]
+    }
+    dst {
+      id		      21
+      intersection	      [1 0 -1 0.4333 137.3596 239.625 0 0]
+    }
+    midPoint		    [137.3596 221.0165]
+    chart		    2
+    linkNode		    [19 0 50]
+    visible		    0
+    dataLimits		    [134.96 139.76 209.625 239.625]
+    subviewer		    17
+    executionOrder	    1
+    ssIdNumber		    64
+  }
+  transition {
+    id			    50
+    labelString		    "[after(uint8(beep_Delay),tick)]"
+    labelPosition	    [798.964 249.534 154.596 16.155]
+    fontSize		    12
+    src {
+      id		      20
+      intersection	      [2 1 0 0.1476 793.0334 270.5557 0 0]
+    }
+    dst {
+      id		      24
+      intersection	      [0 -1 0 -1 966.8381 270.5557 0 0]
+    }
+    midPoint		    [879.4534 270.5557]
+    chart		    2
+    linkNode		    [19 49 51]
+    visible		    0
+    dataLimits		    [793.033 966.838 268.156 272.956]
+    stampAngle		    0
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+      sticky		      DST_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    65
+  }
+  transition {
+    id			    51
+    labelString		    "[fltValue >...\n(start_FuelLevel + CD_FUEL_WARN_DELTA)]"
+    labelPosition	    [265.117 237.597 242.68 30.515]
+    fontSize		    12
+    src {
+      id		      21
+      intersection	      [2 1 0 0.0942 256.6825 272.846 0 -73.0228]
+    }
+    dst {
+      id		      20
+      intersection	      [4 -1 -0 0.8417 510.671 272.846 0 73.0228]
+    }
+    midPoint		    [384.9375 272.8396]
+    chart		    2
+    linkNode		    [19 50 52]
+    visible		    0
+    dataLimits		    [256.683 510.671 270.446 275.246]
+    stampAngle		    -1
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    66
+  }
+  transition {
+    id			    52
+    labelString		    "{\nstate_Buzzer = SINGLE_SHORT_BEEP;\n}"
+    labelPosition	    [980.369 277.5 215.716 44.875]
+    fontSize		    12
+    src {
+      id		      24
+      intersection	      [0 0 1 -1 973.8381 277.5557 0 0]
+    }
+    dst {
+      id		      25
+      intersection	      [0 0 -1 -1 973.8381 329.8437 0 0]
+    }
+    midPoint		    [973.8381 300.5757]
+    chart		    2
+    linkNode		    [19 51 53]
+    visible		    0
+    dataLimits		    [971.438 976.238 277.556 329.844]
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    67
+  }
+  transition {
+    id			    53
+    labelString		    "[uint8(beep_Delay) == previous_Delay]"
+    labelPosition	    [990.865 319.219 202.233 16.155]
+    fontSize		    12
+    src {
+      id		      25
+      intersection	      [0 1 0 -1 980.8381 336.8437 0 0]
+    }
+    dst {
+      id		      26
+      intersection	      [0 -1 0 -1 1192.8932 336.8437 0 0]
+    }
+    midPoint		    [1087.2148 336.8437]
+    chart		    2
+    linkNode		    [19 52 54]
+    visible		    0
+    dataLimits		    [980.838 1192.893 334.444 339.244]
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    68
+  }
+  transition {
+    id			    54
+    labelString		    "{\nprevious_Delay = uint8(beep_Delay);\ndelay_Limit = 0;\n}"
+    labelPosition	    [985.057 340.313 191.448 59.235]
+    fontSize		    12
+    src {
+      id		      25
+      intersection	      [0 0 1 -1 973.8381 343.8437 0 0]
+    }
+    dst {
+      id		      27
+      intersection	      [0 0 -1 -1 973.8381 402.2188 0 0]
+    }
+    midPoint		    [973.8381 370.0396]
+    chart		    2
+    linkNode		    [19 53 55]
+    visible		    0
+    dataLimits		    [971.438 976.238 343.844 402.219]
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    69
+  }
+  transition {
+    id			    55
+    labelString		    "{\ndelay_Limit+= uint8(beep_Delay);\n}"
+    labelPosition	    [1203.063 349.239 176.168 44.875]
+    fontSize		    12
+    src {
+      id		      26
+      intersection	      [0 0 1 -1 1199.8932 343.8437 0 0]
+    }
+    dst {
+      id		      28
+      intersection	      [0 0 -1 -1 1199.8932 402.2188 0 0]
+    }
+    midPoint		    [1199.8932 370.0396]
+    chart		    2
+    linkNode		    [19 54 56]
+    visible		    0
+    dataLimits		    [1197.493 1202.293 343.844 402.219]
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    70
+  }
+  transition {
+    id			    56
+    labelString		    "[delay_Limit > CD_FUEL_WARN_TIMEOUT]"
+    labelPosition	    [264.055 374.191 233.692 16.155]
+    fontSize		    12
+    src {
+      id		      20
+      intersection	      [4 -1 -0 0.2495 510.671 399.3908 0 -53.5397]
+    }
+    dst {
+      id		      21
+      intersection	      [2 1 0 0.4529 256.6825 399.3908 0 53.5397]
+    }
+    midPoint		    [382.416 399.4021]
+    chart		    2
+    linkNode		    [19 55 57]
+    visible		    0
+    dataLimits		    [256.683 510.671 396.991 401.791]
+    stampAngle		    NaN
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    3
+    ssIdNumber		    71
+  }
+  transition {
+    id			    57
+    labelPosition	    [866.328 409.219 8.089 16.155]
+    fontSize		    12
+    src {
+      id		      27
+      intersection	      [0 -1 0 -1 966.8381 409.2188 0 0]
+    }
+    dst {
+      id		      20
+      intersection	      [2 1 0 0.7965 793.0334 409.2188 0 0]
+    }
+    midPoint		    [880.4181 409.2188]
+    chart		    2
+    linkNode		    [19 56 58]
+    visible		    0
+    dataLimits		    [793.033 966.838 406.819 411.619]
+    stampAngle		    0
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+      sticky		      DST_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    72
+  }
+  transition {
+    id			    58
+    labelPosition	    [1069.1 409.219 8.089 16.155]
+    fontSize		    12
+    src {
+      id		      28
+      intersection	      [0 -1 0 -1 1192.8932 409.2188 0 0]
+    }
+    dst {
+      id		      27
+      intersection	      [0 1 0 -1 980.8381 409.2188 0 0]
+    }
+    midPoint		    [1086.5165 409.2188]
+    chart		    2
+    linkNode		    [19 57 59]
+    visible		    0
+    dataLimits		    [980.838 1192.893 406.819 411.619]
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    73
+  }
+  transition {
+    id			    59
+    labelString		    "[beep_Delay == 0]"
+    labelPosition	    [717.991 468.284 97.971 16.155]
+    fontSize		    12
+    src {
+      id		      20
+      intersection	      [3 0 1 0.2764 714.9793 452.7054 0 45.5249]
+    }
+    dst {
+      id		      22
+      intersection	      [1 -0 -1 0.3321 714.9793 516.3986 0 -45.5249]
+    }
+    midPoint		    [714.9884 481.6759]
+    chart		    2
+    linkNode		    [19 58 60]
+    visible		    0
+    dataLimits		    [712.579 717.379 452.705 516.399]
+    stampAngle		    -1
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    74
+  }
+  transition {
+    id			    60
+    labelString		    "[after(CD_FUEL_WARN_TIMEOUT,tick)]"
+    labelPosition	    [318.853 523.999 212.12 16.155]
+    fontSize		    12
+    src {
+      id		      22
+      intersection	      [4 -1 -0 0.7009 632.5249 540.8762 0 -42.899]
+    }
+    dst {
+      id		      21
+      intersection	      [2 1 0 0.854 256.6825 540.8762 0 18.2532]
+    }
+    midPoint		    [440.6939 540.8748]
+    chart		    2
+    linkNode		    [19 59 0]
+    visible		    0
+    dataLimits		    [256.683 632.525 538.476 543.276]
+    stampAngle		    -1
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    75
+  }
+  data {
+    id			    61
+    ssIdNumber		    93
+    name		    "state_Engine"
+    linkNode		    [2 0 62]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    62
+    ssIdNumber		    92
+    name		    "state_Console"
+    linkNode		    [2 61 63]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    63
+    ssIdNumber		    32
+    name		    "fltValue"
+    linkNode		    [2 62 64]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    64
+    ssIdNumber		    33
+    name		    "rawValue"
+    linkNode		    [2 63 65]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    65
+    ssIdNumber		    34
+    name		    "state_FuelLevel"
+    linkNode		    [2 64 66]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    66
+    ssIdNumber		    35
+    name		    "CD_FUEL_LEVEL_FUNCTION"
+    linkNode		    [2 65 67]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 4
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    67
+    ssIdNumber		    36
+    name		    "CD_FUEL_LEVEL_LOW"
+    linkNode		    [2 66 68]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 5
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    68
+    ssIdNumber		    37
+    name		    "CD_FUEL_LEVEL_OORL"
+    linkNode		    [2 67 69]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 7
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    69
+    ssIdNumber		    38
+    name		    "CD_FUEL_LEVEL_OORH"
+    linkNode		    [2 68 70]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 6
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    70
+    ssIdNumber		    39
+    name		    "CD_FUEL_LEVEL_DEBOUNCE_NORMAL"
+    linkNode		    [2 69 71]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    71
+    ssIdNumber		    40
+    name		    "CD_FUEL_LEVEL_DEBOUNCE_OORL"
+    linkNode		    [2 70 72]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    72
+    ssIdNumber		    41
+    name		    "CD_FUEL_LEVEL_DEBOUNCE_OORH"
+    linkNode		    [2 71 73]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    73
+    ssIdNumber		    42
+    name		    "CD_FUEL_LEVEL_DEBOUNCE_LOW"
+    linkNode		    [2 72 74]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    74
+    ssIdNumber		    43
+    name		    "CD_FUEL_RESET_VALUE"
+    linkNode		    [2 73 75]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 8
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    75
+    ssIdNumber		    44
+    name		    "debounceCount"
+    linkNode		    [2 74 76]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      initialValue	      "0"
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    76
+    ssIdNumber		    45
+    name		    "OORH"
+    linkNode		    [2 75 77]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 19
+    machine		    1
+    props {
+      initialValue	      "21"
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    77
+    ssIdNumber		    46
+    name		    "OORL"
+    linkNode		    [2 76 78]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 20
+    machine		    1
+    props {
+      initialValue	      "22"
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    78
+    ssIdNumber		    47
+    name		    "NON_FUNCTIONAL"
+    linkNode		    [2 77 79]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 16
+    machine		    1
+    props {
+      initialValue	      "255"
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    79
+    ssIdNumber		    48
+    name		    "NORMAL"
+    linkNode		    [2 78 80]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 17
+    machine		    1
+    props {
+      initialValue	      "8"
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    80
+    ssIdNumber		    49
+    name		    "LOW"
+    linkNode		    [2 79 81]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 15
+    machine		    1
+    props {
+      initialValue	      "9"
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    81
+    ssIdNumber		    80
+    name		    "CD_FUEL_WARN_DELTA"
+    linkNode		    [2 80 82]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 9
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    82
+    ssIdNumber		    81
+    name		    "CD_FUEL_WARN_FUNCTION"
+    linkNode		    [2 81 83]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 10
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    83
+    ssIdNumber		    82
+    name		    "CD_FUEL_WARN_TIMEOUT"
+    linkNode		    [2 82 84]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 11
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    84
+    ssIdNumber		    83
+    name		    "ENGINE_NOT_RUNNING"
+    linkNode		    [2 83 85]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 13
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    85
+    ssIdNumber		    85
+    name		    "INACTIVE"
+    linkNode		    [2 84 86]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 14
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    86
+    ssIdNumber		    86
+    name		    "NO_BEEP"
+    linkNode		    [2 85 87]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 18
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    87
+    ssIdNumber		    87
+    name		    "beep_Delay"
+    linkNode		    [2 86 88]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    88
+    ssIdNumber		    88
+    name		    "delay_Limit"
+    linkNode		    [2 87 89]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    89
+    ssIdNumber		    89
+    name		    "previous_Delay"
+    linkNode		    [2 88 90]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    90
+    ssIdNumber		    90
+    name		    "start_FuelLevel"
+    linkNode		    [2 89 91]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    91
+    ssIdNumber		    91
+    name		    "state_Buzzer"
+    linkNode		    [2 90 92]
+    scope		    DATA_STORE_MEMORY_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    92
+    ssIdNumber		    94
+    name		    "CONTINUOUS_BEEP"
+    linkNode		    [2 91 93]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 12
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    93
+    ssIdNumber		    95
+    name		    "SINGLE_SHORT_BEEP"
+    linkNode		    [2 92 0]
+    scope		    PARAMETER_DATA
+    paramIndexForInitFromWorkspace 21
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    94
+    name		    "FuelLevel/Fuel_Level"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    95
+    name		    "FuelLevel/Gain"
+    windowPosition	    [140.25 84.75 1215.75 696.75]
+    viewLimits		    [97.561 875.935 8.631 447.369]
+    zoomFactor		    0.664
+    screen		    [1 1 1920 1200 1.333333333333333]
+    firstTransition	    104
+    firstJunction	    96
+    viewObj		    95
+    machine		    1
+    subviewS {
+      x1		      97.561
+      y1		      8.631
+      zoomFactor	      0.664
+    }
+    ssIdHighWaterMark	    14
+    decomposition	    CLUSTER_CHART
+    firstData		    105
+    chartFileNumber	    23
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  junction {
+    id			    96
+    position		    [184.5313 195.0937 7]
+    chart		    95
+    linkNode		    [95 0 97]
+    subviewer		    95
+    ssIdNumber		    6
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    97
+    position		    [509.6878 195.0937 7]
+    chart		    95
+    linkNode		    [95 96 98]
+    subviewer		    95
+    ssIdNumber		    7
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    98
+    position		    [184.5625 290.9062 7]
+    chart		    95
+    linkNode		    [95 97 99]
+    subviewer		    95
+    ssIdNumber		    8
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    99
+    position		    [509.6878 290.9062 7]
+    chart		    95
+    linkNode		    [95 98 0]
+    subviewer		    95
+    ssIdNumber		    9
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    100
+    labelString		    "[(state_Console != INACTIVE)]"
+    labelPosition	    [228.922 175.125 162.767 14.414]
+    fontSize		    12
+    src {
+      id		      96
+      intersection	      [0 1 0 -1 191.5313 195.0937 0 0]
+    }
+    dst {
+      id		      97
+      intersection	      [0 -1 0 -1 502.6878 195.0937 0 0]
+    }
+    midPoint		    [349.6131 195.0937]
+    chart		    95
+    linkNode		    [95 104 101]
+    dataLimits		    [191.531 502.688 192.694 197.494]
+    subviewer		    95
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    1
+  }
+  transition {
+    id			    101
+    labelString		    "{\nGain = CD_FUEL_LEVEL_FILTER_SLOW_VALUE;\n}"
+    labelPosition	    [526.18 217.659 273.27 41.253]
+    fontSize		    12
+    src {
+      id		      97
+      intersection	      [0 0 1 -1 509.6878 202.0937 0 0]
+    }
+    dst {
+      id		      99
+      intersection	      [0 0 -1 -1 509.6878 283.9062 0 0]
+    }
+    midPoint		    [509.6878 240.5178]
+    chart		    95
+    linkNode		    [95 100 103]
+    dataLimits		    [507.288 512.088 202.094 283.906]
+    subviewer		    95
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  transition {
+    id			    102
+    labelPosition	    [319.005 290.906 7.466 14.414]
+    fontSize		    12
+    src {
+      id		      99
+      intersection	      [0 -1 0 -1 502.6878 290.9062 0 0]
+    }
+    dst {
+      id		      98
+      intersection	      [0 1 0 -1 191.5625 290.9062 0 0]
+    }
+    midPoint		    [344.6222 290.9062]
+    chart		    95
+    linkNode		    [95 103 0]
+    dataLimits		    [191.563 502.688 288.506 293.306]
+    subviewer		    95
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    3
+  }
+  transition {
+    id			    103
+    labelString		    "{\nGain = CD_FUEL_LEVEL_FILTER_FAST_VALUE;\n}"
+    labelPosition	    [200.122 221.269 267.794 41.253]
+    fontSize		    12
+    src {
+      id		      96
+      intersection	      [0 0.0003 1 -1 184.5336 202.0937 0 0]
+    }
+    dst {
+      id		      98
+      intersection	      [0 -0.0003 -1 -1 184.5602 283.9062 0 0]
+    }
+    midPoint		    [184.5461 240.5178]
+    chart		    95
+    linkNode		    [95 101 102]
+    dataLimits		    [182.158 186.958 202.094 283.906]
+    subviewer		    95
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    4
+  }
+  transition {
+    id			    104
+    labelPosition	    [188.931 166.485 7.466 14.414]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 184.5313 158.0937 0 0]
+    }
+    dst {
+      id		      96
+      intersection	      [0 0 -1 -1 184.5313 188.0937 0 0]
+    }
+    midPoint		    [184.5313 169.4852]
+    chart		    95
+    linkNode		    [95 0 100]
+    dataLimits		    [182.131 186.931 158.094 188.094]
+    subviewer		    95
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    5
+  }
+  data {
+    id			    105
+    ssIdNumber		    10
+    name		    "state_Console"
+    linkNode		    [95 0 106]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    106
+    ssIdNumber		    11
+    name		    "Gain"
+    linkNode		    [95 105 107]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    107
+    ssIdNumber		    12
+    name		    "CD_FUEL_LEVEL_FILTER_SLOW_VALUE"
+    linkNode		    [95 106 108]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    108
+    ssIdNumber		    13
+    name		    "CD_FUEL_LEVEL_FILTER_FAST_VALUE"
+    linkNode		    [95 107 109]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    109
+    ssIdNumber		    14
+    name		    "INACTIVE"
+    linkNode		    [95 108 0]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    110
+    name		    "FuelLevel/Gain"
+    machine		    1
+    chart		    95
+  }
+  chart {
+    id			    111
+    name		    "FuelLevel/Truth_Table"
+    windowPosition	    [591 179.33 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 112 0 0]
+    firstTransition	    114
+    firstJunction	    113
+    viewObj		    111
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    TRUTHTABLE_CHART
+    firstData		    115
+    chartFileNumber	    25
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    supportVariableSizing   0
+  }
+  state {
+    id			    112
+    labelString		    "tt_blk_kernel"
+    position		    [17.75 73.5 122.375 65.625]
+    fontSize		    12
+    chart		    111
+    treeNode		    [111 0 0 0]
+    superState		    SUBCHART
+    subviewer		    111
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      script		      "function gauge = fcn(state)\n\naVarTruthTableCondition_1 = false;\naVarTruthTableCondition_2 = fa"
+      "lse;\n\n\n% OORH\n\naVarTruthTableCondition_1 = logical(state == 21);\n\n% OORL\n\naVarTruthTableCondition_2 = l"
+      "ogical(state == 22);\n\nif (aVarTruthTableCondition_1)\n    aFcnTruthTableAction_3();\nelseif (aVarTruthTableCon"
+      "dition_2)\n    aFcnTruthTableAction_1();\nelse % Default\n    aFcnTruthTableAction_2();\nend\n\nfunction aFcnTru"
+      "thTableAction_1()\n\n% Gauge min\n\ngauge = uint8(1);\n\nfunction aFcnTruthTableAction_2()\n\n% Gauge current\n\n"
+      "gauge = uint8(2);\n\nfunction aFcnTruthTableAction_3()\n\n% Gauge max\n\ngauge = uint8(3);\n"
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', true)"
+      emlDefaultFimath	      FimathUserSpecified
+    }
+    truthTable {
+      isTruthTable	      1
+      useEML		      1
+      predicateArray	      "100 C3x5{T\"OORH\",T\"OORL\",T\"\",T\"state == 21\",T\"state == 22\",T\"Actions\",T\"T\",T"
+      "\"-\",T\"3\",T\"-\",T\"T\",T\"1\",T\"F\",T\"F\",T\"2\"}"
+      actionArray	      "100 C3x2{T\"Gauge min\",T\"Gauge current\",T\"Gauge max\",T\"gauge = uint8(1);\",T\"gauge = u"
+      "int8(2);\",T\"gauge = uint8(3);\"}"
+      checksum		      [346458994 3781679302 968486075 2040719516]
+      editorLayout	      "100 S'dim','div','pcw','acw','prh','arh'{{M2x1[609 582],M[199],M5x1[160 160 30 30 30],M2x1[1"
+      "60 390],M3x1[62 55 55],M3x1[76 55 72]}}"
+    }
+    autogen {
+      mapping		      "100 C17x2{M[9],M[10],M[13],M[14],M[15],M[16],M[17],M[18],M[19],M[20],M[21],M[27],M[28],M[33],M[3"
+      "4],M[39],M[40],S'type','index'{{M[0],M[1]}},M[],S'type','index'{{M[0],M[2]}},M[],S'type','index'{{M[2],M[1]}},S'"
+      "type','index'{{M[1],M[3]}},S'type','index'{{M[2],M[2]}},S'type','index'{{M[1],M[1]}},S'type','index'{{M[2],M[3]}"
+      "},S'type','index'{{M[1],M[2]}},M[],S'type','index'{{M[1],M[1]}},M[],S'type','index'{{M[1],M[2]}},M[],S'type','in"
+      "dex'{{M[1],M[3]}},M[]}"
+    }
+  }
+  junction {
+    id			    113
+    position		    [23.5747 49.5747 7]
+    chart		    111
+    linkNode		    [111 0 0]
+    subviewer		    111
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    114
+    labelString		    "{tt_blk_kernel();}"
+    labelPosition	    [32.125 19.875 85.5 15]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      113
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    111
+    linkNode		    [111 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    111
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    115
+    ssIdNumber		    4
+    name		    "state"
+    linkNode		    [111 0 116]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    116
+    ssIdNumber		    5
+    name		    "gauge"
+    linkNode		    [111 115 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    117
+    name		    "FuelLevel/Truth_Table"
+    machine		    1
+    chart		    111
+  }
+  target {
+    id			    118
+    name		    "sfun"
+    codeFlags		    ""
+    machine		    1
+    linkNode		    [1 0 119]
+  }
+  target {
+    id			    119
+    name		    "rtw"
+    codeFlags		    " comments=1 statebitsets=1 databitsets=1 emitlogicalops=1 elseifdetection=1 constantfolding=1 redu"
+    "ndantloadelimination=0 preservenames=0 preservenameswithparent=0 exportcharts=0"
+    machine		    1
+    linkNode		    [1 118 0]
+  }
+}

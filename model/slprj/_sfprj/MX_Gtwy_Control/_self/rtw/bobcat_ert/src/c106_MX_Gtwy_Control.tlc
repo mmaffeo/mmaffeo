@@ -1,0 +1,88 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   10 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c106_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Pot_Motion"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Pot_Motion"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_IDLE_STATE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "IDLE_STATE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "potMotion"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "potMotion"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previous_Throttle"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "previous_Throttle"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceIdle"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceIdle"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "flag_EngineJustStarted"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "flag_EngineJustStarted"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

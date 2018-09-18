@@ -1,0 +1,153 @@
+/*******************************************************************************
+* Project Name: E10 Electric
+*
+* Copyright 2005 Bobcat Company as an unpublished work.
+* All Rights Reserved.
+*
+* The information contained herein is confidential
+* property of Bobcat Company. The use, copying, transfer or
+* disclosure of such information is prohibited except
+* by express written agreement with Bobcat Company.
+*
+* First written on 06 August, 2018 
+*
+* Module Description:
+* The module broadcasts messages on CANOpen Standard between the electric devices 
+* in a "CANOpen" message on the secondary CAN bus.
+*******************************************************************************/
+
+// INCLUDES
+
+//#include "hw_io.h"
+//#include "nvm_ecuid.h"
+#include "CANOpen.h"
+#include "CANOpenMsg.h"
+//#include "MX_Gtwy_Control_types.h"
+
+//#include "ap_eeprom.h"
+//#include "ap_subs.h"
+//#include "ap_can.h"
+//#include "MX_Gtwy_Control.h"
+//#include "MX_Gtwy_Control_private.h"
+//#include "global.h"
+//#include "ap_deluxeG5.h"
+//#include "defines.h"
+
+// DEFINES
+
+//#define STARTUP_TIME    10
+
+// STRUCTURES
+
+// GLOBAL VARIABLES
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Set all the std CAN identifier for all the RPDO
+//  messages used and add this in list of the message that must be 
+//  received
+//  Notes       :
+//******************************************************************************
+//void CANOpen_initialize(void)
+//{
+////Inizialitation of the RPOD1
+////  CANOpenRPDO1.initialize();
+////  CANOpenRPDO1.rx_id     .set_stdID( 0x0188);                                   //Set the CAN Identifier 0x200+0x100*(nPDO-1)+NodeID (0x180+0x0+0x8=188)                                    
+//  //CANOpenRPDO1.D0_data = 0x00;                                                  //With this value there is no filter on the first data byte received 
+//  //CANOpenRPDO1.rx_callback = CANOpenRPDO1_rx_callback;                          //Function overload
+////Inizialitation of the RPOD2
+////  CANOpenRPDO2.initialize();
+////  CANOpenRPDO2.rx_id     .set_stdID( 0x0288);                                   //Set the CAN Identifier 0x200+0x100*(nPDO-1)+NodeID (0x180+0x100+0x8=288)                                    
+////  //CANOpenRPDO2.D0_data = 0x00;                                                  //With this value there is no filter on the first data byte received 
+////  CANOpenRPDO2.rx_callback = CANOpenRPDO2_rx_callback;                          //Function overload
+////Inizialitation of the RPOD2
+////  CANOpenGuard.initialize();
+////  CANOpenGuard.rx_id     .set_stdID( 0x0708);                                   //Set the CAN Identifier 0x200+0x100*(nPDO-1)+NodeID (0x180+0x100+0x8=288)                                    
+//  //CANOpenGuard.D0_data = 0x00;                                                  //With this value there is no filter on the first data byte received 
+////  CANOpenGuard.rx_callback = CANOpenGuard_rx_callback;                          //Function overload
+////Add message to the list of the readed messages  
+////  hw_can_rx_handler[HWC_CAN0].add_msg(&CANOpenRPDO1);
+////  hw_can_rx_handler[HWC_CAN0].add_msg(&CANOpenRPDO2);  
+////  hw_can_rx_handler[HWC_CAN0].add_msg(&CANOpenGuard);  
+//}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Add here all the CANOpen obj that you want to use
+//  Notes       :
+//******************************************************************************
+//CANOpenManag::CANOpenManag(void)
+//{  
+  //CANOpenNTMMsg(0x08) = new CANOpenNTM ;
+  //CANOpenNTM* CANOpenNTMMsg =  new CANOpenNTM(0x08);
+//}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Add here all the CANOpen obj that you want to use
+//  Notes       :
+//******************************************************************************
+void CANOpenManag::Initialize(void)
+{  
+  CANOpenNTMMsg->Initialize(0x08);
+  CANOpenPDOMsgNode8.Initialize(0x08);
+}
+//******************************************************************************
+//  returns     : NONE.
+//  Description : Every 1000 ms send out the messages
+//  Notes       :
+//******************************************************************************
+void CANOpenManag::Update(void)
+{  
+uint16_t currentTime = hw_clock_mS();
+// messages sent every 32 ms 
+  if (uint16_t(currentTime - prevTime) >= 32 )
+  {
+    prevTime += 32;
+    CANOpenNTMMsg->sendSyncMsg();
+  } 
+//// message sent every 10 ms  
+//  if (uint16_t(currentTime - prevTime1) >= 10)
+//  {
+//        prevTime1 += 10;
+//        switch (steps)
+//        {
+//          case 0:
+//            steps++;
+//            break;
+//          case 1:
+//            TPDO1.enablePower = true;
+//            steps++;
+//            break;
+//          case 2:
+//            TPDO1.enablePower = true;
+//            TPDO1.powerLineON = true;
+//            steps++;           
+//            break;
+//          case 3:
+//            TPDO1.enablePower = true;
+//            TPDO1.powerLineON = true;
+//            TPDO1.dirFWD = true;
+//            steps++;           
+//            break;
+//          case 4:
+//            TPDO1.enablePower = true;
+//            TPDO1.powerLineON = true;
+//            TPDO1.dirFWD = true;
+//            TPDO1.targetSpeed = 80;
+//            steps++;  
+//          case 5:
+//            TPDO1.enablePower = true;
+//            TPDO1.powerLineON = true;
+//            TPDO1.dirFWD = true;
+//            TPDO1.targetSpeed = 80;
+//            setNTMMsg( &msgData);         
+//            steps++;  
+//          case 6:
+//            TPDO1.enablePower = true;
+//            TPDO1.powerLineON = true;
+//            TPDO1.dirFWD = true;
+//            TPDO1.targetSpeed = 80;             
+//          default:
+//            break;
+//        }  
+//        CANOpenPDOMsgNode8.sendTPDO1Msg();
+//  }
+}

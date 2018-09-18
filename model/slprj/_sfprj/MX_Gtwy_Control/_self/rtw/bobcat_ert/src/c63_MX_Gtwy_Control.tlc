@@ -1,0 +1,102 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c63_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c63_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SEND_MSG"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ECU.SEND_MSG"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_RPM_FAULT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ECU.RPM_FAULT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_UNRESPONSIVE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ECU.RPM_FAULT.UNRESPONSIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SHUTDOWN"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ECU.RPM_FAULT.SHUTDOWN"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HP_MATCH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ECU.HP_MATCH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SEND_REQUEST"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ECU.HP_MATCH.SEND_REQUEST"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "derate_HPMatch"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "derate_HPMatch"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "num_Trys"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "num_Trys"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceRequest"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceRequest"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

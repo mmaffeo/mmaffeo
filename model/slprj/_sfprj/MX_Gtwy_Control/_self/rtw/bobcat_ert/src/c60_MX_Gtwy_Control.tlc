@@ -1,0 +1,194 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   25 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c60_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_KEYPAD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEYPAD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PRESSED"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KEYPAD.PRESSED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_KS_PASSWORD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_CHANGE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD.CHANGE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ENTER_OWNER"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD.CHANGE.ENTER_OWNER"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OWNER_USER_SELECT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD.CHANGE.OWNER_USER_SELECT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OWNER_USER_SELECT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD.CHANGE.OWNER_USER_SELECT.OWNER_USER_SELECT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DISPLAY_DELAY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD.CHANGE.OWNER_USER_SELECT.OWNER_USER_SELECT.DISPLAY_DELAY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DISPLAY_DELAY1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD.CHANGE.OWNER_USER_SELECT.OWNER_USER_SELECT.DISPLAY_DELAY1"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DISPLAY_DELAY2"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD.CHANGE.OWNER_USER_SELECT.OWNER_USER_SELECT.DISPLAY_DELAY2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_WAIT_NEW"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_PASSWORD.CHANGE.WAIT_NEW"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_KS_LOCK"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_LOCK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_KS_DISPLAY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_DISPLAY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_CODE_ERROR2"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_DISPLAY.CODE_ERROR2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PASSWORD"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "KS_DISPLAY.CODE_ERROR2.PASSWORD"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "reset_PwdState"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "reset_PwdState"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "pwd_New"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "pwd_New"\
+      SrcLocation  ""\
+      Dimensions   [5]\
+    }\
+    ChartData {\
+      Name         "KSChangeDisp"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "KSChangeDisp"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "DBEnterTime"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "DBEnterTime"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i3"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i4"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

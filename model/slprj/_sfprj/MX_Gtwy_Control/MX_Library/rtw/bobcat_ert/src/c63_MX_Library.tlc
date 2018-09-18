@@ -1,0 +1,102 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c63_MX_Library"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OC_STG"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT.ACTIVE.OC_STG"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ACTIVE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT.ACTIVE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OPEN_CIRCUIT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT.ACTIVE.OPEN_CIRCUIT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SHORT_TO_GROUND"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT.ACTIVE.SHORT_TO_GROUND"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_SHORT_TO_BATTERY"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT.ACTIVE.SHORT_TO_BATTERY"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FAULT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OUTPUT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OUTPUT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OVERCURRENT"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OVERCURRENT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "db_cnt"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "db_cnt"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "db_cnt_oc"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "db_cnt_oc"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

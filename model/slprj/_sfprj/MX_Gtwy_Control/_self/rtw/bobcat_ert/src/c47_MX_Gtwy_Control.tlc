@@ -1,0 +1,144 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   18 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c47_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_AutoShift_TrackTensioning"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.AutoShift_TrackTensioning"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.AutoShift_TrackTensioning.Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Low_Range"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.AutoShift_TrackTensioning.Active.Low_Range"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_High_Range_Available"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.AutoShift_TrackTensioning.Active.High_Range_Available"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Travel_Autoshift"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.AutoShift_TrackTensioning.Active.High_Range_Available.Travel_Autoshift"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_AutoShift"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.AutoShift"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.AutoShift.Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Autoshift_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.AutoShift.Active.Autoshift_Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_TrackTensioning"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.TrackTensioning"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.TrackTensioning.Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Low"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.TrackTensioning.Active.Low"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Normal"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.Normal"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Active"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Control.Normal.Active"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Two_Speed_Command"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Two_Speed_Command"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "cmd_TwoSpeed"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "cmd_TwoSpeed"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

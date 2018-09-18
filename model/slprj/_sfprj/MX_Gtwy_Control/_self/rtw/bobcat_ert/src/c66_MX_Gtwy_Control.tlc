@@ -1,0 +1,88 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   10 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c66_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_COUNTER"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "PERSISTANCE_COUNTER.COUNTER"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FAULT_DETECTION"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT_DETECTION"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_COUNTER_BASED"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT_DETECTION.COUNTER_BASED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_TIME_BASED"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT_DETECTION.TIME_BASED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NOT_CONNECTED"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT_DETECTION.TIME_BASED.NOT_CONNECTED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT_DETECTION.TIME_BASED.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_PLUGGED"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "FAULT_DETECTION.TIME_BASED.PLUGGED"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "state_Engine_old"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "state_Engine_old"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

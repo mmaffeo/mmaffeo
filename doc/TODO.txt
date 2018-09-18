@@ -1,0 +1,163 @@
+
+TODO
+
+- ap_cdata.h
+  - do not do lookup for cdata map
+
+- Fix MEX Secondary project
+  - Set Module ID in ecuid
+
+- CAN Driver cleanup
+- fix structure docs
+- limit use of BSP macro
+
+-DONE *************************************************************************
+
+x- verfiy matlab's "portable" data types
+  x- add CTAs
+
+x- Flash wait states
+  x- Need 6 wait states for 168MHz @ 2.4V (Datasheet Table 15)
+  x- default may not work with low voltage
+  x- measure cpu usage difference
+  x- Timing
+    x- 5 wait states
+      x- max run time: 367us / 1000us
+      x- avg run time: ~27us / 1000us
+      x- ~18ms checksum
+    x- 6 wait states (~3.5% more time to execute same amount of code)
+      x- max run time: 380us / 1000us
+      x- avg run time: ~28us / 1000us
+      x- ~18ms checksum (did not seem to change)
+
+x- Optimization breaks sleep function
+x- move eeServiceEEPROM() into scheduler
+
+x- Watchdog kicked from outside scheduler
+  x- Need to protect all tasks
+
+
+- Bootblock
+  x- option bytes
+    x- cleanup code
+    x- Set to 0x0FFCAAC4
+    x- flash protection
+    x- Enable Watchdog at startup
+    x- Voltage Monitor POR / PDR / BOR
+      x- Al to determine range
+        x- lets go with BOR2 on the brownout reset (2.44 V minimum)
+  x- driver reinits
+  x- jump to app method
+  x- can terminators
+  x- power hold
+  x- bb reflash
+  x- Startup Timing
+    x- HCS12 takes ~300ms to start app
+    x- M4 BB
+      x- ~80ms without NVM
+      x- ~200ms with NVM
+    x- M4 App
+      x- App running at ~20ms (220ms from power on)
+      x- NVM restored at ~190ms (390ms from power on)
+
+x- fix fin driver
+  x- send new driver to phil
+
+x-fix interrupt disable
+  x-interrupt disable is called too many times
+
+x-verify can term state in bootloader
+x-fix gateway flash loader
+
+x-fix bspTest
+
+x- Unused pin, default states
+
+x- call combine from post build scripts
+
+x- Watchdog
+  x- ~100ms (1000ms on HCS12)
+  x- change to (300 to 600ms)
+
+x- The eeprom test should respond with a 1 in tstate if the test is a success... today it just remains 0.
+
+x- Update MEX gtw to latest BSP
+  x- Sleeps after ap_init breaks scheduler stats
+    x- move io init to bsp init funcs
+
+
+
+x- Move bsp.c and h to ap
+x- split bsp_rom
+
+x- Enable NVM in BB
+  -  9410 bytes ROM disabled
+  - 12251 bytes ROM enabled
+
+
+-HCS12 emulation
+  x- io
+  x- mcu
+  x- ecuid
+  x- can
+  x- clock
+  x- dio
+  x- pwm
+  x- adc
+  x- fin
+  x- reset
+  x- eeprom
+    x- nvm
+    x- hwt
+      x- Added nvm test to bsp_nvm driver
+        x- same as old nvm test
+      x- Connect bsp test to hwt
+    x- resize sections for memory aligned projects
+    x- Still failing checksum (these should be OK)
+      x- EE_MIRROR_RESTORE_PASSWORDS( i == 0 only)
+      x- EE_MIRROR_RESTORE_SERVICE_CLOCK_QUEUE
+      x- EE_MIRROR_RESTORE_USER_LOG
+      x- EE_MIRROR_RESTORE_SOFTWARE_UPDATE
+
+-direct reads
+  x-nvm
+  x-flash
+  x-ram
+
+x- IAR optimizations
+  x- using too much flash
+
+x- cdata pointers
+
+- BSP enumerations
+  - hcs12 mapping
+
+- schedule code review
+  - one at a time
+
+- ap_mode
+
+- Move HCS12 to libs
+
+- Fix bservie programming settings
+  - add to sdata
+
+- fix bservice direct memory access
+
+- fix bservice endianess issues
+- Fix endianess issues in hw_can_msg.h
+  - RegExpressions
+    - _t *\*) *&
+    - _t *\* *) *&(?!eeMirror)
+    - \* *) *&(?!eeMirror)
+    - \*\s*)\s*&(?!eeMirror)
+
+
+
+
+
+B0 00 00 38 10
+sw_MX_Gateway.abs.hex
+A93K11001
+
+

@@ -1,0 +1,524 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+  Version="10.0"
+  VendorName="SlickEdit"
+  TemplateName="Other C/C++"
+  WorkingDir=".">
+  <Config
+    Name="Debug"
+    Type="cpp"
+    DebugCallbackName="gdb"
+    OutputFile="%bdmex_phoenix_gateway"
+    CompilerConfigName="Latest Version">
+    <Menu>
+      <Target
+        Name="Compile"
+        MenuCaption="&amp;Compile"
+        CaptureOutputWith="ProcessBuffer"
+        OutputExts="*.o"
+        SaveOption="SaveCurrent"
+        RunFromDir="%rw">
+        <Exec CmdLine='cc -c -g %i %defd -o "%bd%n.o" "%f"'/>
+      </Target>
+      <Target
+        Name="Link"
+        MenuCaption="&amp;Link">
+        <Exec CmdLine='cc -g -o "%o" %f %libs'/>
+      </Target>
+      <Target
+        Name="Build"
+        MenuCaption="&amp;Build"
+        CaptureOutputWith="ProcessBuffer"
+        SaveOption="SaveWorkspaceFiles"
+        RunFromDir="%rw">
+        <Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+      </Target>
+      <Target
+        Name="Rebuild"
+        MenuCaption="&amp;Rebuild"
+        CaptureOutputWith="ProcessBuffer"
+        SaveOption="SaveWorkspaceFiles"
+        RunFromDir="%rw">
+        <Exec CmdLine='"%(VSLICKBIN1)vsbuild" rebuild "%w" "%r"'/>
+      </Target>
+      <Target
+        Name="Debug"
+        MenuCaption="&amp;Debug"
+        SaveOption="SaveNone"
+        BuildFirst="1"
+        CaptureOutputWith="ProcessBuffer"
+        RunFromDir="%rw">
+        <Exec CmdLine='vsdebugio -prog "%o"'/>
+      </Target>
+      <Target
+        Name="Execute"
+        MenuCaption="E&amp;xecute"
+        SaveOption="SaveNone"
+        BuildFirst="1"
+        CaptureOutputWith="ProcessBuffer"
+        RunFromDir="%rw">
+        <Exec CmdLine='"%o"'/>
+      </Target>
+    </Menu>
+  </Config>
+  <Config
+    Name="Release"
+    Type="cpp"
+    DebugCallbackName="gdb"
+    OutputFile="%bdmex_phoenix_gateway"
+    CompilerConfigName="Latest Version">
+    <Menu>
+      <Target
+        Name="Compile"
+        MenuCaption="&amp;Compile"
+        CaptureOutputWith="ProcessBuffer"
+        SaveOption="SaveCurrent"
+        OutputExts="*.o"
+        RunFromDir="%rw">
+        <Exec CmdLine='cc -c -O %i %defd -o "%bd%n.o" "%f"'/>
+      </Target>
+      <Target
+        Name="Link"
+        MenuCaption="&amp;Link">
+        <Exec CmdLine='cc -O -o "%o" %f %libs'/>
+      </Target>
+      <Target
+        Name="Build"
+        MenuCaption="&amp;Build"
+        CaptureOutputWith="ProcessBuffer"
+        SaveOption="SaveWorkspaceFiles"
+        RunFromDir="%rw">
+        <Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+      </Target>
+      <Target
+        Name="Rebuild"
+        MenuCaption="&amp;Rebuild"
+        CaptureOutputWith="ProcessBuffer"
+        SaveOption="SaveWorkspaceFiles"
+        RunFromDir="%rw">
+        <Exec CmdLine='"%(VSLICKBIN1)vsbuild" rebuild "%w" "%r"'/>
+      </Target>
+      <Target
+        Name="Debug"
+        MenuCaption="&amp;Debug"
+        SaveOption="SaveNone"
+        BuildFirst="1"
+        CaptureOutputWith="ProcessBuffer"
+        RunFromDir="%rw">
+        <Exec CmdLine='vsdebugio -prog "%o"'/>
+      </Target>
+      <Target
+        Name="Execute"
+        MenuCaption="E&amp;xecute"
+        SaveOption="SaveNone"
+        BuildFirst="1"
+        CaptureOutputWith="ProcessBuffer"
+        RunFromDir="%rw">
+        <Exec CmdLine='"%o"'/>
+      </Target>
+    </Menu>
+  </Config>
+  <Rules Name="Compile">
+    <Rule
+      InputExts="*.s"
+      OutputExts="*.o"
+      LinkObject="1">
+      <Exec CmdLine='as -o "%bd%n.o" "%f"'/>
+    </Rule>
+  </Rules>
+  <CustomFolders>
+    <Folder
+      Name="Source Files"
+      Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl;*.d;*.m;*.mm;*.go"></Folder>
+    <Folder
+      Name="Header Files"
+      Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if"></Folder>
+    <Folder
+      Name="Resource Files"
+      Filters="*.ico;*.cur;*.dlg"/>
+    <Folder
+      Name="Bitmaps"
+      Filters="*.bmp"/>
+    <Folder
+      Name="Other Files"
+      Filters=""/>
+  </CustomFolders>
+  <Files AutoFolders="DirectoryView">
+    <Folder Name="../">
+      <F N="../readme.txt"/>
+    </Folder>
+    <Folder Name="../doc">
+      <F N="../doc/TODO.txt"/>
+    </Folder>
+    <Folder Name="../iar">
+      <Folder Name="Debug">
+        <Folder Name="List">
+          <F N="../iar/Debug/List/mex_gateway_Debug.map"/>
+        </Folder>
+      </Folder>
+      <Folder Name="Release">
+        <Folder Name="List">
+          <F N="../iar/Release/List/mex_gateway_Release.map"/>
+        </Folder>
+      </Folder>
+      <F N="../iar/stf4_app.icf"/>
+    </Folder>
+    <Folder Name="../libs">
+      <Folder Name="bsp">
+        <Folder Name="inc">
+          <Folder Name="m4">
+            <F N="../libs/bsp/inc/m4/bsp_types.h"/>
+          </Folder>
+          <F N="../libs/bsp/inc/bsp_adc.h"/>
+          <F N="../libs/bsp/inc/bsp_can.h"/>
+          <F N="../libs/bsp/inc/bsp_clock.h"/>
+          <F N="../libs/bsp/inc/bsp_com.h"/>
+          <F N="../libs/bsp/inc/bsp_common.h"/>
+          <F N="../libs/bsp/inc/bsp_din.h"/>
+          <F N="../libs/bsp/inc/bsp_dout.h"/>
+          <F N="../libs/bsp/inc/bsp_ecuid.h"/>
+          <F N="../libs/bsp/inc/bsp_fin.h"/>
+          <F N="../libs/bsp/inc/bsp_mcu.h"/>
+          <F N="../libs/bsp/inc/bsp_nvm.h"/>
+          <F N="../libs/bsp/inc/bsp_pwm.h"/>
+          <F N="../libs/bsp/inc/bsp_rom.h"/>
+          <F N="../libs/bsp/inc/bsp_romBB.h"/>
+          <F N="../libs/bsp/inc/bsp_rtc.h"/>
+          <F N="../libs/bsp/inc/bsp_sdata.h"/>
+        </Folder>
+        <Folder Name="lib">
+          <Folder Name="cmsis">
+            <F N="../libs/bsp/lib/cmsis/core_cm0.h"/>
+            <F N="../libs/bsp/lib/cmsis/core_cm0plus.h"/>
+            <F N="../libs/bsp/lib/cmsis/core_cm3.h"/>
+            <F N="../libs/bsp/lib/cmsis/core_cm4.h"/>
+            <F N="../libs/bsp/lib/cmsis/core_cm4_simd.h"/>
+            <F N="../libs/bsp/lib/cmsis/core_cmFunc.h"/>
+            <F N="../libs/bsp/lib/cmsis/core_cmInstr.h"/>
+          </Folder>
+          <Folder Name="stm32f4xx_stdperiph">
+            <Folder Name="inc">
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/misc.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_adc.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_can.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_crc.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_cryp.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_dac.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_dbgmcu.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_dcmi.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_dma.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_dma2d.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_exti.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_flash.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_fmc.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_fsmc.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_gpio.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_hash.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_i2c.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_iwdg.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_ltdc.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_pwr.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_rcc.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_rng.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_rtc.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_sai.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_sdio.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_spi.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_syscfg.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_tim.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_usart.h"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/inc/stm32f4xx_wwdg.h"/>
+            </Folder>
+            <Folder Name="src">
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/misc.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_adc.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_can.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_crc.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_cryp.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_cryp_aes.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_cryp_des.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_cryp_tdes.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_dac.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_dbgmcu.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_dcmi.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_dma.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_dma2d.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_exti.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_flash.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_fmc.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_fsmc.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_gpio.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_hash.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_hash_md5.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_hash_sha1.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_i2c.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_iwdg.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_ltdc.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_pwr.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_rcc.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_rng.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_rtc.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_sai.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_sdio.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_spi.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_syscfg.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_tim.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_usart.c"/>
+              <F N="../libs/bsp/lib/stm32f4xx_stdperiph/src/stm32f4xx_wwdg.c"/>
+            </Folder>
+          </Folder>
+        </Folder>
+        <Folder Name="src">
+          <Folder Name="stf4">
+            <F N="../libs/bsp/src/stf4/iar_stf4_cstartup.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_adc.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_adc.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_can.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_can.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_clock.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_clock.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_com.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_com.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_din.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_din.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_dout.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_dout.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_ecuid.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_ecuid.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_fin.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_fin.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_mcu.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_mcu.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_nvm.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_nvm.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_pwm.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_pwm.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_rom.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_rom.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_romBB.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_romBB.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_rtc.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_rtc.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_sdata.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_bsp_sdata.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_cstartup.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_fifo.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_fifo.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_iic.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_iic.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_timer.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_timer.h"/>
+            <F N="../libs/bsp/src/stf4/stf4_vectors.c"/>
+            <F N="../libs/bsp/src/stf4/stf4_vectors.h"/>
+            <F N="../libs/bsp/src/stf4/stm32f4xx.h"/>
+            <F N="../libs/bsp/src/stf4/stm32f4xx_conf.h"/>
+            <F N="../libs/bsp/src/stf4/system_stm32f4xx.c"/>
+            <F N="../libs/bsp/src/stf4/system_stm32f4xx.h"/>
+          </Folder>
+          <Folder Name="x86">
+            <F N="../libs/bsp/src/x86/timer.c"/>
+            <F N="../libs/bsp/src/x86/timer.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_adc.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_adc.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_can.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_can.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_clock.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_clock.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_com.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_com.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_din.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_din.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_dout.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_dout.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_ecuid.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_ecuid.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_fin.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_fin.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_mcu.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_mcu.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_nvm.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_nvm.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_pwm.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_pwm.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_rom.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_rom.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_rtc.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_rtc.h"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_sdata.c"/>
+            <F N="../libs/bsp/src/x86/x86_bsp_sdata.h"/>
+          </Folder>
+        </Folder>
+      </Folder>
+      <Folder Name="hw_hcs12">
+        <Folder Name="inc">
+          <F N="../libs/hw_hcs12/inc/Hw_adc.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_can.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_can_msg.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_can_rx.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_can_tx.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_can_txq.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_clock.h"/>
+          <F N="../libs/hw_hcs12/inc/Hw_dio.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_fin.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_fps.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_gauge.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_io.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_io_GetSet.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_mcu.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_nvm.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_pwm.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_reset.h"/>
+          <F N="../libs/hw_hcs12/inc/hw_timer.h"/>
+          <F N="../libs/hw_hcs12/inc/J1939_msg.h"/>
+          <F N="../libs/hw_hcs12/inc/J1939_TP.h"/>
+          <F N="../libs/hw_hcs12/inc/J1939_TP_rx.h"/>
+          <F N="../libs/hw_hcs12/inc/J1939_TP_tx.h"/>
+          <F N="../libs/hw_hcs12/inc/nvm_ecuid.h"/>
+        </Folder>
+        <Folder Name="src">
+          <Folder Name="emuBSP">
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_adc.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_can.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_clock.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_dio.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_fin.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_io.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_mcu.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_nvm.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/hw_pwm.cpp"/>
+            <F N="../libs/hw_hcs12/src/emuBSP/nvm_ecuid.cpp"/>
+          </Folder>
+          <Folder Name="hcs12">
+            <F N="../libs/hw_hcs12/src/hcs12/datapage.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/Hw_adc.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_atd.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_atd.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_can.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_clock.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_config.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_dio.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_eeprom.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_eeprom.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_fin.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_io.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_mcu.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_mscan.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_mscan.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_nvm.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_pwm.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_pwm_ect.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_pwm_ect.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_pwm_pp.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/Hw_pwm_pp.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_reset.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_spi.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_spi.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_vectors.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/hw_vectors.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/nvm_ecuid.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/Start12.c"/>
+            <F N="../libs/hw_hcs12/src/hcs12/stdbool.h"/>
+            <F N="../libs/hw_hcs12/src/hcs12/stdint.h"/>
+          </Folder>
+          <F N="../libs/hw_hcs12/src/hw_can_rx.cpp"/>
+          <F N="../libs/hw_hcs12/src/hw_can_tx.cpp"/>
+          <F N="../libs/hw_hcs12/src/hw_can_txq.cpp"/>
+          <F N="../libs/hw_hcs12/src/hw_gauge.cpp"/>
+          <F N="../libs/hw_hcs12/src/hw_timer.cpp"/>
+          <F N="../libs/hw_hcs12/src/J1939_msg.cpp"/>
+          <F N="../libs/hw_hcs12/src/J1939_TP.cpp"/>
+          <F N="../libs/hw_hcs12/src/J1939_TP_rx.cpp"/>
+          <F N="../libs/hw_hcs12/src/J1939_TP_tx.cpp"/>
+        </Folder>
+      </Folder>
+    </Folder>
+    <Folder Name="../model">
+      <Folder Name="functions">
+        <F N="../model/functions/SendMsgNow.cpp"/>
+        <F N="../model/functions/SendMsgNow.h"/>
+        <F N="../model/functions/SendMsgNow_Blank.cpp"/>
+      </Folder>
+      <Folder Name="MX_Gtwy_Control_bobcat_ert_rtw">
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_Inputs.cpp"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_Inputs.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_Library.cpp"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_Library.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_Outputs.cpp"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_Outputs.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_Panel.cpp"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_Panel.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_System.cpp"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/mod_System.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/MX_Gtwy_Control.cpp"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/MX_Gtwy_Control.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/MX_Gtwy_Control_data.cpp"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/MX_Gtwy_Control_private.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/MX_Gtwy_Control_types.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/rtmodel.h"/>
+        <F N="../model/MX_Gtwy_Control_bobcat_ert_rtw/rtwtypes.h"/>
+      </Folder>
+    </Folder>
+    <Folder Name="../sources">
+      <Folder Name="bsp">
+        <F N="../sources/bsp/ap.cpp"/>
+        <F N="../sources/bsp/ap.h"/>
+        <F N="../sources/bsp/ap_bsp.cpp"/>
+        <F N="../sources/bsp/ap_bsp.h"/>
+        <F N="../sources/bsp/ap_cdata.cpp"/>
+        <F N="../sources/bsp/ap_cdata.h"/>
+        <F N="../sources/bsp/ap_eeprom_bsp.cpp"/>
+        <F N="../sources/bsp/ap_schd.cpp"/>
+        <F N="../sources/bsp/ap_schd.h"/>
+        <F N="../sources/bsp/cdata.c"/>
+        <F N="../sources/bsp/cdata.h"/>
+        <F N="../sources/bsp/iar_cdata.c"/>
+        <F N="../sources/bsp/main.cpp"/>
+        <F N="../sources/bsp/temp_cdata.c"/>
+      </Folder>
+      <Folder Name="hcs12">
+        <F N="../sources/hcs12/af_main.c"/>
+        <F N="../sources/hcs12/ap_eeprom_hcs12.cpp"/>
+        <F N="../sources/hcs12/cdata.c"/>
+        <F N="../sources/hcs12/cdata.h"/>
+        <F N="../sources/hcs12/main.C"/>
+      </Folder>
+      <F N="../sources/af_main.h"/>
+      <F N="../sources/ap_bservice.cpp"/>
+      <F N="../sources/ap_bservice.h"/>
+      <F N="../sources/ap_bservice_CAN04.cpp"/>
+      <F N="../sources/ap_bservice_CAN04.h"/>
+      <F N="../sources/ap_bservice_dv.cpp"/>
+      <F N="../sources/ap_bservice_dv.h"/>
+      <F N="../sources/ap_bservice_prog.cpp"/>
+      <F N="../sources/ap_bservice_prog.h"/>
+      <F N="../sources/ap_can.cpp"/>
+      <F N="../sources/ap_can.h"/>
+      <F N="../sources/ap_deluxeG5.cpp"/>
+      <F N="../sources/ap_deluxeG5.h"/>
+      <F N="../sources/ap_dv.cpp"/>
+      <F N="../sources/ap_dv.h"/>
+      <F N="../sources/ap_eeprom.cpp"/>
+      <F N="../sources/ap_eeprom.h"/>
+      <F N="../sources/ap_gateway.cpp"/>
+      <F N="../sources/ap_gateway.h"/>
+      <F N="../sources/ap_hwt.cpp"/>
+      <F N="../sources/ap_hwt.h"/>
+      <F N="../sources/ap_keylessstart.cpp"/>
+      <F N="../sources/ap_keylessstart.h"/>
+      <F N="../sources/ap_main.cpp"/>
+      <F N="../sources/ap_main.h"/>
+      <F N="../sources/ap_MXGWcontrol_defs.h"/>
+      <F N="../sources/ap_subs.cpp"/>
+      <F N="../sources/ap_subs.h"/>
+      <F N="../sources/ap_tasks.cpp"/>
+      <F N="../sources/ap_tasks.h"/>
+      <F N="../sources/ap_version.cpp"/>
+      <F N="../sources/ap_version.h"/>
+      <F N="../sources/cdata.h"/>
+      <F N="../sources/defines.h"/>
+      <F N="../sources/global.cpp"/>
+      <F N="../sources/global.h"/>
+      <F N="../sources/hw_can_cfg.h"/>
+    </Folder>
+  </Files>
+</Project>

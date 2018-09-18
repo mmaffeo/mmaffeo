@@ -1,0 +1,4234 @@
+Model {
+  Name			  "EMEA_Controls_States"
+  Version		  8.7
+  MdlSubVersion		  1
+  SavedCharacterEncoding  "windows-1252"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.3"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
+  }
+  slprops.hdlmdlprops {
+    $PropName		    "HDLParams"
+    $ObjectID		    1
+    Array {
+      Type		      "Cell"
+      Dimension		      2
+      Cell		      "HDLSubsystem"
+      Cell		      "BlankChart"
+      PropName		      "mdlProps"
+    }
+  }
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  LastSavedArchitecture	  "win64"
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    2
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      3
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [-8.0, -8.0, 1936.0, 1176.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		6
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1886.0, 1001.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
+      }
+    }
+  }
+  Created		  "Tue Apr 18 12:57:58 2017"
+  Creator		  "aliebel"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "aliebel"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Apr 20 14:59:39 2017"
+  RTWModifiedTimeStamp	  414574409
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  off
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  VariantCondition	  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ShowVisualizeInsertedRTB on
+  ShowMarkup		  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  FunctionConnectors	  off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    7
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "EMEA_Controls_States"
+    overrideMode_	    [0U]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "EMEA_Controls_States"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      8
+      Version		      "1.16.2"
+      Array {
+	Type			"Handle"
+	Dimension		10
+	Simulink.SolverCC {
+	  $ObjectID		  9
+	  Version		  "1.16.2"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.1"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverInfoToggleStatus  on
+	  IsAutoAppliedInSIP	  off
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  on
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  10
+	  Version		  "1.16.2"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Dataset"
+	  SignalLoggingSaveFormat "Dataset"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
+	  StreamToWorkspace	  off
+	  StreamVariableName	  "streamout"
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	  LoggingToFile		  off
+	  LoggingFileName	  "out.mat"
+	  LoggingIntervals	  "[-inf, inf]"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  11
+	  Version		  "1.16.2"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  DefaultParameterBehavior "Tunable"
+	  UseDivisionForNetSlopeComputation "off"
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  PassReuseOutputArgsThreshold 12
+	  ExpressionDepthLimit	  128
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  12
+	  Version		  "1.16.2"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Simplified"
+	  MergeDetectMultiDrivingBlocksExec "error"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "EnableAllAsError"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "error"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  AllowSymbolicDim	  off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "none"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	  SFOutputUsedAsStateInMooreChartDiag "error"
+	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  13
+	  Version		  "1.16.2"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  64
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "Float"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "LittleEndian"
+	  ProdWordSize		  64
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "Intel->x86-64 (Windows64)"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  14
+	  Version		  "1.16.2"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  EnableRefExpFcnMdlSchedulingChecks on
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel on
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  15
+	  Version		  "1.16.2"
+	  SFSimEcho		  on
+	  SimCtrlC		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  16
+	  Version		  "1.16.2"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    15
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "PortableWordSizes"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "GenerateErtSFunction"
+	    Cell		    "CreateSILPILBlock"
+	    Cell		    "CodeExecutionProfiling"
+	    Cell		    "CodeProfilingSaveOptions"
+	    Cell		    "CodeProfilingInstrumentation"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  HardwareBoard		  "None"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  GenerateMissedCodeReplacementReport off
+	  RTWCompilerOptimization "off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      17
+	      Version		      "1.16.2"
+	      Array {
+		Type			"Cell"
+		Dimension		24
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"ParameterTuningSideEffectCode"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InternalIdentifier"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"CustomSymbolStrUtil"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      CommentStyle	      "Auto"
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      18
+	      Version		      "1.16.2"
+	      Array {
+		Type			"Cell"
+		Dimension		13
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"GenerateAllocFcn"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C89/C90 (ANSI)"
+	      CodeReplacementLibrary  "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      InferredTypesCompatibility off
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      CodeInterfacePackaging  "Nonreusable function"
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      ParenthesesLevel	      "Nominal"
+	      CastingMode	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GRTInterface	      off
+	      GenerateAllocFcn	      off
+	      UseToolchainInfoCompliant	on
+	      GenerateSharedConstants on
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	      MultiInstanceErrorCode  "Error"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SlCovCC.ConfigComp {
+	  $ObjectID		  19
+	  Version		  "1.16.2"
+	  Description		  "Simulink Coverage Configuration Component"
+	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
+	  RecordCoverage	  off
+	  CovPath		  "/"
+	  CovSaveName		  "covdata"
+	  CovMetricSettings	  "dw"
+	  CovNameIncrementing	  off
+	  CovHtmlReporting	  on
+	  CovForceBlockReductionOff on
+	  CovEnableCumulative	  on
+	  CovSaveCumulativeToWorkspaceVar on
+	  CovSaveSingleToWorkspaceVar on
+	  CovCumulativeVarName	  "covCumulativeData"
+	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
+	  CovReportOnPause	  on
+	  CovModelRefEnable	  "Off"
+	  CovExternalEMLEnable	  off
+	  CovSFcnEnable		  off
+	  CovBoundaryAbsTol	  1e-05
+	  CovBoundaryRelTol	  0.01
+	  CovUseTimeInterval	  off
+	  CovStartTime		  0
+	  CovStopTime		  0
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  20
+	  Version		  "1.16.2"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    " "
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 71, 71, 1151, 711 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    8
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    21
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+    AutoInsertRateTranBlk   [0]
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "opaque"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
+      GeneratePreprocessorConditionals off
+      TreatAsGroupedWhenPropagatingVariantConditions on
+      ContentPreviewEnabled   off
+      IsWebBlock	      off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "EMEA_Controls_States"
+    Location		    [-8, -8, 1928, 1168]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "1"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Chart"
+      SID		      "1"
+      Ports		      []
+      Position		      [25, 19, 85, 71]
+      ZOrder		      2
+      LibraryVersion	      "1.266"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      RequestExecContextInheritance off
+      SFBlockType	      "Chart"
+      Variant		      off
+      System {
+	Name			"Chart"
+	Location		[-8, -8, 1928, 1168]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"80"
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "1::78"
+	  Ports			  [1, 1]
+	  Position		  [270, 100, 320, 140]
+	  ZOrder		  58
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  " Ground "
+	  SID			  "1::80"
+	  Position		  [20, 111, 40, 129]
+	  ZOrder		  60
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "1::77"
+	  Tag			  "Stateflow S-Function EMEA_Controls_States 3"
+	  Ports			  [1, 1]
+	  Position		  [180, 100, 230, 140]
+	  ZOrder		  57
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 1]"
+	  SFunctionDeploymentMode off
+	  EnableBusSupport	  on
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "1::79"
+	  Position		  [460, 111, 480, 129]
+	  ZOrder		  59
+	}
+	Line {
+	  ZOrder		  13
+	  SrcBlock		  " Ground "
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  14
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  15
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
+#Finite State Machines
+#
+#   Stateflow 80000009
+#
+#
+Stateflow {
+  machine {
+    id			    1
+    name		    "EMEA_Controls_States"
+    created		    "16-Apr-2014 13:46:19"
+    isLibrary		    0
+    firstTarget		    157
+    sfVersion		    80000009
+    sfDemoChecksum	    [2988005370 2771551416 1695967507 1706016003]
+  }
+  chart {
+    id			    2
+    name		    "Chart"
+    windowPosition	    [-8 -8 1936 1176]
+    viewLimits		    [0 1886 -238 763]
+    zoomFactor		    1.333
+    stateColor		    [0.3803921568627451 0.2745098039215687 0.1803921568627451]
+    stateLabelColor	    [0.4588235294117647 0.2980392156862745 0.1411764705882353]
+    transitionColor	    [0.3215686274509804 0.5450980392156862 0.7725490196078432]
+    transitionLabelColor    [0.3215686274509804 0.5450980392156862 0.7725490196078432]
+    junctionColor	    [0.7764705882352941 0.4980392156862745 0]
+    chartColor		    [1 0.9882352941176471 0.9254901960784314]
+    screen		    [1 1 3200 1200 1.25]
+    treeNode		    [0 26 0 0]
+    viewObj		    2
+    visible		    1
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    442
+    decomposition	    CLUSTER_CHART
+    chartFileNumber	    3
+    saturateOnIntegerOverflow 1
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+    actionLanguage	    1
+  }
+  state {
+    id			    3
+    labelString		    "StateB\n% Aux Enabled\n% Offset Enabled\n% Display OF:A1\n% No Aux button flash\n"
+    position		    [853.0343 525.1667 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [10 0 8 9]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    413
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    4
+    labelString		    "KeyOff"
+    position		    [455.1646 146.7946 95.6279 54.3721]
+    fontSize		    12
+    chart		    2
+    treeNode		    [46 0 47 25]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    403
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    5
+    labelString		    "OffsetRight"
+    position		    [258.1847 854.493 1200 281]
+    fontSize		    12
+    chart		    2
+    treeNode		    [46 6 10 0]
+    firstTransition	    53
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    415
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    6
+    labelString		    "StateC\n% Aux Disabled\n% OffsetEnabled\n% Display __:OF\n"
+    position		    [413.041 890.4226 216.9867 173.7175]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 0 0 7]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    422
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    7
+    labelString		    "StateD\n% Aux Enabled\n% Offset Enabled\n% Display A4:OF\n% No Aux button flash\n"
+    position		    [850.5343 894.2813 160 111]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 0 6 11]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    423
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    8
+    labelString		    "StateA\n% Aux Disabled\n% Offset Enabled\n% Display OF:__\n"
+    position		    [422.0343 525.1667 199.2917 152.9058]
+    fontSize		    12
+    chart		    2
+    treeNode		    [10 0 0 3]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    412
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    9
+    labelString		    "StateC1\n% Aux Enabled\n% Offset Enabled\n% Display OF:A4\n"
+    position		    [1243.8008 525.1667 173 165]
+    fontSize		    12
+    chart		    2
+    treeNode		    [10 0 3 0]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    414
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    10
+    labelString		    "OffsetLeft"
+    position		    [276.1847 460.493 1182 290]
+    fontSize		    12
+    chart		    2
+    treeNode		    [46 8 25 5]
+    firstTransition	    59
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    405
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    11
+    labelString		    "StateG\n% Aux Enabled\n% Offset Enabled\n% Display A4:A1\n"
+    position		    [1256.6709 894.2813 166 177]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 0 7 0]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    424
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    12
+    labelString		    "StateA3\n% Aux Disabled\n% Offset Enabled\n% Display __:__\n"
+    position		    [415.3677 373.0471 198.2917 89.9058]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 28 29]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    341
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    13
+    labelString		    "StateG1\n% Aux Enabled\n% Offset Enabled\n% Display A4:A1\n"
+    position		    [3562.98 784.7879 160 111]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 24 19]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    334
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    14
+    labelString		    "StateA\n% Aux Disabled\n% Offset Enabled\n% Display OF:__\n"
+    position		    [415.3677 526.2138 198.2917 89.9058]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 22 21]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    328
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    15
+    labelString		    "StateB1\n% Aux Enabled\n% Offset Enabled\n% Display OF:A1\n"
+    position		    [3152.3434 518.6733 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 29 18]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    326
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    16
+    labelString		    "StateB\n% Aux Enabled\n% Offset Enabled\n% Display OF:A1\n"
+    position		    [853.0343 525.1667 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 18 22]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    329
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    17
+    labelString		    "StateC3\n% Aux Disabled\n% OffsetEnabled\n% Display __:OF\n"
+    position		    [2719.3501 780.9291 156.9867 118.7175]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 21 24]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    332
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    18
+    labelString		    "StateC4\n% Aux Enabled\n% Offset Enabled\n% Display OF:A4\n"
+    position		    [3543.11 518.6733 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 15 16]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    327
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    19
+    labelString		    "StateC2\n% Aux Disabled\n% OffsetEnabled\n% Display __:OF\n% Flash Aux Button **"
+    position		    [1791.3121 788.4697 156.9867 118.7175]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 13 23]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    336
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    20
+    labelString		    "** Only flash aux lights if not coming from key on\nor if coming from an intentional aux disable"
+    position		    [341.3236 1069.6468 263 32]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 23 0]
+    isNoteBox		    1
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    340
+    type		    GROUP_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    21
+    labelString		    "StateA1\n% Aux Disabled\n% Offset Enabled\n% Display OF:__\n"
+    position		    [1793.3054 526.2138 198.2917 89.9058]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 14 17]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    331
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    22
+    labelString		    "StateC\n% Aux Enabled\n% Offset Enabled\n% Display A2:A1\n"
+    position		    [1243.8008 525.1667 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 16 14]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    330
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    23
+    labelString		    "StateD1\n% Aux Enabled\n% Offset Enabled\n% Display A4:OF\n"
+    position		    [2228.8054 792.3284 160 111]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 19 20]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    339
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    24
+    labelString		    "StateD2\n% Aux Enabled\n% Offset Enabled\n% Display A4:OF\n"
+    position		    [3156.8434 784.7879 160 111]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 17 13]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    333
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    25
+    labelString		    "StateA3\n% Aux Disabled\n% Offset Disabled\n% Display __:__\n% No Aux button flash\n"
+    position		    [439.4239 257.5398 198.2917 89.9058]
+    fontSize		    12
+    chart		    2
+    treeNode		    [46 0 4 10]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    404
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    26
+    labelString		    "OptionA"
+    position		    [129.9657 20.4989 338.575 216]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 32 0 46]
+    firstTransition	    73
+    firstJunction	    65
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    2
+    subviewS {
+      panLimits		      [16 1273.333 102.667 770]
+      x1		      96.667
+      y1		      20.667
+      zoomFactor	      0.889
+      pos		      [150 74 3664.575 1204]
+    }
+    ssIdNumber		    238
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    27
+    labelString		    "KeyOff"
+    position		    [445.0343 222.1667 90 60]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 33 28]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    323
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    28
+    labelString		    "KeyOff1"
+    position		    [1816.3054 223.2138 90 60]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 27 12]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    324
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    29
+    labelString		    "StateA2\n% Aux Disabled\n% Offset Enabled\n% Display OF:__\n% Flash Aux Button**"
+    position		    [2721.3434 518.6733 198.2917 89.9058]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 12 15]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    325
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    30
+    labelString		    "Right Mode"
+    position		    [2879.2615 186.3889 64 17]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 31 33]
+    isNoteBox		    1
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    321
+    type		    GROUP_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    31
+    labelString		    "Left Mode"
+    position		    [1963.0206 161.8116 55 17]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 32 30]
+    isNoteBox		    1
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    320
+    type		    GROUP_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    32
+    labelString		    "Any pot out of neutral will not allow state change\nAlso need to consider what happens if consol"
+    "e is up or fault conditions"
+    position		    [712.0343 141.1667 388 32]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 0 31]
+    isNoteBox		    1
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    319
+    type		    GROUP_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    33
+    labelString		    "KeyOff2"
+    position		    [2744.3434 215.6733 90 60]
+    fontSize		    12
+    chart		    2
+    treeNode		    [26 0 30 27]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    322
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    34
+    labelString		    "OptionC"
+    position		    [129.9657 519 338.575 216]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 35 46 0]
+    firstTransition	    120
+    firstJunction	    119
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    2
+    subviewS {
+      panLimits		      [-485.637 1785.85 363.14 1568.738]
+      x1		      96.667
+      y1		      20.667
+      zoomFactor	      1.606
+      pos		      [45 74 1475.286 1554.76]
+    }
+    ssIdNumber		    345
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    35
+    labelString		    "Any pot out of neutral will not allow state change\nAlso need to consider what happens if consol"
+    "e is up or fault conditions"
+    position		    [712.0343 141.1667 388 32]
+    fontSize		    12
+    chart		    2
+    treeNode		    [34 0 0 36]
+    isNoteBox		    1
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    382
+    type		    GROUP_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    36
+    labelString		    "KeyOff"
+    position		    [455.1646 146.7946 95.6279 54.3721]
+    fontSize		    12
+    chart		    2
+    treeNode		    [34 0 35 37]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    383
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    37
+    labelString		    "StateA3\n% Aux Disabled\n% Offset Disabled\n% Display __:__\n% No Aux button flash\n"
+    position		    [439.4239 257.5398 198.2917 89.9058]
+    fontSize		    12
+    chart		    2
+    treeNode		    [34 0 36 45]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    384
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    38
+    labelString		    "StateA\n% Aux Disabled\n% Offset Enabled\n% Display OF:__\n"
+    position		    [422.0343 525.1667 159.5467 149.2927]
+    fontSize		    12
+    chart		    2
+    treeNode		    [45 0 50 0]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    385
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    39
+    labelString		    "StateB\n% Aux Enabled\n% Offset Enabled\n% Display OF:A1\n% No Aux button flash\n"
+    position		    [853.0343 525.1667 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [50 0 0 40]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    386
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    40
+    labelString		    "StateC1\n% Aux Enabled\n% Offset Enabled\n% Display OF:A4\n"
+    position		    [1243.8008 525.1667 166.978 89.1232]
+    fontSize		    12
+    chart		    2
+    treeNode		    [50 0 39 48]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    387
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    41
+    labelString		    "StateC\n% Aux Disabled\n% OffsetEnabled\n% Display __:OF\n"
+    position		    [435.4718 1137.3982 216.9867 173.7175]
+    fontSize		    12
+    chart		    2
+    treeNode		    [44 0 51 0]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    388
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    42
+    labelString		    "StateD\n% Aux Enabled\n% Offset Enabled\n% Display A4:OF\n% No Aux button flash\n"
+    position		    [872.9651 1141.257 160 111]
+    fontSize		    12
+    chart		    2
+    treeNode		    [51 0 0 43]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    389
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    43
+    labelString		    "StateG\n% Aux Enabled\n% Offset Enabled\n% Display A4:A1\n"
+    position		    [1279.1016 1141.257 159.978 113.1671]
+    fontSize		    12
+    chart		    2
+    treeNode		    [51 0 42 52]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    390
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    44
+    labelString		    "OffsetRight"
+    position		    [283.0243 1095.4467 1215.6571 507.7874]
+    fontSize		    12
+    chart		    2
+    treeNode		    [34 51 45 0]
+    firstTransition	    127
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    391
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    45
+    labelString		    "OffsetLeft"
+    position		    [266.1847 458.493 1200.2044 553.7603]
+    fontSize		    12
+    chart		    2
+    treeNode		    [34 50 37 44]
+    firstTransition	    130
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    392
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    46
+    labelString		    "OptionB"
+    position		    [129.9657 263 338.575 216]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 47 26 34]
+    firstTransition	    134
+    firstJunction	    133
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    2
+    subviewS {
+      panLimits		      [-358.815 1847.321 111.493 1462.189]
+      x1		      96.667
+      y1		      20.667
+      zoomFactor	      1.501
+      pos		      [45 74 1510.213 1099.691]
+    }
+    ssIdNumber		    393
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    47
+    labelString		    "Any pot out of neutral will not allow state change\nAlso need to consider what happens if consol"
+    "e is up or fault conditions"
+    position		    [712.0343 141.1667 388 32]
+    fontSize		    12
+    chart		    2
+    treeNode		    [46 0 0 4]
+    isNoteBox		    1
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    402
+    type		    GROUP_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    48
+    labelString		    "StateB1\n% Aux Enabled\n% Offset Enabled\n% Display A2:A1\n\n"
+    position		    [853.0343 809.1312 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [50 0 40 49]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    425
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    49
+    labelString		    "StateB2\n% Aux Enabled\n% Offset Enabled\n% Display A2:A4\n\n"
+    position		    [1229.6847 809.1312 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [50 0 48 0]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    430
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    50
+    labelString		    "Aux_Enabled"
+    position		    [787.6251 475.1731 664.496 500.8082]
+    fontSize		    12
+    chart		    2
+    treeNode		    [45 39 0 38]
+    firstTransition	    141
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    435
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    51
+    labelString		    "Aux_Enabled"
+    position		    [824.1289 1108.0973 654.8608 468.2896]
+    fontSize		    12
+    chart		    2
+    treeNode		    [44 42 0 41]
+    firstTransition	    150
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    437
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    52
+    labelString		    "StateB3\n% Aux Enabled\n% Offset Enabled\n% Display A2:A1\n\n"
+    position		    [1274.5906 1459.3022 169 92]
+    fontSize		    12
+    chart		    2
+    treeNode		    [51 0 43 0]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    441
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    53
+    labelString		    "[changeRightMode]\n%check right pot\n%double beep"
+    labelPosition	    [1053.767 871.219 107.25 47]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [2 1 0 0.2824 1010.5343 925.6258 0 0]
+    }
+    dst {
+      id		      11
+      intersection	      [4 -1 0 0.8229 1256.6709 925.6258 0 0]
+    }
+    midPoint		    [1129.6026 925.6258]
+    chart		    2
+    linkNode		    [5 0 54]
+    visible		    0
+    dataLimits		    [1010.534 1256.671 923.226 928.026]
+    subviewer		    46
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    416
+  }
+  transition {
+    id			    54
+    labelString		    "[changeRightMode]\n% 3 beeps"
+    labelPosition	    [274.589 907.188 107.25 32]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [4 -1 0 0.7937 413.041 926.2599 0 0]
+    }
+    dst {
+      id		      6
+      intersection	      [4 -1 0 0.5747 413.041 964.3049 0 0]
+    }
+    midPoint		    [365.041 945.2824]
+    chart		    2
+    linkNode		    [5 53 55]
+    visible		    0
+    dataLimits		    [364.928 413.041 926.26 966.705]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    417
+  }
+  transition {
+    id			    55
+    labelString		    "[enable_aux]\n% aux enable checks right pot\n% check left pot\n% single beep (aux button)"
+    labelPosition	    [646.683 858.872 162.25 62]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [2 1 0 0.2444 630.0277 932.8724 0 0]
+    }
+    dst {
+      id		      7
+      intersection	      [4 -1 -0 0.6523 850.5343 932.8724 0 0]
+    }
+    midPoint		    [736.281 932.8724]
+    chart		    2
+    linkNode		    [5 54 56]
+    visible		    0
+    dataLimits		    [630.028 850.534 930.472 935.272]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    418
+  }
+  transition {
+    id			    56
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [716.289 978.563 145 47]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [4 -1 0 0.3259 850.5343 969.1058 0 0]
+    }
+    dst {
+      id		      6
+      intersection	      [2 1 0 0.4529 630.0277 969.1058 0 0]
+    }
+    midPoint		    [744.281 969.1058]
+    chart		    2
+    linkNode		    [5 55 57]
+    visible		    0
+    dataLimits		    [630.028 850.534 966.706 971.506]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    419
+  }
+  transition {
+    id			    57
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [1137.242 976.645 107.25 47]
+    fontSize		    12
+    src {
+      id		      11
+      intersection	      [4 -1 0 0.5721 1256.6709 970.0116 0 0]
+    }
+    dst {
+      id		      7
+      intersection	      [2 1 0 0.6823 1010.5343 970.0116 0 0]
+    }
+    midPoint		    [1137.6026 970.0116]
+    chart		    2
+    linkNode		    [5 56 58]
+    visible		    0
+    dataLimits		    [1010.534 1256.671 967.612 972.412]
+    subviewer		    46
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    420
+  }
+  transition {
+    id			    58
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [955.894 1044.332 145 47]
+    fontSize		    12
+    src {
+      id		      11
+      intersection	      [4 -1 0 0.2078 1256.6709 1034.493 0 0]
+    }
+    dst {
+      id		      6
+      intersection	      [2 1 0 0.8293 630.0277 1034.493 0 0]
+    }
+    midPoint		    [947.3493 1034.493]
+    chart		    2
+    linkNode		    [5 57 0]
+    visible		    0
+    dataLimits		    [630.028 1256.671 1032.093 1036.893]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    421
+  }
+  transition {
+    id			    59
+    labelString		    "[changeRightMode]\n%check right pot\n%double beep"
+    labelPosition	    [1058.568 505.256 107.25 47]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [2 1 0 0.3749 1022.0343 559.6621 0 0]
+    }
+    dst {
+      id		      9
+      intersection	      [4 -1 0 0.7909 1243.8008 559.6621 0 0]
+    }
+    midPoint		    [1128.9176 559.6621]
+    chart		    2
+    linkNode		    [10 0 60]
+    visible		    0
+    dataLimits		    [1022.034 1243.801 557.262 562.062]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    406
+  }
+  transition {
+    id			    60
+    labelString		    "[enable_aux]\n%aux enable checks right pot\n%no check for left pot\n%single beep (aux button)"
+    labelPosition	    [632.212 489.167 159 62]
+    fontSize		    12
+    src {
+      id		      8
+      intersection	      [2 1 0 0.2354 621.3261 561.1667 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [4 -1 -0 0.6087 853.0343 561.1667 0 0]
+    }
+    midPoint		    [733.1802 561.1667]
+    chart		    2
+    linkNode		    [10 59 61]
+    visible		    0
+    dataLimits		    [621.326 853.034 558.767 563.567]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    407
+  }
+  transition {
+    id			    61
+    labelString		    "[changeRightMode]\n% 3 beeps"
+    labelPosition	    [299.888 543.045 107.25 32]
+    fontSize		    12
+    src {
+      id		      8
+      intersection	      [4 -1 0 0.7711 422.0343 560.1667 0 0]
+    }
+    dst {
+      id		      8
+      intersection	      [4 -1 0 0.5226 422.0343 598.1667 0 0]
+    }
+    midPoint		    [374.0343 579.1667]
+    chart		    2
+    linkNode		    [10 60 62]
+    visible		    0
+    dataLimits		    [373.922 422.034 560.167 600.567]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    408
+  }
+  transition {
+    id			    62
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [714.912 587.86 145 47]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [4 -1 0 0.3789 853.0343 582.308 0 0]
+    }
+    dst {
+      id		      8
+      intersection	      [2 1 -0 0.3737 621.3261 582.308 0 0]
+    }
+    midPoint		    [741.1802 582.308]
+    chart		    2
+    linkNode		    [10 61 63]
+    visible		    0
+    dataLimits		    [621.326 853.034 579.908 584.708]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    409
+  }
+  transition {
+    id			    63
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [1124.089 599.918 107.25 47]
+    fontSize		    12
+    src {
+      id		      9
+      intersection	      [4 -1 0 0.6153 1243.8008 588.6488 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 -0 0.69 1022.0343 588.6488 0 0]
+    }
+    midPoint		    [1136.9176 588.6488]
+    chart		    2
+    linkNode		    [10 62 64]
+    visible		    0
+    dataLimits		    [1022.034 1243.801 586.249 591.049]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    410
+  }
+  transition {
+    id			    64
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [922.398 679.489 145 47]
+    fontSize		    12
+    src {
+      id		      9
+      intersection	      [4 -1 0 0.1798 1243.8008 660.493 0 0]
+    }
+    dst {
+      id		      8
+      intersection	      [2 1 0 0.885 621.3261 660.493 0 0]
+    }
+    midPoint		    [936.5634 660.493]
+    chart		    2
+    linkNode		    [10 63 0]
+    visible		    0
+    dataLimits		    [621.326 1243.801 658.093 662.893]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    411
+  }
+  junction {
+    id			    65
+    position		    [2789.3434 397.6733 7]
+    chart		    2
+    linkNode		    [26 0 66]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    239
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    66
+    position		    [1861.3054 405.2138 7]
+    chart		    2
+    linkNode		    [26 65 67]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    241
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    67
+    position		    [2840.8221 690.2214 7]
+    chart		    2
+    linkNode		    [26 66 68]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    242
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    68
+    position		    [3227.7851 691.1272 7.4527]
+    chart		    2
+    linkNode		    [26 67 69]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    243
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    69
+    position		    [3583.6061 692.033 7]
+    chart		    2
+    linkNode		    [26 68 70]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    244
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    70
+    position		    [3632.5212 714.5849 8.3243]
+    chart		    2
+    linkNode		    [26 69 71]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    248
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    71
+    position		    [3227.7851 716.4905 8.3243]
+    chart		    2
+    linkNode		    [26 70 72]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    249
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    72
+    position		    [2892.4546 716.4905 7]
+    chart		    2
+    linkNode		    [26 71 0]
+    visible		    0
+    subviewer		    26
+    ssIdNumber		    250
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    73
+    labelString		    ""
+    labelPosition	    [2764.893 200.673 0 0]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 2764.8934 185.6733 0 0]
+    }
+    dst {
+      id		      33
+      intersection	      [1 0 -1 0.2283 2764.8934 215.6733 0 0]
+    }
+    midPoint		    [2764.8934 200.6733]
+    chart		    2
+    linkNode		    [26 0 74]
+    visible		    0
+    dataLimits		    [2762.493 2767.293 185.673 215.673]
+    subviewer		    26
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    3
+    ssIdNumber		    254
+  }
+  transition {
+    id			    74
+    labelString		    ""
+    labelPosition	    [465.584 207.167 0 0]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 465.5843 192.1667 0 0]
+    }
+    dst {
+      id		      27
+      intersection	      [1 0 -1 0.2283 465.5843 222.1667 0 0]
+    }
+    midPoint		    [465.5843 207.1667]
+    chart		    2
+    linkNode		    [26 73 75]
+    visible		    0
+    dataLimits		    [463.184 467.984 192.167 222.167]
+    subviewer		    26
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    255
+  }
+  transition {
+    id			    75
+    labelString		    ""
+    labelPosition	    [1836.855 208.214 0 0]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 1836.8554 193.2138 0 0]
+    }
+    dst {
+      id		      28
+      intersection	      [1 0 -1 0.2283 1836.8554 223.2138 0 0]
+    }
+    midPoint		    [1836.8554 208.2138]
+    chart		    2
+    linkNode		    [26 74 76]
+    visible		    0
+    dataLimits		    [1834.455 1839.255 193.214 223.214]
+    subviewer		    26
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    256
+  }
+  transition {
+    id			    76
+    labelString		    "[Key On]"
+    labelPosition	    [2806.97 305.182 49.25 17]
+    fontSize		    12
+    src {
+      id		      33
+      intersection	      [3 0 1 0.5 2789.3434 275.6733 0 0]
+    }
+    dst {
+      id		      65
+      intersection	      [1 -0 -1 0 2789.3434 390.6733 0 0]
+    }
+    midPoint		    [2789.3434 329.1733]
+    chart		    2
+    linkNode		    [26 75 77]
+    visible		    0
+    dataLimits		    [2786.943 2791.743 275.673 390.673]
+    stampAngle		    -6.2832
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    257
+  }
+  transition {
+    id			    77
+    labelString		    "[Key On]"
+    labelPosition	    [516.293 300.395 49.25 17]
+    fontSize		    12
+    src {
+      id		      27
+      intersection	      [3 0 1 0.4041 498.6667 282.1667 0 0]
+    }
+    dst {
+      id		      12
+      intersection	      [1 -0 -1 0.4201 498.6667 373.0471 0 0]
+    }
+    midPoint		    [498.6667 323.6069]
+    chart		    2
+    linkNode		    [26 76 78]
+    visible		    0
+    dataLimits		    [496.267 501.067 282.167 373.047]
+    stampAngle		    -6.2832
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    258
+  }
+  transition {
+    id			    78
+    labelString		    "[Key On]"
+    labelPosition	    [1878.932 312.722 49.25 17]
+    fontSize		    12
+    src {
+      id		      28
+      intersection	      [3 0 1 0.5 1861.3054 283.2138 0 0]
+    }
+    dst {
+      id		      66
+      intersection	      [1 -0 -1 0 1861.3054 398.2138 0 0]
+    }
+    midPoint		    [1861.3054 336.7138]
+    chart		    2
+    linkNode		    [26 77 79]
+    visible		    0
+    dataLimits		    [1858.905 1863.705 283.214 398.214]
+    stampAngle		    -6.2832
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    259
+  }
+  transition {
+    id			    79
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [3205.712 273.939 145 47]
+    fontSize		    12
+    src {
+      id		      18
+      intersection	      [1 0 -1 0.4505 3619.2453 518.6733 0 0]
+    }
+    dst {
+      id		      29
+      intersection	      [1 0 -1 0.8705 2893.9546 518.6733 0 0]
+    }
+    midPoint		    [3256.6 333.3396]
+    chart		    2
+    linkNode		    [26 78 80]
+    visible		    0
+    dataLimits		    [2891.555 3619.245 333.422 518.673]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    260
+  }
+  transition {
+    id			    80
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [902.797 279 145 47]
+    fontSize		    12
+    src {
+      id		      22
+      intersection	      [1 0 -1 0.4505 1319.9362 525.1667 0 0]
+    }
+    dst {
+      id		      14
+      intersection	      [1 0 -1 0.8652 586.9318 526.2138 0 0]
+    }
+    midPoint		    [953.434 338.4309]
+    chart		    2
+    linkNode		    [26 79 81]
+    visible		    0
+    dataLimits		    [584.532 1319.936 338.551 526.214]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    261
+  }
+  transition {
+    id			    81
+    labelString		    "[OffsetRight]"
+    labelPosition	    [2647.879 376.014 69 17]
+    fontSize		    12
+    src {
+      id		      65
+      intersection	      [4 -0.9948 -0.1017 0 2782.3798 396.9611 0 0]
+    }
+    dst {
+      id		      17
+      intersection	      [4 -1 0 0.8103 2719.3501 803.4506 0 0]
+    }
+    midPoint		    [2450.4075 622.2838]
+    chart		    2
+    linkNode		    [26 80 82]
+    visible		    0
+    dataLimits		    [2450.032 2782.38 396.961 805.851]
+    stampAngle		    -1.6727
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    262
+  }
+  transition {
+    id			    82
+    labelString		    "[OffsetRight]"
+    labelPosition	    [1719.841 383.554 69 17]
+    fontSize		    12
+    src {
+      id		      66
+      intersection	      [4 -0.9948 -0.1017 0 1854.3417 404.5016 0 0]
+    }
+    dst {
+      id		      19
+      intersection	      [4 -1 0 0.8103 1791.3121 810.9912 0 0]
+    }
+    midPoint		    [1522.3695 629.8243]
+    chart		    2
+    linkNode		    [26 81 83]
+    visible		    0
+    dataLimits		    [1521.994 1854.342 404.502 813.391]
+    stampAngle		    -1.6727
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    264
+  }
+  transition {
+    id			    83
+    labelString		    "[OffsetLeft]"
+    labelPosition	    [2789.441 457.673 61 17]
+    fontSize		    12
+    src {
+      id		      65
+      intersection	      [3 -0 1 0 2789.3434 404.6733 0 0]
+    }
+    dst {
+      id		      29
+      intersection	      [1 0 -1 0.3429 2789.3434 518.6733 0 0]
+    }
+    midPoint		    [2789.3434 457.6733]
+    chart		    2
+    linkNode		    [26 82 84]
+    visible		    0
+    dataLimits		    [2786.943 2791.743 404.673 518.673]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    265
+  }
+  transition {
+    id			    84
+    labelString		    "[OffsetLeft]"
+    labelPosition	    [1861.403 465.214 61 17]
+    fontSize		    12
+    src {
+      id		      66
+      intersection	      [3 -0 1 0 1861.3054 412.2138 0 0]
+    }
+    dst {
+      id		      21
+      intersection	      [1 0 -1 0.3429 1861.3054 526.2138 0 0]
+    }
+    midPoint		    [1861.3054 465.2138]
+    chart		    2
+    linkNode		    [26 83 85]
+    visible		    0
+    dataLimits		    [1858.905 1863.705 412.214 526.214]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    267
+  }
+  transition {
+    id			    85
+    labelString		    "%check left pot"
+    labelPosition	    [495.628 472.582 83.25 17]
+    fontSize		    12
+    src {
+      id		      12
+      intersection	      [3 0 1 0.5967 495.3333 462.9529 0 0]
+    }
+    dst {
+      id		      14
+      intersection	      [1 -0 -1 0.4033 495.3333 526.2138 0 0]
+    }
+    midPoint		    [495.3333 490.5834]
+    chart		    2
+    linkNode		    [26 84 86]
+    dataLimits		    [492.933 497.733 462.953 526.214]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    342
+  }
+  transition {
+    id			    86
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [3357.877 498.762 107.25 47]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [2 1 0 0.3749 3321.3434 553.1686 0 0]
+    }
+    dst {
+      id		      18
+      intersection	      [4 -1 0 0.6251 3543.11 553.1686 0 0]
+    }
+    midPoint		    [3428.2267 553.1686]
+    chart		    2
+    linkNode		    [26 85 87]
+    visible		    0
+    dataLimits		    [3321.343 3543.11 550.769 555.569]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    268
+  }
+  transition {
+    id			    87
+    labelString		    "[enable_aux]\n%aux enable checks right pot\n%no check for left pot\n%single beep (aux button)"
+    labelPosition	    [2930.912 482.673 159 62]
+    fontSize		    12
+    src {
+      id		      29
+      intersection	      [2 1 0 0.4004 2919.6352 554.6733 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [4 -1 -0 0.6087 3152.3434 554.6733 0 0]
+    }
+    midPoint		    [3031.9893 554.6733]
+    chart		    2
+    linkNode		    [26 86 88]
+    visible		    0
+    dataLimits		    [2919.635 3152.343 552.273 557.073]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    269
+  }
+  transition {
+    id			    88
+    labelString		    "[changeRightMode]\n% 3 beeps"
+    labelPosition	    [2555.197 542.552 107.25 32]
+    fontSize		    12
+    src {
+      id		      29
+      intersection	      [4 -1 0 0.6107 2721.3434 553.6733 0 0]
+    }
+    dst {
+      id		      29
+      intersection	      [4 -1 0 0.188 2721.3434 591.6733 0 0]
+    }
+    midPoint		    [2673.3434 572.6733]
+    chart		    2
+    linkNode		    [26 87 89]
+    visible		    0
+    dataLimits		    [2673.231 2721.343 553.673 594.073]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    3
+    ssIdNumber		    270
+  }
+  transition {
+    id			    89
+    labelString		    "[changeLeftMode]\n%check left pot\n%double beep"
+    labelPosition	    [1058.568 505.256 99.25 47]
+    fontSize		    12
+    src {
+      id		      16
+      intersection	      [2 1 0 0.3749 1022.0343 559.6621 0 0]
+    }
+    dst {
+      id		      22
+      intersection	      [4 -1 0 0.6251 1243.8008 559.6621 0 0]
+    }
+    midPoint		    [1128.9176 559.6621]
+    chart		    2
+    linkNode		    [26 88 90]
+    visible		    0
+    dataLimits		    [1022.034 1243.801 557.262 562.062]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    271
+  }
+  transition {
+    id			    90
+    labelString		    "[enable_aux]\n%aux enable checks right pot\n%no check for left pot\n%single beep (aux button)"
+    labelPosition	    [627.545 490.214 159 62]
+    fontSize		    12
+    src {
+      id		      14
+      intersection	      [2 1 0 0.4004 613.6594 562.2138 0 0]
+    }
+    dst {
+      id		      16
+      intersection	      [4 -1 -0 0.5973 853.0343 562.2138 0 0]
+    }
+    midPoint		    [729.3469 562.2138]
+    chart		    2
+    linkNode		    [26 89 91]
+    visible		    0
+    dataLimits		    [613.659 853.034 559.814 564.614]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    272
+  }
+  transition {
+    id			    91
+    labelString		    "[changeLeftMode]\n% 3 beeps"
+    labelPosition	    [249.221 550.092 99.25 32]
+    fontSize		    12
+    src {
+      id		      14
+      intersection	      [4 -1 0 0.6107 415.3677 561.2138 0 0]
+    }
+    dst {
+      id		      14
+      intersection	      [4 -1 0 0.188 415.3677 599.2138 0 0]
+    }
+    midPoint		    [367.3677 580.2138]
+    chart		    2
+    linkNode		    [26 90 92]
+    visible		    0
+    dataLimits		    [367.255 415.368 561.214 601.614]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    273
+  }
+  transition {
+    id			    92
+    labelString		    "[OffsetLeft]\n% check left pot\n% medium beep"
+    labelPosition	    [2289.255 688.353 89 47]
+    fontSize		    12
+    src {
+      id		      23
+      intersection	      [1 0 -1 0.2772 2273.1644 792.3284 0 0]
+    }
+    dst {
+      id		      21
+      intersection	      [2 1 0 0.5066 1991.5971 571.7606 0 0]
+    }
+    midPoint		    [2180.3071 638.1182]
+    chart		    2
+    linkNode		    [26 91 93]
+    visible		    0
+    dataLimits		    [1991.597 2273.164 569.361 792.328]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    274
+  }
+  transition {
+    id			    93
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [3013.917 581.366 145 47]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [4 -1 0 0.3789 3152.3434 575.8145 0 0]
+    }
+    dst {
+      id		      29
+      intersection	      [2 1 -0 0.6356 2919.6352 575.8145 0 0]
+    }
+    midPoint		    [3039.9893 575.8145]
+    chart		    2
+    linkNode		    [26 92 94]
+    visible		    0
+    dataLimits		    [2919.635 3152.343 573.415 578.215]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    3
+    ssIdNumber		    275
+  }
+  transition {
+    id			    94
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [3423.398 593.425 107.25 47]
+    fontSize		    12
+    src {
+      id		      18
+      intersection	      [4 -1 0 0.31 3543.11 582.1553 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [2 1 -0 0.69 3321.3434 582.1553 0 0]
+    }
+    midPoint		    [3436.2267 582.1553]
+    chart		    2
+    linkNode		    [26 93 95]
+    visible		    0
+    dataLimits		    [3321.343 3543.11 579.755 584.555]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    276
+  }
+  transition {
+    id			    95
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [712.579 588.907 145 47]
+    fontSize		    12
+    src {
+      id		      16
+      intersection	      [4 -1 0 0.3675 853.0343 583.355 0 0]
+    }
+    dst {
+      id		      14
+      intersection	      [2 1 -0 0.6356 613.6594 583.355 0 0]
+    }
+    midPoint		    [737.3469 583.355]
+    chart		    2
+    linkNode		    [26 94 96]
+    visible		    0
+    dataLimits		    [613.659 853.034 580.955 585.755]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    277
+  }
+  transition {
+    id			    96
+    labelString		    "[changeLeftMode]\n%check left pot\n%single beep"
+    labelPosition	    [1124.089 599.918 99.25 47]
+    fontSize		    12
+    src {
+      id		      22
+      intersection	      [4 -1 0 0.31 1243.8008 588.6488 0 0]
+    }
+    dst {
+      id		      16
+      intersection	      [2 1 -0 0.69 1022.0343 588.6488 0 0]
+    }
+    midPoint		    [1136.9176 588.6488]
+    chart		    2
+    linkNode		    [26 95 97]
+    visible		    0
+    dataLimits		    [1022.034 1243.801 586.249 591.049]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    278
+  }
+  transition {
+    id			    97
+    labelString		    "[OffsetLeft]\n% check left pot\n% medium beep"
+    labelPosition	    [2633.956 709.544 89 47]
+    fontSize		    12
+    src {
+      id		      17
+      intersection	      [1 0 -1 0.1321 2740.0928 780.9291 0 0]
+    }
+    dst {
+      id		      29
+      intersection	      [3 0 1 0.9054 2740.0928 608.5791 0 0]
+    }
+    midPoint		    [2740.0928 698.7541]
+    chart		    2
+    linkNode		    [26 96 98]
+    visible		    0
+    dataLimits		    [2737.693 2742.493 608.579 780.929]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    279
+  }
+  transition {
+    id			    98
+    labelString		    "[OffsetRight]\n% check right pot\n% Medium Beep"
+    labelPosition	    [2779.009 613.81 94 47]
+    fontSize		    12
+    src {
+      id		      29
+      intersection	      [3 0 1 0.7529 2770.3501 608.5791 0 0]
+    }
+    dst {
+      id		      17
+      intersection	      [1 -0 -1 0.3249 2770.3501 780.9291 0 0]
+    }
+    midPoint		    [2770.3501 690.7541]
+    chart		    2
+    linkNode		    [26 97 99]
+    visible		    0
+    dataLimits		    [2767.95 2772.75 608.579 780.929]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    280
+  }
+  transition {
+    id			    99
+    labelString		    ""
+    labelPosition	    [2892.002 663.035 0 0]
+    fontSize		    12
+    src {
+      id		      72
+      intersection	      [1 -0 -1 0 2892.4546 709.4905 0 0]
+    }
+    dst {
+      id		      29
+      intersection	      [3 0 1 0.1416 2891.5488 608.5791 0 0]
+    }
+    midPoint		    [2892.0017 663.0348]
+    chart		    2
+    linkNode		    [26 98 100]
+    visible		    0
+    dataLimits		    [2889.149 2893.949 608.579 709.491]
+    stampAngle		    -6.2832
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    281
+  }
+  transition {
+    id			    100
+    labelString		    "[OffsetRight]\n% check right pot\n% Medium Beep"
+    labelPosition	    [3236.037 613.834 94 47]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [3 0 1 0.5536 3227.7851 610.6733 0 0]
+    }
+    dst {
+      id		      68
+      intersection	      [1 0 -1 0 3227.7851 683.6745 0 0]
+    }
+    midPoint		    [3227.7851 643.1739]
+    chart		    2
+    linkNode		    [26 99 101]
+    visible		    0
+    dataLimits		    [3225.385 3230.185 610.673 683.674]
+    subviewer		    26
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    282
+  }
+  transition {
+    id			    101
+    labelString		    "[OffsetRight]\n% check right pot\n% Medium Beep"
+    labelPosition	    [3605.504 617.744 94 47]
+    fontSize		    12
+    src {
+      id		      18
+      intersection	      [3 0 1 0.7604 3583.6061 610.6733 0 0]
+    }
+    dst {
+      id		      69
+      intersection	      [1 -0 -1 0 3583.6061 685.033 0 0]
+    }
+    midPoint		    [3583.6061 643.8531]
+    chart		    2
+    linkNode		    [26 100 102]
+    visible		    0
+    dataLimits		    [3581.206 3586.006 610.673 685.033]
+    stampAngle		    -6.2832
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    3
+    ssIdNumber		    283
+  }
+  transition {
+    id			    102
+    labelString		    "[OffsetLeft]\n% check left pot\n% medium beep"
+    labelPosition	    [1705.918 717.084 89 47]
+    fontSize		    12
+    src {
+      id		      19
+      intersection	      [1 0 -1 0.1321 1812.0548 788.4697 0 0]
+    }
+    dst {
+      id		      21
+      intersection	      [3 0 1 0.9054 1812.0548 616.1196 0 0]
+    }
+    midPoint		    [1812.0548 706.2947]
+    chart		    2
+    linkNode		    [26 101 103]
+    visible		    0
+    dataLimits		    [1809.655 1814.455 616.12 788.47]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    287
+  }
+  transition {
+    id			    103
+    labelString		    "[OffsetRight]\n% check right pot\n% Medium Beep"
+    labelPosition	    [1850.971 621.351 94 47]
+    fontSize		    12
+    src {
+      id		      21
+      intersection	      [3 0 1 0.7529 1842.3121 616.1196 0 0]
+    }
+    dst {
+      id		      19
+      intersection	      [1 -0 -1 0.3249 1842.3121 788.4697 0 0]
+    }
+    midPoint		    [1842.3121 698.2947]
+    chart		    2
+    linkNode		    [26 102 104]
+    visible		    0
+    dataLimits		    [1839.912 1844.712 616.12 788.47]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    288
+  }
+  transition {
+    id			    104
+    labelString		    ""
+    labelPosition	    [3038.077 672.683 0 0]
+    fontSize		    12
+    src {
+      id		      68
+      intersection	      [4 -1 -0.0023 0 3220.3324 691.1097 0 0]
+    }
+    dst {
+      id		      67
+      intersection	      [2 1 0.0023 0 2847.8221 690.2377 0 0]
+    }
+    midPoint		    [3038.0772 690.6831]
+    chart		    2
+    linkNode		    [26 103 105]
+    visible		    0
+    dataLimits		    [2847.822 3220.332 687.856 692.656]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    291
+  }
+  transition {
+    id			    105
+    labelString		    ""
+    labelPosition	    [3409.922 673.591 0 0]
+    fontSize		    12
+    src {
+      id		      69
+      intersection	      [4 -1 -0.0025 0 3576.6061 692.0152 0 0]
+    }
+    dst {
+      id		      68
+      intersection	      [2 1 0.0025 0 3235.2378 691.1462 0 0]
+    }
+    midPoint		    [3409.922 691.5909]
+    chart		    2
+    linkNode		    [26 104 106]
+    visible		    0
+    dataLimits		    [3235.238 3576.606 688.767 693.567]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    292
+  }
+  transition {
+    id			    106
+    labelString		    ""
+    labelPosition	    [2840.822 735.075 0 0]
+    fontSize		    12
+    src {
+      id		      67
+      intersection	      [3 -0 1 0 2840.8221 697.2214 0 0]
+    }
+    dst {
+      id		      17
+      intersection	      [1 0 -1 0.7738 2840.8221 780.9291 0 0]
+    }
+    midPoint		    [2840.8221 735.0752]
+    chart		    2
+    linkNode		    [26 105 107]
+    visible		    0
+    dataLimits		    [2838.422 2843.222 697.221 780.929]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    295
+  }
+  transition {
+    id			    107
+    labelString		    ""
+    labelPosition	    [3434.153 697.519 0 0]
+    fontSize		    12
+    src {
+      id		      70
+      intersection	      [4 -1 0.0047 0 3624.1969 714.6241 0 0]
+    }
+    dst {
+      id		      71
+      intersection	      [2 1 -0.0047 0 3236.1093 716.4514 0 0]
+    }
+    midPoint		    [3434.1531 715.5189]
+    chart		    2
+    linkNode		    [26 106 108]
+    visible		    0
+    dataLimits		    [3236.109 3624.197 714.014 718.814]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    297
+  }
+  transition {
+    id			    108
+    labelString		    ""
+    labelPosition	    [3063.458 698.491 0 0]
+    fontSize		    12
+    src {
+      id		      71
+      intersection	      [4 -1 0 0 3219.4608 716.4905 0 0]
+    }
+    dst {
+      id		      72
+      intersection	      [2 1 0 0 2899.4546 716.4905 0 0]
+    }
+    midPoint		    [3063.4577 716.4905]
+    chart		    2
+    linkNode		    [26 107 109]
+    visible		    0
+    dataLimits		    [2899.455 3219.461 714.091 718.891]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    298
+  }
+  transition {
+    id			    109
+    labelString		    "[OffsetLeft]\n% check left pot\n% medium beep"
+    labelPosition	    [3639.642 736.159 89 47]
+    fontSize		    12
+    src {
+      id		      13
+      intersection	      [1 0 -1 0.4346 3632.5212 784.7879 0 0]
+    }
+    dst {
+      id		      70
+      intersection	      [3 0 1 0 3632.5212 722.9092 0 0]
+    }
+    midPoint		    [3632.5212 757.8486]
+    chart		    2
+    linkNode		    [26 108 110]
+    visible		    0
+    dataLimits		    [3630.121 3634.921 722.909 784.788]
+    subviewer		    26
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    301
+  }
+  transition {
+    id			    110
+    labelString		    "[OffsetLeft]\n% check left pot\n% medium beep"
+    labelPosition	    [3234.906 737.071 89 47]
+    fontSize		    12
+    src {
+      id		      24
+      intersection	      [1 0 -1 0.4434 3227.7851 784.7879 0 0]
+    }
+    dst {
+      id		      71
+      intersection	      [3 0 1 0 3227.7851 724.8149 0 0]
+    }
+    midPoint		    [3227.7851 758.8014]
+    chart		    2
+    linkNode		    [26 109 111]
+    visible		    0
+    dataLimits		    [3225.385 3230.185 724.815 784.788]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    302
+  }
+  transition {
+    id			    111
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [3360.076 761.726 107.25 47]
+    fontSize		    12
+    src {
+      id		      24
+      intersection	      [2 1 0 0.2824 3316.8434 816.1323 0 0]
+    }
+    dst {
+      id		      13
+      intersection	      [4 -1 0 0.7176 3562.98 816.1323 0 0]
+    }
+    midPoint		    [3435.9117 816.1323]
+    chart		    2
+    linkNode		    [26 110 112]
+    visible		    0
+    dataLimits		    [3316.843 3562.98 813.732 818.532]
+    subviewer		    26
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    3
+    ssIdNumber		    305
+  }
+  transition {
+    id			    112
+    labelString		    "[changeRightMode]\n% 3 beeps"
+    labelPosition	    [2550.898 821.695 107.25 32]
+    fontSize		    12
+    src {
+      id		      17
+      intersection	      [4 -1 0 0.6981 2719.3501 816.7664 0 0]
+    }
+    dst {
+      id		      17
+      intersection	      [4 -1 0 0.3777 2719.3501 854.8114 0 0]
+    }
+    midPoint		    [2671.3501 835.7889]
+    chart		    2
+    linkNode		    [26 111 113]
+    visible		    0
+    dataLimits		    [2671.237 2719.35 816.766 857.211]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    3
+    ssIdNumber		    306
+  }
+  transition {
+    id			    113
+    labelString		    "[enable_aux]\n% aux enable checks right pot\n% check left pot\n% single beep (aux button)"
+    labelPosition	    [2919.079 749.379 162.25 62]
+    fontSize		    12
+    src {
+      id		      17
+      intersection	      [2 1 0 0.3576 2876.3368 823.379 0 0]
+    }
+    dst {
+      id		      24
+      intersection	      [4 -1 -0 0.6523 3156.8434 823.379 0 0]
+    }
+    midPoint		    [3012.5901 823.379]
+    chart		    2
+    linkNode		    [26 112 114]
+    visible		    0
+    dataLimits		    [2876.337 3156.843 820.979 825.779]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    308
+  }
+  transition {
+    id			    114
+    labelString		    "[enable_aux]\n% aux enable checks right pot\n% check left pot\n% single beep (aux button)"
+    labelPosition	    [1991.041 756.92 162.25 62]
+    fontSize		    12
+    src {
+      id		      19
+      intersection	      [2 1 0 0.3576 1948.2988 830.9195 0 0]
+    }
+    dst {
+      id		      23
+      intersection	      [4 -1 -0 0.6523 2228.8054 830.9195 0 0]
+    }
+    midPoint		    [2084.5521 830.9195]
+    chart		    2
+    linkNode		    [26 113 115]
+    visible		    0
+    dataLimits		    [1948.299 2228.805 828.52 833.32]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    311
+  }
+  transition {
+    id			    115
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [3004.337 869.07 145 47]
+    fontSize		    12
+    src {
+      id		      24
+      intersection	      [4 -1 0 0.3259 3156.8434 859.6124 0 0]
+    }
+    dst {
+      id		      17
+      intersection	      [2 1 0 0.6628 2876.3368 859.6124 0 0]
+    }
+    midPoint		    [3020.5901 859.6124]
+    chart		    2
+    linkNode		    [26 114 116]
+    visible		    0
+    dataLimits		    [2876.337 3156.843 857.212 862.012]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    312
+  }
+  transition {
+    id			    116
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [3443.551 867.152 107.25 47]
+    fontSize		    12
+    src {
+      id		      13
+      intersection	      [4 -1 0 0.3177 3562.98 860.5182 0 0]
+    }
+    dst {
+      id		      24
+      intersection	      [2 1 0 0.6823 3316.8434 860.5182 0 0]
+    }
+    midPoint		    [3443.9117 860.5182]
+    chart		    2
+    linkNode		    [26 115 117]
+    visible		    0
+    dataLimits		    [3316.843 3562.98 858.118 862.918]
+    subviewer		    26
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    313
+  }
+  transition {
+    id			    117
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [2076.299 876.61 145 47]
+    fontSize		    12
+    src {
+      id		      23
+      intersection	      [4 -1 0 0.3259 2228.8054 867.1529 0 0]
+    }
+    dst {
+      id		      19
+      intersection	      [2 1 0 0.6628 1948.2988 867.1529 0 0]
+    }
+    midPoint		    [2092.5521 867.1529]
+    chart		    2
+    linkNode		    [26 116 118]
+    visible		    0
+    dataLimits		    [1948.299 2228.805 864.753 869.553]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    316
+  }
+  transition {
+    id			    118
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [3173.075 999.456 145 47]
+    fontSize		    12
+    src {
+      id		      13
+      intersection	      [3 0 1 0.4822 3645.8335 895.7879 0 0]
+    }
+    dst {
+      id		      17
+      intersection	      [3 0 1 0.5032 2797.342 899.6466 0 0]
+    }
+    midPoint		    [3265.6583 1067.9542]
+    chart		    2
+    linkNode		    [26 117 0]
+    visible		    0
+    dataLimits		    [2794.942 3645.833 895.788 1069.541]
+    subviewer		    26
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    3
+    ssIdNumber		    317
+  }
+  junction {
+    id			    119
+    position		    [490.0343 404.1667 7]
+    chart		    2
+    linkNode		    [34 0 0]
+    visible		    0
+    subviewer		    34
+    ssIdNumber		    346
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    120
+    labelString		    ""
+    labelPosition	    [477 131.795 0 0]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 476.9996 116.7946 0 0]
+    }
+    dst {
+      id		      36
+      intersection	      [1 0 -1 0.2283 476.9996 146.7946 0 0]
+    }
+    midPoint		    [476.9996 131.7946]
+    chart		    2
+    linkNode		    [34 0 121]
+    visible		    0
+    dataLimits		    [474.6 479.4 116.795 146.795]
+    subviewer		    34
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    353
+  }
+  transition {
+    id			    121
+    labelString		    "[Key On]"
+    labelPosition	    [507.962 216.269 49.25 17]
+    fontSize		    12
+    src {
+      id		      36
+      intersection	      [3 0 1 0.5751 495.7977 201.1667 0 0]
+    }
+    dst {
+      id		      37
+      intersection	      [1 -0 -1 0.2843 495.7977 257.5398 0 0]
+    }
+    midPoint		    [495.7977 225.3532]
+    chart		    2
+    linkNode		    [34 120 122]
+    visible		    0
+    dataLimits		    [493.398 498.198 201.167 257.54]
+    stampAngle		    -6.2832
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    354
+  }
+  transition {
+    id			    122
+    labelString		    ""
+    labelPosition	    [490.034 368.306 0 0]
+    fontSize		    12
+    src {
+      id		      37
+      intersection	      [3 0 1 0.7448 490.0343 347.4456 0 0]
+    }
+    dst {
+      id		      119
+      intersection	      [1 0 -1 0 490.0343 397.1667 0 0]
+    }
+    midPoint		    [490.0343 368.3062]
+    chart		    2
+    linkNode		    [34 121 123]
+    visible		    0
+    dataLimits		    [487.634 492.434 347.446 397.167]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    356
+  }
+  transition {
+    id			    123
+    labelString		    "[OffsetRight]\n%check right pot"
+    labelPosition	    [286.571 429.648 90.75 32]
+    fontSize		    12
+    src {
+      id		      119
+      intersection	      [4 -1 0 0 483.0343 404.1667 0 0]
+    }
+    dst {
+      id		      44
+      intersection	      [4 -1 0 0.7955 283.0243 1199.2863 0 0]
+    }
+    midPoint		    [173.5598 801.7265]
+    chart		    2
+    linkNode		    [34 122 124]
+    visible		    0
+    dataLimits		    [146.577 483.034 404.167 1201.686]
+    stampAngle		    -1.6727
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    357
+  }
+  transition {
+    id			    124
+    labelString		    "[OffsetLeft]\n%check left pot"
+    labelPosition	    [498.011 421.395 83.25 32]
+    fontSize		    12
+    src {
+      id		      119
+      intersection	      [3 -0 1 0 490.0343 411.1667 0 0]
+    }
+    dst {
+      id		      38
+      intersection	      [1 0 -1 0.4262 490.0343 525.1667 0 0]
+    }
+    midPoint		    [490.0343 464.1667]
+    chart		    2
+    linkNode		    [34 123 125]
+    visible		    0
+    dataLimits		    [487.634 492.434 411.167 525.167]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    358
+  }
+  transition {
+    id			    125
+    labelString		    "[OffsetLeft]\n% check left pot\n% medium beep\n% Flash Aux Button"
+    labelPosition	    [338.972 1027.687 108 62]
+    fontSize		    12
+    src {
+      id		      44
+      intersection	      [1 0 -1 0.1436 457.6155 1095.4467 0 0]
+    }
+    dst {
+      id		      45
+      intersection	      [3 0 1 0.8405 457.6155 1012.2534 0 0]
+    }
+    midPoint		    [457.6155 1057.85]
+    chart		    2
+    linkNode		    [34 124 126]
+    visible		    0
+    dataLimits		    [455.215 460.015 1012.253 1095.447]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    364
+  }
+  transition {
+    id			    126
+    labelString		    "[OffsetRight]\n% check right pot\n% Medium Beep\n% Flash Aux Button"
+    labelPosition	    [550.866 1030.149 108 62]
+    fontSize		    12
+    src {
+      id		      45
+      intersection	      [3 0 1 0.7713 540.6155 1012.2534 0 0]
+    }
+    dst {
+      id		      44
+      intersection	      [1 -0 -1 0.2119 540.6155 1095.4467 0 0]
+    }
+    midPoint		    [540.6155 1049.85]
+    chart		    2
+    linkNode		    [34 125 0]
+    visible		    0
+    dataLimits		    [538.215 543.015 1012.253 1095.447]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    365
+  }
+  transition {
+    id			    127
+    labelString		    "[changeRightMode...\n|| changeLeftMode]\n% 3 beeps"
+    labelPosition	    [297.02 1154.164 113.75 47]
+    fontSize		    12
+    src {
+      id		      41
+      intersection	      [4 -1 0 0.7937 435.4718 1173.2355 0 0]
+    }
+    dst {
+      id		      41
+      intersection	      [4 -1 0 0.5747 435.4718 1211.2805 0 0]
+    }
+    midPoint		    [387.4718 1192.258]
+    chart		    2
+    linkNode		    [44 0 128]
+    visible		    0
+    dataLimits		    [387.359 435.472 1173.235 1213.681]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    377
+  }
+  transition {
+    id			    128
+    labelString		    "[enable_aux]\n% aux enable checks right pot\n% check left pot\n% single beep (aux button)"
+    labelPosition	    [645.757 1107.455 162.25 62]
+    fontSize		    12
+    src {
+      id		      41
+      intersection	      [2 1 0 0.2536 652.4584 1181.4554 0 0]
+    }
+    dst {
+      id		      51
+      intersection	      [4 -1 -0 0.8433 824.1289 1181.4554 0 0]
+    }
+    midPoint		    [734.2937 1181.4554]
+    chart		    2
+    linkNode		    [44 127 129]
+    visible		    0
+    dataLimits		    [652.458 824.129 1179.055 1183.855]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    378
+  }
+  transition {
+    id			    129
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [704.746 1225.84 145 47]
+    fontSize		    12
+    src {
+      id		      51
+      intersection	      [4 -1 0 0.7688 824.1289 1216.3829 0 0]
+    }
+    dst {
+      id		      41
+      intersection	      [2 1 0 0.4547 652.4584 1216.3829 0 0]
+    }
+    midPoint		    [742.2937 1216.3829]
+    chart		    2
+    linkNode		    [44 128 0]
+    visible		    0
+    dataLimits		    [652.458 824.129 1213.983 1218.783]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    379
+  }
+  transition {
+    id			    130
+    labelString		    "[changeRightMode...\n|| changeLeftMode]\n% 3 beeps"
+    labelPosition	    [291.888 520.045 113.75 47]
+    fontSize		    12
+    src {
+      id		      38
+      intersection	      [4 -1 0 0.7656 422.0343 560.1667 0 0]
+    }
+    dst {
+      id		      38
+      intersection	      [4 -1 0 0.511 422.0343 598.1667 0 0]
+    }
+    midPoint		    [374.0343 579.1667]
+    chart		    2
+    linkNode		    [45 0 131]
+    visible		    0
+    dataLimits		    [373.922 422.034 560.167 600.567]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    361
+  }
+  transition {
+    id			    131
+    labelString		    "[enable_aux]\n%aux enable checks right pot\n%no check for left pot\n%single beep (aux button)"
+    labelPosition	    [596.877 492.188 159 62]
+    fontSize		    12
+    src {
+      id		      38
+      intersection	      [2 1 0 0.2775 581.581 566.5972 0 0]
+    }
+    dst {
+      id		      50
+      intersection	      [4 -1 -0 0.8174 787.6251 566.5972 0 0]
+    }
+    midPoint		    [680.6031 566.5972]
+    chart		    2
+    linkNode		    [45 130 132]
+    visible		    0
+    dataLimits		    [581.581 787.625 564.197 568.997]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    360
+  }
+  transition {
+    id			    132
+    labelString		    "[!enable_aux]\n% no pot checks\n% single beep (aux button)"
+    labelPosition	    [634.656 599.85 145 47]
+    fontSize		    12
+    src {
+      id		      50
+      intersection	      [4 -1 0 0.7718 787.6251 589.4807 0 0]
+    }
+    dst {
+      id		      38
+      intersection	      [2 1 -0 0.4308 581.581 589.4807 0 0]
+    }
+    midPoint		    [688.6031 589.4807]
+    chart		    2
+    linkNode		    [45 131 0]
+    visible		    0
+    dataLimits		    [581.581 787.625 587.081 591.881]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    362
+  }
+  junction {
+    id			    133
+    position		    [490.0343 404.1667 7]
+    chart		    2
+    linkNode		    [46 0 0]
+    visible		    0
+    subviewer		    46
+    ssIdNumber		    394
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    134
+    labelString		    ""
+    labelPosition	    [477 131.795 0 0]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 476.9996 116.7946 0 0]
+    }
+    dst {
+      id		      4
+      intersection	      [1 0 -1 0.2283 476.9996 146.7946 0 0]
+    }
+    midPoint		    [476.9996 131.7946]
+    chart		    2
+    linkNode		    [46 0 135]
+    visible		    0
+    dataLimits		    [474.6 479.4 116.795 146.795]
+    subviewer		    46
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    395
+  }
+  transition {
+    id			    135
+    labelString		    "[Key On]"
+    labelPosition	    [507.962 216.269 49.25 17]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [3 0 1 0.5751 495.7977 201.1667 0 0]
+    }
+    dst {
+      id		      25
+      intersection	      [1 -0 -1 0.2843 495.7977 257.5398 0 0]
+    }
+    midPoint		    [495.7977 225.3532]
+    chart		    2
+    linkNode		    [46 134 136]
+    visible		    0
+    dataLimits		    [493.398 498.198 201.167 257.54]
+    stampAngle		    -6.2832
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    396
+  }
+  transition {
+    id			    136
+    labelString		    ""
+    labelPosition	    [490.034 368.306 0 0]
+    fontSize		    12
+    src {
+      id		      25
+      intersection	      [3 0 1 0.7448 490.0343 347.4456 0 0]
+    }
+    dst {
+      id		      133
+      intersection	      [1 0 -1 0 490.0343 397.1667 0 0]
+    }
+    midPoint		    [490.0343 368.3062]
+    chart		    2
+    linkNode		    [46 135 137]
+    visible		    0
+    dataLimits		    [487.634 492.434 347.446 397.167]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    397
+  }
+  transition {
+    id			    137
+    labelString		    "[OffsetRight]\n%check right pot"
+    labelPosition	    [310.142 357.43 90.75 32]
+    fontSize		    12
+    src {
+      id		      133
+      intersection	      [4 -1 0 0 483.0343 404.1667 0 0]
+    }
+    dst {
+      id		      5
+      intersection	      [4 -1 0 0.7189 258.1847 933.493 0 0]
+    }
+    midPoint		    [242.1847 429.493]
+    chart		    2
+    linkNode		    [46 136 138]
+    visible		    0
+    dataLimits		    [140.021 483.034 395.731 935.893]
+    stampAngle		    -1.6727
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    398
+  }
+  transition {
+    id			    138
+    labelString		    "[OffsetLeft]\n%check left pot"
+    labelPosition	    [498.011 421.395 83.25 32]
+    fontSize		    12
+    src {
+      id		      133
+      intersection	      [3 -0 1 0 490.0343 411.1667 0 0]
+    }
+    dst {
+      id		      8
+      intersection	      [1 0 -1 0.3412 490.0343 525.1667 0 0]
+    }
+    midPoint		    [490.0343 464.1667]
+    chart		    2
+    linkNode		    [46 137 139]
+    visible		    0
+    dataLimits		    [487.634 492.434 411.167 525.167]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    399
+  }
+  transition {
+    id			    139
+    labelString		    "[OffsetLeft]\n% check left pot\n% medium beep\n% Flash Aux Button"
+    labelPosition	    [316.541 774.443 108 62]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [1 0 -1 0.1475 435.1847 854.493 0 0]
+    }
+    dst {
+      id		      10
+      intersection	      [3 0 1 0.8655 435.1847 750.493 0 0]
+    }
+    midPoint		    [435.1847 806.493]
+    chart		    2
+    linkNode		    [46 138 140]
+    visible		    0
+    dataLimits		    [432.785 437.585 750.493 854.493]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    400
+  }
+  transition {
+    id			    140
+    labelString		    "[OffsetRight]\n% check right pot\n% Medium Beep\n% Flash Aux Button"
+    labelPosition	    [530.844 773.865 108 62]
+    fontSize		    12
+    src {
+      id		      10
+      intersection	      [3 0 1 0.7953 518.1847 750.493 0 0]
+    }
+    dst {
+      id		      5
+      intersection	      [1 -0 -1 0.2167 518.1847 854.493 0 0]
+    }
+    midPoint		    [518.1847 798.493]
+    chart		    2
+    linkNode		    [46 139 0]
+    visible		    0
+    dataLimits		    [515.785 520.585 750.493 854.493]
+    subviewer		    46
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    401
+  }
+  transition {
+    id			    141
+    labelString		    ""
+    labelPosition	    [931.385 510.167 0 0]
+    fontSize		    12
+    src {
+      intersection	      [0 -0 1 0 931.3854 495.1667 0 0]
+    }
+    dst {
+      id		      39
+      intersection	      [1 0 -1 0.4636 931.3854 525.1667 0 0]
+    }
+    midPoint		    [931.3854 510.1667]
+    chart		    2
+    linkNode		    [50 0 142]
+    dataLimits		    [928.985 933.785 495.167 525.167]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    436
+  }
+  transition {
+    id			    142
+    labelString		    "[changeRightMode]\n%check right pot\n%double beep"
+    labelPosition	    [1030.867 506.46 107.25 47]
+    fontSize		    12
+    src {
+      id		      39
+      intersection	      [2 1 0 0.3749 1022.0343 559.6621 0 0]
+    }
+    dst {
+      id		      40
+      intersection	      [4 -1 0 0.6129 1243.8008 559.6621 0 0]
+    }
+    midPoint		    [1128.9176 559.6621]
+    chart		    2
+    linkNode		    [50 141 143]
+    visible		    0
+    dataLimits		    [1022.034 1243.801 557.262 562.062]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    359
+  }
+  transition {
+    id			    143
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [1124.089 599.918 107.25 47]
+    fontSize		    12
+    src {
+      id		      40
+      intersection	      [4 -1 0 0.2877 1243.8008 588.6488 0 0]
+    }
+    dst {
+      id		      39
+      intersection	      [2 1 -0 0.69 1022.0343 588.6488 0 0]
+    }
+    midPoint		    [1136.9176 588.6488]
+    chart		    2
+    linkNode		    [50 142 144]
+    visible		    0
+    dataLimits		    [1022.034 1243.801 586.249 591.049]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    363
+  }
+  transition {
+    id			    144
+    labelString		    "[changeLeftMode]\n%check left pot\n%double beep"
+    labelPosition	    [1191.244 659.761 99.25 47]
+    fontSize		    12
+    src {
+      id		      40
+      intersection	      [3 0 1 0.6743 1298.1847 614.2899 0 0]
+    }
+    dst {
+      id		      49
+      intersection	      [1 0 -1 0.4053 1298.1847 809.1312 0 0]
+    }
+    midPoint		    [1298.1847 707.7105]
+    chart		    2
+    linkNode		    [50 143 145]
+    visible		    0
+    dataLimits		    [1295.785 1300.585 614.29 809.131]
+    subviewer		    34
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    429
+  }
+  transition {
+    id			    145
+    labelString		    "[changeLeftMode]\n%check left pot\n%single beep"
+    labelPosition	    [1344.835 750.892 99.25 47]
+    fontSize		    12
+    src {
+      id		      49
+      intersection	      [1 0 -1 0.642 1338.1847 809.1312 0 0]
+    }
+    dst {
+      id		      40
+      intersection	      [3 0 1 0.4348 1338.1847 614.2899 0 0]
+    }
+    midPoint		    [1338.1847 715.7105]
+    chart		    2
+    linkNode		    [50 144 146]
+    visible		    0
+    dataLimits		    [1335.785 1340.585 614.29 809.131]
+    subviewer		    34
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    428
+  }
+  transition {
+    id			    146
+    labelString		    "[changeLeftMode]\n%check left pot\n%double beep"
+    labelPosition	    [799.345 625.616 99.25 47]
+    fontSize		    12
+    src {
+      id		      39
+      intersection	      [3 0 1 0.6065 919.5343 617.1667 0 0]
+    }
+    dst {
+      id		      48
+      intersection	      [1 0 -1 0.3935 919.5343 809.1312 0 0]
+    }
+    midPoint		    [919.5343 709.149]
+    chart		    2
+    linkNode		    [50 145 147]
+    dataLimits		    [917.134 921.934 617.167 809.131]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    427
+  }
+  transition {
+    id			    147
+    labelString		    "[changeLeftMode]\n%check left pot\n%single beep"
+    labelPosition	    [960.98 731.172 99.25 47]
+    fontSize		    12
+    src {
+      id		      48
+      intersection	      [1 0 -1 0.6065 955.5343 809.1312 0 0]
+    }
+    dst {
+      id		      39
+      intersection	      [3 0 1 0.3935 955.5343 617.1667 0 0]
+    }
+    midPoint		    [955.5343 717.149]
+    chart		    2
+    linkNode		    [50 146 148]
+    dataLimits		    [953.134 957.934 617.167 809.131]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    426
+  }
+  transition {
+    id			    148
+    labelString		    "[changeRightMode]\n%check right pot\n%double beep"
+    labelPosition	    [1058.394 782.841 107.25 47]
+    fontSize		    12
+    src {
+      id		      48
+      intersection	      [2 1 0 0.2831 1022.0343 835.1771 0 0]
+    }
+    dst {
+      id		      49
+      intersection	      [4 -1 -0 0.7169 1229.6847 835.1771 0 0]
+    }
+    midPoint		    [1121.8595 835.1771]
+    chart		    2
+    linkNode		    [50 147 149]
+    dataLimits		    [1022.034 1229.685 832.777 837.577]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    433
+  }
+  transition {
+    id			    149
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [1115.001 879.192 107.25 47]
+    fontSize		    12
+    src {
+      id		      49
+      intersection	      [4 -1 0 0.3242 1229.6847 871.3089 0 0]
+    }
+    dst {
+      id		      48
+      intersection	      [2 1 -0 0.6758 1022.0343 871.3089 0 0]
+    }
+    midPoint		    [1129.8595 871.3089]
+    chart		    2
+    linkNode		    [50 148 0]
+    dataLimits		    [1022.034 1229.685 868.909 873.709]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    434
+  }
+  transition {
+    id			    150
+    labelString		    "[changeRightMode]\n%check right pot\n%double beep"
+    labelPosition	    [1077.402 1121.808 107.25 47]
+    fontSize		    12
+    src {
+      id		      42
+      intersection	      [2 1 0 0.2824 1032.9651 1172.6014 0 0]
+    }
+    dst {
+      id		      43
+      intersection	      [4 -1 0 0.723 1279.1016 1172.6014 0 0]
+    }
+    midPoint		    [1152.0334 1172.6014]
+    chart		    2
+    linkNode		    [51 0 151]
+    visible		    0
+    dataLimits		    [1032.965 1279.102 1170.201 1175.001]
+    subviewer		    34
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    376
+  }
+  transition {
+    id			    151
+    labelString		    "[changeRightMode]\n%check right pot\n%single beep"
+    labelPosition	    [1159.673 1223.621 107.25 47]
+    fontSize		    12
+    src {
+      id		      43
+      intersection	      [4 -1 0 0.3308 1279.1016 1216.9873 0 0]
+    }
+    dst {
+      id		      42
+      intersection	      [2 1 0 0.6823 1032.9651 1216.9873 0 0]
+    }
+    midPoint		    [1160.0334 1216.9873]
+    chart		    2
+    linkNode		    [51 150 152]
+    visible		    0
+    dataLimits		    [1032.965 1279.102 1214.587 1219.387]
+    subviewer		    34
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    380
+  }
+  transition {
+    id			    152
+    labelString		    "[changeLeftMode]\n% 3 beeps"
+    labelPosition	    [907.298 1309.958 99.25 32]
+    fontSize		    12
+    src {
+      id		      42
+      intersection	      [3 0 1 0.6876 922.9547 1252.257 0 0]
+    }
+    dst {
+      id		      42
+      intersection	      [3 0 1 0.2961 985.5832 1252.257 0 0]
+    }
+    midPoint		    [954.2689 1300.257]
+    chart		    2
+    linkNode		    [51 151 153]
+    dataLimits		    [922.955 987.983 1252.257 1300.381]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    438
+  }
+  transition {
+    id			    153
+    labelString		    "[changeLeftMode]\n%check left pot\n%double beep"
+    labelPosition	    [1212.26 1303.387 99.25 47]
+    fontSize		    12
+    src {
+      id		      43
+      intersection	      [3 0 1 0.7493 1319.2003 1254.4241 0 0]
+    }
+    dst {
+      id		      52
+      intersection	      [1 0 -1 0.264 1319.2003 1459.3022 0 0]
+    }
+    midPoint		    [1319.2003 1352.8631]
+    chart		    2
+    linkNode		    [51 152 154]
+    visible		    0
+    dataLimits		    [1316.8 1321.6 1254.424 1459.302]
+    subviewer		    34
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    439
+  }
+  transition {
+    id			    154
+    labelString		    "[changeLeftMode]\n%check left pot\n%single beep"
+    labelPosition	    [1368.005 1400.305 99.25 47]
+    fontSize		    12
+    src {
+      id		      52
+      intersection	      [1 0 -1 0.5134 1361.3541 1459.3022 0 0]
+    }
+    dst {
+      id		      43
+      intersection	      [3 0 1 0.4859 1361.3541 1254.4241 0 0]
+    }
+    midPoint		    [1361.3541 1360.8631]
+    chart		    2
+    linkNode		    [51 153 155]
+    visible		    0
+    dataLimits		    [1358.954 1363.754 1254.424 1459.302]
+    subviewer		    34
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    440
+  }
+  transition {
+    id			    155
+    labelString		    "[changeLeftMode]\n% 3 beeps"
+    labelPosition	    [1113.796 1477.189 99.25 32]
+    fontSize		    12
+    src {
+      id		      52
+      intersection	      [4 -1 0 0.7604 1274.5906 1481.3496 0 0]
+    }
+    dst {
+      id		      52
+      intersection	      [4 -1 0 0.2891 1274.5906 1524.7078 0 0]
+    }
+    midPoint		    [1226.5906 1503.0287]
+    chart		    2
+    linkNode		    [51 154 0]
+    dataLimits		    [1226.475 1274.591 1481.35 1527.108]
+    subviewer		    34
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    442
+  }
+  instance {
+    id			    156
+    name		    "Chart"
+    machine		    1
+    chart		    2
+  }
+  target {
+    id			    157
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

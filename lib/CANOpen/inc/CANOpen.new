@@ -1,0 +1,66 @@
+/***************************************************************
+* Project Name: E10 Electric
+*
+* Copyright 2005 Bobcat Company as an unpublished work.
+* All Rights Reserved.
+*
+* The information contained herein is confidential
+* property of Bobcat Company. The use, copying, transfer or
+* disclosure of such information is prohibited except
+* by express written agreement with Bobcat Company.
+*
+* First written on 6 August 2018
+*
+* Module Description:
+* The module broadcasts all the messages in a "CANOpen" message on the secondary
+* CAN bus.  It also handles all error code routines.
+***************************************************************/
+
+#ifndef _ap_bservice_CANOpen_h
+#define _ap_bservice_CANOpen_h
+
+// INCLUDES
+#include "hw_io.h"
+//#include "ap_bservice_CANOpenMsg.h"
+
+//******************************************************************************
+//              : 
+//  Description : Managing the CANOPen structure
+//  Notes       : 
+//******************************************************************************
+//  hw_can_rxmsg              CANOpenRPDO1,
+//                            CANOpenRPDO2;
+//    CANOpenNTM* CANOpenNTMMsg =  new CANOpenNTM;  
+//    static CANOpenPDO       CANOpenPDOMsgNode8; 
+
+    uint16_t                prevTime,
+                            prevTime1;
+  
+//  uint8_t                   nodeID;
+//  CANOpenMsgRPDO1           RPDO1;  
+//  CANOpenMsgRPDO2           RPDO2;  
+//  CANOpenMsgTPDO1           TPDO1; 
+//  CANOpenMsgTPDO2           TPDO2;   
+  
+
+//  CANOpenManag(             void);
+  void Update(              void);  
+  void Initialize(          void);
+//  void sendTPDO1Msg(        void);
+//  void sendTPDO2Msg(        void);  
+
+//  void sendMsg(             hw_can_msg_t*); 
+//  uint16_t getRPDO_ID(      uint8_t,
+//                            uint8_t);
+//  uint16_t getTPDO_ID(      uint8_t,
+//                            uint8_t);
+//  uint16_t getGUARD_ID(     uint8_t);
+//  void addMsgHandler(       hw_can_rxmsg*);  
+
+//  void addRPDO1Msg(         uint8_t);
+//  void addRPDO2Msg(         uint8_t);
+//  void Msg2RPDO1(           hw_can_msg_t*);
+//  void Msg2RPDO2(           hw_can_msg_t*);
+};
+#endif
+

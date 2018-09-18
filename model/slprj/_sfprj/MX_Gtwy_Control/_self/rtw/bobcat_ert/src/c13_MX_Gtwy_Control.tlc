@@ -1,0 +1,102 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c13_MX_Gtwy_Control"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c13_MX_Gtwy_Control"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_EXTREMELY_HIGH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.EXTREMELY_HIGH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_HIGH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.HIGH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ALTERNATOR_HIGH"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.ALTERNATOR_HIGH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_NORMAL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.NORMAL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_LOW"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.LOW"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ALTERNATOR_LOW"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.ALTERNATOR_LOW"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_EXTREMELY_LOW"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "NORMAL.EXTREMELY_LOW"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_OORL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "OORL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debounceCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debounceCount"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

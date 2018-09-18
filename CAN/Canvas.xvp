@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Canvas">
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl24" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl24</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">195, 48</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_LHJoystick_RH;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">26</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl23" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl23</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">173, 48</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_LHJoystick_LH;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">25</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ProgressBarControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="ProgressBarControl1" Children="Controls" ControlName="Progress Bar">
+      <Property Name="Name">ProgressBarControl1</Property>
+      <Property Name="Size">74, 16</Property>
+      <Property Name="Location">436, 48</Property>
+      <Property Name="OriginValue">160</Property>
+      <Property Name="Alignment">RightBottom</Property>
+      <Property Name="Maximum">160</Property>
+      <Property Name="Minimum">150</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="ValueSize">28, 23</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;sld01;0;CAN1;CAN1;-1</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl21" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl21</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">250, 48</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_LHJoystick_Up;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">24</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl22" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl22</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">250, 83</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_LHJoystick_Dw;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">23</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl20" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl20</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">306, 304</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_03;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">22</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl19" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl19</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">462, 83</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_RHJoystick_Trigger;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">21</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl18" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl18</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">277, 304</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_04;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">20</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl17" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl17</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">250, 304</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_05;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">19</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl3" Children="Controls" ControlName="Input/Output Box 2">
+      <Property Name="Name">TextBoxControl3</Property>
+      <Property Name="Size">236, 22</Property>
+      <Property Name="Location">156, 226</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="ValueDecimalPlaces">0</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Decimal</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmUpperFont">Microsoft Sans Serif, 7.8pt</Property>
+      <Property Name="AlarmGeneralSettings">1;0;0;0</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">DWORD1:</Property>
+      <Property Name="AlarmLowerFont">Microsoft Sans Serif, 7.8pt</Property>
+      <Property Name="DescriptionSize">51, 18</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg_0000;DWORD1;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">18</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl2" Children="Controls" ControlName="Input/Output Box 2">
+      <Property Name="Name">TextBoxControl2</Property>
+      <Property Name="Size">231, 22</Property>
+      <Property Name="Location">161, 203</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="ValueDecimalPlaces">0</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Decimal</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmUpperFont">Microsoft Sans Serif, 7.8pt</Property>
+      <Property Name="AlarmGeneralSettings">1;0;0;0</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">DWORD:</Property>
+      <Property Name="AlarmLowerFont">Microsoft Sans Serif, 7.8pt</Property>
+      <Property Name="DescriptionSize">46, 18</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg_0000;DWORD;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">17</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl9" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl9</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">193, 339</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_15;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">15</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl10" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl10</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">166, 339</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_16;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">14</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl11" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl11</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">250, 339</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_13;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">13</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl12" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl12</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">223, 339</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_14;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">12</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl13" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl13</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">304, 339</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_11;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">11</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl14" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl14</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">277, 339</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_12;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">10</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl15" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl15</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">358, 339</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_09;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">9</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl16" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl16</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">331, 339</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_10;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">8</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl5" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl5</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">331, 304</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_02;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">7</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl6" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl6</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">360, 304</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_01;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">6</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl7" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl7</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">515, 48</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_RHJoystick_Speed;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">5</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl8" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl8</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">223, 304</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_06;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">4</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl3" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl3</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">409, 48</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_RHJoystick_Up;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">3</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl4" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl4</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">409, 83</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_RHJoystick_Dw;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">2</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl2" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl2</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">166, 304</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_08;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">1</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=8.0.35.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl1" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl1</Property>
+      <Property Name="Size">23, 30</Property>
+      <Property Name="Location">195, 304</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="IsButton">True</Property>
+      <Property Name="SymbolConfiguration">4;2;CANdb1;Auxiliary;TestMsg;btn_07;0;CAN1;CAN1;-1</Property>
+      <Property Name="TabIndex">0</Property>
+      <Property Name="ReadOnlyControl">True</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">613, 400</Property>
+  </Object>
+</Panel>

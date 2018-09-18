@@ -1,0 +1,57 @@
+
+//DG256 memory map...
+
+NAMES
+
+END
+
+SECTIONS
+      /* List of all sections specified on the "Build options" tab */
+      // internal RAM
+      
+      RAM         = READ_WRITE   0x1000 TO 0x3FEF;
+                                                // 0x3FF0->reserved for future use
+                                                // 0x3FFA
+                                                // 0x3FFB -reserved for hw_can_term_state  
+                                                // 0x3FFC->reserved for pvector_base
+                                                // 0x3FFD
+                                                // 0x3FFE -reserved for bb_smode
+                                                // 0x3FFF -reserved for ap_smode
+    
+      ROM_4000    =  READ_ONLY  0x00006000 TO 0x00007F7F; //0x4200 to 0x5FFF constant data
+      ROM_PAGE30  =  READ_ONLY  0x00308000 TO 0x0030BFFF;
+      ROM_PAGE31  =  READ_ONLY  0x00318000 TO 0x0031BFFF;
+      ROM_PAGE32  =  READ_ONLY  0x00328000 TO 0x0032BFFF;
+      ROM_PAGE33  =  READ_ONLY  0x00338000 TO 0x0033BFFF;
+      ROM_PAGE34  =  READ_ONLY  0x00348000 TO 0x0034BFFF;
+      ROM_PAGE35  =  READ_ONLY  0x00358000 TO 0x0035BFFF;
+      ROM_PAGE36  =  READ_ONLY  0x00368000 TO 0x0036BFFF;      
+      ROM_PAGE37  =  READ_ONLY  0x00378000 TO 0x0037BFFF;
+      ROM_PAGE38  =  READ_ONLY  0x00388000 TO 0x0038BFFF;
+      ROM_PAGE39  =  READ_ONLY  0x00398000 TO 0x0039BFFF;
+      ROM_PAGE3A  =  READ_ONLY  0x003A8000 TO 0x003ABFFF;
+      ROM_PAGE3B  =  READ_ONLY  0x003B8000 TO 0x003BBFFF;
+      //ROM_PAGE3C  =  READ_ONLY  0x003C8000 TO 0x003CBFFD; //Reserved for ROM tables
+      //ROM_PAGE3D  =  READ_ONLY  0x003D8000 TO 0x003DBFFF; //Constant Data Tables
+END
+
+
+
+PLACEMENT
+      DEFAULT_RAM           INTO RAM;
+      DEFAULT_ROM           INTO ROM_PAGE30, ROM_PAGE31, ROM_PAGE32, ROM_PAGE33,
+                                 ROM_PAGE34, ROM_PAGE35, ROM_PAGE36, ROM_PAGE37,
+                                 ROM_PAGE38, ROM_PAGE39, ROM_PAGE3A, ROM_PAGE3B;
+      
+      _PRESTART, STARTUP,
+      ROM_VAR, STRINGS,
+      NON_BANKED, COPY      INTO ROM_4000;
+      
+
+
+END
+
+STACKSIZE 0x0400                 // Size of the system stack
+
+HEXFILE   ED1163.abs.s19  // add this "hex" file to the executable created
+HEXFILE   control_id.abs.s19  // add this "hex" file to the executable created

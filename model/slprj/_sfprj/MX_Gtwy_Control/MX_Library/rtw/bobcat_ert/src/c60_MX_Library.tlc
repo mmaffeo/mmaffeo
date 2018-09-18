@@ -1,0 +1,53 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   5 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c60_MX_Library"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_diagnostics"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "diagnostics"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "db_cnt"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "diagnostics.db_cnt"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "db_state"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "diagnostics.db_state"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "db_limit"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "diagnostics.db_limit"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

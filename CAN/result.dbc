@@ -1,0 +1,970 @@
+VERSION "created by Milan Hutera"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Auxiliary PTOLKeypad Drive Primary ECU WorkGrp ServiceTool Joystick Display
+VAL_TABLE_ CAN_Functions 8193 "Custom Function CAN20 Type 1" 1537 "Custom Function CAN06 Type 1" 769 "Custom Function CAN03 Type 1" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ btn_LHJoystick_RH : 0|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_LH : 0|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ sld01 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_RHJoystick_Dw : 0|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_Up : 0|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_RHJoystick_Trigger : 0|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_RHJoystick_Speed : 0|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_Dw : 0|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_16 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_15 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_14 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_13 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_12 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_11 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_10 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_09 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_RHJoystick_Up : 0|1@1+ (1,0) [0|0] "-" Vector__XXX
+
+BO_ 2566862308 AuxControls: 8 Vector__XXX
+ SG_ btn_LHJoystick_RH : 22|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_LH : 20|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ sld01 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_RHJoystick_Dw : 27|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_Up : 25|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_RHJoystick_Trigger : 28|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_RHJoystick_Speed : 59|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_Dw : 24|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_RHJoystick_Up : 26|1@1+ (1,0) [0|0] "-" Vector__XXX
+
+BO_ 2566914020 LegacyMessaggesPrior6: 8 Vector__XXX
+ SG_ btn_08 m18436 : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_07 m18436 : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_06 m8194 : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_05 m8194 : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANLegacyFunctionsSelector M : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ btn_04 m8193 : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_03 m8193 : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_02 m259 : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_01 m259 : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566869988 AuxControlsTX: 8 Vector__XXX
+
+BO_ 2499805104 TestMsg_0000: 8 Auxiliary
+ SG_ DWORD1 : 32|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DWORD : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566849079 KeypadPress1: 6 PTOLKeypad
+ SG_ key9 : 16|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ key8 : 14|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ EngineStart : 0|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ key3 : 4|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ Stop : 2|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ key6 : 10|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ key4 : 6|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ Beacon : 12|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ WorkLight : 8|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ HandThrottle : 32|10@1+ (1,0) [0|1023] ""  Primary,WorkGrp
+ SG_ key12 : 22|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ key11 : 20|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ key10 : 18|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+
+BO_ 2566860720 BCT_GAU: 7 Primary
+ SG_ Gauge4 : 24|8@1+ (1,0) [0|255] ""  Display
+ SG_ engineCoolantTemp : 0|8@1+ (1,0) [0|255] ""  Display
+ SG_ hydraulicOilTemperature : 40|8@1+ (1,0) [0|255] ""  Display
+ SG_ Unused : 48|8@1+ (1,0) [0|255] ""  Display
+ SG_ hydraulicChargePressure : 16|8@1+ (1,0) [0|255] ""  Display
+ SG_ fuelLevelGauge : 8|8@1+ (0.4,0) [0|102] ""  Display
+ SG_ engineOilPressure : 32|8@1+ (1,0) [0|255] ""  Display
+
+BO_ 2561030064 SAE_AUXIO3: 8 Primary
+ SG_ Button12_Right : 10|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button15_Right : 28|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button16_Center : 32|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button17_Right : 40|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button20_Right : 58|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button11_Right : 4|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button14_Center : 20|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button14_Left : 18|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button19_Left : 48|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button18_Center : 44|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button11_Left : 0|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Unused : 60|4@1+ (1,0) [0|15] ""  PTOLKeypad
+ SG_ Button11_Center : 2|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button17_Left : 36|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button13_Center : 14|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button18_Right : 46|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button15_Left : 24|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button14_Right : 22|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button13_Left : 12|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button16_Right : 34|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button12_Left : 6|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button19_Right : 52|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button19_Center : 50|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button18_Left : 42|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button16_Left : 30|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button17_Center : 38|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button12_Center : 8|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button20_Center : 56|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button20_Left : 54|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button13_Right : 16|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button15_Center : 26|2@1+ (1,0) [0|0] ""  PTOLKeypad
+
+BO_ 2566860208 BCT_IND: 6 Primary
+ SG_ DPFInhibit : 46|2@1+ (1,0) [0|0] ""  Display
+ SG_ DEFGreen4 : 28|2@1+ (1,0) [0|0] ""  Display
+ SG_ SeatBelt : 14|2@1+ (1,0) [0|0] ""  Display
+ SG_ HydraulicWarning : 4|2@1+ (1,0) [0|0] ""  Display
+ SG_ DEFGreen1 : 34|2@1+ (1,0) [0|0] ""  Display
+ SG_ Battery : 12|2@1+ (1,0) [0|0] ""  Display
+ SG_ DEFRed1 : 40|2@1+ (1,0) [0|0] ""  Display
+ SG_ EngineCoolantTempSw : 8|2@1+ (1,0) [0|0] ""  Display
+ SG_ DPFActive : 44|2@1+ (1,0) [0|0] ""  Display
+ SG_ DEFYellow : 36|2@1+ (1,0) [0|0] ""  Display
+ SG_ ParkBrake : 10|2@1+ (1,0) [0|0] ""  Display
+ SG_ DiffLock : 16|2@1+ (1,0) [0|0] ""  Display
+ SG_ GeneralWarning : 0|2@1+ (1,0) [0|0] ""  Display
+ SG_ BoomFloat : 24|2@1+ (1,0) [0|0] ""  Display
+ SG_ RideControle : 26|2@1+ (1,0) [0|0] ""  Display
+ SG_ EngineWarning : 6|2@1+ (1,0) [0|0] ""  Display
+ SG_ Fuel : 18|2@1+ (1,0) [0|0] ""  Display
+ SG_ DEFGreen3 : 30|2@1+ (1,0) [0|0] ""  Display
+ SG_ HEST : 42|2@1+ (1,0) [0|0] ""  Display
+ SG_ DEFGreen2 : 32|2@1+ (1,0) [0|0] ""  Display
+
+BO_ 2566847664 SAE_DD: 8 Primary
+ SG_ CargoAmbientTemperature : 32|16@1+ (1,0) [0|65535] ""  ECU
+ SG_ WasherFluidLevel : 0|8@1+ (1,0) [0|255] ""  ECU
+ SG_ Unused : 56|8@1+ (1,0) [0|255] ""  ECU
+ SG_ FuelLevel1 : 8|8@1+ (0.4,0) [0|100] ""  ECU
+ SG_ FuelLevel2 : 48|8@1+ (0.4,0) [0|100] ""  ECU
+ SG_ EngineOilFileterDifferential : 24|8@1+ (1,0) [0|255] ""  ECU
+ SG_ EngineFuelFilterDifferential : 16|8@1+ (1,0) [0|255] ""  ECU
+
+BO_ 2565865904 EBC1: 8 Primary
+ SG_ SrcAddrssOfCntrllngDvcFrBrkeCtrl : 48|8@1+ (1,0) [0|255] ""  ECU
+ SG_ ASROffroadSwitch : 18|2@1+ (1,0) [0|0] ""  ECU
+ SG_ RemoteAccelEnableSwitch : 30|2@1+ (1,0) [0|0] ""  ECU
+ SG_ BrakePedalPos : 8|8@1+ (0.4,0) [0|100] ""  ECU
+ SG_ AntiLockBrakingActive : 4|2@1+ (1,0) [0|0] ""  ECU
+ SG_ EBSBrakeSwitch : 6|2@1+ (1,0) [0|0] ""  ECU
+ SG_ ATC_ASRInformationSignal : 46|2@1+ (1,0) [0|0] ""  ECU
+ SG_ TrctrMntdTrailerABSWarningSignal : 62|2@1+ (1,0) [0|0] ""  ECU
+ SG_ ASREngCtrlActive : 0|2@1+ (1,0) [0|0] ""  ECU
+ SG_ ASRBrakeCtrlActive : 2|2@1+ (1,0) [0|0] ""  ECU
+ SG_ ABS_EBSAmberWarningSignal : 44|2@1+ (1,0) [0|0] ""  ECU
+ SG_ EngRetarderSelection : 32|8@1+ (0.4,0) [0|100] ""  ECU
+ SG_ EBSRedWarningSignal : 42|2@1+ (1,0) [0|0] ""  ECU
+ SG_ ABSFullyOperational : 40|2@1+ (1,0) [0|0] ""  ECU
+ SG_ EngAuxShutdownSwitch : 28|2@1+ (1,0) [0|0] ""  ECU
+ SG_ ASRHillHolderSwitch : 20|2@1+ (1,0) [0|0] ""  ECU
+ SG_ TractionCtrlOverrideSwitch : 22|2@1+ (1,0) [0|0] ""  ECU
+ SG_ ABSOffroadSwitch : 16|2@1+ (1,0) [0|0] ""  ECU
+ SG_ HaltBrakeSwitch : 58|2@1+ (1,0) [0|0] ""  ECU
+ SG_ AccelInterlockSwitch : 24|2@1+ (1,0) [0|0] ""  ECU
+ SG_ EngDerateSwitch : 26|2@1+ (1,0) [0|0] ""  ECU
+ SG_ TrailerABSStatus : 60|2@1+ (1,0) [0|0] ""  ECU
+
+BO_ 2499805156 LegacyMessaggesPrior5: 8 Auxiliary
+ SG_ CANLegacyFunctionsSelector M : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ btn_LHJoystick_RH m262 : 22|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_LH m262 : 20|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ sld01 m262 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ btn_RHJoystick_Dw m262 : 27|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_Up m262 : 25|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_RHJoystick_Trigger m262 : 28|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_RHJoystick_Speed m262 : 59|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_LHJoystick_Dw m262 : 24|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ btn_RHJoystick_Up m262 : 26|1@1+ (1,0) [0|0] "-"  Primary
+
+BO_ 2561095600 SAE_AUXIO2: 8 Primary
+ SG_ Button6_Center : 32|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button4_Center : 20|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button1_Right : 4|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button10_Left : 54|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button8_Center : 44|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button3_Left : 12|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button8_Right : 46|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button6_Right : 34|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button7_Right : 40|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Unused : 60|4@1+ (1,0) [0|15] ""  PTOLKeypad
+ SG_ Button9_Right : 52|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button9_Center : 50|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button8_Left : 42|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ key5_Center : 26|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ workLight_Front : 24|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button6_Left : 30|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button3_Center : 14|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button4_Left : 18|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button7_Left : 36|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ workLight_Rear : 28|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ beacon : 38|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button2_Left : 6|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button2_Center : 8|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button10_Right : 58|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button1_Center : 2|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button3_Right : 16|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button4_Right : 22|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button10_Center : 56|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button1_Left : 0|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button2_Right : 10|2@1+ (1,0) [0|0] ""  PTOLKeypad
+ SG_ Button9_Left : 48|2@1+ (1,0) [0|0] ""  PTOLKeypad
+
+BO_ 2566890672 SMVCU: 8 Primary
+ SG_ PTO : 16|5@1+ (1,0) [0|31] ""  ECU
+ SG_ CrCtlDecl : 26|2@1+ (1,0) [0|3] ""  ECU
+ SG_ APP1Ext : 0|8@1+ (0.004,0) [0|1.02] ""  ECU
+ SG_ CheckSum : 60|4@1- (1,0) [0|15] ""  ECU
+ SG_ Counter : 56|4@1+ (1,0) [0|15] ""  ECU
+ SG_ BrkSwt : 12|2@1+ (1,0) [0|3] ""  ECU
+ SG_ CrCtlAccl : 30|2@1- (1,0) [0|3] ""  ECU
+ SG_ EngStrtrMtrRlyCtlRq : 48|2@1+ (1,0) [0|3] ""  ECU
+ SG_ CrCtlOff : 24|2@1+ (1,0) [0|3] ""  ECU
+ SG_ VehSpd : 32|16@1+ (1,0) [0|251] "kmph"  ECU
+ SG_ ParkBrkSwt : 50|2@1+ (1,0) [0|3] ""  ECU
+ SG_ CrCtlRes : 28|2@1- (1,0) [0|3] ""  ECU
+
+BO_ 2173693721 CCVS: 8 Drive
+ SG_ PBrkRelInhReq : 6|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ PTO_State : 48|5@1+ (1,0) [0|0] "-"  Primary
+ SG_ EngIdlDecSwt : 58|2@1+ (1,0) [0|3] "-"  Primary
+ SG_ vWheelBasedVehSpd : 8|16@1+ (0.00390625,0) [0|251] ""  Primary
+ SG_ TwoSpdAxlSwt : 0|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ CruiseControlSetSpeed : 40|8@1+ (1,0) [0|251] "km/h"  Primary
+ SG_ ShtDwnOvrdSwt : 62|2@1+ (1,0) [0|3] "-"  Primary
+ SG_ CoastDecSwt : 34|2@1+ (1,0) [0|3] "-"  Primary
+ SG_ BrkSwt : 28|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ ParkingBrakeSwt : 2|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ CruiseControlActive : 24|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ CruiseControlStates : 53|3@1+ (1,0) [0|0] "-"  Primary
+ SG_ CCSetSwt : 32|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ EngTstModeSwt : 60|2@1+ (1,0) [0|3] "-"  Primary
+ SG_ ResumeSwt : 36|2@1+ (1,0) [0|3] "-"  Primary
+ SG_ CCEnblSwt : 26|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ AccSwt : 38|2@1+ (1,0) [0|3] "-"  Primary
+ SG_ ClutchSwt : 30|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ CCPauseSwt : 4|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ EngIdlIncSwt : 56|2@1+ (1,0) [0|3] "-"  Primary
+
+BO_ 2173693504 Shutdown: 5 ECU
+ SG_ WaittoStartLmp : 24|2@1+ (1,0) [0|0] "-"  Primary
+ SG_ EngShutdown : 32|2@1+ (1,0) [0|0] "-"  Primary
+
+BO_ 2173693664 ET1: 4 ECU
+ SG_ EngineCoolantTemp : 0|8@1- (1,-40) [-40|210] "deg C"  Primary
+ SG_ EngineOilTemp : 16|16@1- (0.03125,-273) [-273|1735] ""  Primary
+ SG_ EngineFuelTemp : 8|8@1- (1,-40) [-40|210] "deg C"  Primary
+
+BO_ 2173693680 EFLP1: 8 ECU
+ SG_ EngineCoolantLevel : 56|8@1+ (0.4,0) [0|100] ""  Primary
+ SG_ EngineOilLevel : 16|8@1+ (0.4,0) [0|100] ""  Primary
+ SG_ EngineOilPressure : 24|8@1+ (4,0) [0|1000] ""  Primary
+ SG_ EngineFuelDeliveryPressure : 0|8@1+ (4,0) [0|1000] ""  Primary
+
+BO_ 2633927932 SAE_AAI: 7 WorkGrp
+ SG_ AuxTemp1 : 0|8@1+ (1,-40) [-40|210] "deg C"  Primary
+ SG_ AuxPress2 : 24|8@1+ (16,0) [0|4000] ""  Primary
+ SG_ HydraulicOilTemperature : 8|8@1+ (1,-40) [-40|210] "deg C"  Primary
+ SG_ AuxilaryLevel : 32|16@1+ (0.1,0) [0|6425.5] "mm"  Primary
+ SG_ AuxPress1 : 16|8@1+ (16,0) [0|4000] ""  Primary
+ SG_ RelativeHumidity : 48|8@1+ (0.4,0) [0|100] ""  Primary
+
+BO_ 2566861308 BCT_IND2: 4 WorkGrp
+ SG_ LowBeam : 2|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ Reverse : 20|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ DriveMode0 : 8|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ InstrumentIcon40 : 30|2@1+ (1,0) [0|3] ""  Primary,Display
+ SG_ Neutral : 18|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ DriveMode1 : 10|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ HighBeam : 0|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ DriveMode3 : 14|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ DriveMode2 : 12|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ InstrumentIcon39 : 28|2@1+ (1,0) [0|3] ""  Primary,Display
+ SG_ InstrumentIcon38 : 26|2@1+ (1,0) [0|3] ""  Primary,Display
+ SG_ Forward : 16|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ Flasher : 6|2@1+ (1,0) [0|0] ""  Primary,Display
+ SG_ InstrumentIcon37 : 24|2@1+ (1,0) [0|3] ""  Primary,Display
+ SG_ PreheatIndic : 22|2@1+ (1,0) [0|0] "-"  Primary,Display
+ SG_ PositionLi : 4|2@1+ (1,0) [0|0] ""  Primary,Display
+
+BO_ 2173698033 CAN03: 3 ServiceTool
+ SG_ EngineCranking : 8|2@1+ (1,0) [0|0] ""  Primary
+ SG_ EngineStop : 16|2@1+ (1,0) [0|0] ""  Primary
+
+BO_ 2173689234 EJM2: 8 Joystick
+ SG_ Counter : 56|8@1+ (1,0) [0|255] "-"  Primary,WorkGrp
+ SG_ RIGHT_ROCKER_NEUTRAL : 16|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ LEFT_ROCKER_POSITION_VALUE : 6|10@1+ (1,0) [0|102] "%"  Primary,WorkGrp
+ SG_ LEFT_ROCKER_NEUTRAL : 0|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ RIGHT_ROCKER_BACK : 18|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ LEFT_ROCKER_BACK : 2|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ RIGHT_ROCKER_FORWARD : 20|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ LEFT_ROCKER_FORWARD : 4|2@1+ (1,0) [0|0] ""  Primary,WorkGrp
+ SG_ RIGHT_ROCKER_POSITION_VALUE : 22|20@1+ (1,0) [0|102] "%"  Primary,WorkGrp
+
+BO_ 2173695618 BJM2: 8 Joystick
+ SG_ X_Axis_Neutral_Position_Status : 0|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ X_Axis_Lever_Left_Negative_Posi : 2|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Y_Axis_Position : 22|10@1+ (1,0) [0|1023] "-"  Primary,WorkGrp
+ SG_ Button2_Plus : 44|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Button3_Bucket : 42|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Y_Axis_Lever_Left_Negative_Posi : 18|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Button5_FNR_F : 54|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ X_Axis_Lever_Right_Postive_Posi : 4|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Counter : 56|8@1+ (1,0) [0|255] "-"  Primary,WorkGrp
+ SG_ X_Axis_Position : 6|10@1+ (1,0) [0|1023] "-"  Primary,WorkGrp
+ SG_ Y_Axis_Neutral_Position_Status : 16|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Y_Axis_Lever_Right_Postive_Posi : 20|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Button1_Minus : 46|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Button4 : 40|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Button7_FNR_R : 50|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+ SG_ Not_Defined : 32|4@1+ (1,0) [0|15] "-"  Primary,WorkGrp
+ SG_ Button6_FNR_N : 52|2@1+ (1,0) [0|3] "-"  Primary,WorkGrp
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 btn_LHJoystick_RH "Test";
+CM_ SG_ 3221225472 btn_LHJoystick_LH "Test";
+CM_ SG_ 3221225472 btn_RHJoystick_Dw "Test";
+CM_ SG_ 3221225472 btn_LHJoystick_Up "Test";
+CM_ SG_ 3221225472 btn_RHJoystick_Trigger "Test";
+CM_ SG_ 3221225472 btn_RHJoystick_Speed "Test";
+CM_ SG_ 3221225472 btn_LHJoystick_Dw "Test";
+CM_ SG_ 3221225472 btn_RHJoystick_Up "Test";
+CM_ BO_ 2566862308 "TestMsg for Massimo";
+CM_ SG_ 2566862308 btn_LHJoystick_RH "Test";
+CM_ SG_ 2566862308 btn_LHJoystick_LH "Test";
+CM_ SG_ 2566862308 btn_RHJoystick_Dw "Test";
+CM_ SG_ 2566862308 btn_LHJoystick_Up "Test";
+CM_ SG_ 2566862308 btn_RHJoystick_Trigger "Test";
+CM_ SG_ 2566862308 btn_RHJoystick_Speed "Test";
+CM_ SG_ 2566862308 btn_LHJoystick_Dw "Test";
+CM_ SG_ 2566862308 btn_RHJoystick_Up "Test";
+CM_ BO_ 2566914020 "TestMsg for Massimo";
+CM_ SG_ 2566914020 CANLegacyFunctionsSelector "Use trhis value to determine which function is used in the format 0xTTFF where 0xFF is the function and  0xTT is the type";
+CM_ BO_ 2499805104 "TestMsg for Massimo";
+CM_ SG_ 2566849079 key9 "press key 9";
+CM_ SG_ 2566849079 key8 "press key 8";
+CM_ SG_ 2566849079 EngineStart "press key 1";
+CM_ SG_ 2566849079 key3 "press key 3";
+CM_ SG_ 2566849079 Stop "press key 2";
+CM_ SG_ 2566849079 key6 "press key 6";
+CM_ SG_ 2566849079 key4 "press key 4";
+CM_ SG_ 2566849079 Beacon "press key 7";
+CM_ SG_ 2566849079 WorkLight "press key 5";
+CM_ SG_ 2566849079 HandThrottle "Hand throttle";
+CM_ SG_ 2566849079 key12 "press key 12";
+CM_ SG_ 2566849079 key11 "press key 11";
+CM_ SG_ 2566849079 key10 "press key 10";
+CM_ BO_ 2566860720 "Guage messages";
+CM_ SG_ 2566860720 Gauge4 "Gauge4 not Used";
+CM_ SG_ 2566860720 engineCoolantTemp "Gauge1 Engine Coolant Temperature";
+CM_ SG_ 2566860720 hydraulicOilTemperature "Gauge6 Hydraulic Oil Temperature";
+CM_ SG_ 2566860720 Unused "Unused";
+CM_ SG_ 2566860720 hydraulicChargePressure "Gauge3 Hydraulic Charge Pressure";
+CM_ SG_ 2566860720 fuelLevelGauge "Gauge2 Fuel Level Gauge";
+CM_ SG_ 2566860720 engineOilPressure "Gauge5 Engine Oil Pressure";
+CM_ BO_ 2561030064 "Keypad led indicators";
+CM_ SG_ 2561030064 Button12_Right "keypad indicator";
+CM_ SG_ 2561030064 Button15_Right "keypad indicator";
+CM_ SG_ 2561030064 Button16_Center "keypad indicator";
+CM_ SG_ 2561030064 Button17_Right "keypad indicator";
+CM_ SG_ 2561030064 Button20_Right "keypad indicator";
+CM_ SG_ 2561030064 Button11_Right "keypad indicator";
+CM_ SG_ 2561030064 Button14_Center "keypad indicator";
+CM_ SG_ 2561030064 Button14_Left "keypad indicator";
+CM_ SG_ 2561030064 Button19_Left "keypad indicator";
+CM_ SG_ 2561030064 Button18_Center "keypad indicator";
+CM_ SG_ 2561030064 Button11_Left "keypad indicator";
+CM_ SG_ 2561030064 Unused "keypad indicator";
+CM_ SG_ 2561030064 Button11_Center "keypad indicator";
+CM_ SG_ 2561030064 Button17_Left "keypad indicator";
+CM_ SG_ 2561030064 Button13_Center "keypad indicator";
+CM_ SG_ 2561030064 Button18_Right "keypad indicator";
+CM_ SG_ 2561030064 Button15_Left "keypad indicator";
+CM_ SG_ 2561030064 Button14_Right "keypad indicator";
+CM_ SG_ 2561030064 Button13_Left "keypad indicator";
+CM_ SG_ 2561030064 Button16_Right "keypad indicator";
+CM_ SG_ 2561030064 Button12_Left "keypad indicator";
+CM_ SG_ 2561030064 Button19_Right "keypad indicator";
+CM_ SG_ 2561030064 Button19_Center "keypad indicator";
+CM_ SG_ 2561030064 Button18_Left "keypad indicator";
+CM_ SG_ 2561030064 Button16_Left "keypad indicator";
+CM_ SG_ 2561030064 Button17_Center "keypad indicator";
+CM_ SG_ 2561030064 Button12_Center "keypad indicator";
+CM_ SG_ 2561030064 Button20_Center "keypad indicator";
+CM_ SG_ 2561030064 Button20_Left "keypad indicator";
+CM_ SG_ 2561030064 Button13_Right "keypad indicator";
+CM_ SG_ 2561030064 Button15_Center "keypad indicator";
+CM_ SG_ 2566860208 DPFInhibit "Instrument Icon 24 DPF Inhibit";
+CM_ SG_ 2566860208 DEFGreen4 "Instrument Icon 15 DEF Green 4";
+CM_ SG_ 2566860208 SeatBelt "Instrument Icon 8 SeatBelt";
+CM_ SG_ 2566860208 HydraulicWarning "Instrument Icon 3 Hydraulic Warning";
+CM_ SG_ 2566860208 DEFGreen1 "Instrument Icon 18 DEF Green 1";
+CM_ SG_ 2566860208 Battery "Instrument Icon 7 Battery";
+CM_ SG_ 2566860208 DEFRed1 "Instrument Icon 21 DEF Red 1";
+CM_ SG_ 2566860208 EngineCoolantTempSw "Instrument Icon 5 Engine Coolant Temperature";
+CM_ SG_ 2566860208 DPFActive "Instrument Icon 23 DPF Active ";
+CM_ SG_ 2566860208 DEFYellow "Instrument Icon 20 DEF Yellow ";
+CM_ SG_ 2566860208 ParkBrake "Instrument Icon 12 Park Brake ";
+CM_ SG_ 2566860208 DiffLock "Instrument Icon 9 Diff Lock";
+CM_ SG_ 2566860208 GeneralWarning "Instrument Icon 1 General Warning";
+CM_ SG_ 2566860208 BoomFloat "Instrument Icon 13 Boom Float";
+CM_ SG_ 2566860208 RideControle "Instrument Icon 14 Ride Contro";
+CM_ SG_ 2566860208 EngineWarning "Instrument Icon 2 Engine Warning";
+CM_ SG_ 2566860208 Fuel "Instrument Icon 10 Fuel";
+CM_ SG_ 2566860208 DEFGreen3 "Instrument Icon 16 DEF Green 3";
+CM_ SG_ 2566860208 HEST "Instrument Icon 22 HEST";
+CM_ SG_ 2566860208 DEFGreen2 "Instrument Icon 17 DEF Green 2";
+CM_ SG_ 2566847664 WasherFluidLevel "Washer flued level";
+CM_ SG_ 2566847664 FuelLevel1 "Fuel level";
+CM_ SG_ 2565865904 SrcAddrssOfCntrllngDvcFrBrkeCtrl "The source address of the SAE J1939 device currently controlling the brake system. Its value may be the source address";
+CM_ SG_ 2565865904 ASROffroadSwitch "Switch signal which indicates the position of the ASR off-road switch.";
+CM_ SG_ 2565865904 RemoteAccelEnableSwitch "Switch signal which indicates that the remote accelerator has been enabled and controls the engine.";
+CM_ SG_ 2565865904 BrakePedalPos "Ratio of brake pedal position to maximum pedal position. Used for electric brake applications. 0% means no braking.";
+CM_ SG_ 2565865904 AntiLockBrakingActive "State signal which indicates that the ABS is active. The signal is set active when wheel brake pressure actually starts to";
+CM_ SG_ 2565865904 EBSBrakeSwitch "Switch signal which indicates that the brake pedal is being pressed. The EBS brake switch is independent of the brake";
+CM_ SG_ 2565865904 ATC_ASRInformationSignal "This parameter commands the ATC/ASR driver information signal| for example a dash lamp.";
+CM_ SG_ 2565865904 TrctrMntdTrailerABSWarningSignal "This parameter commands the tractor-mounted trailer ABS optical warning signal.";
+CM_ SG_ 2565865904 ASREngCtrlActive "State signal which indicates that ASR engine control has been commanded to be active. Active means that ASR actually";
+CM_ SG_ 2565865904 ASRBrakeCtrlActive "State signal which indicates that ASR brake control is active. Active means that ASR actually controls wheel brake";
+CM_ SG_ 2565865904 ABS_EBSAmberWarningSignal "This parameter commands the ABS/EBS amber/yellow optical warning signal";
+CM_ SG_ 2565865904 EngRetarderSelection "The position of the operator controlled selector| expressed as a percentage and determined by the ratio of the current";
+CM_ SG_ 2565865904 EBSRedWarningSignal "This parameter commands the EBS red optical warning signal";
+CM_ SG_ 2565865904 ABSFullyOperational "Signal which indicates whether an ABS system is fully operational or whether its functionality is reduced by a defect or by";
+CM_ SG_ 2565865904 EngAuxShutdownSwitch "Switch signal which requests that all engine fueling stop.";
+CM_ SG_ 2565865904 ASRHillHolderSwitch "Switch signal which indicates the position of the ASR hill holder switch.";
+CM_ SG_ 2565865904 TractionCtrlOverrideSwitch "Switch signal which indicates the position of the traction control override switch. The traction control override signal";
+CM_ SG_ 2565865904 ABSOffroadSwitch "Switch signal which indicates the position of the ABS off-road switch.";
+CM_ SG_ 2565865904 HaltBrakeSwitch "Switch signal which indicates the position of the halt brake switch.";
+CM_ SG_ 2565865904 AccelInterlockSwitch "Switch signal used to disable the accelerator and remote accelerator inputs| causing the engine to return to idle.";
+CM_ SG_ 2565865904 EngDerateSwitch "Switch signal used to activate the torque limiting feature of the engine. The specific nature of torque limiting should be";
+CM_ SG_ 2565865904 TrailerABSStatus "State signal which indicates that ABS in the trailer is actively controlling the brakes. A message is sent to the tractor from";
+CM_ BO_ 2499805156 "TestMsg for Massimo";
+CM_ SG_ 2499805156 CANLegacyFunctionsSelector "Use this value to determine which function is used in the format 0xTTUU where UU is the function and  TT is the type in hex ";
+CM_ SG_ 2499805156 btn_LHJoystick_RH "Test";
+CM_ SG_ 2499805156 btn_LHJoystick_LH "Test";
+CM_ SG_ 2499805156 btn_RHJoystick_Dw "Test";
+CM_ SG_ 2499805156 btn_LHJoystick_Up "Test";
+CM_ SG_ 2499805156 btn_RHJoystick_Trigger "Test";
+CM_ SG_ 2499805156 btn_RHJoystick_Speed "Test";
+CM_ SG_ 2499805156 btn_LHJoystick_Dw "Test";
+CM_ SG_ 2499805156 btn_RHJoystick_Up "Test";
+CM_ BO_ 2561095600 "Keypad led indicators";
+CM_ SG_ 2561095600 Button6_Center "key 6 center indicator";
+CM_ SG_ 2561095600 Button4_Center "key 4 center indicator";
+CM_ SG_ 2561095600 Button1_Right "key 1 right indicator";
+CM_ SG_ 2561095600 Button10_Left "keypad indicator";
+CM_ SG_ 2561095600 Button8_Center "key 8 center indicator";
+CM_ SG_ 2561095600 Button3_Left "key 3 left indicator";
+CM_ SG_ 2561095600 Button8_Right "key 8 right indicator";
+CM_ SG_ 2561095600 Button6_Right "key 6 right indicator";
+CM_ SG_ 2561095600 Button7_Right "key 7 right indicator";
+CM_ SG_ 2561095600 Unused "keypad indicator";
+CM_ SG_ 2561095600 Button9_Right "keypad indicator";
+CM_ SG_ 2561095600 Button9_Center "keypad indicator";
+CM_ SG_ 2561095600 Button8_Left "key 8 left indicator";
+CM_ SG_ 2561095600 key5_Center "key 5 center indicator";
+CM_ SG_ 2561095600 workLight_Front "key 5 left indicator";
+CM_ SG_ 2561095600 Button6_Left "key 6 left indicator";
+CM_ SG_ 2561095600 Button3_Center "key 3 center indicator";
+CM_ SG_ 2561095600 Button4_Left "key 4 left indicator";
+CM_ SG_ 2561095600 Button7_Left "key 7 left indicator";
+CM_ SG_ 2561095600 workLight_Rear "key 5 right indicator";
+CM_ SG_ 2561095600 beacon "key 7 center indicator";
+CM_ SG_ 2561095600 Button2_Left "key 2 left indicator";
+CM_ SG_ 2561095600 Button2_Center "key 2 center indicator";
+CM_ SG_ 2561095600 Button10_Right "keypad indicator";
+CM_ SG_ 2561095600 Button1_Center "key 1 center indicator";
+CM_ SG_ 2561095600 Button3_Right "key 3 right indicator";
+CM_ SG_ 2561095600 Button4_Right "key 4 right indicator";
+CM_ SG_ 2561095600 Button10_Center "keypad indicator";
+CM_ SG_ 2561095600 Button1_Left "key 1 left indicator";
+CM_ SG_ 2561095600 Button2_Right "key 2 right indicator";
+CM_ SG_ 2561095600 Button9_Left "keypad indicator";
+CM_ SG_ 2566890672 APP1Ext "Throttle pedal";
+CM_ SG_ 2566890672 CheckSum "CheckSum byte";
+CM_ SG_ 2566890672 Counter "CheckSum byte";
+CM_ SG_ 2566890672 BrkSwt "Break Switch";
+CM_ SG_ 2566890672 VehSpd "Vehicle speed";
+CM_ SG_ 2566890672 ParkBrkSwt "Hand park break switch";
+CM_ SG_ 2173693721 PBrkRelInhReq "Park Brake Release Inhibit Request";
+CM_ SG_ 2173693721 PTO_State "PTO Governor State";
+CM_ SG_ 2173693721 EngIdlDecSwt "Engine Idle Decrement Swtich";
+CM_ SG_ 2173693721 vWheelBasedVehSpd "Wheel-Based Vehicle Speed";
+CM_ SG_ 2173693721 TwoSpdAxlSwt "Two Speed Axle Switch";
+CM_ SG_ 2173693721 CruiseControlSetSpeed "Cuise Control Set Speed";
+CM_ SG_ 2173693721 ShtDwnOvrdSwt "Engine Shutdown Override Switch";
+CM_ SG_ 2173693721 CoastDecSwt "Cruise Control Coast (Decelerate) Switch";
+CM_ SG_ 2173693721 BrkSwt "Brake Switch";
+CM_ SG_ 2173693721 ParkingBrakeSwt "Parking Brake Switch";
+CM_ SG_ 2173693721 CruiseControlActive "Cruise Control Active";
+CM_ SG_ 2173693721 CruiseControlStates "Cruise Control States";
+CM_ SG_ 2173693721 CCSetSwt "Cruise Control Set Switch";
+CM_ SG_ 2173693721 EngTstModeSwt "Engine Test Mode Switch";
+CM_ SG_ 2173693721 ResumeSwt "Cruise Control Resume Switch";
+CM_ SG_ 2173693721 CCEnblSwt "Cruise Control Enable Switch";
+CM_ SG_ 2173693721 AccSwt "Cruise Control Accelerate Switch";
+CM_ SG_ 2173693721 ClutchSwt "Clutch Switch";
+CM_ SG_ 2173693721 CCPauseSwt "Cruise Control Pause Switch";
+CM_ SG_ 2173693721 EngIdlIncSwt "Engine Idle Increment Switch";
+CM_ BO_ 2173693504 "Engine info";
+CM_ SG_ 2173693504 WaittoStartLmp "Preheat indicator";
+CM_ SG_ 2173693664 EngineCoolantTemp "Engine coolant temperature";
+CM_ SG_ 2173693664 EngineOilTemp "Engine Oil temperature";
+CM_ SG_ 2173693664 EngineFuelTemp "Engine fuel temperature";
+CM_ SG_ 2173693680 EngineCoolantLevel "Engine coolant level";
+CM_ SG_ 2173693680 EngineOilLevel "Engine oil level";
+CM_ SG_ 2173693680 EngineOilPressure "Engine oil pressure";
+CM_ SG_ 2173693680 EngineFuelDeliveryPressure "Engine fuel delivery pressure";
+CM_ BO_ 2633927932 "Auxiliary Analog Information";
+CM_ SG_ 2633927932 AuxTemp1 "Auxilary Temperature 1 ";
+CM_ SG_ 2633927932 AuxPress2 "Auxilary Pressure #2 _Lift Base";
+CM_ SG_ 2633927932 HydraulicOilTemperature "Auxilary Temperature 2 ";
+CM_ SG_ 2633927932 AuxilaryLevel "Auxilary Level";
+CM_ SG_ 2633927932 AuxPress1 "Auxilary Pressure #1";
+CM_ SG_ 2633927932 RelativeHumidity "Relative Humidity";
+CM_ SG_ 2566861308 LowBeam "Instrument Icon 26 Road lights low beam status";
+CM_ SG_ 2566861308 Reverse "Instrument Icon 35 Reverse";
+CM_ SG_ 2566861308 DriveMode0 "Instrument Icon 29 Drive mode ";
+CM_ SG_ 2566861308 InstrumentIcon40 "Instrument Icon 40 ";
+CM_ SG_ 2566861308 Neutral "Instrument Icon 34 Neutral";
+CM_ SG_ 2566861308 DriveMode1 "Instrument Icon 30 Drive mode ";
+CM_ SG_ 2566861308 HighBeam "Instrument Icon 25 Road lights high beam status";
+CM_ SG_ 2566861308 DriveMode3 "Instrument Icon 32 Drive mode ";
+CM_ SG_ 2566861308 DriveMode2 "Instrument Icon 31 Drive mode ";
+CM_ SG_ 2566861308 InstrumentIcon39 "Instrument Icon 39 ";
+CM_ SG_ 2566861308 InstrumentIcon38 "Instrument Icon 38 ";
+CM_ SG_ 2566861308 Forward "Instrument Icon 33 Forward";
+CM_ SG_ 2566861308 Flasher "Instrument Icon 28 Flasher (Turn signal)";
+CM_ SG_ 2566861308 InstrumentIcon37 "Instrument Icon 37 ";
+CM_ SG_ 2566861308 PreheatIndic "Instrument Icon 36 Preheat indicator";
+CM_ SG_ 2566861308 PositionLi "Instrument Icon 27 PositionLi";
+CM_ BO_ 2173698033 "ServiceTool";
+CM_ SG_ 2173698033 EngineCranking "Engine Cranking";
+CM_ SG_ 2173698033 EngineStop "Engine Stop";
+CM_ SG_ 2173689234 RIGHT_ROCKER_NEUTRAL "Reports when the current joystick grip position is in the neutral position for that axis of travel. The neutral position";
+CM_ SG_ 2173689234 LEFT_ROCKER_POSITION_VALUE "The position of the joystick grip in the relative motion of travel from the neutral position. Position value of 0 is Neutral and";
+CM_ SG_ 2173689234 LEFT_ROCKER_NEUTRAL "Reports when the current joystick grip position is in the neutral position for that axis of travel. The neutral position";
+CM_ SG_ 2173689234 RIGHT_ROCKER_BACK "Reports when the current joystick grip position is on the negative travel side (back| left| counterclockwise| down) relative";
+CM_ SG_ 2173689234 LEFT_ROCKER_BACK "Reports when the current joystick grip position is on the negative travel side (back| left| counterclockwise| down) relative";
+CM_ SG_ 2173689234 RIGHT_ROCKER_FORWARD "Reports when the current joystick grip position is on the positive travel side (forward| right| clockwise| up) relative to the";
+CM_ SG_ 2173689234 LEFT_ROCKER_FORWARD "Reports when the current joystick grip position is on the positive travel side (forward| right| clockwise| up) relative to the";
+CM_ SG_ 2173689234 RIGHT_ROCKER_POSITION_VALUE "The position of the joystick grip in the relative motion of travel from the neutral position. Position value of 0 is Neutral and";
+CM_ SG_ 2173695618 Button2_Plus "upper right button with + symbol";
+CM_ SG_ 2173695618 Button3_Bucket "lower button with bucket symbol";
+CM_ SG_ 2173695618 Button5_FNR_F "FNR switch F state";
+CM_ SG_ 2173695618 Button1_Minus "upper left button with - symbol";
+CM_ SG_ 2173695618 Button4 "back side button";
+CM_ SG_ 2173695618 Button7_FNR_R "FNR switch R state";
+CM_ SG_ 2173695618 Button6_FNR_N "FNR switch N state";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","SendNow","IfActive","onRequest","Ident","counterValidator","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "Port_Primary" ENUM  "CAN_PORT_1","CAN_PORT_2","CAN_PORT_3","CAN_PORT_4","CAN_PORT_5","CAN_PORT_6","CAN_PORT_7","CAN_PORT_8","None";
+BA_DEF_ BO_  "Port_WorkGrp" ENUM  "CAN_PORT_1","CAN_PORT_2","CAN_PORT_3","CAN_PORT_4","CAN_PORT_5","CAN_PORT_6","CAN_PORT_7","CAN_PORT_8","None";
+BA_DEF_ BO_  "Port_PTOLKeypad" ENUM  "CAN_PORT_1","CAN_PORT_2","CAN_PORT_3","CAN_PORT_4","CAN_PORT_5","CAN_PORT_6","CAN_PORT_7","CAN_PORT_8","None";
+BA_DEF_ BO_  "Port_Display" ENUM  "CAN_PORT_1","CAN_PORT_2","CAN_PORT_3","CAN_PORT_4","CAN_PORT_5","CAN_PORT_6","CAN_PORT_7","CAN_PORT_8","None";
+BA_DEF_ BO_  "Port_ECU" ENUM  "CAN_PORT_1","CAN_PORT_2","CAN_PORT_3","CAN_PORT_4","CAN_PORT_5","CAN_PORT_6","CAN_PORT_7","CAN_PORT_8","None";
+BA_DEF_ BO_  "Port_Drive" ENUM  "CAN_PORT_1","CAN_PORT_2","CAN_PORT_3","CAN_PORT_4","CAN_PORT_5","CAN_PORT_6","CAN_PORT_7","CAN_PORT_8","None";
+BA_DEF_ BO_  "Port_ServiceTool" ENUM  "CAN_PORT_1","CAN_PORT_2","CAN_PORT_3","CAN_PORT_4","CAN_PORT_5","CAN_PORT_6","CAN_PORT_7","CAN_PORT_8","None";
+BA_DEF_ BO_  "Port_Joystick" ENUM  "CAN_PORT_1","CAN_PORT_2","CAN_PORT_3","CAN_PORT_4","CAN_PORT_5","CAN_PORT_6","CAN_PORT_7","CAN_PORT_8","None";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "Port_Primary" "None";
+BA_DEF_DEF_  "Port_WorkGrp" "None";
+BA_DEF_DEF_  "Port_PTOLKeypad" "None";
+BA_DEF_DEF_  "Port_Display" "None";
+BA_DEF_DEF_  "Port_ECU" "None";
+BA_DEF_DEF_  "Port_Drive" "None";
+BA_DEF_DEF_  "Port_ServiceTool" "None";
+BA_DEF_DEF_  "Port_Joystick" "None";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "DBName" "CWL";
+BA_ "NmStationAddress" BU_ Auxiliary 228;
+BA_ "NmStationAddress" BU_ PTOLKeypad 55;
+BA_ "NmStationAddress" BU_ Drive 9;
+BA_ "NmStationAddress" BU_ Primary 176;
+BA_ "NmStationAddress" BU_ ECU 0;
+BA_ "NmStationAddress" BU_ WorkGrp 252;
+BA_ "NmStationAddress" BU_ ServiceTool 1;
+BA_ "NmStationAddress" BU_ Joystick 2;
+BA_ "NmStationAddress" BU_ Display 65;
+BA_ "GenMsgSendType" BO_ 2566862308 1;
+BA_ "Port_Primary" BO_ 2566862308 1;
+BA_ "Port_WorkGrp" BO_ 2566862308 1;
+BA_ "GenMsgCycleTime" BO_ 2566862308 1000;
+BA_ "VFrameFormat" BO_ 2566862308 1;
+BA_ "GenMsgSendType" BO_ 2566914020 1;
+BA_ "Port_Primary" BO_ 2566914020 1;
+BA_ "Port_WorkGrp" BO_ 2566914020 1;
+BA_ "GenMsgCycleTime" BO_ 2566914020 1000;
+BA_ "VFrameFormat" BO_ 2566914020 1;
+BA_ "VFrameFormat" BO_ 2566869988 3;
+BA_ "VFrameFormat" BO_ 2499805104 1;
+BA_ "GenMsgSendType" BO_ 2499805104 1;
+BA_ "GenMsgCycleTime" BO_ 2499805104 1000;
+BA_ "Port_Primary" BO_ 2566849079 1;
+BA_ "Port_WorkGrp" BO_ 2566849079 1;
+BA_ "Port_PTOLKeypad" BO_ 2566849079 1;
+BA_ "GenMsgSendType" BO_ 2566849079 0;
+BA_ "GenMsgCycleTime" BO_ 2566849079 100;
+BA_ "VFrameFormat" BO_ 2566849079 3;
+BA_ "Port_Display" BO_ 2566860720 0;
+BA_ "Port_Primary" BO_ 2566860720 0;
+BA_ "GenMsgSendType" BO_ 2566860720 0;
+BA_ "GenMsgCycleTime" BO_ 2566860720 100;
+BA_ "VFrameFormat" BO_ 2566860720 3;
+BA_ "Port_PTOLKeypad" BO_ 2561030064 1;
+BA_ "Port_Primary" BO_ 2561030064 1;
+BA_ "GenMsgSendType" BO_ 2561030064 1;
+BA_ "GenMsgCycleTime" BO_ 2561030064 2500;
+BA_ "VFrameFormat" BO_ 2561030064 3;
+BA_ "Port_Display" BO_ 2566860208 0;
+BA_ "Port_Primary" BO_ 2566860208 0;
+BA_ "GenMsgSendType" BO_ 2566860208 0;
+BA_ "GenMsgCycleTime" BO_ 2566860208 100;
+BA_ "VFrameFormat" BO_ 2566860208 3;
+BA_ "Port_ECU" BO_ 2566847664 0;
+BA_ "Port_Primary" BO_ 2566847664 0;
+BA_ "GenMsgSendType" BO_ 2566847664 0;
+BA_ "GenMsgCycleTime" BO_ 2566847664 1000;
+BA_ "VFrameFormat" BO_ 2566847664 3;
+BA_ "Port_ECU" BO_ 2565865904 0;
+BA_ "Port_Primary" BO_ 2565865904 0;
+BA_ "GenMsgSendType" BO_ 2565865904 3;
+BA_ "GenMsgCycleTime" BO_ 2565865904 0;
+BA_ "VFrameFormat" BO_ 2565865904 3;
+BA_ "VFrameFormat" BO_ 2499805156 1;
+BA_ "Port_WorkGrp" BO_ 2499805156 1;
+BA_ "Port_Primary" BO_ 2499805156 1;
+BA_ "GenMsgSendType" BO_ 2499805156 1;
+BA_ "GenMsgCycleTime" BO_ 2499805156 1000;
+BA_ "Port_PTOLKeypad" BO_ 2561095600 1;
+BA_ "Port_Primary" BO_ 2561095600 1;
+BA_ "GenMsgSendType" BO_ 2561095600 1;
+BA_ "GenMsgCycleTime" BO_ 2561095600 2500;
+BA_ "VFrameFormat" BO_ 2561095600 3;
+BA_ "Port_ECU" BO_ 2566890672 0;
+BA_ "Port_Primary" BO_ 2566890672 0;
+BA_ "GenMsgSendType" BO_ 2566890672 0;
+BA_ "GenMsgCycleTime" BO_ 2566890672 50;
+BA_ "VFrameFormat" BO_ 2566890672 3;
+BA_ "Port_Primary" BO_ 2173693721 0;
+BA_ "Port_Drive" BO_ 2173693721 0;
+BA_ "GenMsgSendType" BO_ 2173693721 1;
+BA_ "GenMsgCycleTime" BO_ 2173693721 2500;
+BA_ "VFrameFormat" BO_ 2173693721 3;
+BA_ "Port_Primary" BO_ 2173693504 0;
+BA_ "Port_ECU" BO_ 2173693504 0;
+BA_ "GenMsgSendType" BO_ 2173693504 0;
+BA_ "GenMsgCycleTime" BO_ 2173693504 1000;
+BA_ "VFrameFormat" BO_ 2173693504 3;
+BA_ "Port_Primary" BO_ 2173693664 0;
+BA_ "Port_ECU" BO_ 2173693664 0;
+BA_ "GenMsgSendType" BO_ 2173693664 0;
+BA_ "GenMsgCycleTime" BO_ 2173693664 1000;
+BA_ "VFrameFormat" BO_ 2173693664 3;
+BA_ "Port_Primary" BO_ 2173693680 0;
+BA_ "Port_ECU" BO_ 2173693680 0;
+BA_ "GenMsgSendType" BO_ 2173693680 0;
+BA_ "GenMsgCycleTime" BO_ 2173693680 500;
+BA_ "VFrameFormat" BO_ 2173693680 3;
+BA_ "Port_Primary" BO_ 2633927932 0;
+BA_ "Port_WorkGrp" BO_ 2633927932 0;
+BA_ "GenMsgSendType" BO_ 2633927932 0;
+BA_ "GenMsgCycleTime" BO_ 2633927932 1000;
+BA_ "VFrameFormat" BO_ 2633927932 3;
+BA_ "Port_Primary" BO_ 2566861308 0;
+BA_ "Port_Display" BO_ 2566861308 0;
+BA_ "Port_WorkGrp" BO_ 2566861308 0;
+BA_ "GenMsgSendType" BO_ 2566861308 0;
+BA_ "GenMsgCycleTime" BO_ 2566861308 100;
+BA_ "VFrameFormat" BO_ 2566861308 3;
+BA_ "Port_Primary" BO_ 2173698033 0;
+BA_ "Port_ServiceTool" BO_ 2173698033 0;
+BA_ "GenMsgSendType" BO_ 2173698033 4;
+BA_ "GenMsgCycleTime" BO_ 2173698033 1000;
+BA_ "VFrameFormat" BO_ 2173698033 3;
+BA_ "Port_Primary" BO_ 2173689234 1;
+BA_ "Port_WorkGrp" BO_ 2173689234 1;
+BA_ "Port_Joystick" BO_ 2173689234 1;
+BA_ "GenMsgSendType" BO_ 2173689234 5;
+BA_ "GenMsgCycleTime" BO_ 2173689234 100;
+BA_ "VFrameFormat" BO_ 2173689234 3;
+BA_ "Port_Primary" BO_ 2173695618 1;
+BA_ "Port_WorkGrp" BO_ 2173695618 1;
+BA_ "Port_Joystick" BO_ 2173695618 1;
+BA_ "GenMsgSendType" BO_ 2173695618 5;
+BA_ "GenMsgCycleTime" BO_ 2173695618 2500;
+BA_ "VFrameFormat" BO_ 2173695618 3;
+BA_ "GenSigStartValue" SG_ 3221225472 btn_LHJoystick_RH 0;
+BA_ "GenSigStartValue" SG_ 3221225472 btn_LHJoystick_LH 0;
+BA_ "GenSigStartValue" SG_ 3221225472 btn_RHJoystick_Dw 0;
+BA_ "GenSigStartValue" SG_ 3221225472 btn_LHJoystick_Up 0;
+BA_ "GenSigStartValue" SG_ 3221225472 btn_RHJoystick_Trigger 0;
+BA_ "GenSigStartValue" SG_ 3221225472 btn_RHJoystick_Speed 0;
+BA_ "GenSigStartValue" SG_ 3221225472 btn_LHJoystick_Dw 0;
+BA_ "GenSigStartValue" SG_ 3221225472 btn_RHJoystick_Up 0;
+BA_ "GenSigStartValue" SG_ 2566862308 btn_LHJoystick_RH 0;
+BA_ "GenSigStartValue" SG_ 2566862308 btn_LHJoystick_LH 0;
+BA_ "GenSigStartValue" SG_ 2566862308 btn_RHJoystick_Dw 0;
+BA_ "GenSigStartValue" SG_ 2566862308 btn_LHJoystick_Up 0;
+BA_ "GenSigStartValue" SG_ 2566862308 btn_RHJoystick_Trigger 0;
+BA_ "GenSigStartValue" SG_ 2566862308 btn_RHJoystick_Speed 0;
+BA_ "GenSigStartValue" SG_ 2566862308 btn_LHJoystick_Dw 0;
+BA_ "GenSigStartValue" SG_ 2566862308 btn_RHJoystick_Up 0;
+BA_ "GenSigStartValue" SG_ 2566914020 CANLegacyFunctionsSelector 0;
+BA_ "GenSigStartValue" SG_ 2499805156 CANLegacyFunctionsSelector 0;
+BA_ "GenSigStartValue" SG_ 2499805156 btn_LHJoystick_RH 0;
+BA_ "GenSigStartValue" SG_ 2499805156 btn_LHJoystick_LH 0;
+BA_ "GenSigStartValue" SG_ 2499805156 btn_RHJoystick_Dw 0;
+BA_ "GenSigStartValue" SG_ 2499805156 btn_LHJoystick_Up 0;
+BA_ "GenSigStartValue" SG_ 2499805156 btn_RHJoystick_Trigger 0;
+BA_ "GenSigStartValue" SG_ 2499805156 btn_RHJoystick_Speed 0;
+BA_ "GenSigStartValue" SG_ 2499805156 btn_LHJoystick_Dw 0;
+BA_ "GenSigStartValue" SG_ 2499805156 btn_RHJoystick_Up 0;
+VAL_ 2566914020 CANLegacyFunctionsSelector 518 "Custom Function CAN06 Type 2" 515 "Custom Function CAN03 Type 2" 262 "Custom Function CAN06 Type 1" 18436 "Custom Function CAN04 Type 48" 259 "Custom Function CAN03 Type 1" 8194 "Custom Function CAN20 Type 2'" 8193 "Custom Function CAN20 Type 1" ;
+VAL_ 2566849079 key9 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 key8 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 EngineStart 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 key3 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 Stop 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 key6 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 key4 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 Beacon 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 WorkLight 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 key12 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 key11 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2566849079 key10 0 "Key_Not_Pressed" 1 "Key_Pressed" 2 "Error" 3 "Unused_Key" ;
+VAL_ 2561030064 Button12_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button15_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button16_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button17_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button20_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button11_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button14_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button14_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button19_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button18_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button11_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button11_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button17_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button13_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button18_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button15_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button14_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button13_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button16_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button12_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button19_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button19_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button18_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button16_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button17_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button12_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button20_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button20_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button13_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561030064 Button15_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2566860208 DPFInhibit 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 DEFGreen4 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 SeatBelt 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 HydraulicWarning 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 DEFGreen1 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 Battery 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 DEFRed1 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 EngineCoolantTempSw 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 DPFActive 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 DEFYellow 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 ParkBrake 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 DiffLock 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 GeneralWarning 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 BoomFloat 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 RideControle 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 EngineWarning 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 Fuel 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 DEFGreen3 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 HEST 0 "OFF" 1 "ON" ;
+VAL_ 2566860208 DEFGreen2 0 "OFF" 1 "ON" ;
+VAL_ 2565865904 ASROffroadSwitch 0 "ASR offroad switch passive" 1 "ASR offroad switch active" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 RemoteAccelEnableSwitch 0 "Off" 1 "On" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 AntiLockBrakingActive 0 "ABS passive but installed" 1 "ABS active" 2 "Reserved" 3 "Not available" ;
+VAL_ 2565865904 EBSBrakeSwitch 0 "Brake pedal is not being pressed" 1 "Brake pedal is being pressed" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 ATC_ASRInformationSignal 0 "Off" 1 "On" 2 "Reserved" 3 "Take no action" ;
+VAL_ 2565865904 TrctrMntdTrailerABSWarningSignal 0 "Off" 1 "On" 2 "Reserved" 3 "Take no action" ;
+VAL_ 2565865904 ASREngCtrlActive 0 "ASR engine control passive but installed" 1 "ASR engine control active" 2 "Reserved" 3 "Not available" ;
+VAL_ 2565865904 ASRBrakeCtrlActive 0 "ASR brake control passive but installed" 1 "ASR brake control active" 2 "Reserved" 3 "Not available" ;
+VAL_ 2565865904 ABS_EBSAmberWarningSignal 0 "Off" 1 "On" 2 "Reserved" 3 "Take no action" ;
+VAL_ 2565865904 EBSRedWarningSignal 0 "Off" 1 "On" 2 "Reserved" 3 "Take no action" ;
+VAL_ 2565865904 ABSFullyOperational 0 "Not Fully Operational" 1 "Fully Operational" 2 "Reserved" 3 "Not available" ;
+VAL_ 2565865904 EngAuxShutdownSwitch 0 "Off" 1 "On" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 ASRHillHolderSwitch 0 "ASR hill holder switch passive" 1 "ASR hill holder switch active" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 TractionCtrlOverrideSwitch 0 "Off" 1 "On" 2 "Error" 3 "Not available or not installed" ;
+VAL_ 2565865904 ABSOffroadSwitch 0 "ABS offroad switch passive" 1 "ABS offroad switch active" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 HaltBrakeSwitch 0 "Halt brake switch passive" 1 "Halt brake switch active" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 AccelInterlockSwitch 0 "Off" 1 "On" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 EngDerateSwitch 0 "Off" 1 "On" 2 "Error" 3 "Not available" ;
+VAL_ 2565865904 TrailerABSStatus 0 "Trailer ABS Status Information Available But Not Active" 1 "Trailer ABS Active" 2 "Reserved" 3 "Trailer ABS Status Information Not Available or Parameter Not Supported" ;
+VAL_ 2499805156 CANLegacyFunctionsSelector 518 "Custom Function CAN06 Type 2" 515 "Custom Function CAN03 Type 2" 262 "Custom Function CAN06 Type 1" 18436 "Custom Function CAN04 Type 48" 259 "Custom Function CAN03 Type 1" 8194 "Custom Function CAN20 Type 2'" 8193 "Custom Function CAN20 Type 1" ;
+VAL_ 2561095600 Button6_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button4_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button1_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button10_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button8_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button3_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button8_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button6_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button7_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button9_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button9_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button8_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 key5_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 workLight_Front 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button6_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button3_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button4_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button7_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 workLight_Rear 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 beacon 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button2_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button2_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button10_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button1_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button3_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button4_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button10_Center 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button1_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button2_Right 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2561095600 Button9_Left 0 "Indicator_Off" 1 "Indicator_On" 2 "Indicator_Blink_Medium" 3 "No_Change_Data" ;
+VAL_ 2173693721 PBrkRelInhReq 0 "PBrkRelInh not requested" 1 "PBrkRelInh requested" 2 "SAE reserved" 3 "Unavailable" ;
+VAL_ 2173693721 PTO_State 0 "Disable" 1 "Hold" 3 "Standby_Neutral" 5 "Set" 6 "Decelerate" 7 "Resume" 8 "Accelerate" 10 "Set_Speed_1" 11 "Set_Speed_2" 12 "Set_Speed_3" 13 "Set_Speed_4" 31 "Not_available" ;
+VAL_ 2173693721 TwoSpdAxlSwt 0 "INACTIVE" 1 "ACTIVE" 2 "ERROR" 3 "UNAVAILABLE" ;
+VAL_ 2173693721 BrkSwt 0 "Brake pedal released" 1 "Brake pedal depressed" 2 "Error" 3 "Not Available" ;
+VAL_ 2173693721 ParkingBrakeSwt 0 "Parking brake not set" 1 "Parking brake set" 2 "Error" 3 "Not available" ;
+VAL_ 2173693721 CruiseControlActive 0 "CC switched  off" 1 "CC switched on" 2 "Error" 3 "Not available" ;
+VAL_ 2173693721 CruiseControlStates 0 "Off_or_Disable" 1 "Hold" 2 "Accelerate" 3 "Decelerate" 4 "Resume" ;
+VAL_ 2173693721 CCSetSwt 0 "CCActv not in position SET" 1 "CCActv in position SET" 2 "Error" 3 "Not available" ;
+VAL_ 2173693721 CCEnblSwt 0 "CC disabled" 1 "CC enabled" 2 "Error" 3 "Not available" ;
+VAL_ 2173693721 ClutchSwt 0 "Clutch pedal released" 1 "Clutch pedal depressed" 2 "Error" 3 "Not Available" ;
+VAL_ 2173693721 CCPauseSwt 0 "Off" 1 "On" 2 "Error Indicator" 3 "Take no Action" ;
+VAL_ 2173693504 WaittoStartLmp 0 "OFF" 1 "ON" ;
+VAL_ 2173693504 EngShutdown 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 LowBeam 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 Reverse 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 DriveMode0 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 Neutral 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 DriveMode1 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 HighBeam 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 DriveMode3 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 DriveMode2 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 Forward 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 Flasher 0 "OFF" 1 "ON" ;
+VAL_ 2566861308 PreheatIndic 0 "INACTIVE" 1 "ACTIVE" 2 "ERROR" 3 "UNAVAILABLE" ;
+VAL_ 2566861308 PositionLi 0 "OFF" 1 "ON" ;
+VAL_ 2173698033 EngineCranking 0 "OFF" 1 "ON" ;
+VAL_ 2173698033 EngineStop 0 "OFF" 1 "ON" ;
+VAL_ 2173689234 RIGHT_ROCKER_NEUTRAL 0 "OFF" 1 "ON" ;
+VAL_ 2173689234 LEFT_ROCKER_NEUTRAL 0 "Not on negative side of Neutral" 1 "On negative side of Neutral" 2 "Error Indicator" 3 "Not Available" ;
+VAL_ 2173689234 RIGHT_ROCKER_BACK 0 "Not on negative side of Neutral" 1 "On negative side of Neutral" 2 "Error Indicator" 3 "Not Available" ;
+VAL_ 2173689234 LEFT_ROCKER_BACK 0 "Not on negative side of Neutral" 1 "On negative side of Neutral" 2 "Error Indicator" 3 "Not Available" ;
+VAL_ 2173689234 RIGHT_ROCKER_FORWARD 0 "Not on Positive side of Neutral" 1 "On positive side of Neutral" 2 "Error Indicator" 3 "Not Available" ;
+VAL_ 2173689234 LEFT_ROCKER_FORWARD 0 "Not on Positive side of Neutral" 1 "On positive side of Neutral" 2 "Error Indicator" 3 "Not Available" ;
+SIG_GROUP_ 2566862308 CAN06Type1_Copy_1 1 : btn_LHJoystick_Dw btn_RHJoystick_Speed btn_RHJoystick_Trigger btn_LHJoystick_Up btn_RHJoystick_Dw sld01 btn_LHJoystick_LH btn_LHJoystick_RH btn_RHJoystick_Up;
+SIG_GROUP_ 2566914020 CAN03Type48 1 : btn_08 btn_07;
+SIG_GROUP_ 2566914020 CANMultiplexer 1 :;
+SIG_GROUP_ 2566914020 CAN20Type2 1 : btn_06 btn_05;
+SIG_GROUP_ 2566914020 CAN20Type1 1 : btn_04 btn_03;
+SIG_GROUP_ 2566914020 CAN03Type1 1 : btn_02 btn_01;
+SIG_GROUP_ 2499805156 CAN06Type1 1 : btn_LHJoystick_Dw btn_RHJoystick_Speed btn_RHJoystick_Trigger btn_LHJoystick_Up btn_RHJoystick_Dw sld01 btn_LHJoystick_LH btn_LHJoystick_RH btn_RHJoystick_Up;
+
